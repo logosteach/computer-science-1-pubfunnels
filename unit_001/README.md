@@ -1,4 +1,4 @@
-# Unit 1
+# Unit 1 - Computer Science
 
 ## Getting Started
 
