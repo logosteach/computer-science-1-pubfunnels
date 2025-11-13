@@ -20,7 +20,7 @@ This first unit is broken up into several parts.
 - ☑️ Lesson 1: Downloading and Installing Python
 - ☑️ Lesson 2: Python in the IDLE Shell
 - ☑️ Lesson 3: The Magnificent Print Function
-- ☑️ Lesson 4: IDLE
+- ☑️ Lesson 4: IDLE Script Editor
 - ☑️ Lesson 5: Dowloading, Installing, and an Introduction to VS-Code
 
 You can find more information about the author and biblicall integrated content at: [LogosTeach](https://logosteach.com)
