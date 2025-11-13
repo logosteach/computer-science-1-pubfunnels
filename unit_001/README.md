@@ -28,3 +28,5 @@ You can find more information about the author and biblicall integrated content 
 *"Father in heaven, let everything have it's proper place before You. Bless my student, help them as they begin this course, help me to prepare these lessons for them in a way that is helpful and beneficial to their learning and their growth in getting to know Your blessed Son Jesus better. Let everything that connects to You in this course be connected directly and without any addition or subtraction to Your Word. Which is most precious. In Jesus' name, the name You love. Amen."*
 
 Let's get started!
+
+@copy; LogosTeach 2025 - All Rights Reserved
