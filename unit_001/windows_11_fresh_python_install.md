@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: Python Clean Install – SAFE CHECKLIST (Windows 11)
 subtitle: Rename, Don’t Delete – Easy to Undo!
