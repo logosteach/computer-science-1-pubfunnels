@@ -1,6 +1,6 @@
 # Python Clean Install – SAFE CHECKLIST (Windows 11)
 
-> **DISCLAIMER**  
+> ⚠️ **DISCLAIMER**  
 > **The author and instructor are NOT responsible for any issues, data loss, or system problems from following these steps.**  
 > Always **back up important files** before changing system settings.  
 > These instructions are for educational use. **Proceed at your own risk.**
