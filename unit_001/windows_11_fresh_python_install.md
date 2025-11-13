@@ -1,11 +1,4 @@
-
----
-title: Python Clean Install – SAFE CHECKLIST (Windows 11)
-subtitle: Rename, Don’t Delete – Easy to Undo!
-author: Your Instructor
-date: November 2025
-geometry: margin=1in
----
+# Python Clean Install – SAFE CHECKLIST (Windows 11)
 
 > **DISCLAIMER**  
 > **The author and instructor are NOT responsible for any issues, data loss, or system problems from following these steps.**  
