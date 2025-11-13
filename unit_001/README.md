@@ -29,4 +29,4 @@ You can find more information about the author and biblicall integrated content 
 
 Let's get started!
 
-@copy; LogosTeach 2025 - All Rights Reserved
+&copy; LogosTeach 2025 - All Rights Reserved
