@@ -1,10 +1,3 @@
-
----
-title: How to Start the IDLE Shell on Windows 10 & 11
-author: Your Instructor
-date: November 2025
----
-
 # **How to Start the IDLE Shell on Windows 10 & 11**
 
 > **IDLE** is Python’s built-in code editor and interactive shell — perfect for testing code quickly!
