@@ -9,7 +9,7 @@ Welcome to Computer Science - Level 1. In this course we are going to learn both
 Our Textbook is: Python with a Worldview by John C. Partridge - 1st Edition
 [Purchase Link](#)
 
-You will need a laptop or desktop computer in order to follow the lessons in this course.
+You will need a laptop or desktop computer :computer: in order to follow the lessons in this course.
 
 This is a self-paced, self-graded course. When you complete the course you will be given a certificate of completion of the course with your name, the course name and level on it.
 
