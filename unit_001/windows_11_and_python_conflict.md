@@ -121,4 +121,3 @@ Or create a simple checklist:
 
 ---
 
-**Let me know if you want a downloadable checklist or batch script to fix this automatically!**
