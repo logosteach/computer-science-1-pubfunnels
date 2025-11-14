@@ -168,3 +168,5 @@ Product: 96
 **You did it!** You’re now coding in the Python Shell like a pro!
 
 ---
+
+&copy; LogosTeach 2025 - All Rights Reserved
