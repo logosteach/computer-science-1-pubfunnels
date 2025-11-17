@@ -71,7 +71,7 @@ Today we will type everything directly at the >>> prompt and watch the Psalms co
 ### Part 5 – Repeat with the Magic *
 10. Type:  
     ```python
-    >>> print("Hallelujah! " * 5)
+    >>> print("Christ is Risen! " * 5)
     ```
 
 11. Make a divider line:  
@@ -117,7 +117,7 @@ Now combine everything you learned. Type the lines one by one at the >>> prompt.
 - Did everything run with no errors?  
 - Does it look beautiful?
 
-You just made the Book of Psalms appear exactly the way YOU wanted—using only the Python Shell and the magnificent print() function!
+You just used Python as a tool to glorify the Lord's precious name in your own mind and heart! Any engagement with God's Word is time well spent. Be blessed today.
 
 “Make a joyful noise to the LORD, all the earth!” (Psalm 100:1)  
 Well done! Show your teacher your favorite creation.
