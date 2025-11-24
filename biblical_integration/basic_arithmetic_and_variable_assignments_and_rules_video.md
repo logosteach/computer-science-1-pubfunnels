@@ -36,11 +36,10 @@ Jesus doesn’t say “pray something like this.” He gives the exact model —
 
 ## Conclusion
 
-God is not running an “anything-goes” interactive shell.  
-He has given us the exact grammar of acceptable approach:
+God design in how we approach Him is good. It is right and it is for our immense good.
 
 ```text
-repentance + faith in Christ + humility + obedience to Scripture + prayer in Jesus' name according to His will
+faith in Christ alone ➡️ repentance ➡️ sanctification(humility, obedience to Scripture, prayer to the Father through Christ's name according to His will)
 ```
 
 Get the syntax wrong, and spiritually speaking, you raise an exception that only His grace — through the cross — can catch.
