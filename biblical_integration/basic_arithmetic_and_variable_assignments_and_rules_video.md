@@ -1,4 +1,4 @@
-# Divine Syntax: Approaching God According to His Rules
+# Divine Syntax: Approaching God According to His Ways
 
 Python has strict rules for typing commands into the Python Shell — syntax must be exact, indentation matters, case-sensitivity applies, or you get a `SyntaxError` — so the Lord Himself (according to the Scriptures) has immutable rules for how we approach Him in prayer, worship, and obedience. Are we listening to them? That is the question each of us must answer for him or herself.
 
