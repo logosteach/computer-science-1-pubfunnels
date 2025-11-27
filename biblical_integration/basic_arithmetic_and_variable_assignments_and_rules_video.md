@@ -10,7 +10,7 @@ Jesus declares the core protocol in **John 4:23–24** (ESV):
 
 Note the **must** — there is no alternative interpreter.
 
-## Prayer Has a Prescribed Form
+## A Scaffold for Prayer
 
 **Matthew 6:7–9** (ESV):
 
