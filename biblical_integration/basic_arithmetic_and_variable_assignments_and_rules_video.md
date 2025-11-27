@@ -1,6 +1,6 @@
 # Divine Syntax: Approaching God According to His Ways
 
-Python has strict rules for typing commands into the Python Shell — syntax must be exact, indentation matters, case-sensitivity applies, or you get a `SyntaxError`. Our Lord gives us plain instruction on what God desires in worship. Remember thar He is the one who evaluates the quality and authenticity of the heart. Not we ourselves. Christ graciuously gave us instruction on how "abiding vines" can grow in prayer.
+Python has strict rules for typing commands into the Python Shell — syntax must be exact, indentation matters, case-sensitivity applies, or you get a `SyntaxError`. Our Lord gives us plain instruction on what God desires in worship. Remember that He is the one who evaluates the quality and authenticity of the heart. Not we ourselves. Christ graciuously gave us instruction on how "abiding vines" can grow in prayer.
 
 ## The Biblical “Syntax” of Acceptable Worship
 
