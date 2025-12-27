@@ -32,7 +32,6 @@ or
 ```python
 >>> print("   |   ")
 >>> print("   |   ")
->>> postcards
 >>> print("-------")
 >>> print("   |   ")
 >>> print("   |   ")
@@ -75,7 +74,8 @@ Result: Hallelujah! Hallelujah! Hallelujah! … (7 times with one space between)
 >>> print("Halleluja")
 >>> print("Hallelujah!")
 ```
-Clever one-line version (still allowed in shell):
+Clever one-line version (still allowed in shell): This does use a for loop which you have not learned yet, so if this does not make sense yet, don't worry. :smiley:
+
 ```python
 >>> for word in ["H","Ha","Hal","Hall","Halle","Hallel","Hallelu","Halleluj","Halleluja","Hallelujah!"]: print(word)
 ```
