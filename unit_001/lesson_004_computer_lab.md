@@ -1,3 +1,10 @@
+<script type="text/javascript" 
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+</script>
+
 # The IDLE Editor: Writing our first scripts
 
 Welcome to the **IDLE Editor** 
@@ -12,7 +19,7 @@ Open the IDLE Editor window and then proceed..
 
 ## Calculate a hypotenuse
 
-In this labe we are going to calculate the lenght of the hypotenuse of a right triangle.
+In this labe we are going to calculate the length of the hypotenuse of a right triangle.
 
 In mathematics, a right triangle has two legs and a hypotenuse. The hypotenuse is the side of the triangle that is *opposite* the right angle. The famous formula, also known as the Pythagorean theorem states that:
 
@@ -61,7 +68,3 @@ And there you go! Now, here is an extra challenge for you.
 
 **Is there a way to get the user to enter their own values for a and b into the program and calculate the value of the hypotenuse
 based off of these values? This is left to you to research on your own.**
-
----
-
-&copy; LogosTeach 2025 - All Rights Reserved

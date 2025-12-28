@@ -24,6 +24,16 @@ Good luck, and have fun coding!
 
 Write a python script where `s = 5` represents the side of a square. Calculate and print the length of the square's diagonal.
 
+```python
+from math import sqrt
+
+s = 5
+d = sqrt(s**2 + s**2)
+print("The diagonal of the square is:", d)
+````
+
+::: page-break :::
+
 ## Challenge 2
 
 Write a python script that generates the following output:
@@ -34,6 +44,16 @@ Write a python script that generates the following output:
 .---.
 ```
 
+```python
+print(".---.")
+print("| ? |")
+print(".---.")
+```
+
 ## Challenge 3
 
 Write a python script that prints the verse from Psalm 27:1, but here is the catch. Print the double quotes with the verse itself. If you need to do some online research that is perfectly fine.
+
+```python
+print('"The Lord is my light and my salvation.'")
+```

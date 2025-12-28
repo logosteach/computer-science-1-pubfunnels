@@ -1,9 +1,9 @@
 # Python Shell Basics: Your First Steps in Interactive Coding
 
+## Lesson 2 - Computer Lab
+
 Welcome to the **Python Shell** (also called the **REPL** — Read-Eval-Print Loop)!  
 This is where you can type Python code **one line at a time** and see results instantly.
-
----
 
 ## What Version of Python Do You Have?
 
@@ -35,7 +35,7 @@ Or just:
 
 This will show something like: `3.12.6`
 
----
+::: page-break :::
 
 ## Step 1: Open the Python Shell
 
@@ -131,7 +131,7 @@ Use `print()` to show messages clearly:
 Great job! Your score is: 95
 ```
 
----
+::: page-break :::
 
 ## Mini Project: Create a Simple Calculator
 
@@ -166,7 +166,3 @@ Product: 96
 ```
 
 **You did it!** You’re now coding in the Python Shell like a pro!
-
----
-
-&copy; LogosTeach 2025 - All Rights Reserved

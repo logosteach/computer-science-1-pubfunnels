@@ -1,0 +1,504 @@
+@page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0.5in;
+  padding:0.5in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    src: url(../fonts/SourceSans3-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url(../fonts/SourceSans3-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url(../fonts/SourceSans3-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url(../fonts/SourceSans3-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Noto Color Emoji";
+  src: url(../fonts/NotoColorEmoji-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+  
+html, body {
+  font-family: "Source Sans 3", "Noto Color Emoji", "Arial", sans-serif;
+  font-size: 12pt !important;
+  line-height: 1.3;
+  color: #333;
+  margin: 0;
+  padding:0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 12px;
+
+  break-before: auto;
+  break-after: avoid;
+  break-inside: avoid;
+  orphans: 3;
+  widows: 3;
+}
+
+h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  break-before:avoid;
+  page-break-before: avoid;
+}
+
+h1 {
+  font-size: 2em;
+  string-set: chapter content();
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.18em;
+}
+h5 {
+  font-size: 1.14em;
+}
+h6 {
+  font-size: 1em;
+}
+
+p code, li code {
+    font-family: "Source Code Pro", monospace;
+    padding: 3px;
+    color:#232323 !important;;
+    background-color:#becfef;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.7em;
+    white-space: nowrap;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display:inline-block
+}
+
+.note {
+  background-color: #ffc !important;
+  color: #222 !important;
+  box-shadow: #fff0b3 5px 5px;
+  word-wrap: break-word;
+  padding: 0 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.you-try-it {
+  background-color: #a28089 !important;
+  color: white !important;
+  box-shadow: #785f66 5px 5px;
+  word-wrap: break-word;
+  padding: 0 5px;
+}
+
+.you-try-it a {
+    color: #ffa8b5;
+}
+
+.console {
+  font-family: "Inconsolata", monospace !important;
+  color: #0550ae !important;
+  background-color: #f6f8fa !important;
+  padding: 0 5px;
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  outline: none;
+  letter-spacing: 0.5px;;
+  white-space:pre-wrap;
+  white-space:-moz-pre-wrap;
+  white-space:-pre-wrap;
+  white-space:-o-pre-wrap;
+  break-inside: avoid !important;
+  overflow-x: auto !important;
+  margin: 0 0 10px 0 !important;
+  
+  
+}
+
+.console code, pre code {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  line-height: inherit;
+}
+
+mark {
+  background-color: #fff6b6;
+  color: #222;
+  padding: 0 5px;
+}
+
+pre code {
+  font-size: 0.8em;
+  white-space: pre-wrap; /* Preserves all whitespace, including spaces, tabs, and newlines */
+  font-family: "Source Code Pro", monospace; /* Ensures a monospaced font for consistent spacing */
+  display: block; /* Ensures the code block behaves as a block element */
+  padding: 5px; /* Adds padding for readability */
+  background-color: #f4f4f4; /* Light background for code blocks */
+  border: none;
+  outline: none;
+  overflow-x: auto; /* Adds horizontal scrollbar for long lines */
+  white-space: pre-wrap; /* Preserves whitespace and allows wrapping */
+  tab-size: 4; /* Sets consistent tab width (adjust as needed) */
+}
+
+pre {
+  margin: 1em 0; /* Adds spacing around the code block */
+  overflow: visible; /* Ensures content isn’t clipped */
+}
+
+.float-left {
+  float:left;
+  margin-right: 15px;
+}
+
+.stop-float-left {
+  clear: both;
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.page-break-after{
+  page-break-after: always;
+}
+
+.question {
+  background-color: rgb(239, 204, 239);
+  color: #333;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.answer {
+  background-color: rgb(204, 239, 239);
+  color: #333;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+
+@media print, screen {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center images if needed */
+    gap: 20px; /* Space between images */
+    width: 100%; /* Ensure container takes full width */
+    margin: 0 auto; /* Center container */
+  }
+
+  .image-container img {
+    width: 45%; /* Adjust to fit two images side by side */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Optional: limit maximum width */
+  }
+
+  .float-container {
+    width: 100%;
+    overflow: auto; /* Ensures container wraps floated content */
+    margin: 0 auto;
+  }
+
+  .float-container img {
+    float: left;
+    width: 40%; /* Adjust as needed */
+    max-width: 300px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+  }
+
+  .float-container .text-block {
+    overflow: hidden; /* Ensures text wraps around floated image */
+    font-size: inherit; /* Adjust as needed */
+    line-height: inherit;
+  }
+
+  .float-container2 {
+    width: 100%;
+    overflow: auto; /* Ensures container wraps floated content */
+    margin: 0 auto;
+  }
+
+  .float-container2 img {
+    float: left;
+    width: 30%; /* Adjust as needed */
+    max-width: 100px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+  }
+
+  .float-container2 .text-block {
+    overflow: hidden; /* Ensures text wraps around floated image */
+    font-size: inherit; /* Adjust as needed */
+    line-height: inherit;
+  }
+
+  .center-img {
+    justify-content: center;
+    text-align: center;
+  }
+
+    .fit-img-90 > *{
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .fit-img-80 > *{
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .fit-img-50 > *{
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .fit-img-40 > *{
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .center-img-40{
+    
+    justify-content: center;
+    text-align: center;
+
+    * {
+      max-width: 40%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .fit-img-30 > *{
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .fit-img-25 > * {
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .center-text {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .clear {
+    clear: both; /* Clears the float after the container */
+  }
+}
+
+.inline-text-height-img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.2em; /* Adjust this value to fit your text height */
+}
+
+.chp-h1 {
+  font-size: 3em;
+  margin: 1em 0.5em;
+  font-family: "Source Sans 3", sans-serif !important;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: center;;
+  
+  break-before: always;
+}
+
+.chp-h2 {
+  font-size: 2em;
+  margin: 1em 0.5em;
+  font-family: "Source Sans 3", sans-serif !important;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+
+  break-before: always;
+}
+
+.chp-h3 {
+  font-style:italic;
+}
+
+.prayer {
+  font-style: italic;
+  padding: 0.5em;
+  margin: 1em;
+  background-color: seashell;
+  box-shadow: rgb(229, 220, 213) 5px 5px;
+}
+
+.center-table {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering, optional */
+}
+
+.center-table > table {
+  width: auto;
+}
+
+.green-code {
+  display: inline;
+  font-family: "Source Code Pro", verdana;
+  color: rgb(109, 187, 109);
+}
+
+.error-code {
+  color: rgb(247, 100, 100);
+}
+
+.warning-box {
+    /* Layout and spacing */
+    display: block;
+    padding: 0.75em;
+    margin: 16px 0;
+    border-radius: 6px;
+    border: 2px solid #f59e0b; /* Amber border for warning */
+    
+    /* Background and text */
+    background-color: #fef3c7; /* Light amber background */
+    color: #7c2d12; /* Dark brown text for contrast */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500; /* Slightly bold for emphasis */
+    
+    /* Optional: Icon or visual cue */
+    position: relative;
+    padding-left: 48px; /* Space for an icon */
+}
+
+/* Pseudo-element for warning icon (optional) */
+.warning-box::before {
+    content: '⚠️'; /* Warning emoji or use an SVG/icon font */
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* Optional: Hover effect for interactivity */
+.warning-box:hover {
+    background-color: #fde68a; /* Slightly darker amber on hover */
+    transition: background-color 0.2s ease;
+}
+
+.fake-link {
+  color: #0a6ee8;
+  text-decoration: underline;
+  cursor: pointer;
+  display:inline;
+}
+
+.chevrons {
+  color: rgb(180, 36, 36) !important;
+}
+
+
+
+/* 
+Emphasis Colors
+*/
+
+.b {
+  font-weight: bold;
+}
+
+.my-quote {
+  display: inline;
+  font-style: italic;
+  color:rgb(83, 142, 83) !important;
+}
+
+.emph-coral {
+  color: #ff7f50;
+  font-style: italic;
+}
+
+.emph-purple {
+  color: #802fd0;
+  font-style: italic;
+}
+
+.kybrd {
+  display: inline-block; /* Allows inline use with block-level styling */
+  padding: 2px 4px; /* Space inside the button */
+  background-color: #e0e0e0; /* Light gray, typical keyboard key color */
+  color: #333; /* Dark text for contrast */
+  font-family: monospace, sans-serif; /* Monospace font for a techy feel */
+  font-size: 14px; /* Readable text size */
+  font-weight: bold; /* Bold text, common for key labels */
+  border: 2px solid #999; /* Slightly darker border for definition */
+  border-radius: 4px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), /* Outer shadow for 3D effect */
+              inset 0 1px 1px rgba(255, 255, 255, 0.5); /* Inner highlight */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Hand cursor for interactivity */
+  transition: transform 0.1s, box-shadow 0.1s; /* Smooth press animation */
+}
+
+/* Pressed state for interaction */
+.kybrd:active {
+  transform: translateY(2px); /* Slight downward movement */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Reduced shadow when pressed */
+  background-color: #d0d0d0; /* Slightly darker background when pressed */
+}
+
+.footer {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    width: calc(100% - 2cm);
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}

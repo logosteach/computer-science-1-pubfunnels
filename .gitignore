@@ -1,0 +1,7 @@
+*.pdf
+
+static/pdf/*
+
+static/pdf
+
+.DS_Store
