@@ -21,3 +21,5 @@ Good luck, and have fun coding!
 ## Challenge 2
 
 ## Challenge 3
+
+©️LogosTeach 2025 - All Rights Reserved
