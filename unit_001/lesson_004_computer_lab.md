@@ -55,6 +55,7 @@ a = 3
 b = 4
 c = sqrt(a**2 + b**2)
 print("The hypotenuse is: ", c)
+```
 
 And there you go! Now, here is an extra challenge for you.
 
