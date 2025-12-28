@@ -8,6 +8,12 @@ choose the `Run` option in IDLE.
 
 ---
 
+## Calculate a hypotenuse
 
+In this labe we are going to calculate the lenght of the hypotenuse of a right triangle.
+
+In mathematics, a right triangle has two legs and a hypotenuse. The hypotenuse is the side of the triangle that is *opposite* the right angle. The famous formula, also known as the Pythagorean theorem states that:
+
+$a^2 + b^2 = c^2$
 
 &copy; LogosTeach 2025 - All Rights Reserved
