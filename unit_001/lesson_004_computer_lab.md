@@ -16,4 +16,12 @@ In mathematics, a right triangle has two legs and a hypotenuse. The hypotenuse i
 
 $a^2 + b^2 = c^2$
 
+Where $a$ and $b$ are the legs, and $c$ is the length of the hypotenuse. Now if we take the square root of both sides we get:
+
+$c = \sqrt{a^2 + b^2}$.
+
+It is this formula that we will calculate in our python script.
+
+
+
 &copy; LogosTeach 2025 - All Rights Reserved
