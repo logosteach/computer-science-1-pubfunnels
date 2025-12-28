@@ -6,6 +6,8 @@ choose the `Run` option in IDLE.
 
 **Note:** Remember, all python script files must end with the `*.py` extension.
 
+Open the IDLE Editor window and then proceed..
+
 ---
 
 ## Calculate a hypotenuse
@@ -22,6 +24,43 @@ $c = \sqrt{a^2 + b^2}$.
 
 It is this formula that we will calculate in our python script.
 
+## import
 
+In order to us the $\sqrt{}$ function we need to import it from the standard math library. To do this we use the `from` and `import` keywords. Always put your imports at the very TOP of your script.
+
+```python
+from math import sqrt
+# Extra stuff will come later
+```
+
+## Define the legs
+
+Next we will add in two variables and values to represent the legs of the triangle.
+
+```python
+from math import sqrt
+
+a = 3
+b = 4
+```
+
+## Calculate the hypotenuse
+
+Next, we calculate the value of the hypotenuse and then print the value.
+
+```python
+from math import sqrt
+
+a = 3
+b = 4
+c = sqrt(a**2 + b**2)
+print("The hypotenuse is: ", c)
+
+And there you go! Now, here is an extra challenge for you.
+
+**Is there a way to get the user to enter their own values for a and b into the program and calculate the value of the hypotenuse
+based off of these values? This is left to you to research on your own.**
+
+---
 
 &copy; LogosTeach 2025 - All Rights Reserved
