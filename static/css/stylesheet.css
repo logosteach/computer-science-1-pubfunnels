@@ -502,3 +502,37 @@ Emphasis Colors
     border-top: 1px solid #ccc;
     padding-top: 5px;
 }
+
+/* 
+For links
+*/
+
+.link a {
+  color: #0066cc;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  border: 1px solid #0066cc;
+  padding:5px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0066cc;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  color: #004499;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
