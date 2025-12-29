@@ -40,9 +40,9 @@ or a one-print version using `\n` is not allowed yet, so the multi-line way abov
 
 ### Challenge 5 – Hallelujah Chorus
 ```python
->>> print("Hallelujah! " * 7)
+>>> print("Christ is risen! " * 7)
 ```
-Result: Hallelujah! Hallelujah! Hallelujah! … (7 times with one space between)
+Result: Christ is risen! Christ is risen! Christ is risen! … (7 times with one space between)
 
 ### Challenge 6 – Framed Verse
 ```python

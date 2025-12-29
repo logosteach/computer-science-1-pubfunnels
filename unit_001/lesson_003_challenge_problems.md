@@ -21,7 +21,7 @@ Make this appear with **exactly one** print statement:
 `Psalm 23:1 – The LORD is my shepherd, I shall not want.`
 
 ### Challenge 2 – No Extra Spaces
-Make this appear with **one** print statement and **no extra spaces** anywhere:  
+Make this appear with **one** print statement and **no extra spaces** anywhere. Concatenate each worth with the `+` operator:  
 `Bless the LORD, O my soul!`
 
 ### Challenge 3 – Same-Line Verse
