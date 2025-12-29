@@ -1,4 +1,6 @@
-# Python Shell Challenges: Unit 001, Lesson 002
+# Unit 001, Lesson 002
+
+## Challenge Problems - Python Shell
 
 These challenge problems build on the basics introduced in the computer lab, including opening the Python Shell, checking your Python version, performing basic math operations (+, -, *, /, **), creating variables to store numbers and strings, and using the `print()` function to display results. Complete each challenge by typing code directly into the Python Shell (REPL) one line at a time. Experiment with different values to see how the results change. Submit screenshots of your shell output for each challenge.
 

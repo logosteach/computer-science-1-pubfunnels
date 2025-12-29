@@ -1,4 +1,7 @@
-# Lesson 3 – Challenge Problems  
+# Unit 001 - Lesson 003 
+
+## Challenge Problems  
+
 **The Magnificent Print Function**  
 **20–30 minutes – Work on your own in the Python Shell**
 
@@ -36,7 +39,7 @@ Make a cross using only `"|"`, `"—"`, and spaces. Example (yours can be differ
 ```
 
 ### Challenge 5 – Hallelujah Chorus
-Make the word `Hallelujah!` appear exactly **7 times** on the same line with exactly **one space** between each.
+Make the phrase `Christ is risen!` appear exactly **7 times** on the same line with exactly **one space** between each.
 
 ### Challenge 6 – Framed Verse
 Create this exact box using only print statements (no extra blank lines):  
@@ -51,7 +54,7 @@ Make a countdown from 5 to 1 that looks exactly like this:
 `5 >>> 4 >>> 3 >>> 2 >>> 1 >>> PRAISE HIM!`
 
 ### Challenge 8 – Growing Praise
-Make this exact triangle using only print and the * operator:  
+Make this exact triangle using only print functions.  
 ```
 H  
 Ha  
@@ -72,21 +75,22 @@ Using only print statements with `end=""`, make this appear:
 Then make it appear with spaces:  
 `Jesus loves me`
 
+::: page-break :::
+
 ### Challenge 10 – Your Own Psalm Art
-Create the most beautiful thing you can using everything you learned.  
+Do you have a favorite verse in scripture, or a verse you have learned recently? Try to use all the features below to print that verse out, but in the most elegant and styled format you can think of!
+
 It must include:
 - at least one comma (,)
 - at least one `end=`
 - at least one `+`
 - at least one `*`
-- at least three different lines
-- something from the Psalms
+- at least two or three different lines
 
 Write your name at the bottom like this:  
-`Created by: [Your Name]`
+`Coded by: [Your Name]`
 
 Good luck!  
-When you finish, raise your hand and show your teacher your favorite creation.  
-The quietest, most beautiful, or most clever ones win silent applause!  
+When you finish, raise your hand and show your teacher your code creation. 
 
 “Let everything that has breath praise the LORD. Praise the LORD!” (Psalm 150:6)
