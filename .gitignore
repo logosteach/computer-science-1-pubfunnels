@@ -7,3 +7,14 @@ static/pdf
 .DS_Store
 
 *.pages
+
+*.mp4
+*.mp3
+*.mov
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.m4a
+static/media/videos/*
+static/media/audios/*

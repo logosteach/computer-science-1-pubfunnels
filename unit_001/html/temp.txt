@@ -1,0 +1,87 @@
+Opening Meditation
+
+Psalm 90:17 (ESV) “Let the favor of the Lord our God be upon us, and establish the work of our hands upon us; yes, establish the work of our hands!”
+
+We want to begin this lesson well, so read and meditate upon Psalm 90:17. Even if you encounter errors in this lesson, this does not mean you have failed. Seek, ask questions of your instructor, try and try again. May the Lord establish us as we begin this journey together.
+
+
+
+Textbook Instructions for this lesson can also be found in
+
+Chapter 0 - Downloading and Installing Python
+
+System Requirements and Installation
+
+This lesson is composed of a two part process.
+
+
+
+
+
+Check to see if your system has the minimum requirements to install the needed software (Python 3.XX)
+
+
+
+Installing the needed software (Python 3.XX)
+
+Note: Python 3.XX means any version of Python from 3.10, 3.11, and so on and so forth.
+
+
+
+At the given link in this paragraph, you will find both steps in one single page. This link will open a new tab to the LogosTeach - Python with a Worldview Git Hub Page.
+
+
+
+Go through each step carefully. If there are typos, or you encounter problems during this process then contact your instructor and in the Subject Line specify the nature of the problem and be as detailed as you can in the email body on which part of the installation process you are having difficulty with.
+
+
+
+---------------------------------------------------------------------------------------
+
+Windows 11 Users Note: IMPORTANT! Please read through these
+
+following links first.
+
+
+
+Windows 11 - Python Clean Install
+
+
+
+Note: Windows Users: Make absolutely sure that when the Python installation wizard appears, you check the box that states "Add to Path"
+
+---------------------------------------------------------------------------------------
+
+
+
+Verifying the Installation
+
+Next, we want to verify the installation of Python.
+
+
+
+
+
+In Windows you will want to open up the Command Prompt and type in 
+
+python -- version
+
+Note: You can do a web search for: "In Windows, how do I open the Command Prompt?" if you are not sure how to do this on your own.
+
+
+
+In macOS/Linux you will want to open up the Terminal Window and type in python3 --version
+
+Note: You can do a web search for: "In macOS or Linux, how do I open the Terminal window?" If you are not sure how to do this on your own.
+
+If you got something like: python 3.13.5 (or other number) the installation was successful. If you got an error, then contact your instructor.
+
+
+
+Summary
+
+In this lesson we first checked to see if our computer systems had at least the minimum requirements to install Python 3.XX. Assuming this was the case, we then proceeded to download and install the latest version of Python onto our computer and then verify the installation.
+
+
+
+© LogosTeach 2025 - All Rights Reserved
