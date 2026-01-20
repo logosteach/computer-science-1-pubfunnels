@@ -1,87 +1,86 @@
+Arithmetic, Variable Assignments and Naming Rules
+
+In this lesson we are going to learn how to do basic arithmetic and variable assignments and the naming rules that come with variable declarations in Python. The video lecture link is given below.
+
+Note: In the video lecture, I am using a special version of the Python shell knowns bPython. You will be opening up your IDLE program on your personal computer. There are visual differences, but not substantive differences concerning content of the lesson.
+
+For more on bPython if you want to investigate it on your own and at your own risk, go ahead and check out this link: https://bpython-interpreter.org/
+
+Lesson Objectives
+
+The student will know how to perform basic arithmetic calculations in the Python shell.
+Goal: The student will know how to independently perform an arithmetic calculation using error free Python syntax in the Python shell without any assistance.
+Activities:
+Read the reading assignment
+Watch the video lecture
+Think about the Lesson Questions
+Read through and test the Examples given on your own.
+Complete the given computer lab
+Complete the given challenge problems
+Success Criteria: The student can successfully perform any arithmetic operation in the Python shell using +, -, x, /, and exponentiation on their own without any outside assitance.
+The student will know how to declare a Python variable following the naming conventions and rules (given in PEP 8)
+Goal: The student will follow the given resources to learn how to create their own Python variables following the naming conventions and rules given in PEP 8
+Activities:
+Read the reading assignment
+Watch the video lecture
+Think about the Lesson Questions
+Read through and test the Examples given on your own.
+Complete the given computer lab
+Complete the given challenge problems
+Success Criteria: The student will know how to declare a Python variable using the naming conventions and rules defined in PEP 8 and run their Python code with no syntax errors.
 Opening Meditation
 
-Psalm 90:17 (ESV) “Let the favor of the Lord our God be upon us, and establish the work of our hands upon us; yes, establish the work of our hands!”
+Introductory thoughts
+Your Heavenly Father has given you a name. It is directly from Him. Don't believe me? Read Revelation 2:17. This name is personal. So personal that only you and your God will know it.
+In Python it is important to name your variables correctly. The name that believers receive from their God is perfectly correct and a wonderful sign of the personal care He has for us.
+Devotional Link: God has planned your glory
+Reading Assignment
 
-We want to begin this lesson well, so read and meditate upon Psalm 90:17. Even if you encounter errors in this lesson, this does not mean you have failed. Seek, ask questions of your instructor, try and try again. May the Lord establish us as we begin this journey together.
+Python with a Worldview by John C. Partridge - 1st Edition
 
+Textbook - Chapter 1 - Lesson 1: Variables and Data Types, pages XX - XX
 
+Reading Goals:
 
-Textbook Instructions for this lesson can also be found in
+✅ The student will learn how to declare variable assignments in Python
+✅ The student will become aware about PEP documentation
+✅ The student will learn the rules of naming a variable in Python
+✅ The student will learn the naming conventions for variables in Python
+✅ The student will learn about Syntax and Name errors, why and how they are generated.
+▶ Video Lecture
 
-Chapter 0 - Downloading and Installing Python
+Arithmetic, Variable Naming Rules and Conventions
+Lesson Questions
 
-System Requirements and Installation
+Why did the creators of Python establish the rule that a variable must not begin with a number?
+What reason or reasons would there be for not allowing a Python variable to contain a special character, like #, or @, etc.. ?
+Why are not spaces allowed in a variable name?
+Examples
 
-This lesson is composed of a two part process.
+Getting Ready: Here are some examples that make us think. This section is like another warm up session before we take the computer lab.
 
+Example 1:
 
+Example 2:
 
+Example 3:
 
+Example 4:
 
-Check to see if your system has the minimum requirements to install the needed software (Python 3.XX)
+Computer Lab
 
+In this hands-on lab, you will apply what you've learned by completing a series of interactive tasks directly in the Python Shell. Work through each exercise step by step. Read through the instructions carefully and make sure you understand each step. If you find something confusion or puzzling, or if you think you have discovered a typo or mistake. Contact your instructor!
 
+Computer lab:
 
-Installing the needed software (Python 3.XX)
+Challenge Problems
 
-Note: Python 3.XX means any version of Python from 3.10, 3.11, and so on and so forth.
+Now it is time to put your Python Shell skills to the test with these slightly more advanced, open-ended challenges. Work through each problem in the interactive REPL, experiment freely, and record your final session output.
 
+Challenge Problems:
 
+Solutions to Challenge Problems
 
-At the given link in this paragraph, you will find both steps in one single page. This link will open a new tab to the LogosTeach - Python with a Worldview Git Hub Page.
+The final link below is the complete, working solutions to the challenge problems. Review them only after attempting the challenges yourself.
 
-
-
-Go through each step carefully. If there are typos, or you encounter problems during this process then contact your instructor and in the Subject Line specify the nature of the problem and be as detailed as you can in the email body on which part of the installation process you are having difficulty with.
-
-
-
----------------------------------------------------------------------------------------
-
-Windows 11 Users Note: IMPORTANT! Please read through these
-
-following links first.
-
-
-
-Windows 11 - Python Clean Install
-
-
-
-Note: Windows Users: Make absolutely sure that when the Python installation wizard appears, you check the box that states "Add to Path"
-
----------------------------------------------------------------------------------------
-
-
-
-Verifying the Installation
-
-Next, we want to verify the installation of Python.
-
-
-
-
-
-In Windows you will want to open up the Command Prompt and type in 
-
-python -- version
-
-Note: You can do a web search for: "In Windows, how do I open the Command Prompt?" if you are not sure how to do this on your own.
-
-
-
-In macOS/Linux you will want to open up the Terminal Window and type in python3 --version
-
-Note: You can do a web search for: "In macOS or Linux, how do I open the Terminal window?" If you are not sure how to do this on your own.
-
-If you got something like: python 3.13.5 (or other number) the installation was successful. If you got an error, then contact your instructor.
-
-
-
-Summary
-
-In this lesson we first checked to see if our computer systems had at least the minimum requirements to install Python 3.XX. Assuming this was the case, we then proceeded to download and install the latest version of Python onto our computer and then verify the installation.
-
-
-
-© LogosTeach 2025 - All Rights Reserved
+Solutions Key:
