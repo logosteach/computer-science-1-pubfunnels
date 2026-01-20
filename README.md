@@ -4,6 +4,6 @@
 
 This repository contains specialized content for the Computer Science 1 Course hosted by Anistemi Publishing. 
 
-Author: LogosTeach
+Author: [LogosTeach](https://www.logosteach.com)
 
-&copy; LogosTeach 2025 - All Rights Reserved
+&copy; [LogosTeach](https://www.logosteach.com) 2026 - All Rights Reserved
