@@ -29,4 +29,20 @@ You can find more information about the author and biblicall integrated content 
 
 Let's get started!
 
+# Unit 1 - Objectives
+
+## Lesson 1 - Objectives
+
+## Lesson 2 - Objectives
+
+## Lesson 3 - Objectives
+
+## Lesson 4 - Objectives
+
+## Lesson 5 - Objectives
+
+
+
 &copy; LogosTeach 2025 - All Rights Reserved
+
+Author: John C. Partridge
