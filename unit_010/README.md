@@ -43,3 +43,6 @@ By the end of the lesson, students will be able to:
 - use the `@pytest.mark.parametrize` decorator to create parameterized tests.
 - write parameterized test functions using `@pytest.mark.parametrize`.
 - read the following verses (John 17:17; 2 Corinthians 6:17; 2 Timothy 2:21) and develop one or more parallels between the concept of a Python virtual environment and how the LORD sanctifies, sets apart, and equips believers—creating a Christ centered, and Christ focused walk in their lives, dying to self daily, so they can be useful vessels for His good purposes and plans.
+
+&copy; LogosTeach 2026 - All Rights Reserved.
+author: John C. Partridge
