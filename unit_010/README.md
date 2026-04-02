@@ -33,4 +33,10 @@ By the end of the lesson the student will..
 
 By the end of the lesson the student will..
 
-- 
+- be able to download and install the `pytest` third party package indpendently into a virtual environment.
+- be able to write `test_..` methods for testing with `pytest` using Python's `assert` keyword.
+- be able to describe the advantages of using `pytest` over `unittest`.
+- be able to describe the basic idea behind _boilerplate_ code.
+- be able to write and implement the `@pytest.fixture` decorator in their programs.
+- be able to write and implement the `@pytest.mark.parametrize` decorator in their programs.
+- be able to write parametrizations of their test functions.
