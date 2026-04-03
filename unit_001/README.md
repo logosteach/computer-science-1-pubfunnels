@@ -48,6 +48,7 @@ By the end of the lesson, students will be able to:
 - verify that Python was installed correctly by checking its version.
 - launch and navigate the IDLE (Integrated Development and Learning Environment) shell.
 - describe the basic layout and purpose of the IDLE interface.
+- articulate how the careful process of downloading Python only from the official, trustworthy source parallels the biblical truth that “faith comes from hearing” — just as we must receive software through the correct medium and verified source, so faith comes through hearing and believing the true gospel of Jesus Christ (Romans 10:17).
 
 ## Lesson 2 Objectives
 
@@ -58,6 +59,7 @@ By the end of the lesson, students will be able to:
 - understand the difference between the interactive shell and running saved scripts.
 - use basic arithmetic operators and see immediate results in the shell.
 - recognize and correct simple syntax errors in the interactive environment.
+- reflect on how the interactive nature of the Python IDLE shell (where we type commands and receive immediate feedback) reminds us that our relationship with God is not passive; rather, we are called to actively engage in worship, listen to the preaching of His Word, read Scripture for ourselves, pray with thanksgiving and supplication, and seek to share the gospel with others so that our lives increasingly reflect the obedience of Christ.
 
 ## Lesson 3 Objectives
 
@@ -68,6 +70,7 @@ By the end of the lesson, students will be able to:
 - use escape sequences such as `\n` (newline) and `\t` (tab) within `print()` statements.
 - concatenate strings and numbers using the `+` operator or commas in `print()`.
 - create simple, formatted output messages using the `print()` function.
+- explain the importance of clear and intentional output in programming and draw a parallel to the biblical command to let our speech and actions be gracious, clear, and purposeful (Colossians 4:6).
 
 ## Lesson 4 Objectives
 
@@ -78,6 +81,7 @@ By the end of the lesson, students will be able to:
 - understand the difference between running code in the shell versus running a saved script.
 - use comments (`#`) effectively to document their code.
 - edit, debug, and re-run scripts within the IDLE environment.
+- reflect on how moving from single commands in the shell to writing, saving, and running multi-line scripts illustrates the biblical value of building lasting, purposeful work instead of living for momentary impulses, as James encourages us to be doers of the Word and not hearers only (James 1:22-25).
 
 ## Lesson 5 Objectives
 
@@ -89,6 +93,7 @@ By the end of the lesson, students will be able to:
 - write, save, and run Python scripts using the VS Code integrated terminal and Run button.
 - compare the features of IDLE versus VS Code and explain when each tool is useful.
 - understand the purpose of the VS Code Marketplace and explain how to identify safe, reputable extensions versus those that may be malicious.
+- compare the features of IDLE versus VS Code and reflect on how different tools are useful for different purposes, just as God equips each believer with unique gifts, callings, and resources for His kingdom work (1 Corinthians 12:4-7).
 
 &copy; LogosTeach 2025 - All Rights Reserved
 
