@@ -95,6 +95,6 @@ By the end of the lesson, students will be able to:
 - understand the purpose of the VS Code Marketplace and explain how to identify safe, reputable extensions versus those that may be malicious.
 - compare the features of IDLE versus VS Code and reflect on how different tools are useful for different purposes, just as God equips each believer with unique gifts, callings, and resources for His kingdom work (1 Corinthians 12:4-7).
 
-&copy; LogosTeach 2025 - All Rights Reserved
+&copy; LogosTeach 2026 - All Rights Reserved
 
 Author: John C. Partridge
