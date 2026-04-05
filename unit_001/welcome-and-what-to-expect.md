@@ -23,6 +23,6 @@ Students who are not believers in Christ are still invited and welcome to take t
 
 With many blessings to you today  
 
-**— John C. Partridge**
-
 © LogosTeach 2026 - All Rights Reserved
+
+Author: John C. Partridge
