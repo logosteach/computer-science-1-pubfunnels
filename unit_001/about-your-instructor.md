@@ -1,6 +1,6 @@
-# Hello!
+# Welcome to Computer Science
 
-My name is **Mr. John Partridge**. I am first and foremost **in Christ Jesus by faith alone**. Additionally, I am husband to my beautiful wife Karen, and father to five amazing blessings given in the Lord. My family and I live in Maine.
+Hello! My name is **Mr. John Partridge**. I am first and foremost **in Christ Jesus by faith alone**. Additionally, I am husband to my beautiful wife Karen, and father to five amazing blessings given in the Lord. My family and I live in Maine.
 
 Currently, I am the founder, maintainer, and sole employee of [LogosTeach](https://www.logosteach.com) — a ministry organization dedicated to providing Christian educational materials that are anchored in the Lord Jesus Christ.
 
