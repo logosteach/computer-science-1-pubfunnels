@@ -2,13 +2,13 @@
 
 ## Introduction
 
-
+Qui ea et ea in cillum fugiat aliquip eiusmod. Commodo officia non tempor mollit ea. Veniam sunt sit eiusmod ullamco non. Reprehenderit aliquip dolor incididunt et sunt commodo. Et qui mollit ullamco deserunt reprehenderit do excepteur do et commodo.
 
 ## Reading
 
 > **Python with a Worldview <sup>2nd</sup> Edition**
-> Chapter 7 - Putting Your Code To The Test
-> Lesson 1 - Assert Thyself
+> Chapter X - Chapter Title
+> Lesson X - Lesson Title
 
 ## Reading Questions
 
@@ -16,13 +16,8 @@
 > 
 > These questions are closely connected to the key ideas in the text. To make your reading more active and purposeful, try creating a quick checklist of these questions. As you come across the answers while reading, check them off. This will help you stay focused and get more out of the material!
 
-1. What is the definition of an assertion statement?
-2. What type of error does an assertion statement throw?
-3. How is the `assert` keyword used when the programmer want to develop their own custom error message?
-4. What are the advantages to using assertion statements?
-5. When should a programmer not use assertion statements?
-6. What are the three basic types of assertion statements covered in this lesson?
-7. Can you explain, in your own words, what is meant by _using assertion statements as documentation items?_
+1. question
+2. question
 
 ## Warm Up Session
 
@@ -31,13 +26,7 @@ Open the Python shell in your computer and type in the following statements.
 #### Part 1
 
 ```python
-x = 5
-y = 3.4
-z = "5.4"
-
-assert isinstance(x, int)
-assert isinstance(y,float)
-assert isinstance(z ,float)
+# part 1
 ```
 
 What happened? Can you explain why?
@@ -45,14 +34,10 @@ What happened? Can you explain why?
 #### Part 2
 
 ```python
-# Is it possible to check two things at once?
-x = 5
-y = 3.4
-z = x + y
-assert isinstance(z, (int, float))
+# part 2
 ```
 
-Does this work? Change x to a floating point number and then check the code again. Next, change both to integers and see if it works.
+
 
 ## Video Examples
 
