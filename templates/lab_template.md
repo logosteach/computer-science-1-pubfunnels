@@ -37,8 +37,6 @@ What happened? Can you explain why?
 # part 2
 ```
 
-
-
 ## Video Examples
 
 ***Here is where links for the video sessions for this lesson will go.***
