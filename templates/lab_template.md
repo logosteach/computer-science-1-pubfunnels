@@ -102,9 +102,9 @@ Copy and run this block after you’ve completed Steps 1–N. It uses all the co
 
 ### Lab Reflection (Answer in your notebook)
 
-1. <Copy Question 0 or first question here>
-2. <Copy Question 1 here>
-3. <Copy Question 2 here>
+1. <Copy Question 1 or first question here>
+2. <Copy Question 2 here>
+3. <Copy Question 3 here>
 4. ...
    
 *(List every Question that appeared in the lab so students have a clean checklist.)*
