@@ -1,84 +1,127 @@
-# Lesson 1 - Assert Thyself
+# Computer Lab: <Descriptive Lab Title>
 
-## Introduction
+## Learning Objectives
+By the end of this lab, you will be able to:
+- <objective 1>
+- <objective 2>
+- <objective 3>
 
-Qui ea et ea in cillum fugiat aliquip eiusmod. Commodo officia non tempor mollit ea. Veniam sunt sit eiusmod ullamco non. Reprehenderit aliquip dolor incididunt et sunt commodo. Et qui mollit ullamco deserunt reprehenderit do excepteur do et commodo.
+## Lab Topics
+<Short list of 3–5 main Python concepts or skills this lab covers>
 
-## Reading
+## Materials / Prior Knowledge
+**You should already know:** <list any prerequisite concepts>  
+**You will need:** <e.g. Python installed, or specific files>
 
-> **Python with a Worldview <sup>2nd</sup> Edition**
-> Chapter X - Chapter Title
-> Lesson X - Lesson Title
+---
 
-## Reading Questions
-
-> **_Helpful tip before you start reading:_**
-> 
-> These questions are closely connected to the key ideas in the text. To make your reading more active and purposeful, try creating a quick checklist of these questions. As you come across the answers while reading, check them off. This will help you stay focused and get more out of the material!
-
-1. question
-2. question
-
-## Warm Up Session
-
-Open the Python shell in your computer and type in the following statements.
-
-#### Part 1
+### Step 0: <Subtitle about setting up the code or environment>
 
 ```python
-# part 1
+# All necessary setup code goes here.
+# Add comments for anything that might be confusing for beginners.
 ```
 
-What happened? Can you explain why?
+**Question 0:** <A question that helps the student think about the setup they just did.>
 
-#### Part 2
+### Step 1: <Learning Topic Goes Here>
+
+**Context:**  
+<Explain the real-world or practical situation the student is coding for.>
+
+**Your Challenge:**  
+<Clear, numbered list of instructions for what the code should do.>
 
 ```python
-# part 2
+# Your starter code template goes here (replace comments)
+# Keep it partial so students must think and fill in key parts.
 ```
 
-## Video Examples
+**Expected Output / Test It:**  
+```
+<Show an example of correct output when the code runs successfully>
+```
 
-***Here is where links for the video sessions for this lesson will go.***
+**Question 1:** <First question about the code the student just wrote.>
 
-## Computer Lab
+**Question 2:** <Next question about the code.>
 
-Welcome to the Python computer labs!  
+### Step 2: <Next Learning Topic>
 
-Computer Labs are added in the **Attached Files** section on this page.
+**Context:**  
+<Explain the situation.>
 
-These labs are provided as **Markdown (.md) files**. Markdown is a simple formatting language that makes instructions, code examples, and questions easy to read. VS Code has excellent built-in support for Markdown, so you can view the nicely formatted version (with headings, code blocks, lists, etc.) while you work.
+**Your Challenge:**  
+<Instructions.>
 
-### How to Open and Preview a Markdown File in VS Code
+```python
+# Starter code template
+```
 
-1. **Open the lab file**
-   - Launch **Visual Studio Code**.
-   - Go to **File > Open Folder...** and select the folder containing your lab files (recommended), or simply **File > Open File...** and choose the specific `.md` file.
+**Expected Output / Test It:**  
+```
+<Example output>
+```
 
-2. **Preview the Markdown (recommended way to read the lab)**
-   Once the `.md` file is open in the editor:
+**Question 3:** <Question>
 
-   **On Windows or Linux:**
-   - Press `Ctrl + Shift + V` (this opens the preview in a new tab)
-   - Or press `Ctrl + K` then `V` (this opens a side-by-side preview — very useful!)
+**Question 4:** <Question>
 
-   **On macOS:**
-   - Press `Cmd + Shift + V` (opens preview in a new tab)
-   - Or press `Cmd + K` then `V` (opens side-by-side preview)
+*(Continue adding Step 3, Step 4, … as needed. Usually 3–5 total learning steps work best for the time limit.)*
 
-    **Alternative methods (work on all operating systems):**
+### Step N: <Final Integration / Wrap-up Topic>
 
-   - Right-click the file tab at the top and choose **Open Preview** (or **Open Preview to the Side**).
-   - Right-click the file in the Explorer sidebar and choose **Open Preview**.
-   - Open the Command Palette (`Ctrl + Shift + P` on Windows/Linux or `Cmd + Shift + P` on macOS), type "Markdown: Open Preview", and select it.
+**Context:**  
+<Explain how this step ties everything together.>
 
-The preview updates **live** as you make any changes (though you usually won't need to edit the instructions themselves).
+**Your Challenge:**  
+<Instructions for the final activity.>
 
-### Working on the Lab
+```python
+# Final starter code template (if needed)
+```
 
-- You can keep the **preview** open on one side and write your Python code in a new `.py` file on the other side.
-- Feel free to add notes directly in the Markdown file if it helps you.
+**Expected Output / Test It:**  
+```
+<Example output>
+```
 
-You're all set! If you have any questions about using VS Code, just ask.
+**Question X:** <Wrap-up thinking question.>
 
-&copy; 2026 LogosTeach - All Rights Reserved
+---
+
+### Final Integration Code
+Copy and run this block after you’ve completed Steps 1–N. It uses all the concepts and variables from the lab.
+
+```python
+# Final wrap-up code (provide a meaningful, complete block here)
+# Add comments to help students understand how everything connects.
+```
+
+---
+
+### Lab Reflection (Answer in your notebook)
+
+1. <Copy Question 0 or first question here>
+2. <Copy Question 1 here>
+3. <Copy Question 2 here>
+4. ...
+   
+*(List every Question that appeared in the lab so students have a clean checklist.)*
+
+### Bonus Challenge (Extra Credit – 5–10 minutes)
+
+**Context:**  
+<Brief context.>
+
+**Your Task:**  
+<More advanced instructions that extend the main lab.>
+
+---
+
+You’re done!  
+You just <short motivational summary of what they accomplished>.  
+
+Save your file as `<lab_topic>_lab.py` and be ready to discuss your answers in class!
+
+&copy; LogosTeach 2026 - All Rights Reserved. 
