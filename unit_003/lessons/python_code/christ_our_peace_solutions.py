@@ -23,19 +23,25 @@ print("TASK 1: Loop through the dictionary and print only the references (keys)"
 print("-" * 60)
 
 # Students should write code here:
-# for loop goes here...
+for reference in christ_our_peace:
+    print(reference)
 
 print("\nTASK 2: Loop through and print the full verses (values only)")
 print("-" * 60)
 
 # Students should write code here:
-# for loop goes here...
+for verse in christ_our_peace.values():
+    print(verse)
+    print()
 
 print("\nTASK 3: Loop through and print both reference + verse (BEST way)")
 print("-" * 60)
 
 # Students should write code here:
-# for loop goes here...
+for reference, verse in christ_our_peace.items():
+    print(f"{reference}:")
+    print(f"   {verse}")
+    print()
 
 # ======================
 # BONUS CHALLENGE
@@ -45,10 +51,10 @@ print("BONUS CHALLENGE:")
 print("Print only the verses that contain the word 'peace' (case insensitive)")
 
 for ref, verse in christ_our_peace.items():
-    # special conditions go here...
+    if "peace" in verse.lower():
+        print(f"✓ {ref}")
 
 # Copyright 2026 LogosTeach - All Rights Reserved.
-
 """
 This software is for educational purposes only. It is not intended for commercial use or distribution.
 """
