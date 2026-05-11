@@ -218,16 +218,13 @@
 
 ---
 
-**Additional Teacher Resources (Markdown ready to copy):**
-
 **Full Code Examples Repository Suggestion**  
 Create a folder for each lesson with `.py` files.
 
 **Suggested Homework Progression:**
+
 - Lesson 1–2: Create 3 personal dictionaries
 - Lesson 3–4: Modify and explore methods
 - Lesson 5: Loop and print nicely formatted information
 - Lesson 6: Build one nested structure
 - Lesson 7: Complete both mini-projects
-
-Would you like me to expand any specific lesson with full code samples, quiz questions, or slide suggestions?
