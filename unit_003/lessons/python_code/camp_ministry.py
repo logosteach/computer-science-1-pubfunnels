@@ -1,6 +1,10 @@
 # BIBLE CAMP SMALL GROUP PLANNER
 # Mini Project - Python Dictionaries
 
+"""
+Jason is preparing to be a counsellor at his church's upcoming Bible camp. He has a small group of kids that he'll be leading, and he wants to keep track of their names, ages, and what they're interested in learning about from the Bible. He decides to use a Python dictionary to organize this information. Each key in the dictionary will be the name of a kid, and the value will be a string containing their age and their Bible interests.
+"""
+
 print("$ BIBLE CAMP SMALL GROUP PLANNER")
 print("=" * 50)
 print("I'm getting ready to lead my small group at Bible camp!\n")
