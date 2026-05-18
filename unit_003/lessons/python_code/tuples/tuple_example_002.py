@@ -14,7 +14,15 @@ print(max(numbers))  # Output: 10
 mixed_numbers = (5, 2, 9, 1, 5, 6)
 sorted_numbers = sorted(mixed_numbers)
 type(mixed_numbers)  # Output: <class 'tuple'>
+print(mixed_numbers)  # Output: (5, 2, 9, 1, 5, 6)
 type(sorted_numbers)  # Output: <class 'list'>
+print(sorted_numbers)  # Output: [1, 2, 5, 5, 6, 9]
+
+# Use tuple() to convert the list back to a tuple.
+sorted_tuple = tuple(sorted_numbers)
+
+# Calculating the length of a tuple
+print(len(numbers))  # Output: 10
 
 """
 Copyright 2026 LogosTeach - All Rights Reserved
