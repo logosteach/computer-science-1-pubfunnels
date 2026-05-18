@@ -1,0 +1,97 @@
+.lesson-container {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.lesson-container h1 {
+    font-size: 2.6em;
+    margin-bottom: 25px;
+    color: #1a3c5e;
+    border-bottom: 5px solid #2c7a7b;
+    padding-bottom: 18px;
+    font-weight: 700;
+}
+
+.lesson-container h2 {
+    font-size: 1.85em;
+    margin: 50px 0 18px 0;
+    color: #2c7a7b;
+    border-left: 6px solid #2c7a7b;
+    padding-left: 16px;
+}
+
+.lesson-container p {
+    font-size: 1.08em;
+    margin-bottom: 22px;
+    color: #444444;
+}
+
+.lesson-container ul {
+    font-size: 1.08em;
+    padding-left: 28px;
+    margin-bottom: 45px;
+}
+
+.lesson-container ul li {
+    margin-bottom: 12px;
+}
+
+.lesson-container a {
+    color: #2c7a7b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lesson-container a:hover {
+    text-decoration: underline;
+}
+
+.lesson-container strong {
+    color: #1a3c5e;
+}
+
+.lesson-container em {
+    color: #555555;
+}
+
+/* Special sections */
+.feedback-box {
+    background-color: #f8f9fa;
+    padding: 22px;
+    border-left: 6px solid #2c7a7b;
+    margin: 35px 0;
+    font-size: 1.05em;
+}
+
+.biblical-quote {
+    background-color: #f0f7f7;
+    border-left: 8px solid #2c7a7b;
+    margin: 35px 0;
+    padding: 28px 32px;
+    font-style: italic;
+    color: #1a3c5e;
+    font-size: 1.12em;
+    line-height: 1.65;
+}
+
+.footer {
+    margin-top: 70px;
+    padding-top: 25px;
+    border-top: 2px solid #e0e0e0;
+    font-size: 0.95em;
+    color: #777777;
+    text-align: center;
+}
+
+/* Optional: Make objectives list look nicer */
+.objectives-list li:last-child {
+    color: #1a3c5e;
+    font-weight: 500;
+}
