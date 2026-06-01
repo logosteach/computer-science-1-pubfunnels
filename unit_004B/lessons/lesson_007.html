@@ -1,0 +1,144 @@
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+        Lesson 007 - Putting It All Together: Loops Best Practices
+    </h1>
+
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+        Below are clear examples, common pitfalls, and best practices for each learning objective.
+    </p>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        1. Choose the most appropriate loop (for or while)
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <table style="width:100%; border-collapse:collapse; font-size:1.05em;">
+            <tr style="background:#f8f9fa;">
+                <th style="padding:12px; text-align:left; border:1px solid #ddd;">Use <strong>for</strong> loop when...
+                </th>
+                <th style="padding:12px; text-align:left; border:1px solid #ddd;">Use <strong>while</strong> loop
+                    when...</th>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;">You know the number of iterations in advance</td>
+                <td style="padding:12px; border:1px solid #ddd;">You don’t know how many times it will run</td>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;">Iterating over a list, string, or range</td>
+                <td style="padding:12px; border:1px solid #ddd;">Repeating based on a condition</td>
+            </tr>
+        </table>
+
+        <p><strong>Example - for loop (better choice):</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for student in students:
+    print("Processing", student)</pre>
+
+        <p><strong>Example - while loop (better choice):</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">while not game_over:
+    process_turn()</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        2. Identify and fix common loop errors
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Common Error 1: Infinite Loop</strong></p>
+        <pre style="background:#fee; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;">count = 0
+while count < 10:
+    print(count)        # Forgot to increment!</pre>
+
+        <p><strong>Fixed Version:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
+while count < 10:
+    print(count)
+    count += 1</pre>
+
+        <p><strong>Common Error 2: Off-by-One</strong></p>
+        <pre style="background:#fee; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;">for i in range(5):      # Prints 0 to 4 (only 5 numbers)
+    print(i)</pre>
+
+        <p><strong>Fixed Version (if you want 1 to 5):</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(1, 6):      # Correct: 1 to 5
+    print(i)</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        3. Debug loops using print statements
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Debugging Example:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">numbers = [3, 7, 2, 9, 1]
+target = 9
+
+for i in range(len(numbers)):
+    print(f"Checking index {i}: {numbers[i]}")   # Debug print
+    if numbers[i] == target:
+        print("Target found at index", i)
+        break</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        4. Write clean, readable, and efficient loop code (Best Practices)
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Good Practice Examples:</strong></p>
+
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;"># Clean & Readable
+for student in students:
+    process_student_record(student)
+
+# Use meaningful variable names
+total_sales = 0
+for sale in daily_sales:
+    total_sales += sale</pre>
+
+        <p><strong>Avoid Deep Nesting:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;"># Instead of deep nesting, consider using functions or list comprehensions
+squares = [x**2 for x in range(10)]</pre>
+
+        <p><strong>Best Practices Summary:</strong></p>
+        <ul style="font-size: 1.08em; padding-left: 28px;">
+            <li>Use <code>for</code> when possible — it's usually cleaner</li>
+            <li>Keep loops as simple as possible</li>
+            <li>Use meaningful variable names</li>
+            <li>Limit nesting depth (ideally no more than 2–3 levels)</li>
+            <li>Include comments for complex logic</li>
+        </ul>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        5. Biblical Reflection
+    </h2>
+    <div
+        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        <p>
+            Mastering loops teaches us diligence, patience, and the importance of doing things in an orderly way.
+            Just as we write clear and efficient code, God calls us to live with purpose and excellence.
+        </p>
+        <p style="margin-top: 15px;">
+            <strong>Scripture:</strong><br>
+            “Let all things be done decently and in order.” (1 Corinthians 14:40)<br><br>
+            “Whatever you do, work at it with all your heart, as working for the Lord…” (Colossians 3:23)
+        </p>
+    </div>
+
+    <div
+        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+        <em>If you find any typos or errors, please let me know.</em><br><br>
+        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 007"
+            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+    </div>
+
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+        © 2026 LogosTeach - All Rights Reserved.
+    </div>
+
+</div>

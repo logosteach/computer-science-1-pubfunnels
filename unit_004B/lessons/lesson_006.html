@@ -1,0 +1,109 @@
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+        Lesson 006 - Nested Loops: Examples & Illustrations
+    </h1>
+
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+        Below are clear examples and illustrations for each learning objective in this lesson.
+    </p>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        1. Create and understand nested for and while loops
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Basic Nested For Loops:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for outer in range(3):           # Outer loop
+    for inner in range(4):       # Inner loop
+        print(f"({outer}, {inner})", end=" ")
+    print()                         # New line after inner loop</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        2. Use nested loops to solve problems (patterns, tables, grids)
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Example: Multiplication Table</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(1, 6):
+    for j in range(1, 6):
+        print(f"{i*j:3}", end=" ")
+    print()</pre>
+
+        <p><strong>Example: Star Pattern (Right Triangle)</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">rows = 5
+for i in range(1, rows + 1):
+    for j in range(i):
+        print("*", end="")
+    print()</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        3. Trace the execution of nested loops (outer vs inner)
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Tracing Example:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for outer in range(1, 4):
+    print(f"Outer loop: {outer}")
+    for inner in range(1, 3):
+        print(f"   Inner loop: {inner} (inside outer {outer})")
+    print("--- Finished inner loop ---")</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        4. Avoid common pitfalls (excessive nesting & off-by-one errors)
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Common Mistake — Off-by-one:</strong></p>
+        <pre style="background:#fee; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;">for i in range(5):      # Wrong: goes 0 to 4
+    for j in range(5):
+        print(i, j)</pre>
+
+        <p><strong>Better Practice:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(1, 6):    # Clearer: 1 to 5
+    for j in range(1, 6):
+        print(i, j)</pre>
+
+        <p><strong>Tip:</strong> Avoid nesting more than 3 levels deep when possible. Consider using functions to
+            simplify deeply nested code.</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        5. Biblical Reflection
+    </h2>
+    <div
+        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        <p>
+            Nested loops show us that God often works in layers — He has purposes within purposes.
+            What looks complex to us is beautifully intricate and orderly in His perfect plan.
+        </p>
+        <p style="margin-top: 15px;">
+            <strong>Scripture:</strong><br>
+            “For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans
+            to give you hope and a future.”
+            (Jeremiah 29:11)<br><br>
+            “Oh, the depth of the riches of the wisdom and knowledge of God! How unsearchable his judgments, and his
+            paths beyond tracing out!”
+            (Romans 11:33-34)
+        </p>
+    </div>
+
+    <div
+        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+        <em>If you find any typos or errors, please let me know.</em><br><br>
+        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 006"
+            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+    </div>
+
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+        © 2026 LogosTeach - All Rights Reserved.
+    </div>
+
+</div>

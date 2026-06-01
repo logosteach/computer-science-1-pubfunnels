@@ -1,0 +1,116 @@
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+        Lesson 005 - The Pass Statement and Loop Else Clause: Examples & Illustrations
+    </h1>
+
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+        Below are clear examples and illustrations for each learning objective in this lesson.
+    </p>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        1. Use the pass statement as a placeholder
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Using <code>pass</code> in a loop (placeholder):</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
+    if i == 2:
+        pass          # TODO: Add logic later
+    else:
+        print(i)</pre>
+
+        <p><strong>Using <code>pass</code> in conditional blocks:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">number = 10
+
+if number > 0:
+    print("Positive")
+elif number < 0:
+    print("Negative")
+else:
+    pass              # Do nothing for zero (placeholder)</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        2 & 3. The optional else clause with for and while loops
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>For Loop with <code>else</code>:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
+    print(i)
+else:
+    print("Loop completed normally!")</pre>
+
+        <p><strong>For Loop with <code>break</code> (else does NOT run):</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(10):
+    print(i)
+    if i == 3:
+        print("Breaking early...")
+        break
+else:
+    print("Loop completed normally!")</pre>
+
+        <p><strong>While Loop with <code>else</code>:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
+while count < 5:
+    print(count)
+    count += 1
+else:
+    print("While loop finished successfully!")</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        4. Practical use of pass and else clause
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Realistic Example — Searching with else clause:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">numbers = [12, 45, 67, 23, 89]
+target = 67
+
+for num in numbers:
+    if num == target:
+        print("Target found!")
+        break
+else:
+    print("Target not found in the list.")</pre>
+
+        <p><strong>Cleaner Code Tip:</strong> Use <code>pass</code> when you're sketching structure and
+            <code>else</code> to handle "no break occurred" scenarios cleanly.</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        5. Biblical Reflection
+    </h2>
+    <div
+        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        <p>
+            The <strong>else</strong> clause in a loop runs only when the loop completes normally — without encountering
+            a <code>break</code>.
+            In the same way, God’s promises are “Yes” and “Amen” when we remain faithful and do not quit prematurely.
+        </p>
+        <p style="margin-top: 15px;">
+            <strong>Scripture:</strong><br>
+            “For all the promises of God find their Yes in him. That is why it is through him that we utter our Amen to
+            God for his glory.”
+            (2 Corinthians 1:20)
+        </p>
+    </div>
+
+    <div
+        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+        <em>If you find any typos or errors, please let me know.</em><br><br>
+        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 005"
+            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+    </div>
+
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+        © 2026 LogosTeach - All Rights Reserved.
+    </div>
+
+</div>

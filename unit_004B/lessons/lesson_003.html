@@ -1,0 +1,126 @@
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+        Lesson 003 - The For Loop and the range() Function: Examples & Illustrations
+    </h1>
+
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+        Below are clear examples and illustrations for each learning objective in this lesson.
+    </p>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        1. Understand the range() function — what it produces and how to use it in a for loop
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>What does <code>range()</code> produce?</strong></p>
+        <p>It generates a sequence of numbers (it returns a <strong>range object</strong>, not a list).</p>
+
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">print(range(5))          # range(0, 5)
+print(list(range(5)))    # [0, 1, 2, 3, 4]</pre>
+
+        <p><strong>Using it in a for loop:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
+    print("Iteration", i)</pre>
+        <p><strong>Output:</strong> Iteration 0, Iteration 1, Iteration 2, Iteration 3, Iteration 4</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        2. Use the range() function with start, stop, and step parameters
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Full syntax:</strong> <code>range(start, stop, step)</code></p>
+
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;"># Count from 2 to 10 (stop is exclusive)
+for i in range(2, 11):
+    print(i)
+
+# Count by 2s (step)
+for i in range(0, 21, 2):
+    print(i)        # 0, 2, 4, ..., 20
+
+# Count backwards
+for i in range(10, 0, -1):
+    print(i)        # 10 down to 1</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        3. Iterate over sequences such as strings and simple lists
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Looping over a list:</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print("I like", fruit)</pre>
+
+        <p><strong>Looping over a string (character by character):</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for letter in "Python":
+    print(letter)</pre>
+        <p><strong>Output:</strong> P y t h o n (one letter per line)</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        4. Explain when to use a for loop versus a while loop
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <table style="width:100%; border-collapse:collapse; font-size:1.05em;">
+            <tr style="background:#f8f9fa;">
+                <th style="padding:12px; text-align:left; border:1px solid #ddd;">Use a <strong>for</strong> loop when…
+                </th>
+                <th style="padding:12px; text-align:left; border:1px solid #ddd;">Use a <strong>while</strong> loop
+                    when…</th>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;">You know how many times you want to repeat (fixed
+                    number)</td>
+                <td style="padding:12px; border:1px solid #ddd;">You don’t know in advance how many times it will run
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;">Iterating over a list, string, range, etc.</td>
+                <td style="padding:12px; border:1px solid #ddd;">Repeating until a condition becomes False</td>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;">Example: printing numbers 1–10</td>
+                <td style="padding:12px; border:1px solid #ddd;">Example: keep asking for password until correct</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        5. Biblical Reflection
+    </h2>
+    <div
+        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        <p>
+            Just as a <strong>for loop</strong> moves through a known sequence one step at a time, God leads us step by
+            step through life.
+            We don’t always see the full journey ahead, but we can trust His Word to light the next step.
+        </p>
+        <p style="margin-top: 15px;">
+            <strong>Scripture:</strong><br>
+            “Your word is a lamp to my feet and a light to my path.” (Psalm 119:105)<br>
+            “Trust in the Lord with all your heart, and do not lean on your own understanding. In all your ways
+            acknowledge him, and he will make straight your paths.” (Proverbs 3:5-6)
+        </p>
+    </div>
+
+    <div
+        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+        <em>If you find any typos or errors, please let me know.</em><br><br>
+        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 003"
+            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+    </div>
+
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+        © 2026 LogosTeach - All Rights Reserved.
+    </div>
+
+</div>

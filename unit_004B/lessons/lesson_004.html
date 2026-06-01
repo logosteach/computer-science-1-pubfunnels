@@ -1,0 +1,123 @@
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+        Lesson 004 - Loop Control Statements: Break and Continue: Examples & Illustrations
+    </h1>
+
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+        Below are clear examples and illustrations for each learning objective in this lesson.
+    </p>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        1. Use the break statement to exit a loop early
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong><code>break</code> immediately exits the loop.</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(10):
+    print(i)
+    if i == 5:
+        print("Found 5! Stopping...")
+        break</pre>
+        <p><strong>Output:</strong> 0 1 2 3 4 5 Found 5! Stopping...</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        2. Use the continue statement to skip the rest of the current iteration
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong><code>continue</code> skips to the next iteration.</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(8):
+    if i % 2 == 0:      # Skip even numbers
+        continue
+    print(i)</pre>
+        <p><strong>Output:</strong> 1 3 5 7 (only odd numbers)</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        3. Apply break and continue to solve practical programming problems
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Practical Example: Search with early exit</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">numbers = [12, 45, 67, 89, 34, 67, 23]
+
+for num in numbers:
+    if num == 67:
+        print("Found target:", num)
+        break
+    print("Checking...", num)
+else:
+    print("Target not found")</pre>
+
+        <p><strong>Another Example: Skip invalid input</strong></p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">while True:
+    user_input = input("Enter a positive number: ")
+    if user_input == "quit":
+        break
+    if not user_input.isdigit() or int(user_input) <= 0:
+        print("Invalid input. Try again.")
+        continue
+    print("Valid number entered:", user_input)
+    break</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        4. Understand how these statements affect loop execution
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <table style="width:100%; border-collapse:collapse; font-size:1.05em;">
+            <tr style="background:#f8f9fa;">
+                <th style="padding:12px; text-align:left; border:1px solid #ddd;">Statement</th>
+                <th style="padding:12px; text-align:left; border:1px solid #ddd;">Effect</th>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;"><strong>break</strong></td>
+                <td style="padding:12px; border:1px solid #ddd;">Completely exits the loop (like an emergency stop)</td>
+            </tr>
+            <tr>
+                <td style="padding:12px; border:1px solid #ddd;"><strong>continue</strong></td>
+                <td style="padding:12px; border:1px solid #ddd;">Skips the rest of the current iteration and moves to
+                    the next one</td>
+            </tr>
+        </table>
+        <p style="margin-top: 15px;"><strong>Important:</strong> Both <code>break</code> and <code>continue</code> only
+            affect the innermost loop when using nested loops.</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        5. Biblical Reflection
+    </h2>
+    <div
+        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        <p>
+            In programming, <strong>break</strong> is like repentance — we stop going in the wrong direction.
+            <strong>Continue</strong> is like pressing forward — we keep going toward the goal despite setbacks.
+        </p>
+        <p style="margin-top: 15px;">
+            <strong>Scripture:</strong><br>
+            “Brothers and sisters, I do not consider myself yet to have taken hold of it.
+            But one thing I do: Forgetting what is behind and straining toward what is ahead,
+            I press on toward the goal to win the prize for which God has called me heavenward in Christ Jesus.”
+            (Philippians 3:13-14)
+        </p>
+    </div>
+
+    <div
+        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+        <em>If you find any typos or errors, please let me know.</em><br><br>
+        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 004"
+            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+    </div>
+
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+        © 2026 LogosTeach - All Rights Reserved.
+    </div>
+
+</div>
