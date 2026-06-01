@@ -13,6 +13,7 @@ Here are the basic duties that I require from you.
 - I will need examples created and placed into an html document that follows the "lesson_examples.html" in the templates folder.
 - This is a living document so responsibilities will change and grow as this document is edited.
 - Make sure that any sections you generate that have a tip or Tip for the user use the css .tip class in the containing html tag. class="tip"
+- If you generate any html that has a warning or notifies the learner of potential errors then use the css class "warning-box" in the containing html tag.
 
 After you have performed all the actions in this file, then notify me on the Grok App I am using on the browser or on my phone that you are ready with the statement: "Computer Science 1 PubFunnels Information Processed. Ready!"
 
