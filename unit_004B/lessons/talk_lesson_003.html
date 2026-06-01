@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    <title>Lesson [###] - [Lesson Title] | Talking Points</title>
+    <title>Lesson 003 - The For Loop and range() | Talking Points</title>
 </head>
 
 <body>
 
-    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <!-- Header -->
     <header class="document-header">
         <div class="header-content">
             <div class="header-left">Python with a Worldview</div>
@@ -18,60 +17,121 @@
         </div>
     </header>
 
-    <!-- ====================== MAIN CONTENT ====================== -->
     <div
         style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
 
         <h1
             style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            Lesson [###] - [Lesson Title] — Talking Points
+            Lesson 003 - The For Loop and the range() Function: Talking Points & Discussion
         </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            Key talking points and discussion notes for this lesson.
+            Key talking points and discussion questions for teaching the For Loop and range() function.
         </p>
 
-        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <!-- TALKING POINTS -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Main Teaching Points
+            Main Talking Points
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
             <ul style="font-size: 1.08em;">
                 <li>
-                    <p><strong>Point 1:</strong> [Main idea or concept]</p>
+                    <p><strong>The <code>range()</code> function:</strong> It generates a sequence of numbers. It does
+                        <strong>not</strong> return a list — it returns a range object (which is very memory efficient).
+                    </p>
                 </li>
                 <li>
-                    <p><strong>Point 2:</strong> [Main idea or concept]</p>
+                    <p><strong>Basic usage:</strong> <code>range(stop)</code> → starts from 0 and goes up to (but does
+                        not include) the stop value.</p>
                 </li>
                 <li>
-                    <p><strong>Point 3:</strong> [Main idea or concept]</p>
+                    <p><strong>Full syntax:</strong> <code>range(start, stop, step)</code>. The <code>stop</code> value
+                        is always exclusive.</p>
+                </li>
+                <li>
+                    <p><strong>Iterating over sequences:</strong> The <code>for</code> loop is perfect for going through
+                        lists, strings, and other sequences one item at a time.</p>
+                </li>
+                <li>
+                    <p><strong>When to use <code>for</code> vs <code>while</code>:</strong>
+                        Use <code>for</code> when you know how many times you want to repeat.
+                        Use <code>while</code> when you want to repeat until a condition changes.</p>
                 </li>
             </ul>
         </div>
 
-        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <!-- DISCUSSION QUESTIONS -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Discussion & Talking Points
+            Discussion & Thought Questions
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
             <ul style="font-size: 1.08em;">
                 <li>
-                    <p><strong>Question 1:</strong> [Discussion prompt]</p>
+                    <p>What does <code>range(5)</code> actually produce? Why is it useful that it doesn’t create a full
+                        list in memory?</p>
                 </li>
                 <li>
-                    <p><strong>Question 2:</strong> [Discussion prompt]</p>
+                    <p>What is the difference between <code>range(10)</code>, <code>range(1, 11)</code>, and
+                        <code>range(0, 21, 2)</code>?</p>
                 </li>
                 <li>
-                    <p><strong>Question 3:</strong> [Discussion prompt]</p>
+                    <p>Can you loop through a string using a <code>for</code> loop? Why is this useful?</p>
+                </li>
+                <li>
+                    <p>When would you choose a <code>for</code> loop instead of a <code>while</code> loop? Give an
+                        example.</p>
+                </li>
+                <li>
+                    <p>When would you choose a <code>while</code> loop instead of a <code>for</code> loop? Give an
+                        example.</p>
+                </li>
+                <li>
+                    <p>How is the idea of God leading us “one step at a time” similar to how a <code>for</code> loop
+                        moves through a sequence?</p>
+                </li>
+                <li>
+                    <p>Why is it important to trust God’s guidance even when we can’t see the full path ahead? (Relate
+                        to Proverbs 3:5-6)</p>
                 </li>
             </ul>
         </div>
 
-        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <!-- BIBLICAL INTEGRATION -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
             Biblical Integration
         </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Just as a <strong>for loop</strong> moves through a known sequence one step at a time, God leads us step
+                by step through life.
+                We don’t always see the full journey ahead, but we can trust His Word to light the next step.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Your word is a lamp to my feet and a light to my path.” (Psalm 119:105)<br><br>
+                “Trust in the Lord with all your heart, and do not lean on your own understanding.
+                In all your ways acknowledge him, and he will make straight your paths.” (Proverbs 3:5-6)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Talking Points - Lesson 003"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
