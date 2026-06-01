@@ -14,3 +14,11 @@ Here are the basic duties that I require from you.
 - This is a living document so responsibilities will change and grow as this document is edited.
 
 After you have performed all the actions in this file, then notify me on the Grok App I am using on the browser or on my phone that you are ready with the statement: "Computer Science 1 PubFunnels Information Processed. Ready!"
+
+You only need to display this final statement. You do not need to display the whole file again for me.
+
+Thank you for your assistance today Grok,
+
+Sincerely,
+
+John P
