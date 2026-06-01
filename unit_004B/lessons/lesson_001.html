@@ -1,0 +1,118 @@
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+        Lesson 001 - Introduction to Loops: Examples & Illustrations
+    </h1>
+
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+        Below are helpful examples and illustrations for each learning objective in this lesson.
+    </p>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        1. Explain why repetition is necessary in programming
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Why repetition matters:</strong> Many tasks in life and programming require doing the same action
+            multiple times. Writing the same code over and over is inefficient and error-prone.</p>
+        <p><strong>Real-world examples:</strong></p>
+        <ul style="font-size: 1.08em; padding-left: 28px;">
+            <li>Printing 100 student report cards</li>
+            <li>Sending reminder emails to 500 customers</li>
+            <li>Calculating the total of all items in a shopping cart</li>
+            <li>Checking every item in an inventory list</li>
+        </ul>
+        <p><strong>Programming benefit:</strong> Loops allow us to write the code once and repeat it as many times as
+            needed.</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        2. Describe the two main types of loops in Python: while and for
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>for loop:</strong> Best when you know how many times you want to repeat (definite iteration).</p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
+    print("Hello!", i)</pre>
+
+        <p><strong>while loop:</strong> Best when you want to repeat until a condition becomes false (indefinite
+            iteration).</p>
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
+while count < 5:
+    print("Hello!", count)
+    count += 1</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        3. Understand the basic concept of iteration
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Iteration</strong> means repeating a process. Each repetition is called an
+            <strong>iteration</strong>.</p>
+        <p><strong>Example:</strong> Imagine a washing machine cycle. Each full rotation of the drum is one iteration.
+        </p>
+
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;"># Simple iteration example
+for number in [1, 2, 3, 4, 5]:
+    print("Processing item", number)</pre>
+        <p>This loop performs 5 iterations — one for each number in the list.</p>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        4. Recognize the danger of infinite loops and how to prevent them
+    </h2>
+    <div style="margin-bottom: 45px; padding-left: 28px;">
+        <p><strong>Infinite Loop Danger:</strong> A loop that never stops running.</p>
+        <pre
+            style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;"># DANGEROUS - Infinite Loop!
+while True:
+    print("This will never stop!")</pre>
+
+        <p><strong>How to prevent infinite loops:</strong></p>
+        <ul style="font-size: 1.08em; padding-left: 28px;">
+            <li>Always include a condition that will eventually become False</li>
+            <li>Use a counter that increases/decreases toward the stopping condition</li>
+            <li>Include a <code>break</code> statement when a goal is reached</li>
+        </ul>
+
+        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
+while count < 10:        # Safe condition
+    print(count)
+    count += 1           # Progress toward stopping condition</pre>
+    </div>
+
+    <h2
+        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        5. Biblical Reflection
+    </h2>
+    <div
+        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        <p>
+            Just as God established rhythms and cycles in creation — day and night, seasons, and the rhythm of life —
+            loops help us bring order and repetition into our programs.
+            We can trust that God’s character is faithful and consistent, just as we can rely on well-written loops to
+            behave predictably.
+        </p>
+        <p style="margin-top: 15px;">
+            <strong>Scripture:</strong> “While the earth remains, seedtime and harvest, cold and heat, summer and
+            winter, day and night, shall not cease.” (Genesis 8:22)
+        </p>
+    </div>
+
+    <div
+        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+        <em>If you find any typos or errors, please let me know.</em><br><br>
+        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 001"
+            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+    </div>
+
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+        © 2026 LogosTeach - All Rights Reserved.
+    </div>
+
+</div>
