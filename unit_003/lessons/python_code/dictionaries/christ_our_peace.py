@@ -50,5 +50,5 @@ for ref, verse in christ_our_peace.items():
 # Copyright 2026 LogosTeach - All Rights Reserved.
 
 """
-This software is for educational purposes only. It is not intended for commercial use or distribution.
+    This software is for educational purposes only. It is not intended for commercial use or distribution.
 """
