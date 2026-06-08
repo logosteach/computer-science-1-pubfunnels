@@ -11,6 +11,7 @@ Here are the basic duties that I require from you.
 - creation of html, md, and python files. Make sure your read through and understand all the templates that I have in the templates folder.
 - creation and editing of css styles. The css file is found in static/css/stylesheet.css
 - If you create any markdown files for me, I do not need you to enclose the markdown content in the ```markdown ``` body.
+- When creating a markdown file, make sure that you have a single line with no content between any headers and the content that falls under that header.
 - I will need examples created and placed into an html document that follows the "lesson_examples.html" in the templates folder.
 - This is a living document so responsibilities will change and grow as this document is edited.
 - Make sure that any sections you generate that have a tip or Tip for the user use the css .tip class in the containing html tag. class="tip"
