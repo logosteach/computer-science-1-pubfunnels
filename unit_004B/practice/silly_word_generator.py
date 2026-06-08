@@ -33,3 +33,5 @@ while True:
             print("Something went wrong with the connection. Check your internet!")
     else:
         print("Please type 'yes' or 'no'.\n")
+
+# Copyright 2026 LogosTeach -- All Rights Reserved. For educational use only.
