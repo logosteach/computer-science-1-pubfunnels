@@ -2,7 +2,7 @@
 
 Below are clear examples and illustrations for each learning objective in this lesson.
 
-## 1. Understand the range() function — what it produces and how to use it in a for loop
+## 1. Understand the range() function what it produces and how to use it in a for loop
 
 **What does `range()` produce?**  
 It generates a sequence of numbers (it returns a **range object**, not a list).
