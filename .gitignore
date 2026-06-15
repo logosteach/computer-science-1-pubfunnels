@@ -8,13 +8,20 @@ static/pdf
 
 *.pages
 
-*.mp4
+# Audio files
 *.mp3
-*.mov
-*.avi
-*.mkv
-*.flv
-*.wmv
+*.wav
+*.ogg
+*.flac
 *.m4a
+*.aac
+*.wma
+*.aiff
+*.alac
+*.opus
+*.mid
+*.midi
+*.mp4a  # sometimes used for audio
+*.webm   # can contain audio
 static/media/videos/*
 static/media/audios/*
