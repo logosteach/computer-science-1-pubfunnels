@@ -1,140 +1,182 @@
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to your custom CSS -->
-    <link rel="stylesheet" href="../../static/css/stylesheet.css">
-</head>
-
-<body>
-
-    <!-- ====================== DOCUMENT HEADER ====================== -->
-    <header class="document-header">
-        <div class="header-content">
-            <div class="header-left">
-                Python with a Worldview
-            </div>
-            <div class="header-right">
-                LogosTeach
-            </div>
-        </div>
-    </header>
-
-    <div
-        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
-
-        <h1
-            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            Lesson 006 - Nested Loops
-        </h1>
-        <h2>
-            Examples and Illustrations
-        </h2>
-
-        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            Below are clear examples and illustrations for each learning objective in this lesson.
-        </p>
-
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            1. Create and understand nested for and while loops
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Basic Nested For Loops:</strong></p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for outer in range(3):           # Outer loop
-    for inner in range(4):       # Inner loop
-        print(f"({outer}, {inner})", end=" ")
-    print()                         # New line after inner loop</pre>
-        </div>
-
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            2. Use nested loops to solve problems (patterns, tables, grids)
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Example: Multiplication Table</strong></p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(1, 6):
-    for j in range(1, 6):
-        print(f"{i*j:3}", end=" ")
-    print()</pre>
-
-            <p><strong>Example: Star Pattern (Right Triangle)</strong></p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">rows = 5
-for i in range(1, rows + 1):
-    for j in range(i):
-        print("*", end="")
-    print()</pre>
-        </div>
-
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            3. Trace the execution of nested loops (outer vs inner)
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Tracing Example:</strong></p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for outer in range(1, 4):
-    print(f"Outer loop: {outer}")
-    for inner in range(1, 3):
-        print(f"   Inner loop: {inner} (inside outer {outer})")
-    print("--- Finished inner loop ---")</pre>
-        </div>
-
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            4. Avoid common pitfalls (excessive nesting & off-by-one errors)
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Common Mistake — Off-by-one:</strong></p>
-            <pre
-                style="background:#fee; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;">for i in range(5):      # Wrong: goes 0 to 4
-    for j in range(5):
-        print(i, j)</pre>
-
-            <p><strong>Better Practice:</strong></p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(1, 6):    # Clearer: 1 to 5
-    for j in range(1, 6):
-        print(i, j)</pre>
-
-            <p class="tip"><strong>Tip:</strong> Avoid nesting more than 3 levels deep when possible. Consider using functions to
-                simplify deeply nested code.</p>
-        </div>
-
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            5. Biblical Reflection
-        </h2>
-        <div
-            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;">
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;">
+        <strong>Nested Loops</strong>
+    </h1>
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+        In this lesson, we will explore the concept of nested loops in Python.
+        Nested loops are loops that exist within another loop. They allow us to
+        perform more complex iterations and can be particularly useful when working
+        with multi-dimensional data structures, such as lists of lists (2D arrays)
+        or when we need to compare elements in a collection against each other.
+    </p>
+    <p>
+        Joseph's brothers hated him. They were going to kill him but instead they
+        sold him for money to some traders passing through. God had multiple
+        purposes in allowing this to happen to Joseph. From slave to head man in the
+        house of Potipher, to slave again, to head master of the jail and then
+        second to only Pharaoh of Egypt, God's purposes unfolded in Joseph's life to
+        give God all the glory and work His plan of salvation. To bring His people
+        out of slavery and into the land of promise. How important was it that
+        Israel become slaves first before they could be free and possess the land of
+        promise? Why was this the path that God chose for them? The answers to this
+        are found in Christ Jesus and what He has done for us by bringing us back to
+        God from death and sin. Our former slavery is now over and done with. We are
+        truly free, if we are trusting in Christ for the washing away of our sins!
+        (Galatians 5:1; Romans 6:6-7).
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Objectives
+    </h2>
+    <p>By the end of the lesson, learners will be able to:</p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
+        <li>
+            <p>Create and understand nested for and while loops.</p>
+        </li>
+        <li>
             <p>
-                Nested loops show us that God often works in layers — He has purposes within purposes.
-                What looks complex to us is beautifully intricate and orderly in His perfect plan.
+                Use nested loops to solve problems such as printing patterns, tables, or
+                grids.
             </p>
-            <p style="margin-top: 15px;">
-                <strong>Scripture:</strong><br>
-                “For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you,
-                plans to give you hope and a future.”
-                (Jeremiah 29:11)<br><br>
-                “Oh, the depth of the riches of the wisdom and knowledge of God! How unsearchable his judgments, and his
-                paths beyond tracing out!”
-                (Romans 11:33-34)
+        </li>
+        <li>
+            <p>Trace the execution of nested loops (outer vs. inner loop).</p>
+        </li>
+        <li>
+            <p>
+                Avoid common pitfalls such as excessive nesting or off-by-one errors.
             </p>
-        </div>
-
-        <div
-            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-            <em>If you find any typos or errors, please let me know.</em><br><br>
-            <a href="mailto:info@logosteach.com?subject=Examples for Lesson 006"
-                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
-        </div>
-
-        <div
-            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-            © 2026 LogosTeach - All Rights Reserved.
-        </div>
-
+        </li>
+        <li>
+            <p>
+                Reflect on how nested loops show that God often works in layers — He has
+                purposes within purposes — and His plans are beautifully intricate and
+                orderly (Jeremiah 29:11; Romans 11:33-34).
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Reading Assignment
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 15px;">
+        Complete the following reading in your textbook before continuing:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
+        <li>
+            <p>Chapter 2: pages 151 - 170.</p>
+        </li>
+    </ul>
+    <p style="font-size: 1.08em; margin-bottom: 12px;">
+        <strong>While reading, pay special attention to:</strong> keywords such as
+        for, while, break, continue, pass, and the range() function. Also make sure
+        you understand how the range() function works, and how one of it's
+        parameters uses "off by one behavior."
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Video Resources
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Watch the following videos to reinforce and go beyond the concepts covered
+        in the reading:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1201564598/a19a3adfd5?share=copy&amp;fl=sv&amp;fe=ci">Talking Points: Nested
+                    Loops</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1201570472/e12cfc65ed?share=copy&amp;fl=sv&amp;fe=ci">Examples of Nested
+                    Loops</a>
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Practice Files
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Download the following files relevant to this lesson. This also includes the
+        computer lab for this lesson.
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004B/practice/nested_loops_practice.py">nested_loops_practice.py</a>
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Computer Lab
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 20px;">
+        The first computer lab for this unit will be given in lesson 7 along with
+        the solutions file.
+    </p>
+    <div
+        style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;">
+        <p>
+            <em>If you find any typos or errors, please let me know.</em><br /><br /><a target="_blank"
+                rel="noopener noreferrer nofollow"
+                href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"><strong>📧 Send
+                    me an email</strong></a>
+        </p>
     </div>
-
-</body>
-
-</html>
+    <p style="font-size: 1.08em; margin: 25px 0px 15px;">
+        <strong>Deliverable:</strong> The student is responsible to self-grade their
+        work. Solutions are provided in the <strong>Attached Files</strong> section
+        of this lesson.
+    </p>
+    <p style="font-size: 1.08em; margin-bottom: 40px;">
+        {{DELIVERABLE_INSTRUCTIONS}}
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;">
+        Anchored in Christ
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 22px;">
+        <strong>The
+            <span style="color: rgb(235, 11, 11) !important;">Nested</span> Purposes
+            of God for You In Christ Jesus</strong>
+    </p>
+    <p style="font-size: 1.08em; margin-bottom: 30px;">
+        The Lord has prepared works for us to do in Jesus Christ before the
+        foundation of the world. Think about that! We know that his purposes and
+        nested. Purpose within purpose, and it is the joy of growing in relationship
+        to your God through Jesus Christ that He Himself will reveal these purposes
+        to you and minister to you and grow you more like the image of His blessed
+        Son.
+    </p>
+    <blockquote>
+        <p>
+            <strong><em>Micah 6:8 (KJV) </em></strong><em>He hath shewed thee, O man, what is good; and what doth the
+                LORD
+                require of thee, but to do justly, and to love mercy, and to walk humbly
+                with thy God?</em>
+        </p>
+    </blockquote>
+    <p></p>
+    <p>
+        <strong><em> Ephesians 2:10 (KJV)</em></strong>
+    </p>
+    <blockquote>
+        <p style="white-space: pre-wrap;" dir="auto">
+            <em>For we are his workmanship, created in Christ Jesus unto good works,
+                which God hath before ordained that we should walk in them.</em>
+        </p>
+    </blockquote>
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;">
+        <p>© 2026 LogosTeach - All Rights Reserved.</p>
+    </div>
+</div>
