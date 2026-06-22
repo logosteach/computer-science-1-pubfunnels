@@ -1,128 +1,162 @@
 <div
-    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
-
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;">
     <h1
-        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-        Lesson 002 - The While Loop: Examples & Illustrations
+        style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;">
+        <strong>The While Loop</strong>
     </h1>
-
-    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-        Below are clear examples and illustrations for each learning objective in this lesson.
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+        In this lesson, we will explore the concept of loops in programming,
+        focusing on the while loop. While loops are best used when you know you want
+        a process to repeat and indefinite number of times. You then set a condition
+        or a type of "flag" that lets the program know when to stop the loop. While
+        loops are powerful tools for creating interactive programs such as: video
+        games, user input forms, simulations, and much more.
     </p>
-
+    <p>
+        The Lord Himself has His perfect timing in our lives. Perhaps the most
+        relevant while loop to the Christian believer is the parable of the
+        persistent widow in Luke 18:1-8. Do not give up in prayer! Never give up,
+        never surrender. The Lord will answer in His own perfect timing. Our job is
+        to be faithful and trust. This teaches us more of His good and kind
+        character in and through the face of Jesus Christ our Lord and Savior.
+        (Philippians 4:6-7).
+    </p>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        1. The syntax of the while loop
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Objectives
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>Basic While Loop Syntax:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">while condition:
-    # code to repeat
-    # must eventually make condition False</pre>
-
-        <p><strong>Example:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">i = 1
-while i <= 5:
-    print("Count:", i)
-    i += 1          # Important: update the counter!</pre>
-        <p><strong>Output:</strong> Count: 1 through Count: 5</p>
-    </div>
-
+    <p>By the end of the lesson, learners will be able to:</p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
+        <li>
+            <p>Write and understand the syntax of a while loop.</p>
+        </li>
+        <li>
+            <p>
+                Use a while loop with a counter or condition that eventually becomes
+                false.
+            </p>
+        </li>
+        <li>
+            <p>Combine while loops with user input to create interactive programs.</p>
+        </li>
+        <li>
+            <p>
+                Identify and avoid infinite loops by ensuring the loop condition
+                eventually changes.
+            </p>
+        </li>
+        <li>
+            <p>
+                Reflect on how the while loop reminds us that persistence in prayer and
+                faithfulness is important, yet we must also know when to stop and trust
+                God’s timing (Luke 18:1-8; Ecclesiastes 3:1).
+            </p>
+        </li>
+    </ul>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        2. Use a while loop with a counter or condition that eventually becomes false
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Reading Assignment
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>Example with Counter:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
-while count < 10:
-    print("Iteration", count)
-    count += 1          # Counter increases → condition will become False</pre>
-
-        <p><strong>Example with Condition:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">password = ""
-while password != "secret123":
-    password = input("Enter password: ")
-print("Access granted!")</pre>
-    </div>
-
+    <p style="font-size: 1.08em; margin-bottom: 15px;">
+        Complete the following reading in your textbook before continuing:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
+        <li>
+            <p>Chapter 2: pages 151 - 170.</p>
+        </li>
+    </ul>
+    <p style="font-size: 1.08em; margin-bottom: 12px;">
+        <strong>While reading, pay special attention to:</strong> keywords such as
+        for, while, break, continue, pass, and the range() function. Also make sure
+        you understand how the range() function works, and how one of it's
+        parameters uses "off by one behavior."
+    </p>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        3. Combine while loops with user input to create interactive programs
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Video Resources
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>Good Example - Interactive Menu:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">choice = ""
-while choice != "quit":
-    print("\n1. Say Hello")
-    print("2. Tell a joke")
-    print("Type 'quit' to exit")
-    choice = input("Enter your choice: ").lower()
-    
-    if choice == "1":
-        print("Hello there!")
-    elif choice == "2":
-        print("Why do programmers prefer dark mode? Because light attracts bugs!")</pre>
-
-        <p><strong>How this can go wrong (Bad Example):</strong></p>
-        <pre style="background:#fee; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;">while True:                    # Dangerous!
-    name = input("Enter your name: ")
-    print("Hello", name)        # No way to exit!</pre>
-        <p><em>This program will run forever with no exit option.</em></p>
-    </div>
-
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Watch the following videos to reinforce and go beyond the concepts covered
+        in the reading:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1199552644/295fbd9cd6?share=copy&amp;fl=sv&amp;fe=ci">Lesson 002 - Talking
+                    Points</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1199548992/f6112baf83?share=copy&amp;fl=sv&amp;fe=ci">Lesson 002 -
+                    Examples</a>
+            </p>
+        </li>
+    </ul>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        4. Infinite loops - How to identify, when to use intentionally, and how to avoid
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Practice Files
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>Accidental Infinite Loop (Common Mistake):</strong></p>
-        <pre style="background:#fee; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;">count = 0
-while count < 10:
-    print(count)        # Forgot to increment count!</pre>
-
-        <p><strong>Intentional Infinite Loop (Useful with break):</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">while True:
-    command = input("Enter command (or 'exit'): ")
-    if command == "exit":
-        break
-    print("Processing:", command)</pre>
-
-        <p><strong>Prevention Tips:</strong></p>
-        <ul style="font-size: 1.08em; padding-left: 28px;">
-            <li>Always ensure the loop condition can become False</li>
-            <li>Use a counter or progress variable</li>
-            <li>Add a <code>break</code> statement for controlled exit</li>
-        </ul>
-    </div>
-
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Download the following files relevant to this lesson. This also includes the
+        computer lab for this lesson.
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004B/practice/encouragements.py">encouragements.py</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004B/practice/guess_the_bible_book.py">guess_the_bible_book.py</a>
+            </p>
+        </li>
+    </ul>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        5. Biblical Reflection
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Computer Lab
     </h2>
+    <p style="font-size: 1.08em; margin-bottom: 20px;">
+        The first computer lab assignment in this unit will be given in lesson 7
+        along with the solutions file.
+    </p>
     <div
-        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;">
         <p>
-            The while loop teaches us about persistence - continuing while a condition is true.
-            In the same way, Jesus taught us to pray persistently and not give up (Luke 18:1-8).
-            Yet we must also know when to stop and trust God's perfect timing (Ecclesiastes 3:1).
-        </p>
-        <p style="margin-top: 15px;">
-            <strong>Key Lesson:</strong> Keep praying and remain faithful, but also learn to rest in God's sovereign
-            timing.
+            <em>If you find any typos or errors, please let me know.</em><br /><br /><a target="_blank"
+                rel="noopener noreferrer nofollow"
+                href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"><strong>📧 Send
+                    me an email</strong></a>
         </p>
     </div>
-
+    <p style="font-size: 1.08em; margin: 25px 0px 15px;">
+        <strong>Deliverable:</strong> The student is responsible to self-grade their
+        work.
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;">
+        Anchored in Christ
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 22px;">
+        Never give up in prayer. The Lord's answer will always be the right one,
+        even if it is the one we did not desire. Yet, to the one who persists in
+        prayer, it will be answered. Count on it! Persistence is a nice analogy to
+        the behavior of a while loop.
+    </p>
+    <p style="font-size: 1.08em; margin-bottom: 22px;"></p>
+    <blockquote>
+        <p>
+            "And he spake a parable unto them to this end, that men ought always to
+            pray, and not to faint;” Luke 18:1
+        </p>
+    </blockquote>
     <div
-        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-        <em>If you find any typos or errors, please let me know.</em><br><br>
-        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 002"
-            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;">
+        <p>© 2026 LogosTeach - All Rights Reserved.</p>
     </div>
-
-    <div
-        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-        © 2026 LogosTeach - All Rights Reserved.
-    </div>
-
 </div>

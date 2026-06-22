@@ -1,142 +1,163 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Link to your custom CSS -->
-        <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    </head>
-<body class="lesson-body">
-    <header class="document-header">
-        <div class="header-content">
-            <div class="header-left">
-                Python with a Worldview
-            </div>
-            <div class="header-right">
-                LogosTeach
-            </div>
-        </div>
-    </header>
-
-    <div
-        style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
-    
-        <h1
-            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            Lesson 001 - Introduction to Loops: Examples & Illustrations
-        </h1>
-    
-        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            Below are helpful examples and illustrations for each learning objective in this lesson.
-        </p>
-    
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            1. Explain why repetition is necessary in programming
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Why repetition matters:</strong> Many tasks in life and programming require doing the same action
-                multiple times. Writing the same code over and over is inefficient and error-prone.</p>
-            <p><strong>Real-world examples:</strong></p>
-            <ul style="font-size: 1.08em; padding-left: 28px;">
-                <li>Printing 100 student report cards</li>
-                <li>Sending reminder emails to 500 customers</li>
-                <li>Calculating the total of all items in a shopping cart</li>
-                <li>Checking every item in an inventory list</li>
-            </ul>
-            <p><strong>Programming benefit:</strong> Loops allow us to write the code once and repeat it as many times as
-                needed.</p>
-        </div>
-    
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            2. Describe the two main types of loops in Python: while and for
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>for loop:</strong> Best when you know how many times you want to repeat (definite iteration).</p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
-        print("Hello!", i)</pre>
-    
-            <p><strong>while loop:</strong> Best when you want to repeat until a condition becomes false (indefinite
-                iteration).</p>
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
-    while count < 5:
-        print("Hello!", count)
-        count += 1</pre>
-        </div>
-    
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            3. Understand the basic concept of iteration
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Iteration</strong> means repeating a process. Each repetition is called an
-                <strong>iteration</strong>.
-            </p>
-            <p><strong>Example:</strong> Imagine a washing machine cycle. Each full rotation of the drum is one iteration.
-            </p>
-    
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;"># Simple iteration example
-    for number in [1, 2, 3, 4, 5]:
-        print("Processing item", number)</pre>
-            <p>This loop performs 5 iterations — one for each number in the list.</p>
-        </div>
-    
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            4. Recognize the danger of infinite loops and how to prevent them
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Infinite Loop Danger:</strong> A loop that never stops running.</p>
-            <pre
-                style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em; color:#d32f2f;"># DANGEROUS - Infinite Loop!
-    while True:
-        print("This will never stop!")</pre>
-    
-            <p><strong>How to prevent infinite loops:</strong></p>
-            <ul style="font-size: 1.08em; padding-left: 28px;">
-                <li>Always include a condition that will eventually become False</li>
-                <li>Use a counter that increases/decreases toward the stopping condition</li>
-                <li>Include a <code>break</code> statement when a goal is reached</li>
-            </ul>
-    
-            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
-    while count < 10:        # Safe condition
-        print(count)
-        count += 1           # Progress toward stopping condition</pre>
-        </div>
-    
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            5. Biblical Reflection
-        </h2>
-        <div
-            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+<div
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;">
+    <h1
+        style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;">
+        <strong>Introduction to Loops</strong>
+    </h1>
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+        In this lesson, we will explore the fundamental programming concept of
+        loops. Loops allow us to execute a block of code repeatedly, which is
+        essential for performing tasks that require repetition. We will cover the
+        two primary types of loops in Python: the while loop and the for loop.
+    </p>
+    <p>
+        The Lord Himself has established loops in His creation. From the cycles of
+        day to night, the changing of the tides and seasons, God has promised that
+        while the earth endures these things shall not cease. Yes, we are
+        responsible to take care of this creation our compassionate and merciful God
+        has given to us, yet, we are also warned and comforted that nothing we can
+        do will bring the earth to its end. The life and death of this creation,
+        lies in the hands of our mighty God. He will keep his promises. (Genesis
+        8:22; Psalm 104:19)
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Objectives
+    </h2>
+    <p>By the end of the lesson, learners will be able to:</p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
+        <li>
             <p>
-                Just as God established rhythms and cycles in creation — day and night, seasons, and the rhythm of life —
-                loops help us bring order and repetition into our programs.
-                We can trust that God’s character is faithful and consistent, just as we can rely on well-written loops to
-                behave predictably.
+                Explain why repetition is necessary in programming and give real-world
+                examples of repetitive tasks.
             </p>
-            <p style="margin-top: 15px;">
-                <strong>Scripture:</strong> “While the earth remains, seedtime and harvest, cold and heat, summer and
-                winter, day and night, shall not cease.” (Genesis 8:22)
+        </li>
+        <li>
+            <p>Describe the two main types of loops in Python: while and for.</p>
+        </li>
+        <li>
+            <p>
+                Understand the basic concept of iteration and how loops execute code
+                repeatedly.
             </p>
-        </div>
-    
-        <div
-            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-            <em>If you find any typos or errors, please let me know.</em><br><br>
-            <a href="mailto:info@logosteach.com?subject=Examples for Lesson 001"
-                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
-        </div>
-    
-        <div
-            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-            © 2026 LogosTeach - All Rights Reserved.
-        </div>
-    
+        </li>
+        <li>
+            <p>Recognize the danger of infinite loops and how to prevent them.</p>
+        </li>
+        <li>
+            <p>
+                Reflect on how loops illustrate the importance of rhythm and order in
+                God’s creation, just as seasons, day and night, and the cycles of life
+                show His faithful and consistent character (Genesis 8:22; Psalm 104:19).
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Reading Assignment
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 15px;">
+        Complete the following reading in your textbook before continuing:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
+        <li>
+            <p>Chapter 2: pages 151 - 170.</p>
+        </li>
+    </ul>
+    <p style="font-size: 1.08em; margin-bottom: 12px;">
+        <strong>While reading, pay special attention to:</strong> keywords such as
+        for, while, break, continue, pass, and the range() function. Also make sure
+        you understand how the range() function works, and how one of it's
+        parameters uses <em>"off by one behavior."</em>
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Video Resources
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Watch the following videos to reinforce and go beyond the concepts covered
+        in the reading:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1199517775/00b7b093ad?share=copy&amp;fl=sv&amp;fe=ci">Lesson 1 - Talking
+                    Points: Loop Basics</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1199531956/bbee547e84?share=copy&amp;fl=sv&amp;fe=ci">Lesson 1 - Examples of
+                    Loops Basics</a>
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Practice Files
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Download the following files relevant to this lesson. This also includes the
+        computer lab for this lesson.
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>Lesson_001.pdf is available in the Attached Files section.</p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004B/practice/countdown.py">countdown.py</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004B/practice/silly_word_generator.py">silly_word_generatory.py</a>
+                [You may need to run "<em>pip install requests</em>" in the terminal
+                window to get this file to work as it should.]
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Computer Lab
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 20px;">
+        The first computer lab for this unit will be given in lesson 7 along with
+        the solutions file.
+    </p>
+    <div
+        style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;">
+        <p>
+            <em>If you find any typos or errors, please let me know.</em><br /><br /><a target="_blank"
+                rel="noopener noreferrer nofollow"
+                href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"><strong>📧 Send
+                    me an email</strong></a>
+        </p>
     </div>
-
-</body>
-</html>
-
+    <p style="font-size: 1.08em; margin: 25px 0px 15px;">
+        <strong>Deliverable:</strong> Each student is responsible to self-grade
+        their work.
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;">
+        Anchored in Christ
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 22px;">
+        Christ is continually making intercession for all His church at the throne
+        of His Father. It is not a one time event. It is a process done continually.
+        This continuous aspect has a loop type behavior.
+    </p>
+    <p style="font-size: 1.08em; margin-bottom: 30px;">
+        <em>Wherefore he is able also to save them to the uttermost that come unto
+            God by him, seeing he ever liveth to make intercession for them. Hebrews
+            7:25</em>
+    </p>
+    <div
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;">
+        <p>© 2026 LogosTeach - All Rights Reserved.</p>
+    </div>
+</div>

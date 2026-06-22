@@ -1,0 +1,309 @@
+{
+  "title" : "", 
+  "description" : "", 
+  "author" : "", 
+  "targetLoudness" : -18.0, 
+  "shouldApplyLoudnessNormalization" : true, 
+  "videoFormatFrameRate" : 30, 
+  "audioFormatSampleRate" : 44100, 
+  "allowSubFrameEditing" : false, 
+  "width" : 1920.0, 
+  "height" : 1080.0, 
+  "version" : "10.0", 
+  "editRate" : 705600000, 
+  "authoringClientName" : {
+    "name" : "Camtasia", 
+    "platform" : "Mac", 
+    "version" : "2026.0.7"
+  }, 
+  "sourceBin" : [
+    {
+      "id" : 1, 
+      "src" : "./media/1782142321.155371/lesson_002_NARRATIVE.mp3", 
+      "rect" : [0, 0, 0, 0], 
+      "lastMod" : "20260622T151834", 
+      "loudnessNormalization" : true, 
+      "sourceTracks" : [
+        {
+          "range" : [0, 4458496], 
+          "type" : 2, 
+          "editRate" : 44100, 
+          "trackRect" : [0, 0, 0, 0], 
+          "sampleRate" : 44100, 
+          "bitDepth" : 0, 
+          "numChannels" : 1, 
+          "integratedLUFS" : -26.0000554304369, 
+          "peakLevel" : 0.647898077964783, 
+          "tag" : 0, 
+          "metaData" : "lesson_002_NARRATIVE.mp3;", 
+          "parameters" : {
+          }
+        }
+      ], 
+      "metadata" : {
+        "timeAdded" : "20260622T152015.868354"
+      }
+    }, 
+    {
+      "id" : 2, 
+      "src" : "./media/1782142321.155841/Brass Horizon Fanfare-2.mp3", 
+      "rect" : [0, 0, 0, 0], 
+      "lastMod" : "20260615T181614", 
+      "loudnessNormalization" : true, 
+      "sourceTracks" : [
+        {
+          "range" : [0, 6848639], 
+          "type" : 2, 
+          "editRate" : 48000, 
+          "trackRect" : [0, 0, 0, 0], 
+          "sampleRate" : 48000, 
+          "bitDepth" : 0, 
+          "numChannels" : 2, 
+          "integratedLUFS" : -12.9324148957336, 
+          "peakLevel" : 0.799473345279694, 
+          "tag" : 0, 
+          "metaData" : "Brass Horizon Fanfare-2.mp3;", 
+          "parameters" : {
+          }
+        }
+      ], 
+      "metadata" : {
+        "timeAdded" : "20260622T152112.532635"
+      }
+    }
+  ], 
+  "timeline" : {
+    "id" : 3, 
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0, 
+                "medias" : [
+                  {
+                    "id" : 4, 
+                    "_type" : "AMFile", 
+                    "src" : 2, 
+                    "trackNumber" : 0, 
+                    "attributes" : {
+                      "ident" : "Brass Horizon Fanfare-2", 
+                      "gain" : 0.800000011920929, 
+                      "mixToMono" : false, 
+                      "loudnessNormalization" : true, 
+                      "sourceFileOffset" : 0
+                    }, 
+                    "channelNumber" : "0,1", 
+                    "parameters" : {
+                      "volume" : {
+                        "type" : "double", 
+                        "keyframes" : [
+                          {
+                            "endTime" : 0, 
+                            "time" : 0, 
+                            "value" : 1.0, 
+                            "duration" : 0
+                          }, 
+                          {
+                            "endTime" : 3275548103, 
+                            "time" : 3275548103, 
+                            "value" : 0.982036252885879, 
+                            "duration" : 0
+                          }, 
+                          {
+                            "endTime" : 3339840000, 
+                            "time" : 3339840000, 
+                            "value" : 0.60438829787234, 
+                            "duration" : 0
+                          }, 
+                          {
+                            "endTime" : 74250801613, 
+                            "time" : 74250801613, 
+                            "value" : 0.601271609042553, 
+                            "duration" : 0
+                          }, 
+                          {
+                            "endTime" : 74581919999, 
+                            "time" : 74581919999, 
+                            "value" : 0.0, 
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    }, 
+                    "effects" : [
+                    ], 
+                    "start" : 0, 
+                    "duration" : 74581920000, 
+                    "mediaStart" : 0, 
+                    "mediaDuration" : 74581920000, 
+                    "scalar" : 1, 
+                    "metadata" : {
+                      "audiateLinkedSession" : "", 
+                      "clipSpeedAttribute" : 
+                        {
+                          "type" : "bool", 
+                          "value" : false
+                        }, 
+                      "colorAttribute" : 
+                        {
+                          "type" : "color", 
+                          "value" : [ 0, 0, 0, 0]
+                        }, 
+                      "effectApplied" : "none"
+                    }, 
+                    "animationTracks" : {
+                    }
+                  }, 
+                  {
+                    "id" : 5, 
+                    "_type" : "AMFile", 
+                    "src" : 2, 
+                    "trackNumber" : 0, 
+                    "attributes" : {
+                      "ident" : "Brass Horizon Fanfare-2", 
+                      "gain" : 1.0, 
+                      "mixToMono" : false, 
+                      "loudnessNormalization" : true, 
+                      "sourceFileOffset" : 0
+                    }, 
+                    "channelNumber" : "0,1", 
+                    "parameters" : {
+                      "volume" : {
+                        "type" : "double", 
+                        "keyframes" : [
+                          {
+                            "endTime" : 0, 
+                            "time" : 0, 
+                            "value" : 1.0, 
+                            "duration" : 0
+                          }, 
+                          {
+                            "endTime" : 96337920000, 
+                            "time" : 96337920000, 
+                            "value" : 0.0, 
+                            "duration" : 0
+                          }, 
+                          {
+                            "endTime" : 97043520000, 
+                            "time" : 97043520000, 
+                            "value" : 1.0, 
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    }, 
+                    "effects" : [
+                    ], 
+                    "start" : 74581920000, 
+                    "duration" : 4327680000, 
+                    "mediaStart" : 96337920000, 
+                    "mediaDuration" : 4327680000, 
+                    "scalar" : 1, 
+                    "metadata" : {
+                      "audiateLinkedSession" : "", 
+                      "clipSpeedAttribute" : 
+                        {
+                          "type" : "bool", 
+                          "value" : false
+                        }, 
+                      "colorAttribute" : 
+                        {
+                          "type" : "color", 
+                          "value" : [ 0, 0, 0, 0]
+                        }, 
+                      "effectApplied" : "none"
+                    }, 
+                    "animationTracks" : {
+                    }
+                  }
+                ], 
+                "parameters" : {
+                }
+              }, 
+              {
+                "trackIndex" : 1, 
+                "medias" : [
+                ], 
+                "parameters" : {
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }, 
+    "trackAttributes" : [
+      {
+        "ident" : "", 
+        "audioMuted" : false, 
+        "videoHidden" : false, 
+        "magnetic" : false, 
+        "matte" : 0, 
+        "solo" : false, 
+        "metadata" : {
+          "IsLocked" : "False", 
+          "trackHeight" : "54"
+        }
+      }, 
+      {
+        "ident" : "", 
+        "audioMuted" : false, 
+        "videoHidden" : false, 
+        "magnetic" : false, 
+        "matte" : 0, 
+        "solo" : false, 
+        "metadata" : {
+          "IsLocked" : "False", 
+          "trackHeight" : "54"
+        }
+      }
+    ], 
+    "parameters" : {
+    }, 
+    "captionAttributes" : {
+      "enabled" : true, 
+      "fontName" : "Arial", 
+      "fontSize" : 32, 
+      "backgroundColor" : [ 0, 0, 0, 204], 
+      "foregroundColor" : [ 255, 255, 255, 255], 
+      "lang" : "en", 
+      "alignment" : 0, 
+      "defaultFontSize" : true, 
+      "opacity" : 0.5, 
+      "backgroundEnabled" : true, 
+      "backgroundOnlyAroundText" : true
+    }, 
+    "gain" : 1.0, 
+    "legacyAttenuateAudioMix" : false, 
+    "backgroundColor" : [ 0, 0, 0, 255]
+  }, 
+  "metadata" : {
+    "ProjectThumbnail" : "iVBORw0KGgoAAAANSUhEUgAAAoAAAAFoCAYAAADHMkpRAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAACgKADAAQAAAABAAABaAAAAACeojBPAAASf0lEQVR4Ae3WsREAIAwDscD+OwMFW7y4YwDLKbxm5rzvESBAgAABAgQIRAR2JKeYBAgQIECAAAECX8AAdAoECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAgagGyBAgAABAgQIxAQMwFjh4hIgQIAAAQIEDEA3QIAAAQIECBCICRiAscLFJUCAAAECBAgYgG6AAAECBAgQIBATMABjhYtLgAABAgQIEDAA3QABAgQIECBAICZgAMYKF5cAAQIECBAgYAC6AQIECBAgQIBATMAAjBUuLgECBAgQIEDAAHQDBAgQIECAAIGYgAEYK1xcAgQIECBAgIAB6AYIECBAgAABAjEBAzBWuLgECBAgQIAAAQPQDRAgQIAAAQIEYgIGYKxwcQkQIECAAAECBqAbIECAAAECBAjEBAzAWOHiEiBAgAABAgQMQDdAgAABAgQIEIgJGICxwsUlQIAAAQIECBiAboAAAQIECBAgEBMwAGOFi0uAAAECBAgQMADdAAECBAgQIEAgJmAAxgoXlwABAgQIECBgALoBAgQIECBAgEBMwACMFS4uAQIECBAgQMAAdAMECBAgQIAAgZiAARgrXFwCBAgQIECAgAHoBggQIECAAAECMQEDMFa4uAQIECBAgAABA9ANECBAgAABAgRiAgZgrHBxCRAgQIAAAQIGoBsgQIAAAQIECMQEDMBY4eISIECAAAECBAxAN0CAAAECBAgQiAkYgLHCxSVAgAABAgQIGIBugAABAgQIECAQEzAAY4WLS4AAAQIECBAwAN0AAQIECBAgQCAmYADGCheXAAECBAgQIGAAugECBAgQIECAQEzAAIwVLi4BAgQIECBAwAB0AwQIECBAgACBmIABGCtcXAIECBAgQICAAegGCBAgQIAAAQIxAQMwVri4BAgQIECAAAED0A0QIECAAAECBGICBmCscHEJECBAgAABAhfaGQPPRmdxkAAAAABJRU5ErkJggg==", 
+    "RulerGuidesX" : [], 
+    "RulerGuidesY" : [], 
+    "RulerShowing" : 
+      {
+        "type" : "bool", 
+        "value" : false
+      }, 
+    "activeThemeId" : "99115f19-87e6-42f8-89c7-8312f35520b4", 
+    "commandCount" : 
+      {
+        "type" : "int", 
+        "value" : 44
+      }, 
+    "firstMedia" : 
+      {
+        "type" : "bool", 
+        "value" : true
+      }, 
+    "hasNotifiedAboutHFRMedia" : 
+      {
+        "type" : "bool", 
+        "value" : false
+      }, 
+    "projectDuration" : "01:51"
+  }
+}
