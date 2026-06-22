@@ -1,116 +1,189 @@
 <div
-    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
-
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;">
     <h1
-        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-        Lesson 005 - The Pass Statement and Loop Else Clause: Examples & Illustrations
+        style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;">
+        <strong>The Pass Statement and Loop Else Clause</strong>
     </h1>
-
-    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-        Below are clear examples and illustrations for each learning objective in this lesson.
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+        In this lesson, we will explore two lesser-known but powerful features of
+        Python loops: the pass statement and the else clause. These tools can help
+        you write cleaner and more efficient code when used appropriately. It is
+        important sometimes to create a loop structure before you have all the
+        details filled in. The pass statement allows you to do just that by acting
+        as a placeholder. Additionally, the else clause can be used with loops to
+        execute code only if the loop completes without encountering a break
+        statement.
     </p>
-
+    <p>
+        God is right to judge. The Lord is right to hate all sin and evil. Yet, in
+        His mercy to Israel He provided a way that He might pass over them when He
+        brought judgement down upon Egypt. Make no mistake. All sin will one day
+        have to be accounted for. The time had not yet come for the Messiah to come
+        and deal with sin once and for all.
+    </p>
+    <p></p>
+    <p>
+        The mercy of the passover was an object lesson about the blood of the true
+        lamb that was to come and take away the sins of His people and wash them
+        clean. That they may rejoice in God and enjoy Him forever. Praise be to the
+        Lord, for in Christ Jesus, He has passed over our sins and our
+        transgressions. He remembers them no more. (Romans 4:7-8; Hebrews 10:17;
+        Isaiah 53:5-6; Psalm 103:12).
+    </p>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        1. Use the pass statement as a placeholder
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Objectives
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>Using <code>pass</code> in a loop (placeholder):</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
-    if i == 2:
-        pass          # TODO: Add logic later
-    else:
-        print(i)</pre>
-
-        <p><strong>Using <code>pass</code> in conditional blocks:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">number = 10
-
-if number > 0:
-    print("Positive")
-elif number < 0:
-    print("Negative")
-else:
-    pass              # Do nothing for zero (placeholder)</pre>
-    </div>
-
+    <p>By the end of the lesson, learners will be able to:</p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
+        <li>
+            <p>
+                Use the pass statement as a placeholder in loops and conditional blocks.
+            </p>
+        </li>
+        <li>
+            <p>
+                Understand and use the optional else clause with for and while loops.
+            </p>
+        </li>
+        <li>
+            <p>Explain when the else clause executes (when no break occurs).</p>
+        </li>
+        <li>
+            <p>
+                Write cleaner code using these advanced loop features when appropriate.
+            </p>
+        </li>
+        <li>
+            <p>
+                Recognize that just as the else clause runs only when a loop completes
+                normally, God’s promises are “Yes” and “Amen” when we remain faithful
+                and do not quit prematurely (2 Corinthians 1:20).
+            </p>
+        </li>
+    </ul>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        2 & 3. The optional else clause with for and while loops
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Reading Assignment
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>For Loop with <code>else</code>:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(5):
-    print(i)
-else:
-    print("Loop completed normally!")</pre>
-
-        <p><strong>For Loop with <code>break</code> (else does NOT run):</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">for i in range(10):
-    print(i)
-    if i == 3:
-        print("Breaking early...")
-        break
-else:
-    print("Loop completed normally!")</pre>
-
-        <p><strong>While Loop with <code>else</code>:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">count = 0
-while count < 5:
-    print(count)
-    count += 1
-else:
-    print("While loop finished successfully!")</pre>
-    </div>
-
+    <p style="font-size: 1.08em; margin-bottom: 15px;">
+        Complete the following reading in your textbook before continuing:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
+        <li>
+            <p>Chapter 2: pages 151 - 170.</p>
+        </li>
+    </ul>
+    <p style="font-size: 1.08em; margin-bottom: 12px;">
+        <strong>While reading, pay special attention to:</strong> keywords such as
+        for, while, break, continue, pass, and the range() function. Also make sure
+        you understand how the range() function works, and how one of it's
+        parameters uses "off by one behavior."
+    </p>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        4. Practical use of pass and else clause
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Video Resources
     </h2>
-    <div style="margin-bottom: 45px; padding-left: 28px;">
-        <p><strong>Realistic Example — Searching with else clause:</strong></p>
-        <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-size:1.02em;">numbers = [12, 45, 67, 23, 89]
-target = 67
-
-for num in numbers:
-    if num == target:
-        print("Target found!")
-        break
-else:
-    print("Target not found in the list.")</pre>
-
-        <p><strong>Cleaner Code Tip:</strong> Use <code>pass</code> when you're sketching structure and
-            <code>else</code> to handle "no break occurred" scenarios cleanly.</p>
-    </div>
-
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Watch the following videos to reinforce and go beyond the concepts covered
+        in the reading:
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1201516277/5b90f72d1a?share=copy&amp;fl=sv&amp;fe=ci">Talking Points: Pass
+                    and Else Clauses for Loops</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1201523130/62882e3880?share=copy&amp;fl=sv&amp;fe=ci">Examples: Pass and
+                    Else Clauses for Loops</a>
+            </p>
+        </li>
+    </ul>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        5. Biblical Reflection
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Practice Files
     </h2>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Download the following files relevant to this lesson. This also includes the
+        computer lab for this lesson.
+    </p>
+    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004B/practice/loop_practice_pass_else.py">loop_practice_pass_else.py</a>
+            </p>
+        </li>
+    </ul>
+    <h2
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
+        Computer Lab
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 20px;">
+        The first computer lab for this unit will be given in lesson 7 along with
+        the solutions file.
+    </p>
     <div
-        style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+        style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;">
         <p>
-            The <strong>else</strong> clause in a loop runs only when the loop completes normally — without encountering
-            a <code>break</code>.
-            In the same way, God’s promises are “Yes” and “Amen” when we remain faithful and do not quit prematurely.
-        </p>
-        <p style="margin-top: 15px;">
-            <strong>Scripture:</strong><br>
-            “For all the promises of God find their Yes in him. That is why it is through him that we utter our Amen to
-            God for his glory.”
-            (2 Corinthians 1:20)
+            <em>If you find any typos or errors, please let me know.</em><br /><br /><a target="_blank"
+                rel="noopener noreferrer nofollow"
+                href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"><strong>📧 Send
+                    me an email</strong></a>
         </p>
     </div>
-
+    <p style="font-size: 1.08em; margin: 25px 0px 15px;">
+        <strong>Deliverable:</strong> The student is responsible to self-grade their
+        work.
+    </p>
+    <h2
+        style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;">
+        Anchored in Christ
+    </h2>
+    <p style="font-size: 1.08em; margin-bottom: 22px;">
+        <strong>God Loves To Use Object Lessons</strong>
+    </p>
+    <p style="font-size: 1.08em; margin-bottom: 22px;">
+        The event of the <span style="color: rgb(72, 155, 228);">pass</span>over was
+        an object lesson about God's intention to eventually pass over the sins of
+        His people and bring them back to Himself through the shed blood of the
+        Messiah, Christ Jesus. In the Exodus account, God establishes the passover
+        for Israel that they might celebrate it and remember it. It was always God's
+        plan to remove sin from His people that they might be restored to him.
+        <span style="color: rgb(76, 139, 221);">Else</span>, if anyone was found
+        without their sin covered, then they themselves would suffer the due penalty
+        for standing before a Holy God. That penalty is death. God is kind. He is
+        true kindness. Remember though, He is God. We are not.
+    </p>
+    <p style="font-size: 1.08em; margin-bottom: 22px;">
+        <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://learn.ligonier.org/podcasts/things-unseen-with-sinclair-ferguson/the-lords-supper-a-proclamation"><strong>Beyond
+                Computer Science: The Lord's Supper - A Proclamation</strong></a>
+    </p>
+    <blockquote>
+        <p>
+            <strong><em>Exodus 12:13 (KJV)</em></strong><em>
+                "And the blood shall be to you for a token upon the houses where ye are:
+                and when I see the blood, I will pass over you, and the plague shall not
+                be upon you to destroy you, when I smite the land of Egypt."</em>
+        </p>
+        <p style="text-align: start; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"
+            dir="auto"></p>
+        <p style="text-align: left; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"
+            dir="auto">
+            <strong><em>Exodus 12:27 (KJV)</em></strong><em>
+                "That ye shall say, It is the sacrifice of the LORD'S passover, who
+                passed over the houses of the children of Israel in Egypt, when he smote
+                the Egyptians, and delivered our houses."</em>
+        </p>
+    </blockquote>
     <div
-        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-        <em>If you find any typos or errors, please let me know.</em><br><br>
-        <a href="mailto:info@logosteach.com?subject=Examples for Lesson 005"
-            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;">
+        <p>© 2026 LogosTeach - All Rights Reserved.</p>
     </div>
-
-    <div
-        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-        © 2026 LogosTeach - All Rights Reserved.
-    </div>
-
 </div>

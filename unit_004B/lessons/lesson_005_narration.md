@@ -1,0 +1,10 @@
+# Lesson 5 - The pass Statement and Loop else Clause
+
+The Lord loves to use object lessons. Perhaps one of the most powerful object lessons God gave to His people—and then through the gospel to the whole world—was the establishment of the Jewish Passover.
+In this lesson we are going to learn about the pass and else keywords as they apply to loops. The pass keyword is used when you know you have a loop structure you want to establish, but it is not yet time to implement the code for it. The else keyword gives you the ability to run a block of code so long as the loop completes without any type of break.
+The Lord wanted to demonstrate that He was going to pass over sin through the payment of blood. The time for Christ had not yet come. There were still many generations to come before that time would be ready. So what did the Lord do? He established a “pass” condition. It would still be a pass over that pointed to blood sacrifice. To continue this object lesson throughout all Israel over the generations—from father to son, from mother to daughter—the celebration of the Passover was established.
+Once Christ came, He established His own Passover celebration by instituting the Lord’s Supper. In this supper Christ Himself reminds and comforts us as we remember what He has done for us in His body.
+I heard a theologian I greatly respect once say, “The celebration of the Lord’s Supper is like unto a husband gently stroking his wife’s hair and saying ‘I love you.’” It is a moment of contact. It’s not just words. It’s words of remembrance with physical contact. It reminds her through a loving touch that she has her husband’s love and care.
+The next time you celebrate the Lord’s Supper, don’t try to worry about working up holy feelings in your heart. Let the Lord serve you again in the supper. Let Him come to you, place His loving hand upon you and remind you, “I love you. That is why I died for you. You cannot possibly lose this love that I have for you. You are Mine.”
+
+© 2026 LogosTeach - All Rights Reserved
