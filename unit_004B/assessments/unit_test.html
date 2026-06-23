@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Code+Pro:wght@400;500;600&amp;display=swap"
+            rel="stylesheet">
     <title>Assessment - [Unit/Lesson Title]</title>
     <style>
         body {
@@ -43,6 +46,14 @@
             padding-left: 18px;
         }
 
+        p code, li code {
+            padding: 2px 2px;
+            color: #1d2b53;
+            background-color: #dafcef;
+        }
+
+
+
         .header-info {
             font-size: 1.1em;
             margin-bottom: 30px;
@@ -60,6 +71,20 @@
         .question {
             margin-bottom: 35px;
         }
+
+       .question pre {
+    margin: 8px 0 14px 0;
+    padding: 10px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    text-indent: 0;           /* Removes any inherited indent */
+    margin-left: 0;
+    padding-left: 12px;
+}
 
         .coding-box {
             background-color: #f8f9fa;
@@ -86,6 +111,50 @@
             padding: 20px;
             border-left: 6px solid #2c7a7b;
         }
+
+        .page-break {
+    page-break-before: always;
+    page-break-after: always;
+    page-break-inside: avoid;
+    display: block;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+        pre, code {
+    font-family: 'Source Code Pro', Consolas, Monaco, 'Courier New', monospace;
+    font-size: 1.02em;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.question pre {
+    margin: 8px 0 12px 0;
+    padding: 12px 16px;
+    background-color: #f4f6f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.question ol {
+    margin-top: 12px;
+}
+
+.question li {
+    margin-bottom: 18px;
+}
     </style>
 </head>
 
@@ -154,6 +223,147 @@
                 <li>c) IndentationError</li>
                 <li>d) The result will be i=0, i=1, ... i=15.</li>
                 <li>e) The letter 'i' is not in the word range.</li>
+            </ul>
+            <p><strong>Correct Answer:</strong> b</p>
+        </div>
+
+        <div class="question">
+            <p><strong>3.</strong> What is the output of the following code? (__ points)</p>
+            <pre style="background:#f8f9fa; padding:15px; border-radius:6px; overflow:auto; font-family:monospace;">
+        count = 1
+        while count != 5:
+            print(count)
+            count += 2
+            </pre>
+            <ul>
+                <li>a) 1 2 3 4 5</li>
+                <li>b) 1 3</li>
+                <li>c) 1 3 5</li>
+                <li>d) 1 2 3 4</li>
+                <li>e) The program will run forever (infinite loop)</li>
+            </ul>
+            <p><strong>Correct Answer:</strong> b</p>
+        </div>
+
+        <div class="question">
+            <p><strong>4.</strong> Janice has a Python list named <code>books</code>. Here is what the list looks like:</p>
+            <pre>books = ["The Hobbit", "The Lord of the Rings", "And Then There Were None", "Murder on the Mews", "Out of the Silent Planet"]</pre>
+        
+            <p>She has been asked to create a <code>while</code> loop that will print each book out one at a time with its
+                number (enumeration) listing it. Which is the correct implementation of this? (__ points)</p>
+        
+            <ol style="list-style-type: lower-alpha; padding-left: 20px;">
+                <li>
+<pre>for i in range(len(books)):
+    print(i+1, books[i])</pre>
+                </li>
+                <li>
+<pre>i = 0
+while i &lt; len(books):
+    print(i+1, books[i])
+    i += 1</pre>
+</li>
+<li>
+<pre>for book in books:
+print(book)</pre>
+                </li>
+                <li>
+<pre>i = 0
+while i &lt;= len(books):
+    print(i+1, books[i])
+    i += 1</pre>
+                </li>
+                <li>
+<pre>while True:
+    print(books)</pre>
+                </li>
+            </ol>
+        
+            <p><strong>Correct Answer:</strong> b</p>
+        </div>
+
+        <div class="question">
+            <p><strong>5.</strong> Daniel wants to print out the first 5 odd numbers beginning with 3. Here is the loop he wrote
+                in Python:</p>
+<pre>for i in range(3, 5, 2):
+    print(i)</pre>
+            <p>Will this code achieve what Daniel wants, or does it need to be tweaked in some way? If so, what are the ways in
+                which it needs to be tweaked? (__ points)</p>
+            <ul>
+                <li>a) The code is correct and will print 3, 5, 7, 9, 11.</li>
+                <li>b) The code needs a different <code>stop</code> value (e.g. <code>range(3, 12, 2)</code>).</li>
+                <li>c) The code needs a different <code>step</code> value.</li>
+                <li>d) The code has a capitalization error with the variable <code>I</code> vs <code>i</code>.</li>
+                <li>e) The code is correct but needs <code>print(i, end=" ")</code> to print on one line.</li>
+            </ul>
+            <p><strong>Correct Answer:</strong> b</p>
+        </div>
+
+        <div class="question">
+            <p><strong>6.</strong> Samantha is given a bag full of money from the bake sale and asked to go into the school
+                office to count it out and sort it. What type of loop would best be used to represent the process of her
+                counting the money? (__ points)</p>
+            <ul>
+                <li>a) A <code>for</code> loop, because she knows exactly how much money is in the bag.</li>
+                <li>b) A <code>while</code> loop, because she doesn’t know how many bills or coins there are until she counts
+                    them all.</li>
+                <li>c) A <code>for</code> loop with <code>range(100)</code> because there are usually around 100 items.</li>
+                <li>d) Neither — she should just use <code>print("Count the money")</code> once.</li>
+                <li>e) A nested loop because there are bills and coins.</li>
+            </ul>
+            <p><strong>Correct Answer:</strong> b</p>
+        </div>
+
+        <div class="question">
+            <p><strong>7.</strong> Dallas has the following string variable in Python.</p>
+            <pre>message = "Let us pray that God would intervene and bring our hearts back to Him."</pre>
+            <p>Which of the following loops will print each word exactly once, and then make a new line? (__ points)</p>
+            <ul>
+                <li>a) <code>for word in message:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(word)</code></li>
+                <li>b) <code>for word in message.split():<br>&nbsp;&nbsp;&nbsp;&nbsp;print(word)</code></li>
+                <li>c) <code>for i in range(len(message)):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(message[i])</code></li>
+                <li>d)
+                    <code>while message:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(message)<br>&nbsp;&nbsp;&nbsp;&nbsp;message = ""</code>
+                </li>
+                <li>e) <code>for letter in message:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(letter)</code></li>
+            </ul>
+            <p><strong>Correct Answer:</strong> b</p>
+        </div>
+
+        <div class="question">
+            <p><strong>8.</strong> What will happen when the following code is run? (__ points)</p>
+
+<pre>counter = 0
+while True:
+    print("Game is running...")
+    counter += 1
+    if counter > 1000:
+        break</pre>
+            <ul>
+                <li>a) The message "Game is running..." will print exactly 1000 times and then stop.</li>
+                <li>b) The message "Game is running..." will print forever (infinite loop).</li>
+                <li>c) The message "Game is running..." will print 1001 times and then stop.</li>
+                <li>d) The code will cause an error because <code>break</code> is not allowed in a <code>while</code> loop.</li>
+                <li>e) The message will print once and then stop.</li>
+            </ul>
+            <p><strong>Correct Answer:</strong> c</p>
+        </div>
+
+        <div class="question">
+            <p><strong>9.</strong> What is the output of the following code? (__ points)</p>
+<pre>prayer_requests = ["Heal my mom", "", "Help with school", " ", "Strength for my dad", ""]
+
+for request in prayer_requests:
+    request = request.strip()
+    if request == "":
+        continue
+    print("Praying for:", request)</pre>
+            <ul>
+                <li>a) It prints all 6 items including the empty ones.</li>
+                <li>b) It prints only the non-empty prayer requests.</li>
+                <li>c) It prints nothing because of the <code>continue</code> statement.</li>
+                <li>d) It causes an error because <code>continue</code> cannot be used with a list.</li>
+                <li>e) It prints the empty strings as blank lines.</li>
             </ul>
             <p><strong>Correct Answer:</strong> b</p>
         </div>
