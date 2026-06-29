@@ -1,0 +1,254 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Link to your custom CSS -->
+<link rel="stylesheet" href="../../static/css/stylesheet.css">
+<style>
+    /* Additional inline styles for code blocks and clarity */
+    pre {
+       
+        color: #222 !important;
+       
+        border: 1px solid #e7f2fd;
+        border-radius: 6px;
+        padding: 15px;
+        overflow-x: auto;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 15px 0;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+       
+        color: #222 !important;
+    }
+
+    .code-example {
+        background-color: #e7f2fd;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 5px solid #2c7a7b;
+        margin: 20px 0;
+    }
+
+    .example-label {
+        font-weight: 600;
+        color: #2c7a7b;
+        margin-bottom: 8px;
+        display: block;
+    }
+</style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson 001 - Boolean Values: True, False, and Clear Decisions</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Boolean values are the simplest yet most fundamental data type in Python. They represent truth and
+            falsehood, enabling every decision, branch, and loop in our programs. In this lesson, you will learn what
+            Booleans are, how to create and assign them, and how to use them in conditional logic. Just as God has given
+            us the ability to discern truth from error, Boolean logic allows our code to make clear, unambiguous
+            choices.
+        </p>
+
+        <!-- Section 1: What Are Boolean Values? -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            What Are Boolean Values?
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>In Python, there are exactly two Boolean values: <code>True</code> and <code>False</code>. These are
+                built-in keywords (constants) and must be capitalized exactly as shown. They belong to the
+                <code>bool</code> data type.</p>
+
+            <div class="code-example">
+                <span class="example-label">Basic Boolean Output</span>
+                <pre><code>print(True)           # Output: True
+print(False)          # Output: False
+print(type(True))     # Output: &lt;class 'bool'&gt;
+print(type(False))    # Output: &lt;class 'bool'&gt;</code></pre>
+            </div>
+
+            <p>Booleans are not strings or numbers—they are their own distinct type used specifically for logical
+                operations and decision-making.</p>
+        </div>
+
+        <!-- Section 2: Creating and Assigning Boolean Values -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Creating and Assigning Boolean Values to Variables
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>You can assign Boolean values directly to variables or generate them automatically through comparison
+                operations and expressions. This is one of the most common and powerful ways Booleans are created in
+                real programs.</p>
+
+            <div class="code-example">
+                <span class="example-label">Direct Assignment</span>
+                <pre><code>is_active = True
+is_complete = False
+has_permission = True</code></pre>
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Generated from Comparisons (very common!)</span>
+                <pre><code>age = 15
+is_adult = age &gt;= 18          # False (15 is not &gt;= 18)
+score = 85
+passed_exam = score &gt;= 70     # True
+is_equal = (10 == 10)         # True
+is_greater = (5 &gt; 10)         # False</code></pre>
+            </div>
+
+            <div class="tip">
+                <strong>Tip:</strong> Use clear, descriptive variable names that begin with <code>is_</code>,
+                <code>has_</code>, or <code>can_</code> (e.g., <code>is_student</code>, <code>has_homework</code>). This
+                makes your code much easier to read and understand at a glance.
+            </div>
+        </div>
+
+        <!-- Section 3: Using Boolean Variables in Conditional Logic -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Using Boolean Variables in Conditional Logic
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Boolean values are the heart of <code>if</code> statements, <code>else</code> clauses, <code>elif</code>,
+                and loop conditions. They allow your program to take different paths based on whether a condition is
+                true or false.</p>
+
+            <div class="code-example">
+                <span class="example-label">Simple if-else with Boolean</span>
+                <pre><code>is_logged_in = True
+
+if is_logged_in:
+    print("Welcome back to your account!")
+else:
+    print("Please log in to continue.")</code></pre>
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Multiple Conditions with Logical Operators</span>
+                <pre><code>has_homework = False
+is_weekend = True
+
+if not has_homework and is_weekend:
+    print("Great day to rest and enjoy family time!")
+elif has_homework:
+    print("Let's get that homework done first.")
+else:
+    print("Time to focus on other responsibilities.")</code></pre>
+            </div>
+
+            <div class="warning-box">
+                <strong>Common Pitfall to Avoid:</strong> In Python, we usually write <code>if is_active:</code> instead
+                of <code>if is_active == True:</code>. Both work, but the first is the clean, Pythonic way. Using
+                <code>== True</code> or <code>== False</code> is considered redundant and less readable.
+            </div>
+        </div>
+
+        <!-- Section 4: Booleans - The Foundation of Decision-Making -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Booleans: The Foundation of All Decision-Making in Programming
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Every single decision your program makes ultimately evaluates to either <code>True</code> or
+                <code>False</code>. This includes:</p>
+            <ul>
+                <li>Comparison operators: <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>,
+                    <code>&gt;=</code>, <code>&lt;=</code></li>
+                <li>Logical operators: <code>and</code>, <code>or</code>, <code>not</code></li>
+                <li>Membership tests: <code>in</code>, <code>not in</code></li>
+                <li>Identity tests: <code>is</code>, <code>is not</code></li>
+            </ul>
+
+            <div class="code-example">
+                <span class="example-label">Logical Operators in Action</span>
+                <pre><code># and - both must be True
+print(True and True)     # True
+print(True and False)    # False
+
+# or - at least one must be True
+print(True or False)     # True
+print(False or False)    # False
+
+# not - flips the value
+print(not True)          # False
+print(not False)         # True</code></pre>
+            </div>
+
+            <p>Without Booleans, programs could not branch, repeat actions intelligently, validate input, or respond to
+                user choices. They are the bedrock of all algorithmic thinking.</p>
+
+            <div class="tip">
+                <strong>Best Practice:</strong> When checking Boolean values in conditions, prefer the direct form
+                (<code>if condition:</code>) over explicit comparison. It is cleaner and follows Python's philosophy of
+                readability.
+            </div>
+        </div>
+
+        <!-- Biblical Reflection / Anchored in Christ -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                As we study how Boolean values give our programs the power to clearly distinguish between true and false
+                in order to make wise decisions, we are reminded of a beautiful spiritual truth. God has graciously
+                given every human being the ability to discern truth from falsehood. In a world full of confusion,
+                competing voices, and moral gray areas, He calls us to stand firmly on what is true.
+            </p>
+            <p>
+                Just as a Boolean expression forces a clear <strong>True</strong> or <strong>False</strong> with no
+                middle ground, God calls us to make clear decisions about whom we will serve and what we will believe.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                "Then you will know the truth, and the truth will set you free." — <strong>John 8:32</strong><br><br>
+                "Elijah went before the people and said, 'How long will you waver between two opinions? If the Lord is
+                God, follow him; but if Baal is God, follow him.'" — <strong>1 Kings 18:21</strong>
+            </p>
+            <p style="margin-top: 15px;">
+                May our study of Boolean logic not only make us better programmers but also remind us to live with
+                clarity, choosing daily to walk in the truth that is found in Christ alone.
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 - Boolean Values"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

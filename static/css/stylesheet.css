@@ -140,6 +140,7 @@ li code {
 pre {
   margin: 1em 0;
   overflow: visible;
+  color: #222 !important;
 }
 
 pre code {
@@ -148,10 +149,15 @@ pre code {
   font-family: "Source Code Pro", monospace;
   display: block;
   padding: 5px;
-  background-color: #f4f4f4;
+  background-color: #e7f2fd;
+  color: #222 !important;
   border: none;
   overflow-x: auto;
   tab-size: 4;
+}
+
+code {
+  color: #222 !important;
 }
 
 /* ==================== SPECIAL BOXES & CALLOUTS ==================== */
