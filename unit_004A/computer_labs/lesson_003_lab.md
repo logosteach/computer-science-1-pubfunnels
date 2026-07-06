@@ -1,59 +1,129 @@
 # Computer Lab: Comparison Operators in Python
-#
-# Objectives:
-# By the end of this lab, you will be able to:
-# - Use the comparison operators <, >, <=, >=, ==, and != correctly.
-# - Understand that comparisons return Boolean values (True or False).
-# - Apply comparisons in simple real-world scenarios that require discernment.
-# - Combine comparisons with variables to make logical decisions.
-#
-# Complete the TODO sections. Run the code frequently to test your work.
-# Answer the reflection questions in your notebook.
 
-print("=== Comparison Operators Lab ===\n")
+## Learning Objectives
 
-# Step 0: Setup
+By the end of this lab, you will be able to:
+
+- Use the comparison operators `<`, `>`, `<=`, `>=`, `==`, and `!=` to evaluate relationships between values.
+- Understand that all comparisons return Boolean values (`True` or `False`).
+- Apply comparisons in practical scenarios that require clear discernment.
+
+## Lab Topics
+
+- Comparison operators: `<`, `>`, `<=`, `>=`, `==`, `!=`
+- Boolean results
+- Basic decision-making with comparisons
+
+## Materials / Prior Knowledge
+
+**You should already know:** Variables, `print()` statements, basic data types.  
+**You will need:** Python environment and this file saved as `comparison_operators_lab.py`.
+
+---
+
+### Step 0: Setup
+
+```python
+print("=== Comparison Operators Lab ===")
+```
+
+**Question 0:** What do you think `==` checks for compared to `=`?
+
+### Step 1: Numerical Comparisons
+
+**Context:**  
+Comparisons help us evaluate situations with clarity and truth.
+
+**Your Challenge:**  
+
+1. Set `age = 17` and `min_age = 18`.  
+2. Use `>=` and `<` to determine eligibility.
+
+```python
 age = 17
 min_age = 18
 
-# Step 1: Basic Numerical Comparisons
-can_enter = age >= min_age   # TODO: Change to test different ages
+can_enter = age >= min_age
 is_younger = age < min_age
 
 print(f"Age: {age}")
-print(f"Can enter event (age >= {min_age})? {can_enter}")
-print(f"Is younger than {min_age}? {is_younger}\n")
+print(f"Can enter? {can_enter}")
+print(f"Younger? {is_younger}")
+```
 
-# Step 2: Equality and Inequality
-correct_answer = 42
-user_guess = 42   # TODO: Try changing this value
+**Expected Output / Test It:**  
 
-print(f"User guess: {user_guess}")
-print(f"Guess is correct (==)? {user_guess == correct_answer}")
-print(f"Guess is wrong (!=)? {user_guess != correct_answer}\n")
+```
+Age: 17
+Can enter? False
+Younger? True
+```
 
-# Step 3: Range Check with <= and >=
+**Question 1:** Change `age` to 18. What happens and why?
+
+### Step 2: Equality Checks
+
+**Your Challenge:**  
+Test equality and inequality with a quiz score example.
+
+```python
+correct = 42
+guess = 42
+
+print(f"Correct guess? {guess == correct}")
+print(f"Wrong guess? {guess != correct}")
+```
+
+**Expected Output / Test It:**  
+
+```
+Correct guess? True
+Wrong guess? False
+```
+
+**Question 2:** Change `guess` to 40. Explain the results.
+
+### Step 3: Range Check
+
+**Your Challenge:**  
+Check if a value falls within a range.
+
+```python
 temp = 72
 min_comfort = 65
 max_comfort = 78
 
-is_comfortable = (temp >= min_comfort) and (temp <= max_comfort)
-print(f"Temperature: {temp}°F")
-print(f"Comfortable range ({min_comfort}-{max_comfort})? {is_comfortable}\n")
+comfortable = (temp >= min_comfort) and (temp <= max_comfort)
+print(f"Temperature {temp}°F comfortable? {comfortable}")
+```
 
-# Final Integration
+---
+
+### Final Integration Code
+
+```python
 score = 85
 passing = 70
 
-print("=== Grade Check ===")
-print(f"Score: {score}")
-print(f"Passing (>= {passing})? {score >= passing}")
-print(f"Perfect score (== 100)? {score == 100}")
-print(f"Needs improvement (!= 100)? {score != 100}")
+print("Grade Check:")
+print(f"Passing? {score >= passing}")
+print(f"Perfect? {score == 100}")
+```
 
-# Reflection Questions (notebook):
-# 1. What is the difference between = and == ?
-# 2. What happens when you change the variable values?
-# 3. Where else in life do we make comparisons like this?
+---
 
-# Copyright 2026 LogosTeach - All Rights Reserved
+### Lab Reflection (Answer in your notebook)
+
+1. What is the difference between `=` and `==`?  
+2. How did changing values affect the results?  
+3. Give one real-life example where these operators would be useful.
+
+---
+
+You’re done!  
+
+You just practiced the comparison operators that form the foundation of logical decision-making in Python.  
+
+Save your file as `lesson_003_lab.py` and be ready to discuss.
+
+© LogosTeach 2026 - All Rights Reserved.
