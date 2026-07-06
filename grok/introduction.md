@@ -13,6 +13,9 @@ Make yourself familiar with the repository directory structure first. You will n
 
 - Familiarize yourself with the content in the `templates` folder. I will have you help create labs, assignments, lessons, assessments, etc. You must find and use the correct template for each task.
 - Create HTML, Markdown (`.md`), and Python files. Always read through and understand the relevant templates in the `templates` folder before creating new content.
+- Create lesson examples for a lesson based upon the lesson_examples.html file template
+- Create a lesson outline for a lesson based upon the lesson_template.html file template
+- Create a lesson talking points for a lesson based upon the lesson_talking_points.html file template.
 - Create and edit CSS styles when needed. The main stylesheet is located at `static/css/stylesheet.css`.
 - This is a living document. Responsibilities may change and grow as this file is updated.
 
