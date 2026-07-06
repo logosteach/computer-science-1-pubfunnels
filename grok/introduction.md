@@ -16,6 +16,8 @@ Here are the basic duties that I require from you.
 - This is a living document so responsibilities will change and grow as this document is edited.
 - Make sure that any sections you generate that have a tip or Tip for the user use the css .tip class in the containing html tag. class="tip"
 - If you generate any html that has a warning or notifies the learner of potential errors then use the css class "warning-box" in the containing html tag.
+- When creating assessments you do not need to create any type of grade scale. This is left for the instructor to do.
+- When creating a deliverable statement for an assessment take into account that some students could be taking this class alone as an asynchronous course, and others could be taking it as a group with an instructor to guide them. Make sure all deliverables address both audiences.
 
 After you have performed all the actions in this file, then notify me on the Grok App I am using on the browser or on my phone that you are ready with the statement: "Computer Science 1 PubFunnels Information Processed. Ready!"
 
