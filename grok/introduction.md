@@ -21,15 +21,39 @@ Here are the basic duties that I require from you.
 - When creating assessments you do not need to create any type of grade scale. This is left for the instructor to do.
 - When creating a deliverable statement for an assessment take into account that some students could be taking this class alone as an asynchronous course, and others could be taking it as a group with an instructor to guide them. Make sure all deliverables address both audiences.
 - All labs, practice files, assessments, etc should end with a block paragraph containing the following transparency disclaimer: Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under instructor supervision and review.
-- When creating markdown output, make sure there is always a blank line (empty line) separating a header from the content that flows with that header. For example, do not do the following
-  - # my header
-    This is the content.
 
-    But instead do this
-    
-    # my header
+## Correct Formatting for Markdown
 
-    This is the content.
+Make sure all headers, even subheaders that use the bold effect have one empty line between them and their corresponding content. For example the following is NOT the output we want.
+
+# A Header
+The content
+
+But, the follow IS the output we want..
+
+# A Header
+
+The content
+
+Notice that there is one line between the header and the content that corresponds to that header. The same should hold true for all bold content that behaves like a header.
+
+**Challenge Problem:**
+
+The content of the challenge problem.
+
+Make sure that if you use any markdown code blocks then there is a tag that corresponds to what the code content is. For example, for all output make sure to give
+
+```console
+The output goes here
+```
+
+instead of..
+
+```
+The output goes here
+```
+
+the word console is needed as the label to indicate what type of code block it is.
 
 After you have performed all the actions in this file, then notify me on the Grok App I am using on the browser or on my phone that you are ready with the statement: "Computer Science 1 PubFunnels Information Processed. Ready!"
 
