@@ -1,195 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    <title>Lesson - If, Elif, and Else Statements</title>
 </head>
 
-<body>
-    <div class="container"
-        style="max-width: 900px; margin: 0 auto; padding: 30px 20px; background-color: #f9f9f9; color: #333; line-height: 1.6;">
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
 
-        <!-- Lesson Title -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
         <h1
-            style="text-align: center; font-size: 2.5em; border-bottom: 3px solid #3498db; padding-bottom: 0.4em; margin-bottom: 1em; font-weight: 700; color: #2c3e50;">
-            If, Elif, and Else Statements
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - if, elif, and else Statements</strong>
         </h1>
 
-        <!-- Lesson Description -->
-        <p style="text-align: justify; margin-bottom: 1.1em;" id="lesson-description">
-            In this lesson, you will learn how to use <code>if</code>, <code>elif</code>, and <code>else</code>
-            statements
-            to make decisions in your programs. These structures allow your code to take different paths based on
-            conditions.
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples help you master writing conditional statements, multi-way decisions, proper indentation and
+            colons, and controlling program flow. They also connect to the biblical truth that our choices matter.
         </p>
 
-        <!-- Lesson Objectives -->
         <h2
-            style="font-size: 1.9em; border-left: 6px solid #3498db; padding-left: 0.9em; font-weight: 600; color: #2c3e50; margin-top: 1.5em;">
-            Lesson Objectives
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Simple if Statement
         </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code># Basic decision based on a condition
+age = 17
 
-        <div
-            style="background-color: #eef5fb; padding: 1.2em 1.5em; border-radius: 8px; border-left: 6px solid #3498db; margin: 1.5em 0;">
-            <ul>
-                <li>
-                    <p><strong>Write <code>if</code>, <code>elif</code>, and <code>else</code> statements
-                            correctly.</strong></p>
-                    <ul>
-                        <li>
-                            <p>Understand the required syntax (colon and indentation).</p>
-                        </li>
-                        <li>
-                            <p>Create single and multi-way decision structures.</p>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <p><strong>Control program flow based on different conditions.</strong></p>
-                </li>
-                <li>
-                    <p><strong>Reflect on how decision structures relate to the choices we make in life.</strong></p>
-                </li>
-            </ul>
+if age >= 18:
+    print("You can make this decision independently.")
+print("This line always runs.")</code></pre>
+            <p><strong>Output:</strong><br>This line always runs.</p>
+            <p class="tip">Remember: The colon <code>:</code> after the condition and consistent indentation (4 spaces)
+                are essential in Python!</p>
         </div>
 
-        <!-- Opening Meditation -->
         <h2
-            style="font-size: 1.9em; border-left: 6px solid #3498db; padding-left: 0.9em; font-weight: 600; color: #2c3e50; margin-top: 1.5em;">
-            Opening Meditation
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: if-elif-else (Multi-way Decision)
         </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code># Choosing a path - like life's decisions
+path = "God's way"
 
-        <div
-            style="background-color: #fff3e0; padding: 1.8em 2em; border-radius: 12px; margin: 1.8em 0; box-shadow: 0 8px 24px rgba(255, 152, 0, 0.12), 0 4px 12px rgba(255, 193, 7, 0.1); border-left: 5px solid #ffb74d;">
-            <blockquote>
-                <p style="line-height: 1.7; margin: 0; font-size: 1.1em;">
-                    <em style="color: #b44306;">Just as our code must make clear decisions using if, elif, and else,
-                        so must we in life. God calls us to choose clearly whom we will serve.</em>
-                </p>
-                <p>
-                    <strong><em>Devotional Link:</em></strong>
-                    <a target="_blank" rel="noopener noreferrer nofollow"
-                        href="https://www.desiringgod.org/messages/the-word-of-god-is-at-work-in-you">
-                        <em>The Word of God is at Work in You</em>
-                    </a>
-                </p>
-            </blockquote>
+if path == "God's way":
+    print("Blessed is the one who walks in obedience.")
+elif path == "own way":
+    print("There are consequences when we go our own way.")
+else:
+    print("Compromise leads to unclear direction.")</code></pre>
+            <p><strong>Output (for "God's way"):</strong><br>Blessed is the one who walks in obedience.</p>
         </div>
 
-        <!-- Reading Assignment -->
         <h2
-            style="font-size: 1.9em; border-left: 6px solid #3498db; padding-left: 0.9em; font-weight: 600; color: #2c3e50; margin-top: 1.5em;">
-            Reading Assignment
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Controlling Program Flow (Grading Example)
         </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code>score = 85
 
-        <div
-            style="background-color: #e8f5e9; padding: 1.8em 2em; border-radius: 12px; margin: 1.8em 0; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.12), 0 4px 12px rgba(76, 175, 80, 0.1); border-left: 5px solid #81c784;">
-            <p style="text-align: justify; margin-bottom: 1.1em;">
-                <em>Python with a Worldview</em> by John C. Partridge – 1st Edition
-            </p>
-            <p style="text-align: justify; margin-bottom: 1.1em;">
-                Textbook – <mark>Chapter on Conditional Statements</mark>
-            </p>
-        </div>
+if score >= 90:
+    grade = "A - Excellent!"
+elif score >= 80:
+    grade = "B - Good job!"
+elif score >= 70:
+    grade = "C - Room to grow."
+else:
+    grade = "Needs more practice."
 
-        <!-- Video Lecture -->
-        <h2
-            style="font-size: 1.9em; border-left: 6px solid #3498db; padding-left: 0.9em; font-weight: 600; color: #2c3e50; margin-top: 1.5em;">
-            Video Lecture
-        </h2>
-        <a href="#"
-            style="display: inline-block; padding: 12px 28px; background-color: #5c9ce5; color: white; text-decoration: none; font-weight: 600; font-size: 16px; border: 2px solid #4a8bd4; border-radius: 8px;">
-            ▶️ Click to Watch the Video Lecture
-        </a>
-
-        <!-- Examples Section -->
-        <h2
-            style="font-size: 1.9em; border-left: 6px solid #3498db; padding-left: 0.9em; font-weight: 600; color: #2c3e50; margin-top: 1.5em;">
-            Examples
-        </h2>
-
-        <div
-            style="background-color: #f0f7fd; padding: 1.8em 2em; border-radius: 12px; margin: 1.8em 0; box-shadow: 0 8px 24px rgba(52, 152, 219, 0.12), 0 4px 12px rgba(41, 128, 185, 0.1); border-left: 5px solid #bbdefb;">
-
-            <!-- Example 1 -->
-            <p><strong>Example 1: Basic <code>if</code> Statement</strong></p>
-            <div class="code-block"
-                style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0; font-family: monospace;">
-                age = 17
-
-                if age >= 18:
-                print("You are an adult.")
-            </div>
-            <p><strong>Output:</strong> (No output — condition is False)</p>
-
-            <!-- Example 2 -->
-            <p><strong>Example 2: <code>if</code> and <code>else</code></strong></p>
-            <div class="code-block"
-                style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0; font-family: monospace;">
-                age = 17
-
-                if age >= 18:
-                print("You are an adult.")
-                else:
-                print("You are a minor.")
-            </div>
-            <p><strong>Output:</strong> You are a minor.</p>
-
-            <!-- Example 3 -->
-            <p><strong>Example 3: Multi-way Decisions with <code>elif</code></strong></p>
-            <div class="code-block"
-                style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0; font-family: monospace;">
-                score = 85
-
-                if score >= 90:
-                print("Grade: A")
-                elif score >= 80:
-                print("Grade: B")
-                elif score >= 70:
-                print("Grade: C")
-                else:
-                print("Grade: F")
-            </div>
-            <p><strong>Output:</strong> Grade: B</p>
-
-            <!-- Example 4 -->
-            <p><strong>Example 4: Importance of the Colon and Indentation</strong></p>
-            <div class="code-block"
-                style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0; font-family: monospace;">
-                temperature = 75
-
-                if temperature > 80:
-                print("It's hot outside.") # IndentationError!
-                else:
-                print("Comfortable temperature.")
-            </div>
-            <p><strong>Result:</strong> Python raises an <code>IndentationError</code> because the code under the
-                <code>if</code> is not indented.</p>
-
+print(f"Your grade: {grade}")</code></pre>
+            <p><strong>Output:</strong><br>Your grade: B - Good job!</p>
+            <p class="warning-box">Warning: Order matters! Python checks conditions from top to bottom and stops at the
+                first True match.</p>
         </div>
 
         <!-- Biblical Reflection -->
         <h2
-            style="font-size: 1.9em; border-left: 6px solid #3498db; padding-left: 0.9em; font-weight: 600; color: #2c3e50; margin-top: 1.5em;">
-            Biblical Reflection
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection / Anchored in Christ
         </h2>
-
-        <div style="background-color: #f0f7f7; padding: 20px; border-left: 6px solid #2c7a7b; margin: 20px 0;">
-            <p>Just as <code>if-elif-else</code> structures require us to make clear decisions in code,
-                God calls us to make clear decisions in life. We are not meant to live in constant indecision.</p>
-            <p><strong>“Choose for yourselves this day whom you will serve... But as for me and my house, we will serve
-                    the Lord.”</strong><br>
-                — Joshua 24:15 (NKJV)</p>
-            <p><strong>“I have set before you life and death... therefore choose life.”</strong><br>
-                — Deuteronomy 30:19 (NKJV)</p>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Just as our code uses clear if-elif-else structures to guide what happens next, our lives require clear
+                decisions. We can choose God’s way (the path of blessing), our own way (which leads away from Him), or a
+                compromise (which brings instability). God calls us to decisive, wholehearted obedience.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “...choose this day whom you will serve... But as for me and my house, we will serve the Lord.” (Joshua
+                24:15)<br>
+                “I have set before you life and death, blessing and curse. Therefore choose life...” (Deuteronomy 30:19)
+            </p>
         </div>
 
-        <p style="text-align: center; margin-top: 3em; color: #777;">© LogosTeach 2026 - All Rights Reserved</p>
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:jcpartridge@logosteach.com?subject=Feedback for Lesson Examples - if-elif-else"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
 
     </div>
+
 </body>
 
 </html>
