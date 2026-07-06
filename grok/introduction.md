@@ -17,6 +17,7 @@ Here are the basic duties that I require from you.
 - This is a living document so responsibilities will change and grow as this document is edited.
 - Make sure that any sections you generate that have a tip or Tip for the user use the css .tip class in the containing html tag. class="tip"
 - If you generate any html that has a warning or notifies the learner of potential errors then use the css class "warning-box" in the containing html tag.
+- When creating a *practice file*, a practice file is just a simple Python file but it uses comments to explain and to give instructions to the student who is learning. Put a paragraph comment at the beginning of each file that gives the objectives for that practice file. end each practice file with an inline comment: # Copyright 2026 LogosTeach - All Rights Reserved
 - When creating assessments you do not need to create any type of grade scale. This is left for the instructor to do.
 - When creating a deliverable statement for an assessment take into account that some students could be taking this class alone as an asynchronous course, and others could be taking it as a group with an instructor to guide them. Make sure all deliverables address both audiences.
 
