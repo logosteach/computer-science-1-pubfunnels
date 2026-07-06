@@ -160,6 +160,15 @@ code {
   color: #222 !important;
 }
 
+blockquote {
+  border-left: 4px solid #3b82f6;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #f0f9ff;
+  color: #1e40af;
+  font-style: italic;
+}
+
 /* ==================== SPECIAL BOXES & CALLOUTS ==================== */
 
 /* Tip Box */
