@@ -26,12 +26,12 @@ Here are the basic duties that I require from you.
 
 Make sure all headers, even subheaders that use the bold effect have one empty line between them and their corresponding content. For example the following is NOT the output we want.
 
-# A Header
+### A Header
 The content
 
 But, the follow IS the output we want..
 
-# A Header
+### A Header
 
 The content
 
