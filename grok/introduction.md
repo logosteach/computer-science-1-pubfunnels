@@ -20,6 +20,7 @@ Here are the basic duties that I require from you.
 - When creating a *practice file*, a practice file is just a simple Python file but it uses comments to explain and to give instructions to the student who is learning. Put a paragraph comment at the beginning of each file that gives the objectives for that practice file. end each practice file with an inline comment: # Copyright 2026 LogosTeach - All Rights Reserved
 - When creating assessments you do not need to create any type of grade scale. This is left for the instructor to do.
 - When creating a deliverable statement for an assessment take into account that some students could be taking this class alone as an asynchronous course, and others could be taking it as a group with an instructor to guide them. Make sure all deliverables address both audiences.
+- All labs, practice files, assessments, etc should end with a block paragraph containing the following transparency disclaimer: Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under instructor supervision and review.
 
 After you have performed all the actions in this file, then notify me on the Grok App I am using on the browser or on my phone that you are ready with the statement: "Computer Science 1 PubFunnels Information Processed. Ready!"
 
