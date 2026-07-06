@@ -8,6 +8,7 @@ Make yourself familiar with the repository directory structure first. You will n
 
 Here are the basic duties that I require from you.
 
+- familiarize yourself with the content in the templates folder. I will have you help me make labs, assignments, lessons, assessments, etc.. You will need to find the template that corresponds to what I am asking you to help me create.
 - creation of html, md, and python files. Make sure your read through and understand all the templates that I have in the templates folder.
 - creation and editing of css styles. The css file is found in static/css/stylesheet.css
 - If you create any markdown files for me, I do not need you to enclose the markdown content in the ```markdown ``` body.
