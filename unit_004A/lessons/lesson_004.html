@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Short-Circuit Evaluation - Examples</title>
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
     <style>
-        body {
+        /* Fallback styles in case external CSS is unavailable */
+        body.lesson-body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.7;
             max-width: 1000px;
@@ -19,19 +21,20 @@
         }
 
         h1 {
-            font-size: 2.4em;
+            font-size: 2.6em;
             color: #1a3c5e;
             border-bottom: 5px solid #2c7a7b;
-            padding-bottom: 15px;
+            padding-bottom: 18px;
             margin-bottom: 30px;
+            font-weight: 700;
         }
 
         h2 {
-            font-size: 1.7em;
+            font-size: 1.85em;
             color: #2c7a7b;
             border-left: 6px solid #2c7a7b;
-            padding-left: 15px;
-            margin-top: 45px;
+            padding-left: 16px;
+            margin: 50px 0 18px 0;
         }
 
         .code-block {
@@ -62,7 +65,7 @@
             margin: 15px 0;
         }
 
-        .biblical {
+        .biblical-reflection {
             background-color: #f0f7f7;
             padding: 25px;
             border-left: 6px solid #2c7a7b;
@@ -70,151 +73,170 @@
             font-style: italic;
             color: #1a3c5e;
         }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .logo {
-            font-weight: 700;
-            color: #2c7a7b;
-        }
     </style>
 </head>
 
-<body>
+<body class="lesson-body">
 
-    <div class="header">
-        <div>
-            <span class="logo">Python with a Worldview</span>
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
         </div>
-        <div>
-            <strong>LogosTeach</strong>
+    </header>
+
+    <div style="max-width: 1000px; margin: 0 auto; padding: 35px;">
+
+        <h1>Short-Circuit Evaluation in Python</h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            In this lesson, you will learn how Python uses short-circuit evaluation with the logical operators
+            <code>and</code> and <code>or</code>. Understanding this behavior helps you write safer and more efficient
+            code.
+        </p>
+
+        <!-- Example 1 -->
+        <h2>Example 1: Understanding Short-Circuit Evaluation with <code>and</code></h2>
+
+        <div class="code-block">
+            x = 5
+            y = 10
+
+            # Python stops evaluating as soon as the result is known
+            result = (x > 10) and (y > 5)
+            print(result)
         </div>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            False
+        </div>
+
+        <div class="explanation">
+            <strong>Explanation:</strong> Because <code>x &gt; 10</code> is <code>False</code>, Python does not check
+            <code>y &gt; 5</code>. It already knows the entire expression must be <code>False</code>.
+        </div>
+
+        <!-- Example 2 -->
+        <h2>Example 2: Short-Circuit Evaluation with <code>or</code></h2>
+
+        <div class="code-block">
+            age = 17
+            has_permission = True
+
+            can_enter = (age >= 18) or has_permission
+            print(can_enter)
+        </div>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True
+        </div>
+
+        <div class="explanation">
+            <strong>Explanation:</strong> Because <code>has_permission</code> is <code>True</code>, Python stops
+            and does not evaluate <code>age &gt;= 18</code>.
+        </div>
+
+        <!-- Example 3 -->
+        <h2>Example 3: Using Short-Circuit Evaluation to Avoid Errors</h2>
+
+        <div class="code-block">
+            username = ""
+
+            # Safe check before using len()
+            if username and len(username) > 5:
+            print("Username is long enough")
+            else:
+            print("Username is missing or too short")
+        </div>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Username is missing or too short
+        </div>
+
+        <div class="explanation">
+            <strong>Explanation:</strong> If <code>username</code> is empty (falsy), Python stops immediately
+            and never runs <code>len(username)</code>. This prevents potential problems.
+        </div>
+
+        <!-- Example 4 -->
+        <h2>Example 4: Preventing Division by Zero</h2>
+
+        <div class="code-block">
+            numerator = 20
+            denominator = 0
+
+            # Safe way to check before dividing
+            if denominator != 0 and numerator / denominator > 2:
+            print("Result is greater than 2")
+            else:
+            print("Cannot divide or result is not greater than 2")
+        </div>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Cannot divide or result is not greater than 2
+        </div>
+
+        <div class="explanation">
+            <strong>Explanation:</strong> Because <code>denominator != 0</code> is <code>False</code>,
+            Python never attempts to divide by zero.
+        </div>
+
+        <!-- Example 5 -->
+        <h2>Example 5: Order of Conditions Matters</h2>
+
+        <div class="code-block">
+            has_ticket = False
+            is_vip = True
+
+            can_watch = has_ticket or is_vip
+            print(can_watch)
+        </div>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True
+        </div>
+
+        <div class="explanation">
+            <strong>Explanation:</strong> With <code>or</code>, Python stops as soon as it finds a
+            <code>True</code> value. The order of your conditions can affect both safety and efficiency.
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2>Biblical Reflection</h2>
+
+        <div class="biblical-reflection">
+            Just as short-circuit evaluation allows us to stop checking once we have enough information,
+            God has given us foundational truths in Scripture that are always reliable. When we know that
+            we are loved and accepted in Christ Jesus, we do not need to keep evaluating our performance
+            to find security. As Jesus said:<br><br>
+            <strong>“If the Son sets you free, you will be free indeed.”</strong><br>
+            — John 8:36
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Short-Circuit Evaluation Lesson"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">
+                📧 Send me an email
+            </a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
     </div>
-
-    <h1>Short-Circuit Evaluation in Python</h1>
-
-    <p><strong>Learning Focus:</strong> In this lesson, you will learn how Python uses short-circuit evaluation with the
-        logical operators <code>and</code> and <code>or</code>. Understanding this behavior helps you write safer and
-        more efficient code.</p>
-
-    <!-- Example 1 -->
-    <h2>Example 1: Understanding Short-Circuit Evaluation with <code>and</code></h2>
-
-    <div class="code-block">
-        x = 5
-        y = 10
-
-        # Python stops evaluating as soon as the result is known
-        result = (x > 10) and (y > 5)
-        print(result)
-    </div>
-
-    <div class="output"><strong>Output:</strong><br>False</div>
-
-    <div class="explanation">
-        <strong>Explanation:</strong> Because <code>x > 10</code> is <code>False</code>, Python does not check
-        <code>y > 5</code>. It already knows the entire expression must be <code>False</code>.
-    </div>
-
-    <!-- Example 2 -->
-    <h2>Example 2: Short-Circuit Evaluation with <code>or</code></h2>
-
-    <div class="code-block">
-        age = 17
-        has_permission = True
-
-        can_enter = (age >= 18) or has_permission
-        print(can_enter)
-    </div>
-
-    <div class="output"><strong>Output:</strong><br>True</div>
-
-    <div class="explanation">
-        <strong>Explanation:</strong> Because <code>has_permission</code> is <code>True</code>, Python stops and does
-        not evaluate <code>age >= 18</code>.
-    </div>
-
-    <!-- Example 3 -->
-    <h2>Example 3: Using Short-Circuit Evaluation to Avoid Errors</h2>
-
-    <div class="code-block">
-        username = ""
-
-        # Safe check before using len()
-        if username and len(username) > 5:
-        print("Username is long enough")
-        else:
-        print("Username is missing or too short")
-    </div>
-
-    <div class="output"><strong>Output:</strong><br>Username is missing or too short</div>
-
-    <div class="explanation">
-        <strong>Explanation:</strong> If <code>username</code> is empty (falsy), Python stops immediately and never runs
-        <code>len(username)</code>. This prevents potential problems.
-    </div>
-
-    <!-- Example 4 -->
-    <h2>Example 4: Preventing Division by Zero</h2>
-
-    <div class="code-block">
-        numerator = 20
-        denominator = 0
-
-        # Safe way to check before dividing
-        if denominator != 0 and numerator / denominator > 2:
-        print("Result is greater than 2")
-        else:
-        print("Cannot divide or result is not greater than 2")
-    </div>
-
-    <div class="output"><strong>Output:</strong><br>Cannot divide or result is not greater than 2</div>
-
-    <div class="explanation">
-        <strong>Explanation:</strong> Because <code>denominator != 0</code> is <code>False</code>, Python never attempts
-        to divide by zero.
-    </div>
-
-    <!-- Example 5 -->
-    <h2>Example 5: Order of Conditions Matters</h2>
-
-    <div class="code-block">
-        has_ticket = False
-        is_vip = True
-
-        can_watch = has_ticket or is_vip
-        print(can_watch)
-    </div>
-
-    <div class="output"><strong>Output:</strong><br>True</div>
-
-    <div class="explanation">
-        <strong>Explanation:</strong> With <code>or</code>, Python stops as soon as it finds a <code>True</code> value.
-        The order of your conditions can affect both safety and efficiency.
-    </div>
-
-    <!-- Biblical Reflection -->
-    <h2>Biblical Reflection</h2>
-
-    <div class="biblical">
-        Just as short-circuit evaluation allows us to stop checking once we have enough information,
-        God has given us foundational truths in Scripture that are always reliable. When we know that
-        we are loved and accepted in Christ Jesus, we do not need to keep evaluating our performance
-        to find security. As Jesus said:<br><br>
-        <strong>“If the Son sets you free, you will be free indeed.”</strong><br>
-        — John 8:36
-    </div>
-
-    <p style="text-align: center; margin-top: 50px; color: #777; font-size: 0.9em;">
-        © LogosTeach 2026 - All Rights Reserved
-    </p>
 
 </body>
 
