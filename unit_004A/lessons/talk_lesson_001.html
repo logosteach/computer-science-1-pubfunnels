@@ -3,143 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    <title>Lesson 001 - Boolean Values | Talking Points</title>
+    <title>Talking Points - Lesson 001 - Boolean Values</title>
 </head>
 
-<body>
-
-    <!-- ====================== DOCUMENT HEADER ====================== -->
+<body class="lesson-body">
     <header class="document-header">
         <div class="header-content">
-            <div class="header-left">Python with a Worldview</div>
-            <div class="header-right">LogosTeach</div>
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
         </div>
     </header>
 
-    <!-- ====================== MAIN CONTENT ====================== -->
     <div
         style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
 
         <h1
             style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            Lesson 001 - Boolean Values: True, False, and Clear Decisions — Talking Points
+            <strong>Talking Points - Lesson 001: Boolean Values: True, False, and Clear Decisions</strong>
         </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            Key talking points, discussion prompts, and teaching notes for instructors using this lesson on Boolean
-            values in Python.
+            Use these talking points to guide class discussion, video lecture, or student review for Lesson 001.
         </p>
 
-        <!-- ==================== MAIN TEACHING POINTS ==================== -->
+        <!-- Section 1 -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Main Teaching Points
+            1. What Are Boolean Values?
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <ul style="font-size: 1.08em;">
-                <li>
-                    <p><strong>Boolean Values Defined:</strong> Python has exactly two Boolean values —
-                        <code>True</code> and <code>False</code>. These are built-in keywords (not strings or numbers)
-                        that belong to the <code>bool</code> data type. They represent logical truth and falsehood.</p>
-                </li>
-                <li>
-                    <p><strong>Creating and Assigning Booleans:</strong> Students can assign Booleans directly
-                        (<code>is_active = True</code>) or, more powerfully, generate them through comparison
-                        expressions (<code>age &gt;= 18</code>, <code>score &gt;= 70</code>). Emphasize that comparisons
-                        return Boolean results.</p>
-                </li>
-                <li>
-                    <p><strong>Using Booleans in Conditionals:</strong> Booleans control program flow through
-                        <code>if</code>, <code>else</code>, and <code>elif</code>. Show simple examples and then combine
-                        with logical operators (<code>and</code>, <code>or</code>, <code>not</code>).</p>
-                </li>
-                <li>
-                    <p><strong>Foundation of Decision-Making:</strong> Every decision in programming ultimately
-                        evaluates to True or False. This includes comparisons, membership tests (<code>in</code>),
-                        identity checks (<code>is</code>), and loop conditions. Without Booleans, programs cannot branch
-                        or respond intelligently.</p>
-                </li>
-                <li>
-                    <p><strong>Pythonic Best Practices:</strong> Prefer direct Boolean checks
-                        (<code>if is_logged_in:</code>) over redundant comparisons
-                        (<code>if is_logged_in == True:</code>). Use descriptive variable names starting with
-                        <code>is_</code>, <code>has_</code>, or <code>can_</code>.</p>
-                </li>
+            <ul>
+                <li>Booleans are the simplest data type — only two possible values: <code>True</code> and
+                    <code>False</code>.</li>
+                <li>They are keywords (must be capitalized exactly).</li>
+                <li>Booleans belong to the <code>bool</code> type.</li>
+                <li>Ask students: “Why do you think God designed our minds to understand true/false distinctions?”</li>
             </ul>
         </div>
 
-        <!-- ==================== DISCUSSION & TALKING POINTS ==================== -->
+        <!-- Section 2 -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Discussion &amp; Talking Points
+            2. Creating and Assigning Booleans
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <ul style="font-size: 1.08em;">
-                <li>
-                    <p><strong>Why are Booleans essential?</strong> Ask students: “What would happen if a program
-                        couldn’t tell the difference between true and false conditions?”</p>
-                </li>
-                <li>
-                    <p><strong>Real-world analogies:</strong> Discuss everyday decisions that are essentially Boolean
-                        (e.g., “Is it raining?” → take umbrella or not; “Did I finish my homework?” → play or study).
-                        Connect this to how code makes similar clear choices.</p>
-                </li>
-                <li>
-                    <p><strong>Common pitfalls to highlight:</strong>
-                        <br>• Using <code>=</code> (assignment) instead of <code>==</code> (comparison)
-                        <br>• Writing <code>if x == True:</code> when <code>if x:</code> is cleaner
-                        <br>• Confusing Boolean <code>False</code> with the string <code>"False"</code> or the number
-                        <code>0</code>
-                    </p>
-                </li>
-                <li>
-                    <p><strong>Variable naming discussion:</strong> Why does <code>is_student = True</code> communicate
-                        intent better than <code>x = True</code>? Suggest good names for different
-                        scenarios.</p>
-                </li>
-                <li>
-                    <p><strong>Extension question:</strong> “How might Boolean logic be used in a program that helps
-                        with church ministry scheduling, camp registration, or checking if a student has completed all
-                        assignments?”</p>
-                </li>
+            <ul>
+                <li>Direct assignment: <code>is_active = True</code></li>
+                <li>Generated from comparisons: <code>age >= 18</code>, <code>score >= 70</code></li>
+                <li>Best practice: Use clear names like <code>is_</code>, <code>has_</code>, <code>can_</code></li>
+                <li>Discussion: How do comparison operators help us make decisions in real life?</li>
             </ul>
         </div>
 
-        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <!-- Section 3 -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Biblical Integration
+            3. Using Booleans in Conditional Logic
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li>Core of <code>if</code>, <code>elif</code>, <code>else</code></li>
+                <li>Prefer <code>if is_logged_in:</code> over <code>if is_logged_in == True:</code></li>
+                <li>Logical operators: <code>and</code>, <code>or</code>, <code>not</code></li>
+                <li>Tip: Clean, readable code reflects clear thinking.</li>
+            </ul>
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection / Talking Points
         </h2>
         <div
-            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
-            <p>
-                Just as Boolean values force our programs to make clear, unambiguous decisions between
-                <strong>True</strong> and <strong>False</strong>, God has given us the wonderful ability to discern
-                truth from falsehood in life. In a confusing world, He calls us to stand firmly on what is true rather
-                than wavering between opinions.
-            </p>
-            <p style="margin-top: 12px;">
-                <strong>Key Scriptures:</strong><br>
-                “Then you will know the truth, and the truth will set you free.” — <strong>John 8:32</strong><br><br>
-                “How long will you waver between two opinions? If the Lord is God, follow him...” — <strong>1 Kings
-                    18:21</strong>
-            </p>
-            <p style="margin-top: 12px;">
-                <strong>Teaching Connection:</strong> Use this lesson as an opportunity to remind students that clarity
-                in logic mirrors the clarity God desires in our walk with Him. We are called to make decisive choices
-                for truth, just as our Boolean conditions force decisive program behavior. Encourage students to see
-                their growing programming skills as tools they can steward for God’s glory and the good of others.
-            </p>
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>God has given us the ability to discern truth from falsehood. Boolean logic mirrors this spiritual
+                reality.</p>
+            <ul>
+                <li>Just as <code>True</code> or <code>False</code> forces a clear decision with no middle ground, God
+                    calls us to choose whom we will serve.</li>
+                <li>John 8:32 – “You will know the truth, and the truth will set you free.”</li>
+                <li>1 Kings 18:21 – “How long will you waver between two opinions?”</li>
+                <li>Application: Our code (and our lives) should reflect clarity and commitment to what is true in
+                    Christ.</li>
+            </ul>
         </div>
 
         <div
             style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-            <em>If you find any typos or errors, or have suggestions for additional talking points, please let me
-                know.</em><br><br>
-            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 Talking Points"
-                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">Send me an email</a>
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:jcpartridge@logosteach.com?subject=Feedback for Lesson 001 Talking Points"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
         </div>
 
         <div
@@ -148,7 +106,6 @@
         </div>
 
     </div>
-
 </body>
 
 </html>
