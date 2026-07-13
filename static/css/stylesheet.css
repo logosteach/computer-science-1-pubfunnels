@@ -365,3 +365,64 @@ mark {
   border-top: 1px solid #ccc;
   padding-top: 5px;
 }
+
+/* ========================== To Women
+=============================================*/
+.to_women {
+  position: relative;
+  padding: 35px 40px 30px 35px;
+  margin: 40px 0;
+  background-color: #fff9f0;
+  /* Soft warm ivory / parchment feel */
+  border: 2px solid #d4a5b6;
+  /* Gentle rose-pink border */
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(212, 165, 182, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1.75;
+  color: #3d2b2e;
+  max-width: 1000px;
+}
+
+/* Decorative "logo" / emblem in upper right */
+.to_women::before {
+  content: "✿";
+  /* Elegant floral cross-like symbol */
+  position: absolute;
+  top: -18px;
+  right: 25px;
+  font-size: 52px;
+  color: #c68a9e;
+  opacity: 0.85;
+  line-height: 1;
+  z-index: 1;
+  transform: rotate(-12deg);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Optional second decorative element (smaller flower) */
+.to_women::after {
+  content: "❀";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 22px;
+  color: #d4a5b6;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* Styling for headings and scripture inside */
+.to_women h3,
+.to_women strong {
+  color: #9c4a6c;
+  font-family: "Georgia", serif;
+}
+
+.to_women blockquote {
+  border-left: 5px solid #d4a5b6;
+  padding-left: 20px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #5c3f45;
+}

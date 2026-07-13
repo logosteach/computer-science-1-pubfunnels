@@ -5,188 +5,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    <title>Lesson - Compound Conditions with Logical Operators | Talking Points</title>
 </head>
 
-<body>
-
-    <!-- ====================== DOCUMENT HEADER ====================== -->
+<body class="lesson-body">
     <header class="document-header">
         <div class="header-content">
-            <div class="header-left">Python with a Worldview</div>
-            <div class="header-right">LogosTeach</div>
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
         </div>
     </header>
 
-    <!-- ====================== MAIN CONTENT ====================== -->
     <div
         style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
 
         <h1
             style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            Compound Conditions with Logical Operators — Talking Points
+            <strong>Lesson Examples - Logical Operators: and, or, not and Compound Conditions</strong>
         </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            Key talking points, discussion prompts, and instructor notes for teaching compound conditional logic using
-            Python's <code>and</code>, <code>or</code>, and <code>not</code> operators.
+            These examples demonstrate how to combine multiple conditions using Python's logical operators
+            <code>and</code>, <code>or</code>, and <code>not</code>. You will learn to create compound conditional
+            expressions, understand operator precedence, and write more powerful, realistic decision logic in your
+            programs.
         </p>
 
-        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <!-- Example 1: and Operator -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Main Teaching Points
+            Example 1: Combining Conditions with 'and'
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <ul style="font-size: 1.08em;">
-                <li>
-                    <p><strong>Combining Conditions:</strong> Students learn to join multiple boolean expressions using
-                        <code>and</code> (all must be true), <code>or</code> (at least one true), and <code>not</code>
-                        (inverts truth value). These create more expressive and realistic decision logic than simple
-                        conditions alone.</p>
-                </li>
-                <li>
-                    <p><strong>Compound Conditional Expressions:</strong> By nesting and combining operators, programs
-                        can evaluate complex rules such as access control, eligibility checks, safety systems, and
-                        recommendation engines in a single <code>if</code> statement.</p>
-                </li>
-                <li>
-                    <p><strong>Operator Precedence:</strong> Python evaluates <code>not</code> first, then
-                        <code>and</code>, then <code>or</code>. Without parentheses, expressions can behave
-                        unexpectedly. Emphasize using parentheses for readability and correctness.</p>
-                </li>
-                <li>
-                    <p><strong>Realistic Decision Making:</strong> Compound logic allows programs to mirror real-world
-                        complexity where multiple factors must be weighed together (e.g., "if (age &gt;= 18 and
-                        has_license) or is_emergency").</p>
-                </li>
-                <li>
-                    <p><strong>Moral &amp; Spiritual Parallel:</strong> Just as code must evaluate multiple conditions
-                        to reach one outcome, believers must weigh multiple truths, circumstances, and biblical
-                        principles when making decisions in light of God’s Word.</p>
-                </li>
-            </ul>
+            <p>The <code>and</code> operator requires <strong>both</strong> conditions to be <code>True</code> for the
+                overall expression to be true. This is useful when multiple requirements must be met simultaneously.</p>
+
+            <pre><code class="language-python">age = 20
+is_student = True
+
+if age &lt; 25 and is_student:
+    print("You qualify for the student discount!")
+else:
+    print("Sorry, no discount available.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">You qualify for the student discount!</code></pre>
+
+            <div class="tip">
+                The <code>and</code> operator uses short-circuit evaluation: if the left condition is
+                <code>False</code>, Python does not evaluate the right condition.
+            </div>
         </div>
 
-        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <!-- Example 2: or Operator -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Discussion &amp; Talking Points
+            Example 2: Using 'or' for Alternative Conditions
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <ul style="font-size: 1.08em;">
-                <li>
-                    <p><strong>Why compound conditions?</strong> When is it better to use a single compound
-                        <code>if</code> statement versus multiple nested <code>if</code> / <code>elif</code> blocks?
-                        What are the readability trade-offs?</p>
-                </li>
-                <li>
-                    <p><strong>Precedence pitfalls:</strong> Can you think of a real bug that could occur from
-                        forgetting parentheses when mixing <code>and</code> and <code>or</code>? How would you debug it?
-                    </p>
-                </li>
-                <li>
-                    <p><strong>Real-world mapping:</strong> Choose a familiar app or system (e.g., Netflix
-                        recommendation, bank login, smart home). What compound conditions might be running behind the
-                        scenes?</p>
-                </li>
-                <li>
-                    <p><strong>Faith connection:</strong> How does learning to carefully combine logical conditions help
-                        us practice the kind of multi-faceted wisdom described in Proverbs 2:1-5?</p>
-                </li>
-                <li>
-                    <p><strong>Short-circuit evaluation:</strong> Why might it matter that Python stops evaluating an
-                        <code>and</code> expression once it finds a <code>False</code>? How could this affect program
-                        behavior or performance?</p>
-                </li>
-            </ul>
+            <p>The <code>or</code> operator returns <code>True</code> if <strong>at least one</strong> of the conditions
+                is true. It is ideal for situations with multiple acceptable paths.</p>
+
+            <pre><code class="language-python">is_weekend = False
+is_holiday = True
+
+if is_weekend or is_holiday:
+    print("Enjoy your day off!")
+else:
+    print("Time to work or study.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Enjoy your day off!</code></pre>
         </div>
 
-        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <!-- Example 3: not Operator -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Biblical Integration
+            Example 3: Using 'not' to Negate a Condition
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The <code>not</code> operator inverts the boolean value of a condition. It is powerful for expressing "if
+                something is NOT the case."</p>
+
+            <pre><code class="language-python">is_sunny = True
+
+if not is_sunny:
+    print("Bring an umbrella or stay indoors.")
+else:
+    print("Perfect weather for outdoor plans!")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Perfect weather for outdoor plans!</code></pre>
+
+            <div class="warning-box">
+                Overusing <code>not</code> can make code harder to read. Prefer positive conditions when possible, or
+                use clear variable names like <code>is_raining</code> instead of <code>not is_sunny</code>.
+            </div>
+        </div>
+
+        <!-- Example 4: Compound Expressions -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Creating Compound Conditional Expressions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>You can combine <code>and</code>, <code>or</code>, and <code>not</code> to express sophisticated logic.
+                Always use parentheses to group conditions clearly and control evaluation order.</p>
+
+            <pre><code class="language-python">height_cm = 150
+has_adult_supervision = True
+
+# Compound rule: tall enough alone OR tall enough with adult
+if (height_cm &gt;= 160) or (height_cm &gt;= 140 and has_adult_supervision):
+    print("Access granted to the ride.")
+else:
+    print("Sorry, height requirements not met.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Access granted to the ride.</code></pre>
+
+            <p>This pattern appears in real systems like access control, eligibility checks, and game rules where
+                multiple criteria must be evaluated together.</p>
+        </div>
+
+        <!-- Example 5: Operator Precedence -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 5: Understanding Order of Precedence
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Python evaluates logical operators in this order (highest to lowest precedence):</p>
+            <ol style="margin-left: 20px;">
+                <li><code>not</code></li>
+                <li><code>and</code></li>
+                <li><code>or</code></li>
+            </ol>
+            <p>Without parentheses, expressions can produce unexpected results. Always use parentheses for clarity when
+                mixing operators.</p>
+
+            <pre><code class="language-python">cloudy = True
+raining = False
+cold = True
+
+# Without parens: not cloudy and raining or cold
+# Evaluated as: (not cloudy) and raining or cold → False and False or True → True
+if not cloudy and raining or cold:
+    print("It might be a good day for hot chocolate.")
+else:
+    print("Weather is clear and warm.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">It might be a good day for hot chocolate.</code></pre>
+
+            <p>Compare with explicit grouping to see how precedence affects logic:</p>
+
+            <pre><code class="language-python"># Different result with parentheses
+if not (cloudy and raining) or cold:
+    print("Different grouping changes the outcome.")</code></pre>
+        </div>
+
+        <!-- Example 6: Realistic Powerful Conditions -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 6: Writing Powerful and Realistic Conditions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Compound logic shines in real-world scenarios like authentication, recommendation systems, or safety
+                checks. Here is a practical example modeling a smart home security decision.</p>
+
+            <pre><code class="language-python">door_locked = True
+motion_detected = False
+alarm_armed = True
+is_night = True
+
+# Realistic compound rule for triggering alarm
+if alarm_armed and (not door_locked or motion_detected) and is_night:
+    print("ALERT: Possible security breach detected!")
+else:
+    print("All systems normal. Home is secure.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">All systems normal. Home is secure.</code></pre>
+
+            <p>Notice how multiple real-world factors (door status, motion, time of day, system state) are weighed
+                together using compound logic to reach one actionable decision.</p>
+        </div>
+
+        <!-- Example 7: The XOR Operator (^) -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 7: The XOR (Exclusive OR) Operator (^)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The XOR operator (<code>^</code>) returns <code>True</code> if exactly one of the conditions is
+                <code>True</code> (but not both). It is useful for situations where mutually exclusive options apply.
+                Note that while <code>^</code> is a bitwise operator, it works on boolean values to provide logical XOR
+                behavior.</p>
+
+            <pre><code class="language-python"># Basic XOR examples
+print(True ^ True)   # False (both true)
+print(True ^ False)  # True
+print(False ^ True)  # True
+print(False ^ False) # False (both false)
+
+# Practical use in condition
+is_member = True
+is_guest = False
+
+if is_member ^ is_guest:
+    print("User has exclusive access.")
+else:
+    print("Access rules conflict or neither applies.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">False
+True
+True
+False
+User has exclusive access.</code></pre>
+
+            <div class="tip">
+                Logical XOR (<code>^</code> on booleans) is equivalent to <code>(a and not b) or (not a and b)</code> or
+                <code>a != b</code> for booleans. It's great for toggle-like or one-or-the-other logic.
+            </div>
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
         </h2>
         <div
-            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
             <p>
-                Compound conditions teach us that truth is often multi-dimensional. A single decision in code (or in
-                life) may depend on several factors being true at once, or on any one of several acceptable conditions
-                being met. This reflects the biblical call to wisdom: we are not to rely on simplistic or isolated
-                rules, but to actively seek understanding and weigh multiple principles together.
+                Just as compound conditions in code require us to evaluate multiple factors together—using
+                <code>and</code>, <code>or</code>, and <code>not</code>—to arrive at a single true or false outcome, the
+                moral and spiritual decisions we face daily are rarely simple. We must weigh multiple truths,
+                circumstances, consequences, and biblical principles at the same time. A simplistic "if this, then that"
+                approach often fails to capture the complexity of real life.
             </p>
             <p style="margin-top: 15px;">
-                Proverbs 2:1-5 invites us to "accept my words and store up my commands," to "call out for insight and
-                cry aloud for understanding," and to search for wisdom "as for hidden treasure." In programming terms,
-                we are combining multiple "conditions" (Scripture, circumstances, consequences, the leading of the
-                Spirit) to arrive at decisions that honor God.
+                Learning to build careful compound expressions with proper precedence and parentheses trains us in
+                thoughtful, wise decision-making. This mirrors our calling to seek understanding and discernment rather
+                than relying on isolated facts.
             </p>
             <p style="margin-top: 15px;">
-                As instructors, we can highlight that the careful, parenthesized logic we teach in Python is a small
-                picture of the careful, prayerful reasoning God desires from His people when facing complex moral
-                choices.
+                <strong>Scripture:</strong><br>
+                Proverbs 2:1-5 (NKJV)<br><br>
+                "My son, if you receive my words,<br>
+                And treasure my commands within you,<br>
+                So that you incline your ear to wisdom,<br>
+                And apply your heart to understanding;<br>
+                Yes, if you cry out for discernment,<br>
+                And lift up your voice for understanding,<br>
+                If you seek her as silver,<br>
+                And search for her as for hidden treasures;<br>
+                Then you will understand the fear of the Lord,<br>
+                And find the knowledge of God."
+            </p>
+            <p style="margin-top: 15px;">
+                In programming, we combine conditions to control program flow. In life, we combine multiple truths in
+                light of God’s Word to walk in wisdom and make decisions that honor Him.
             </p>
         </div>
 
-        <!-- ==================== APPLICATION ACTIVITIES ==================== -->
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Application Activities
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <ul style="font-size: 1.08em;">
-                <li>
-                    <p><strong>Code Challenge:</strong> Give students a realistic scenario (e.g., "Determine if a user
-                        can access a restricted feature") and have them write a compound condition using at least one
-                        <code>and</code>, one <code>or</code>, and one <code>not</code>. Require proper use of
-                        parentheses.</p>
-                </li>
-                <li>
-                    <p><strong>Group Discussion &amp; Mapping:</strong> In small groups, have students pick a current
-                        event or personal decision and map the relevant factors onto logical operators. Example: "Should
-                        I post this online?" → (is_true and not harmful) or (public_benefit and verified).</p>
-                </li>
-                <li>
-                    <p><strong>Personal Reflection Journal:</strong> Ask students to write about a recent decision they
-                        faced. Have them identify at least three "conditions" they weighed and describe whether they
-                        used "and", "or", or "not" style thinking. Connect it back to seeking wisdom from God’s Word.
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- ==================== KEY TAKEAWAYS ==================== -->
-        <h2
-            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Key Takeaways
-        </h2>
-        <div style="margin-bottom: 45px; padding-left: 28px;">
-            <ul style="font-size: 1.08em;">
-                <li>
-                    <p><strong>Technical Mastery:</strong> Students should be able to confidently write, read, and debug
-                        compound conditions using <code>and</code>, <code>or</code>, <code>not</code>, and parentheses
-                        for precedence control.</p>
-                </li>
-                <li>
-                    <p><strong>Worldview Connection:</strong> Programming logic provides a concrete metaphor for the
-                        multi-faceted wisdom and discernment believers are called to exercise when making decisions in
-                        light of Scripture.</p>
-                </li>
-                <li>
-                    <p><strong>Practical Implication:</strong> Clear compound logic in code leads to more reliable
-                        programs; clear compound thinking in life, grounded in God’s Word, leads to wiser choices and
-                        greater understanding of the fear of the Lord (Proverbs 2:5).</p>
-                </li>
-            </ul>
-        </div>
-
-
-        <!-- ==================== COPYRIGHT & DISCLAIMER ==================== -->
         <div
-            style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 0.9em; color: #666666; text-align: center;">
-            <p>&copy; 2026 LogosTeach. All rights reserved.</p>
-            <p>This material is provided for educational purposes only and does not constitute professional advice.
-                Always consult with appropriate professionals for specific guidance.</p>
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson Examples - Logical Operators and Compound Conditions"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
         </div>
 
         <p style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #555555;">
@@ -194,7 +289,7 @@
             instructor supervision and review.
         </p>
 
-    </div> <!-- End of main content wrapper -->
+    </div>
 
 </body>
 
