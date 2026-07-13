@@ -24,7 +24,7 @@
 
         <h1
             style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            <strong>Lesson 003A - Logical Operators: and, or, not and Compound Conditions</strong>
+            <strong>Lesson Examples - Logical Operators: and, or, not and Compound Conditions</strong>
         </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
@@ -194,6 +194,45 @@ else:
                 together using compound logic to reach one actionable decision.</p>
         </div>
 
+        <!-- Example 7: The XOR Operator (^) -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 7: The XOR (Exclusive OR) Operator (^)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The XOR operator (<code>^</code>) returns <code>True</code> if exactly one of the conditions is
+                <code>True</code> (but not both). It is useful for situations where mutually exclusive options apply.
+                Note that while <code>^</code> is a bitwise operator, it works on boolean values to provide logical XOR
+                behavior.</p>
+
+            <pre><code class="language-python"># Basic XOR examples
+print(True ^ True)   # False (both true)
+print(True ^ False)  # True
+print(False ^ True)  # True
+print(False ^ False) # False (both false)
+
+# Practical use in condition
+is_member = True
+is_guest = False
+
+if is_member ^ is_guest:
+    print("User has exclusive access.")
+else:
+    print("Access rules conflict or neither applies.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">False
+True
+True
+False
+User has exclusive access.</code></pre>
+
+            <div class="tip">
+                Logical XOR (<code>^</code> on booleans) is equivalent to <code>(a and not b) or (not a and b)</code> or
+                <code>a != b</code> for booleans. It's great for toggle-like or one-or-the-other logic.
+            </div>
+        </div>
+
         <!-- Biblical Reflection -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
@@ -206,7 +245,7 @@ else:
                 <code>and</code>, <code>or</code>, and <code>not</code>—to arrive at a single true or false outcome, the
                 moral and spiritual decisions we face daily are rarely simple. We must weigh multiple truths,
                 circumstances, consequences, and biblical principles at the same time. A simplistic "if this, then that"
-                approach often fails to capture the complexity of real life. Behind all our decision making is the seeking and understanding of what our Lord is like. "What is my Jesus really like? How does He think about this, or what parts of His character are the most relevant in the situation I am in?"
+                approach often fails to capture the complexity of real life.
             </p>
             <p style="margin-top: 15px;">
                 Learning to build careful compound expressions with proper precedence and parentheses trains us in

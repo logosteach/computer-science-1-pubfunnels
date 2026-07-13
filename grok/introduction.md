@@ -18,6 +18,7 @@ Make yourself familiar with the repository directory structure first. You will n
 - Create a lesson talking points for a lesson based upon the lesson_talking_points.html file template.
 - Create and edit CSS styles when needed. The main stylesheet is located at `static/css/stylesheet.css`.
 - This is a living document. Responsibilities may change and grow as this file is updated.
+- ALL SCRIPTURE REFERENCES are to be taken from the New King James version.
 
 ---
 
