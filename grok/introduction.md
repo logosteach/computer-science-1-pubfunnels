@@ -55,6 +55,7 @@ When creating any Markdown file, follow these rules strictly:
 - When creating examples, place them into an HTML document that follows the structure and style of `lesson_examples.html` in the `templates` folder.
 - If you generate any section that contains a **tip**, use the CSS class `tip` on the containing HTML element (`class="tip"`).
 - If you generate any HTML that contains a **warning** or notifies the learner of potential errors, use the CSS class `warning-box` on the containing HTML element.
+- While student feedback is desired, DO NOT create any Feedback html form elements when using a template.
 
 ---
 

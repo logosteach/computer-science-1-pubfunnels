@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson - Compound Conditions with Logical Operators | Talking Points</title>
+</head>
+
+<body>
+
+    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">Python with a Worldview</div>
+            <div class="header-right">LogosTeach</div>
+        </div>
+    </header>
+
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            Compound Conditions with Logical Operators — Talking Points
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Key talking points, discussion prompts, and instructor notes for teaching compound conditional logic using
+            Python's <code>and</code>, <code>or</code>, and <code>not</code> operators.
+        </p>
+
+        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Main Teaching Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Combining Conditions:</strong> Students learn to join multiple boolean expressions using
+                        <code>and</code> (all must be true), <code>or</code> (at least one true), and <code>not</code>
+                        (inverts truth value). These create more expressive and realistic decision logic than simple
+                        conditions alone.</p>
+                </li>
+                <li>
+                    <p><strong>Compound Conditional Expressions:</strong> By nesting and combining operators, programs
+                        can evaluate complex rules such as access control, eligibility checks, safety systems, and
+                        recommendation engines in a single <code>if</code> statement.</p>
+                </li>
+                <li>
+                    <p><strong>Operator Precedence:</strong> Python evaluates <code>not</code> first, then
+                        <code>and</code>, then <code>or</code>. Without parentheses, expressions can behave
+                        unexpectedly. Emphasize using parentheses for readability and correctness.</p>
+                </li>
+                <li>
+                    <p><strong>Realistic Decision Making:</strong> Compound logic allows programs to mirror real-world
+                        complexity where multiple factors must be weighed together (e.g., "if (age &gt;= 18 and
+                        has_license) or is_emergency").</p>
+                </li>
+                <li>
+                    <p><strong>Moral &amp; Spiritual Parallel:</strong> Just as code must evaluate multiple conditions
+                        to reach one outcome, believers must weigh multiple truths, circumstances, and biblical
+                        principles when making decisions in light of God’s Word.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Discussion &amp; Talking Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Why compound conditions?</strong> When is it better to use a single compound
+                        <code>if</code> statement versus multiple nested <code>if</code> / <code>elif</code> blocks?
+                        What are the readability trade-offs?</p>
+                </li>
+                <li>
+                    <p><strong>Precedence pitfalls:</strong> Can you think of a real bug that could occur from
+                        forgetting parentheses when mixing <code>and</code> and <code>or</code>? How would you debug it?
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Real-world mapping:</strong> Choose a familiar app or system (e.g., Netflix
+                        recommendation, bank login, smart home). What compound conditions might be running behind the
+                        scenes?</p>
+                </li>
+                <li>
+                    <p><strong>Faith connection:</strong> How does learning to carefully combine logical conditions help
+                        us practice the kind of multi-faceted wisdom described in Proverbs 2:1-5?</p>
+                </li>
+                <li>
+                    <p><strong>Short-circuit evaluation:</strong> Why might it matter that Python stops evaluating an
+                        <code>and</code> expression once it finds a <code>False</code>? How could this affect program
+                        behavior or performance?</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Integration
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            <p>
+                Compound conditions teach us that truth is often multi-dimensional. A single decision in code (or in
+                life) may depend on several factors being true at once, or on any one of several acceptable conditions
+                being met. This reflects the biblical call to wisdom: we are not to rely on simplistic or isolated
+                rules, but to actively seek understanding and weigh multiple principles together.
+            </p>
+            <p style="margin-top: 15px;">
+                Proverbs 2:1-5 invites us to "accept my words and store up my commands," to "call out for insight and
+                cry aloud for understanding," and to search for wisdom "as for hidden treasure." In programming terms,
+                we are combining multiple "conditions" (Scripture, circumstances, consequences, the leading of the
+                Spirit) to arrive at decisions that honor God.
+            </p>
+            <p style="margin-top: 15px;">
+                As instructors, we can highlight that the careful, parenthesized logic we teach in Python is a small
+                picture of the careful, prayerful reasoning God desires from His people when facing complex moral
+                choices.
+            </p>
+        </div>
+
+        <!-- ==================== APPLICATION ACTIVITIES ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Application Activities
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Code Challenge:</strong> Give students a realistic scenario (e.g., "Determine if a user
+                        can access a restricted feature") and have them write a compound condition using at least one
+                        <code>and</code>, one <code>or</code>, and one <code>not</code>. Require proper use of
+                        parentheses.</p>
+                </li>
+                <li>
+                    <p><strong>Group Discussion &amp; Mapping:</strong> In small groups, have students pick a current
+                        event or personal decision and map the relevant factors onto logical operators. Example: "Should
+                        I post this online?" → (is_true and not harmful) or (public_benefit and verified).</p>
+                </li>
+                <li>
+                    <p><strong>Personal Reflection Journal:</strong> Ask students to write about a recent decision they
+                        faced. Have them identify at least three "conditions" they weighed and describe whether they
+                        used "and", "or", or "not" style thinking. Connect it back to seeking wisdom from God’s Word.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== KEY TAKEAWAYS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Key Takeaways
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Technical Mastery:</strong> Students should be able to confidently write, read, and debug
+                        compound conditions using <code>and</code>, <code>or</code>, <code>not</code>, and parentheses
+                        for precedence control.</p>
+                </li>
+                <li>
+                    <p><strong>Worldview Connection:</strong> Programming logic provides a concrete metaphor for the
+                        multi-faceted wisdom and discernment believers are called to exercise when making decisions in
+                        light of Scripture.</p>
+                </li>
+                <li>
+                    <p><strong>Practical Implication:</strong> Clear compound logic in code leads to more reliable
+                        programs; clear compound thinking in life, grounded in God’s Word, leads to wiser choices and
+                        greater understanding of the fear of the Lord (Proverbs 2:5).</p>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- ==================== COPYRIGHT & DISCLAIMER ==================== -->
+        <div
+            style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 0.9em; color: #666666; text-align: center;">
+            <p>&copy; 2026 LogosTeach. All rights reserved.</p>
+            <p>This material is provided for educational purposes only and does not constitute professional advice.
+                Always consult with appropriate professionals for specific guidance.</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #555555;">
+            Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.
+        </p>
+
+    </div> <!-- End of main content wrapper -->
+
+</body>
+
+</html>
