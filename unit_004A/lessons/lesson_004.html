@@ -1,83 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Short-Circuit Evaluation - Examples</title>
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    <style>
-        /* Fallback styles in case external CSS is unavailable */
-        body.lesson-body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px;
-            background-color: #ffffff;
-            color: #333333;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 2.6em;
-            color: #1a3c5e;
-            border-bottom: 5px solid #2c7a7b;
-            padding-bottom: 18px;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        h2 {
-            font-size: 1.85em;
-            color: #2c7a7b;
-            border-left: 6px solid #2c7a7b;
-            padding-left: 16px;
-            margin: 50px 0 18px 0;
-        }
-
-        .code-block {
-            background-color: #f0f7fd;
-            padding: 18px;
-            border-radius: 8px;
-            border-left: 5px solid #2c7a7b;
-            margin: 20px 0;
-            font-family: "Courier New", monospace;
-            white-space: pre;
-            overflow-x: auto;
-        }
-
-        .output {
-            background-color: #f8f9fa;
-            padding: 12px 18px;
-            border-radius: 6px;
-            border-left: 5px solid #6c757d;
-            margin: 15px 0;
-            font-family: "Courier New", monospace;
-        }
-
-        .explanation {
-            background-color: #fff8e1;
-            padding: 15px 20px;
-            border-radius: 8px;
-            border-left: 5px solid #ffb74d;
-            margin: 15px 0;
-        }
-
-        .biblical-reflection {
-            background-color: #f0f7f7;
-            padding: 25px;
-            border-left: 6px solid #2c7a7b;
-            margin: 40px 0;
-            font-style: italic;
-            color: #1a3c5e;
-        }
-    </style>
 </head>
 
 <body class="lesson-body">
-
     <header class="document-header">
         <div class="header-content">
             <div class="header-left">
@@ -89,146 +18,141 @@
         </div>
     </header>
 
-    <div style="max-width: 1000px; margin: 0 auto; padding: 35px;">
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
 
-        <h1>Short-Circuit Evaluation in Python</h1>
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - if, elif, and else Statements</strong>
+        </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            In this lesson, you will learn how Python uses short-circuit evaluation with the logical operators
-            <code>and</code> and <code>or</code>. Understanding this behavior helps you write safer and more efficient
-            code.
+            These examples demonstrate how to write and understand if, elif, and else statements in Python.
+            Focus on program flow, correct ordering, and proper indentation.
         </p>
 
-        <!-- Example 1 -->
-        <h2>Example 1: Understanding Short-Circuit Evaluation with <code>and</code></h2>
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Basic if Statement
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">age = 18
 
-        <div class="code-block">
-            x = 5
-            y = 10
+if age >= 18:
+    print("You are an adult.")
 
-            # Python stops evaluating as soon as the result is known
-            result = (x > 10) and (y > 5)
-            print(result)
+# Program flow: Only runs the indented block if the condition is True.
+</code></pre>
         </div>
 
-        <div class="output">
-            <strong>Output:</strong><br>
-            False
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Multiple Independent if Statements
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">temperature = 75
+is_sunny = True
+is_weekend = True
+
+print("Checking weather conditions...")
+
+if temperature > 70:
+    print("It is warm.")
+
+if is_sunny:
+    print("The sun is shining.")
+
+if is_weekend:
+    print("It is the weekend.")
+
+print("All checks completed.")
+
+# Program flow: Each if is checked independently. 
+# Multiple blocks can run if their conditions are True.
+</code></pre>
+            <p><strong>Key Point:</strong> Without elif or else, Python evaluates every if statement regardless of
+                previous results.</p>
         </div>
 
-        <div class="explanation">
-            <strong>Explanation:</strong> Because <code>x &gt; 10</code> is <code>False</code>, Python does not check
-            <code>y &gt; 5</code>. It already knows the entire expression must be <code>False</code>.
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            if / else Block
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">score = 65
+
+if score >= 60:
+    print("You passed!")
+else:
+    print("You did not pass. Keep trying!")
+
+# Program flow: Exactly one of the two blocks will always run.
+</code></pre>
         </div>
 
-        <!-- Example 2 -->
-        <h2>Example 2: Short-Circuit Evaluation with <code>or</code></h2>
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            if / elif / else (Multi-way Decisions)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">grade = 85
 
-        <div class="code-block">
-            age = 17
-            has_permission = True
+if grade >= 90:
+    print("Excellent! You got an A.")
+elif grade >= 80:
+    print("Good job! You got a B.")
+elif grade >= 70:
+    print("You got a C.")
+elif grade >= 60:
+    print("You got a D.")
+else:
+    print("You need to study more.")
 
-            can_enter = (age >= 18) or has_permission
-            print(can_enter)
+# Program flow: Python checks conditions in order and runs only the first True block.
+</code></pre>
         </div>
 
-        <div class="output">
-            <strong>Output:</strong><br>
-            True
-        </div>
-
-        <div class="explanation">
-            <strong>Explanation:</strong> Because <code>has_permission</code> is <code>True</code>, Python stops
-            and does not evaluate <code>age &gt;= 18</code>.
-        </div>
-
-        <!-- Example 3 -->
-        <h2>Example 3: Using Short-Circuit Evaluation to Avoid Errors</h2>
-
-        <div class="code-block">
-            username = ""
-
-            # Safe check before using len()
-            if username and len(username) > 5:
-            print("Username is long enough")
-            else:
-            print("Username is missing or too short")
-        </div>
-
-        <div class="output">
-            <strong>Output:</strong><br>
-            Username is missing or too short
-        </div>
-
-        <div class="explanation">
-            <strong>Explanation:</strong> If <code>username</code> is empty (falsy), Python stops immediately
-            and never runs <code>len(username)</code>. This prevents potential problems.
-        </div>
-
-        <!-- Example 4 -->
-        <h2>Example 4: Preventing Division by Zero</h2>
-
-        <div class="code-block">
-            numerator = 20
-            denominator = 0
-
-            # Safe way to check before dividing
-            if denominator != 0 and numerator / denominator > 2:
-            print("Result is greater than 2")
-            else:
-            print("Cannot divide or result is not greater than 2")
-        </div>
-
-        <div class="output">
-            <strong>Output:</strong><br>
-            Cannot divide or result is not greater than 2
-        </div>
-
-        <div class="explanation">
-            <strong>Explanation:</strong> Because <code>denominator != 0</code> is <code>False</code>,
-            Python never attempts to divide by zero.
-        </div>
-
-        <!-- Example 5 -->
-        <h2>Example 5: Order of Conditions Matters</h2>
-
-        <div class="code-block">
-            has_ticket = False
-            is_vip = True
-
-            can_watch = has_ticket or is_vip
-            print(can_watch)
-        </div>
-
-        <div class="output">
-            <strong>Output:</strong><br>
-            True
-        </div>
-
-        <div class="explanation">
-            <strong>Explanation:</strong> With <code>or</code>, Python stops as soon as it finds a
-            <code>True</code> value. The order of your conditions can affect both safety and efficiency.
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Correct Ordering and Rules
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><code>if</code> must come first.</li>
+                <li><code>elif</code> can only come after an <code>if</code> or another <code>elif</code>.</li>
+                <li><code>else</code> must come last (if used).</li>
+                <li>Every block must be indented (usually 4 spaces).</li>
+                <li>Every condition line must end with a colon <code>:</code>.</li>
+            </ul>
         </div>
 
         <!-- Biblical Reflection -->
-        <h2>Biblical Reflection</h2>
-
-        <div class="biblical-reflection">
-            Just as short-circuit evaluation allows us to stop checking once we have enough information,
-            God has given us foundational truths in Scripture that are always reliable. When we know that
-            we are loved and accepted in Christ Jesus, we do not need to keep evaluating our performance
-            to find security. As Jesus said:<br><br>
-            <strong>“If the Son sets you free, you will be free indeed.”</strong><br>
-            — John 8:36
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Just as if-elif-else structures force us to make clear, ordered decisions in code, life presents us with
+                clear choices.
+                We can choose God’s way, our own way, or try to compromise. The structure of our decisions matters —
+                there is no mixing of paths that leads to blessing. Choose this day whom you will serve.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “But if serving the Lord seems undesirable to you, then choose for yourselves this day whom you will
+                serve...” (Joshua 24:15)<br>
+                “This day I call the heavens and the earth as witnesses against you that I have set before you life and
+                death, blessings and curses. Now choose life...” (Deuteronomy 30:19)
+            </p>
         </div>
 
         <div
             style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
             <em>If you find any typos or errors, please let me know.</em><br><br>
-            <a href="mailto:info@logosteach.com?subject=Feedback for Short-Circuit Evaluation Lesson"
-                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">
-                📧 Send me an email
-            </a>
+            <a href="mailto:info@logosteach.com?subject=Feedback for if-elif-else Lesson"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
         </div>
 
         <div

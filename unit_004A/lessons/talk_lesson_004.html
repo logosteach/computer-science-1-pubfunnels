@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
-    <title>Lesson - Short-Circuit Evaluation | Talking Points</title>
+    <title>Lesson - if, elif, else Statements | Talking Points</title>
 </head>
 
 <body>
@@ -23,11 +23,11 @@
 
         <h1
             style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            Lesson - Short-Circuit Evaluation with and and or — Talking Points
+            Lesson - if, elif, and else Statements — Talking Points
         </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            Key talking points and discussion notes for this lesson on short-circuit evaluation.
+            Key talking points and discussion notes for teaching conditional statements.
         </p>
 
         <!-- ==================== TALKING POINTS SECTION ==================== -->
@@ -38,26 +38,27 @@
         <div style="margin-bottom: 45px; padding-left: 28px;">
             <ul style="font-size: 1.08em;">
                 <li>
-                    <p><strong>Short-circuit evaluation defined:</strong> Python stops evaluating a compound logical
-                        expression as soon as the final result is determined. It does not evaluate every part of the
-                        condition.</p>
+                    <p><strong>if statement:</strong> Executes a block of code only if the condition is True. Uses colon
+                        <code>:</code> and indentation.</p>
                 </li>
                 <li>
-                    <p><strong>How and works:</strong> With the <code>and</code> operator, evaluation stops immediately
-                        if the first condition is False (the whole expression must be False).</p>
+                    <p><strong>Multiple independent ifs:</strong> Each if is evaluated separately. More than one block
+                        can execute if multiple conditions are True.</p>
                 </li>
                 <li>
-                    <p><strong>How or works:</strong> With the <code>or</code> operator, evaluation stops immediately if
-                        the first condition is True (the whole expression must be True).</p>
+                    <p><strong>if / else:</strong> Provides an alternative path. Exactly one block runs.</p>
                 </li>
                 <li>
-                    <p><strong>Predicting behavior:</strong> Students should be able to look at a compound condition and
-                        correctly predict which parts will and will not be evaluated.</p>
+                    <p><strong>if / elif / else:</strong> Creates multi-way branching. Python checks conditions from top
+                        to bottom and executes only the first True block.</p>
                 </li>
                 <li>
-                    <p><strong>Practical benefit:</strong> Short-circuit evaluation allows us to write safer code by
-                        guarding against errors (division by zero, accessing None attributes, index errors) and more
-                        efficient code by avoiding unnecessary work.</p>
+                    <p><strong>Syntax rules:</strong> <code>if</code> first, then <code>elif</code>s, then
+                        <code>else</code> last. Proper indentation and colons are required.</p>
+                </li>
+                <li>
+                    <p><strong>Program flow:</strong> Emphasize how the computer makes decisions step by step, just like
+                        we do in life.</p>
                 </li>
             </ul>
         </div>
@@ -70,21 +71,24 @@
         <div style="margin-bottom: 45px; padding-left: 28px;">
             <ul style="font-size: 1.08em;">
                 <li>
-                    <p><strong>Question 1:</strong> Why is it useful that Python stops evaluating once it knows the
-                        answer? Can you think of a real-life situation where you stop reasoning once you have enough
-                        information?</p>
+                    <p><strong>Question 1:</strong> What happens if you have three separate <code>if</code> statements
+                        and all conditions are True? How does this differ from using <code>elif</code>?</p>
                 </li>
                 <li>
-                    <p><strong>Question 2:</strong> Look at this code: <code>(age >= 16) and has_license</code>. If
-                        <code>age</code> is 14, does Python need to check <code>has_license</code>? Why or why not?</p>
+                    <p><strong>Question 2:</strong> Why must <code>elif</code> and <code>else</code> come after
+                        <code>if</code>? What error would occur if the order was wrong?</p>
                 </li>
                 <li>
-                    <p><strong>Question 3:</strong> How can short-circuit evaluation help prevent errors? Give an
-                        example involving division or checking if a variable exists.</p>
+                    <p><strong>Question 3:</strong> How does indentation help Python (and the reader) understand which
+                        code belongs to which condition?</p>
                 </li>
                 <li>
-                    <p><strong>Question 4:</strong> What might happen if a programmer does NOT understand short-circuit
-                        evaluation? What kinds of bugs could appear?</p>
+                    <p><strong>Question 4:</strong> Can you give a real-life example where you need to check several
+                        conditions in order (like a grade calculator or decision tree)?</p>
+                </li>
+                <li>
+                    <p><strong>Question 5:</strong> What might go wrong if you forget the colon <code>:</code> or use
+                        the wrong indentation level?</p>
                 </li>
             </ul>
         </div>
@@ -97,23 +101,22 @@
         <div
             style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
             <p>
-                Just as short-circuit evaluation lets us stop when a certain truth is known, God’s unchanging promises
-                in Christ cut through complexity and doubt. We do not need to keep “evaluating” our performance to earn
-                God’s approval — it is already secure in Jesus. When we rest in the certain truth that God loves us in
-                Christ, we are freed from paralysis and can walk confidently in the freedom He has given.
+                Conditional statements mirror the clear choices we face in life. God sets before us life and death,
+                blessing and curse.
+                There is no middle path or compromise that leads to true life. Our decisions must be decisive and
+                ordered, just like the structure of if-elif-else.
             </p>
             <p style="margin-top: 15px;">
                 <strong>Key Scriptures:</strong><br>
-                “He whom the Son sets free is free indeed.” (John 8:36)<br>
-                “For by grace you have been saved through faith. And this is not your own doing; it is the gift of God,
-                not a result of works...” (Ephesians 2:8-9)
+                “Choose this day whom you will serve...” (Joshua 24:15)<br>
+                “I have set before you life and death, blessing and curse. Therefore choose life...” (Deuteronomy 30:19)
             </p>
         </div>
 
         <div
             style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
             <em>If you find any typos or errors, please let me know.</em><br><br>
-            <a href="mailto:info@logosteach.com?subject=Feedback for Short-Circuit Evaluation Talking Points"
+            <a href="mailto:info@logosteach.com?subject=Feedback for if-elif-else Talking Points"
                 style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
         </div>
 
