@@ -1,7 +1,7 @@
 # Computer Science 1: Python with a Worldview  
 **A Complete Journey from First Line of Code to Confident Problem Solver**
 
-## Snazzy Introduction
+## Course Introduction
 
 Welcome to **Computer Science 1** — where the elegance of Python meets the depth of a biblical worldview.
 
