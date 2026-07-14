@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson Examples - Truthy and Falsy Values | Talking Points</title>
+</head>
+
+<body>
+
+    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">Python with a Worldview</div>
+            <div class="header-right">LogosTeach</div>
+        </div>
+    </header>
+
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            Truthy and Falsy Values — Talking Points
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Key talking points, discussion prompts, instructor notes, and biblical integration for teaching truthy/falsy
+            evaluation and implicit Boolean checking in Python.
+        </p>
+
+        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Main Teaching Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Truthy vs Falsy Evaluation:</strong> Every value in Python has a Boolean truth value when
+                        used in conditional contexts. Falsy values include <code>False</code>, <code>None</code>,
+                        numeric zero (<code>0</code>, <code>0.0</code>), empty strings (<code>""</code>), and empty
+                        collections (<code>[]</code>, <code>{}</code>, etc.). All other values are truthy.</p>
+                </li>
+                <li>
+                    <p><strong>Implicit Boolean Checking:</strong> Pythonic code often uses the value directly in an
+                        <code>if</code> statement (<code>if name:</code>) rather than explicit comparisons
+                        (<code>if name != ""</code>). This produces cleaner, more readable code while relying on the
+                        language’s built-in truthiness rules.</p>
+                </li>
+                <li>
+                    <p><strong>Explicit vs Implicit Comparison:</strong> Writing <code>if x == True:</code> is rarely
+                        needed and can miss cases where a value is truthy but not exactly the boolean <code>True</code>.
+                        Implicit evaluation is preferred in most situations; reserve explicit <code>== True</code> only
+                        when you specifically need to test for the boolean value itself.</p>
+                </li>
+                <li>
+                    <p><strong>Common Falsy Surprises:</strong> Students often overlook that <code>0</code> (a valid
+                        score or count) and empty strings are falsy. Emphasize when an explicit check (e.g.,
+                        <code>is not None</code> or <code>&gt;= 0</code>) is safer than relying on truthiness.</p>
+                </li>
+                <li>
+                    <p><strong>Practical Applications:</strong> Truthy checking appears everywhere: validating user
+                        input, checking for empty lists/dicts before processing, guarding against missing data, and
+                        writing concise guard clauses.</p>
+                </li>
+                <li>
+                    <p><strong>Spiritual Parallel:</strong> Just as code must correctly identify what is truly “present”
+                        or “absent,” believers are called to discern truth from falsehood. God sees reality perfectly;
+                        we are being trained to see more clearly through His Word and Spirit.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Discussion &amp; Talking Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Why implicit checking?</strong> When is it better to use <code>if items:</code> versus
+                        <code>if len(items) &gt; 0</code>? What are the readability and performance trade-offs?</p>
+                </li>
+                <li>
+                    <p><strong>Zero vs empty:</strong> Can you think of a real program where treating <code>0</code> as
+                        falsy would cause a bug? How would you fix it while still using clean truthy-style checks where
+                        appropriate?</p>
+                </li>
+                <li>
+                    <p><strong>Teaching moments:</strong> How would you help a student who keeps writing
+                        <code>if flag == True:</code>? What simple refactor would you suggest, and why does it matter
+                        for long-term code quality?</p>
+                </li>
+                <li>
+                    <p><strong>Edge cases:</strong> What happens with <code>if "0":</code> or <code>if [False]:</code>?
+                        Why is this behavior useful once understood?</p>
+                </li>
+                <li>
+                    <p><strong>Faith connection:</strong> How does learning to correctly evaluate “what is truly there”
+                        in code mirror the biblical call to renew our minds so we can discern God’s will (Romans 12:2)?
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Training in godliness:</strong> In what ways does practicing clear Boolean logic help
+                        prepare us “for every good work” as described in Titus 2:11-12?</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== APPLICATION ACTIVITIES ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Application Activities
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Live Coding Demo:</strong> Start with a function that uses explicit empty checks and
+                        refactor it live to use implicit truthy checks. Ask students to predict output at each step.</p>
+                </li>
+                <li>
+                    <p><strong>Code Review Exercise:</strong> Provide 3–4 short code snippets (some using
+                        <code>== True</code>, some using implicit checks, some with potential zero/empty bugs). Have
+                        students identify issues and suggest improvements.</p>
+                </li>
+                <li>
+                    <p><strong>Real-World Mapping:</strong> In pairs, have students choose a common app feature (login
+                        form, shopping cart, search results, settings page) and list which values would be truthy or
+                        falsy in its conditional logic.</p>
+                </li>
+                <li>
+                    <p><strong>Personal Reflection:</strong> Ask students to journal about a time they made an
+                        assumption that later proved false. Connect it to the idea that God sees things exactly as they
+                        are, and how renewing our minds (Romans 12:2) helps us see more clearly.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Integration
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            <p>
+                Learning to correctly identify truthy and falsy values trains us to see reality as it actually is,
+                rather than as we assume or wish it to be. In the same way, God sees things perfectly as they truly are.
+                Nothing is hidden from His sight.
+            </p>
+            <p style="margin-top: 15px;">
+                From our limited human perspective, truth can sometimes appear relative or uncertain. We are prone to
+                project that same relativity onto God. Yet in Christ Jesus we have direct access to our Heavenly Father.
+                He is teaching us and training us in godliness so that the falsehoods of the world become clearer and we
+                are prepared for every good work.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “And do not be conformed to this world, but be transformed by the renewing of your mind, that you may
+                prove what is that good and acceptable and perfect will of God.” (Romans 12:2 NKJV)<br>
+                “For the grace of God that brings salvation has appeared to all men, teaching us that, denying
+                ungodliness and worldly lusts, we should live soberly, righteously, and godly in the present age.”
+                (Titus 2:11-12 NKJV)<br>
+                “And the world is passing away, and the lust of it; but he who does the will of God abides forever.” (1
+                John 2:17 NKJV)
+            </p>
+            <p style="margin-top: 15px;">
+                As instructors, we can point out that the discipline of writing clear Boolean logic is a small picture
+                of the careful discernment God calls His people to exercise—rejecting what is false and embracing what
+                is truly life-giving in Christ.
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson Talking Points - Truthy and Falsy Values"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+        <p>Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.</p>
+
+    </div>
+
+</body>
+
+</html>
