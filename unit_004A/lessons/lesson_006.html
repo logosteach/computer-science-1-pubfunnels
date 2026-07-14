@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="../../static/css/stylesheet.css">
 </head>
 
@@ -23,66 +24,212 @@
 
         <h1
             style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-            <strong>Lesson Examples - Nested if Statements</strong>
+            <strong>Lesson Examples - Common Mistakes & Best Practices with Conditionals</strong>
         </h1>
 
         <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-            These examples show how to create and trace nested if statements, when they are useful, and how to keep them
-            clear and readable.
+            These examples highlight the most common mistakes students make with <code>if</code> statements and show how
+            to debug and write clear, maintainable conditional logic. Good code is not just correct — it is readable and
+            trustworthy, just as clear thinking leads to wise living.
         </p>
 
+        <!-- Example 1: Assignment vs Equality -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Example 1: Basic Nested if Statement
+            Mistake #1: Using = Instead of ==
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <pre><code>age = 10
+            <p>One of the most common errors is using a single equals sign (<code>=</code>) when checking for equality.
+                In Python, <code>=</code> is for assignment, while <code>==</code> is for comparison.</p>
+
+            <pre><code class="language-python"># ❌ Wrong - This assigns 10 to age instead of comparing
+age = 18
+if age = 18:          # SyntaxError!
+    print("You are 18!")
+
+# ✅ Correct
+age = 18
+if age == 18:
+    print("You are exactly 18 years old.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">You are exactly 18 years old.</code></pre>
+
+            <div class="warning-box">
+                <strong>Warning:</strong> Using <code>=</code> inside an <code>if</code> condition causes a
+                <code>SyntaxError</code>. Always use <code>==</code> for equality checks.
+            </div>
+        </div>
+
+        <!-- Example 2: Missing Colons -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Mistake #2: Forgetting the Colon
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Every <code>if</code>, <code>elif</code>, and <code>else</code> line must end with a colon
+                (<code>:</code>).</p>
+
+            <pre><code class="language-python"># ❌ Wrong - Missing colon
+score = 85
+if score >= 90
+    print("You got an A!")
+
+# ✅ Correct
+score = 85
+if score >= 90:
+    print("You got an A!")
+elif score >= 80:
+    print("You got a B!")
+else:
+    print("Keep working hard!")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">You got a B!</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> The colon tells Python that a block of code is about to begin. Think of it as the
+                "start of the decision block."
+            </div>
+        </div>
+
+        <!-- Example 3: Indentation Errors -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Mistake #3: Incorrect Indentation
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Python uses indentation (usually 4 spaces) to define code blocks. Inconsistent or missing indentation
+                causes <code>IndentationError</code>.</p>
+
+            <pre><code class="language-python"># ❌ Wrong - Inconsistent indentation
+temperature = 75
+if temperature > 70:
+print("It's warm outside.")   # No indentation!
+    print("You might want shorts.")  # Extra indentation
+
+# ✅ Correct - Consistent 4-space indentation
+temperature = 75
+if temperature > 70:
+    print("It's warm outside.")
+    print("You might want shorts.")
+else:
+    print("It's a bit cool today.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">It's warm outside.
+You might want shorts.</code></pre>
+
+            <div class="warning-box">
+                <strong>Warning:</strong> Mixing tabs and spaces is a common cause of hard-to-find indentation errors.
+                Configure your editor to always use 4 spaces.
+            </div>
+        </div>
+
+        <!-- Example 4: Debugging Conditional Logic -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Debugging Conditional Logic
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>When your conditional logic isn't working as expected, use <code>print()</code> statements to trace which
+                branch is being executed.</p>
+
+            <pre><code class="language-python"># Debugging example
+age = 16
 has_permission = True
 
-if age >= 5 and age <= 11:          # outer if
-    print("Student is in the correct VBS age range.")
-    if has_permission:              # nested if
-        print("Student has permission and can register for VBS.")
+print(f"Checking access for age={age}, has_permission={has_permission}")
+
+if age >= 18:
+    print("  Outer: Age requirement met.")
+    if has_permission:
+        print("    Inner: Permission granted.")
+        print(">>> RESULT: Full access approved.")
     else:
-        print("Permission needed from parent.")
+        print("    Inner: No permission.")
+        print(">>> RESULT: Access denied - need permission.")
 else:
-    print("Student is outside the 5-11 age range.")</code></pre>
-            <p><strong>Trace:</strong> Both conditions True → both messages print.</p>
+    print("  Outer: Age requirement NOT met.")
+    print(">>> RESULT: Access denied - too young.")</code></pre>
+
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Checking access for age=16, has_permission=True
+  Outer: Age requirement NOT met.
+>>> RESULT: Access denied - too young.</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> Add temporary print statements with clear labels like "Outer:", "Inner:", or
+                "DEBUG:" to trace program flow. Remove them once the bug is fixed.
+            </div>
         </div>
 
+        <!-- Example 5: Best Practices for Clear Conditionals -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Example 2: Nested vs Compound Conditions
+            Best Practices for Readable Conditionals
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <p><strong>Nested (useful when decisions depend on each other):</strong></p>
-            <pre><code>if age >= 5 and age <= 11:
-    if has_allergy:
-        print("Register with allergy precautions.")</code></pre>
+            <p>Writing clear conditional code makes programs easier to understand, debug, and maintain.</p>
 
-            <p><strong>Compound (better when conditions are independent):</strong></p>
-            <pre><code>if age >= 5 and age <= 11 and has_allergy:
-    print("Register with allergy precautions.")</code></pre>
-            <p class="tip">Use nested when the inner decision only makes sense after the outer one is True. Avoid deep
-                nesting (more than 2-3 levels) to keep code readable.</p>
+            <pre><code class="language-python"># ✅ Good practices demonstrated
+is_weekend = True
+has_homework = False
+energy_level = "high"
+
+# 1. Use descriptive variable names
+if is_weekend and not has_homework and energy_level == "high":
+    print("Perfect time to go hiking!")
+
+# 2. Keep conditions simple - extract complex logic into variables
+is_eligible_for_discount = (age >= 65) or (is_student and has_coupon)
+
+if is_eligible_for_discount:
+    print("You qualify for a discount!")
+
+# 3. Use early returns / guard clauses when appropriate (in functions)
+def get_access_level(user):
+    if not user.is_logged_in:
+        return "guest"
+    if user.is_admin:
+        return "admin"
+    return "user"</code></pre>
+
+            <p><strong>Key Best Practices:</strong></p>
+            <ul>
+                <li>Use meaningful variable names that describe the condition</li>
+                <li>Break complex conditions into named boolean variables</li>
+                <li>Keep <code>if</code> blocks short and focused</li>
+                <li>Add comments for complex logic</li>
+                <li>Be consistent with indentation and style</li>
+            </ul>
         </div>
 
+        <!-- Example 6: Before and After - Improving Readability -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-            Example 3: Debugging Nested Logic
+            Before & After: Making Code More Readable
         </h2>
         <div style="margin-bottom: 45px; padding-left: 28px;">
-            <pre><code>score = 85
-attendance = "good"
+            <p>Here's a before-and-after example of improving conditional code.</p>
 
-if score >= 70:
-    if attendance == "good":
-        print("Student is doing well overall.")
-    else:
-        print("Attendance needs improvement.")
+            <pre><code class="language-python"># ❌ Before - Hard to read and understand
+if age>=18 and (has_id==True or has_passport==True) and not (is_banned==True):
+    print("Access granted")
 else:
-    print("Focus needed on learning.")</code></pre>
-            <p><strong>Common bug to watch for:</strong> Missing indentation or wrong logical operators.</p>
+    print("Access denied")
+
+# ✅ After - Clear and maintainable
+is_adult = age >= 18
+has_valid_id = has_id or has_passport
+is_not_banned = not is_banned
+
+if is_adult and has_valid_id and is_not_banned:
+    print("Access granted")
+else:
+    print("Access denied")</code></pre>
+
+            <p>The second version is much easier to read, debug, and modify later.</p>
         </div>
 
         <!-- Biblical Reflection -->
@@ -93,21 +240,26 @@ else:
         <div
             style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
             <p>
-                Just as nested if statements show layers of decision-making, God often works through layers of
-                circumstances in our lives. Yet He guides us with perfect clarity and purpose. Our job is to trust Him
-                at every level.
+                Just as clear thinking leads to wise living, writing clear conditional logic leads to reliable and
+                trustworthy programs. Sloppy code, like sloppy thinking, often leads to unexpected errors and
+                difficult-to-maintain systems.
+            </p>
+            <p style="margin-top: 15px;">
+                God calls us to guard our hearts and think carefully, because our thoughts shape our actions. Likewise,
+                He calls us to do all things decently and in order. Clear, well-structured code is one small way we can
+                reflect that principle in our work.
             </p>
             <p style="margin-top: 15px;">
                 <strong>Scripture:</strong><br>
-                “The heart of man plans his way, but the Lord establishes his steps.” (Proverbs 16:9)<br>
-                “And we know that for those who love God all things work together for good...” (Romans 8:28)
+                “Keep your heart with all diligence, for out of it spring the issues of life.” (Proverbs 4:23 NKJV)<br>
+                “Let all things be done decently and in order.” (1 Corinthians 14:40 NKJV)
             </p>
         </div>
 
         <div
             style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
             <em>If you find any typos or errors, please let me know.</em><br><br>
-            <a href="mailto:jcpartridge@logosteach.com?subject=Feedback for Nested If Examples"
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson Examples - Conditional Mistakes & Best Practices"
                 style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
         </div>
 
@@ -116,7 +268,11 @@ else:
             © 2026 LogosTeach - All Rights Reserved.
         </div>
 
+        <p>Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.</p>
+
     </div>
+
 </body>
 
 </html>

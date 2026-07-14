@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson Examples - Conditional Mistakes & Best Practices | Talking Points</title>
+</head>
+
+<body>
+
+    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">Python with a Worldview</div>
+            <div class="header-right">LogosTeach</div>
+        </div>
+    </header>
+
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            Common Mistakes & Best Practices with Conditionals — Talking Points
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Key talking points, discussion prompts, and instructor notes for teaching students how to avoid common
+            conditional errors and write clear, maintainable <code>if</code> statements.
+        </p>
+
+        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Main Teaching Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Common Syntax Mistakes:</strong> Students frequently confuse assignment (<code>=</code>)
+                        with equality comparison (<code>==</code>), forget the required colon after
+                        <code>if</code>/<code>elif</code>/<code>else</code>, or create inconsistent indentation. These
+                        are among the most frequent sources of <code>SyntaxError</code> and
+                        <code>IndentationError</code>.</p>
+                </li>
+                <li>
+                    <p><strong>Debugging Conditional Logic:</strong> Effective debugging involves adding strategic
+                        <code>print()</code> statements to trace which branches execute. Teaching students to label
+                        their debug output (e.g., “Outer:”, “Inner:”, “DEBUG:”) dramatically improves their ability to
+                        locate logic errors.</p>
+                </li>
+                <li>
+                    <p><strong>Readability Over Cleverness:</strong> Clear conditional code uses descriptive boolean
+                        variable names, breaks complex conditions into named variables, and keeps <code>if</code> blocks
+                        short. Readable code is easier to debug, test, and maintain over time.</p>
+                </li>
+                <li>
+                    <p><strong>Best Practices:</strong> Use meaningful variable names that describe the condition being
+                        tested. Extract complex logic into well-named boolean variables. Be consistent with indentation
+                        (4 spaces). Add comments only when the logic is not self-explanatory.</p>
+                </li>
+                <li>
+                    <p><strong>Before-and-After Refactoring:</strong> Showing students “messy” versus “clean” versions
+                        of the same logic helps them internalize the value of writing code that is easy for humans (and
+                        their future selves) to understand.</p>
+                </li>
+                <li>
+                    <p><strong>Spiritual Parallel:</strong> Just as clear thinking leads to wise living, writing clear
+                        conditional logic leads to reliable and trustworthy programs. Sloppy code, like sloppy thinking,
+                        often leads to unexpected problems.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Discussion &amp; Talking Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Most common mistake:</strong> Which of the three syntax mistakes (= vs ==, missing colon,
+                        indentation) do your students struggle with the most? Why do you think that is?</p>
+                </li>
+                <li>
+                    <p><strong>Debugging mindset:</strong> How can we train students to think like detectives when their
+                        conditionals don’t behave as expected? What habits can we build early?</p>
+                </li>
+                <li>
+                    <p><strong>Readability vs speed:</strong> Some students prioritize writing code quickly over writing
+                        readable code. How would you respond to a student who says, “It works, so why does it matter if
+                        it’s messy?”</p>
+                </li>
+                <li>
+                    <p><strong>Real-world impact:</strong> Can you think of a situation (in software, games, or even
+                        everyday systems) where unclear conditional logic caused a real problem?</p>
+                </li>
+                <li>
+                    <p><strong>Faith connection:</strong> How does the principle “Let all things be done decently and in
+                        order” (1 Corinthians 14:40) apply to writing code? How might guarding our hearts (Proverbs
+                        4:23) relate to writing careful, thoughtful conditional logic?</p>
+                </li>
+                <li>
+                    <p><strong>Long-term thinking:</strong> Why is it valuable to teach students to write code that
+                        their “future self” (or teammates) can easily understand and modify?</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== APPLICATION ACTIVITIES ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Application Activities
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Code Review Challenge:</strong> Give students 4–5 short code snippets containing common
+                        conditional mistakes. Have them identify the error, explain what will happen, and fix the code.
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Live Debugging Demo:</strong> Start with a broken conditional program and demonstrate how
+                        to use print statements to trace execution. Then let students try it on their own buggy code.
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Refactoring Exercise:</strong> Provide a messy, hard-to-read conditional block and ask
+                        students to refactor it using best practices (descriptive variables, early returns, clear
+                        structure).</p>
+                </li>
+                <li>
+                    <p><strong>Personal Reflection:</strong> Ask students to think of a time they made a decision
+                        without thinking clearly. Connect it to the idea that clear thinking (and clear code) leads to
+                        better outcomes.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Integration
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            <p>
+                Writing clear conditional logic is more than a technical skill — it is an act of stewardship. Just as
+                clear thinking leads to wise living, writing clear conditional logic leads to reliable and trustworthy
+                programs. Sloppy code, like sloppy thinking, often leads to unexpected errors and difficult-to-maintain
+                systems.
+            </p>
+            <p style="margin-top: 15px;">
+                God calls us to guard our hearts with all diligence because our thoughts shape our actions and
+                ultimately our lives. He also calls us to do all things decently and in order. When we write clean,
+                well-structured code, we reflect these principles in our work.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Keep your heart with all diligence, for out of it spring the issues of life.” (Proverbs 4:23 NKJV)<br>
+                “Let all things be done decently and in order.” (1 Corinthians 14:40 NKJV)
+            </p>
+            <p style="margin-top: 15px;">
+                As instructors, we can help students see that the discipline of writing clear, readable code is one
+                small way we practice careful thinking and orderly living — habits that honor God and serve others well.
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson Talking Points - Conditional Mistakes & Best Practices"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+        <p>Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.</p>
+
+    </div>
+
+</body>
+
+</html>
