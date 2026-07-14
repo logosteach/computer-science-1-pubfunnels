@@ -101,6 +101,44 @@ else:
             </div>
         </div>
 
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Tracing Example with print() Statements
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python"># Change the values of temperature and is_raining to test different branches
+temperature = 75
+is_raining = False
+has_umbrella = True
+
+print("Starting program...")
+
+if temperature > 60:
+    print("Outer: It's warm enough for outdoor activities.")
+    if is_raining:
+        print("  Inner: It's raining.")
+        if has_umbrella:
+            print("    Innermost: Good, you have an umbrella!")
+        else:
+            print("    Innermost: You might get wet!")
+    else:
+        print("  Inner: No rain, enjoy the day!")
+else:
+    print("Outer: It's too cold. Stay inside.")
+
+print("Program finished.")</code></pre>
+            <p><strong>Sample Output (temperature=75, is_raining=False):</strong></p>
+            <pre><code class="language-console">Starting program...
+Outer: It's warm enough for outdoor activities.
+  Inner: No rain, enjoy the day!
+Program finished.</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Modify the variables at the top and re-run the code. Add or remove
+                <code>print()</code> statements to trace exactly which branches execute. This helps debug complex nested
+                logic.
+            </div>
+        </div>
+
         <!-- Biblical Reflection -->
         <h2
             style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
