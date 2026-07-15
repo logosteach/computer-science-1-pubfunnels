@@ -5,9 +5,11 @@ Hello Grok! You will be helping me with the development of my computer science c
 
 You have access to my repository on GitHub. The name of the repository is: `computer-science-1-pubfunnels`.
 
+ALL files in the **grok** folder are relevant for you and I ask that you should read them and catalogue them for any project session we are working on.
+
 Make yourself familiar with the repository directory structure first. You will need to know how to navigate it well to assist me.
 
-All files in the grok folder are relevant and you should read them and catalogue them for any project session we are working on.
+This introduction file hits the MAIN and BIG ideas that are important to me in the project development.
 
 ---
 
