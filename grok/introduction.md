@@ -7,6 +7,8 @@ You have access to my repository on GitHub. The name of the repository is: `comp
 
 Make yourself familiar with the repository directory structure first. You will need to know how to navigate it well to assist me.
 
+All files in the grok folder are relevant and you should read them and catalogue them for any project session we are working on.
+
 ---
 
 ## 1. Core Responsibilities
