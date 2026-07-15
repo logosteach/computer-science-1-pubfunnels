@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Ternary Operator</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples demonstrate the ternary operator (`value_if_true if condition else value_if_false`) for
+            writing concise conditional expressions. Learn when it improves readability and when a full `if-else` is
+            better.
+        </p>
+
+        <!-- Example 1: Basic Ternary -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Basic Ternary Operator
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">age = 18
+status = "Adult" if age >= 18 else "Minor"
+print(f"You are a {status}.")</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">You are a Adult.</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Ternary is great for simple assignments or return values. It condenses a full
+                if-else into one line.
+            </div>
+        </div>
+
+        <!-- Example 2: Converting if-else to Ternary -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Converting if-else to Ternary (and Vice Versa)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python"># Full if-else
+score = 85
+if score >= 60:
+    result = "Pass"
+else:
+    result = "Fail"
+
+# Equivalent ternary (more concise)
+result = "Pass" if score >= 60 else "Fail"
+print(f"Result: {result}")</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Result: Pass</code></pre>
+        </div>
+
+        <!-- Example 3: Readability Considerations -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            When to Use (and Not Use) Ternary
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python"># Good: Simple and readable
+discount = 0.1 if is_member else 0
+
+# Avoid when complex (use full if-else instead)
+# message = "Welcome back!" if user.is_logged_in and not user.is_banned and user.has_premium else "Please log in or check your subscription."</code></pre>
+            <div class="warning-box">
+                <strong>Warning:</strong> Overly complex ternaries reduce readability. Prefer full `if-else` for
+                multi-condition or multi-line logic.
+            </div>
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Concise, clear communication reflects the gospel — direct, truthful, and full of grace. Just as the
+                ternary operator allows us to express simple decisions cleanly, our words (and code) should be
+                purposeful and edifying.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Let your speech always be with grace, seasoned with salt, that you may know how you ought to answer
+                each one.” (Colossians 4:6 NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson Examples - Ternary Operator"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+        <p>Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.</p>
+
+    </div>
+
+</body>
+
+</html>
