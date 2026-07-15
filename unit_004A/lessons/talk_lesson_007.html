@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson - Ternary Operator | Talking Points</title>
+</head>
+
+<body>
+
+    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">Python with a Worldview</div>
+            <div class="header-right">LogosTeach</div>
+        </div>
+    </header>
+
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            Ternary Operator — Talking Points
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Key talking points, discussion prompts, and instructor notes for teaching the ternary (conditional)
+            operator: writing concise expressions, converting between if-else and ternary forms, and deciding when
+            ternary improves (or harms) readability.
+        </p>
+
+        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Main Teaching Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Syntax of the Ternary Operator:</strong> The form is
+                        <code>value_if_true if condition else value_if_false</code>. It is an expression (returns a
+                        value) rather than a statement. Students must understand it can be used in assignments, function
+                        arguments, return statements, and list comprehensions.</p>
+                </li>
+                <li>
+                    <p><strong>Conversion Practice:</strong> Emphasize converting simple if-else blocks into ternary
+                        form and expanding ternary expressions back into full if-else. This builds fluency and helps
+                        students see the equivalence.</p>
+                </li>
+                <li>
+                    <p><strong>Readability Judgment:</strong> Ternary improves readability for simple, short conditions
+                        (e.g., choosing between two values). It reduces readability when the condition is complex,
+                        nested, or requires multi-line logic. Teach students to prioritize clarity over cleverness.</p>
+                </li>
+                <li>
+                    <p><strong>Appropriate Use Cases:</strong> Best for assigning a value based on a simple condition,
+                        setting default values, or compact one-liners in clean code. Avoid for side effects (printing,
+                        modifying state) or when more than two branches are needed.</p>
+                </li>
+                <li>
+                    <p><strong>Common Pitfalls:</strong> Students sometimes try to put statements (print, multiple
+                        lines) inside ternary, or nest ternaries too deeply. Encourage “if it feels hard to read out
+                        loud, rewrite it as a full if-else.”</p>
+                </li>
+                <li>
+                    <p><strong>Spiritual Parallel:</strong> Concise, clear communication reflects the gospel — direct,
+                        truthful, and full of grace. Just as a well-chosen ternary can express a decision cleanly, our
+                        words (and code) should be purposeful and edifying rather than verbose or confusing.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Discussion &amp; Talking Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>When is shorter better?</strong> Can you give an example of a ternary that is clearly
+                        better than a multi-line if-else? When does the opposite become true?</p>
+                </li>
+                <li>
+                    <p><strong>Readability test:</strong> How can we teach students a simple “read-aloud” test for
+                        deciding whether to use ternary or full if-else?</p>
+                </li>
+                <li>
+                    <p><strong>Conversion fluency:</strong> Why is it valuable for students to be able to convert freely
+                        between if-else and ternary forms? How does this strengthen their overall understanding of
+                        conditionals?</p>
+                </li>
+                <li>
+                    <p><strong>Team code review:</strong> Imagine a teammate (or future self) must maintain your code.
+                        How might overuse of nested or complex ternaries create problems for others?</p>
+                </li>
+                <li>
+                    <p><strong>Gospel connection:</strong> Colossians 4:6 calls us to let our speech always be with
+                        grace, seasoned with salt. How can writing concise, clear conditional expressions be a small way
+                        we practice graceful, purposeful communication?</p>
+                </li>
+                <li>
+                    <p><strong>Balance:</strong> Some students will love the “cool factor” of ternary and overuse it;
+                        others will avoid it entirely. How do we help them develop wise judgment about when it is
+                        appropriate?</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== APPLICATION ACTIVITIES ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Application Activities
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Conversion Drill:</strong> Provide 4–5 simple if-else blocks. Students rewrite each as a
+                        ternary. Then reverse the exercise: give ternaries and expand them into full if-else.</p>
+                </li>
+                <li>
+                    <p><strong>Readability Challenge:</strong> Show pairs of code (one ternary, one if-else) that
+                        accomplish the same thing. Ask students to vote on which is clearer and explain why. Include
+                        both good and bad examples of ternary use.</p>
+                </li>
+                <li>
+                    <p><strong>Live Coding:</strong> Start with a full if-else that assigns a value. Live-refactor it
+                        into a clean ternary. Then take a messy nested ternary and expand it back into clear if-else.
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Personal Practice:</strong> Students write a short program that uses at least two
+                        appropriate ternary expressions and one place where they deliberately chose a full if-else
+                        instead (with a comment explaining why).</p>
+                </li>
+                <li>
+                    <p><strong>Reflection Prompt:</strong> “Write a one-sentence summary of when you will choose ternary
+                        vs. full if-else. How does this decision reflect the value of clear communication?”</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Integration
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            <p>
+                The ternary operator invites us to express decisions with clarity and conciseness. In the same way, the
+                gospel calls us to communicate truthfully, directly, and with grace. Unnecessary complexity can obscure
+                meaning — whether in code or in our words to others.
+            </p>
+            <p style="margin-top: 15px;">
+                When we choose the right form (simple ternary for simple decisions, full if-else when more room is
+                needed), we practice wise stewardship of clarity. This mirrors the call to let our speech be gracious
+                and purposeful.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Let your speech always be with grace, seasoned with salt, that you may know how you ought to answer
+                each one.” (Colossians 4:6 NKJV)
+            </p>
+            <p style="margin-top: 15px;">
+                As we teach students to write clean, intentional conditional expressions, we can also encourage them to
+                let their communication — in code and in life — be direct, truthful, and full of grace.
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson Talking Points - Ternary Operator"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+        <p>Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.</p>
+
+    </div>
+
+</body>
+
+</html>
