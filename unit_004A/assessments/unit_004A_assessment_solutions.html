@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Code+Pro:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Solutions - Unit 4A: Logic Flow and Conditional Statements Assessment</title>
+    <style>
+        body {
+            font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 35px;
+            background-color: #f8f9fa;
+            color: #333333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin-bottom: 10px;
+            color: #1a3c5e;
+            border-bottom: 6px solid #2c7a7b;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.85em;
+            margin: 45px 0 18px;
+            color: #2c7a7b;
+            border-left: 7px solid #2c7a7b;
+            padding-left: 18px;
+        }
+
+        p code,
+        li code {
+            padding: 2px 2px;
+            color: #1d2b53;
+            background-color: #dafcef;
+        }
+
+        .header-info {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .instructions {
+            background-color: #f0f7f7;
+            padding: 20px;
+            border-left: 7px solid #2c7a7b;
+            margin: 25px 0;
+            font-size: 1.08em;
+        }
+
+        .question {
+            margin-bottom: 35px;
+        }
+
+        .answer {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 12px 18px;
+            margin: 10px 0 20px 0;
+            font-weight: 500;
+        }
+
+        .explanation {
+            background-color: #f5f5f5;
+            padding: 12px 18px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            font-size: 0.98em;
+        }
+
+        .coding-box {
+            background-color: #f8f9fa;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .footer {
+            margin-top: 70px;
+            padding-top: 25px;
+            border-top: 2px solid #e0e0e0;
+            font-size: 0.95em;
+            color: #777777;
+            text-align: center;
+        }
+
+        .biblical {
+            font-style: italic;
+            color: #1a3c5e;
+            background-color: #f0f7f7;
+            padding: 20px;
+            border-left: 6px solid #2c7a7b;
+        }
+
+        pre,
+        code {
+            font-family: 'Source Code Pro', Consolas, Monaco, 'Courier New', monospace;
+            font-size: 1.02em;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 14px 16px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .disclaimer {
+            background-color: #f8f9fa;
+            padding: 18px;
+            border-left: 5px solid #2c7a7b;
+            margin: 30px 0;
+            font-size: 0.98em;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 4A Assessment – Solutions</h1>
+
+        <div class="header-info">
+            <strong>Unit:</strong> 4A – Logic Flow and Conditional Statements<br>
+            <strong>Note:</strong> These solutions are for instructor use and student self-checking. Partial credit and
+            thoughtful explanations should be considered.
+        </div>
+
+        <div class="instructions">
+            <strong>Instructor Note:</strong> No formal grade scale is provided. Use professional judgment. Look for
+            clear reasoning, correct application of concepts, and good coding practices (especially no functions, since
+            students have not learned them yet).
+        </div>
+
+        <!-- Section 1 Solutions -->
+        <h2>Section 1: Knowledge &amp; Understanding – Solutions</h2>
+
+        <div class="question">
+            <p><strong>1.</strong> Which of the following correctly describes Boolean values in Python?</p>
+            <div class="answer">Correct Answer: a</div>
+            <div class="explanation">Boolean values are the two special values <code>True</code> and <code>False</code>.
+                They form the foundation of all decision-making. Options b–d are common beginner misconceptions.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>2.</strong> Which of the following is the correct way to check if a variable <code>age</code> is
+                greater than or equal to 18?</p>
+            <div class="answer">Correct Answer: c</div>
+            <div class="explanation"><code>&gt;=</code> is the correct comparator. a uses assignment; b uses invalid
+                syntax; d is logically equivalent but not the single clean comparator.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>3.</strong> Compound condition with <code>age = 25</code> and <code>has_ticket = True</code></p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">Both conditions are True, so the <code>and</code> expression is True and the print
+                statement executes.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>4.</strong> Short-circuit with <code>x = 10</code> and <code>y = 0</code></p>
+            <div class="answer">Correct Answer: d</div>
+            <div class="explanation">Because the left side of <code>or</code> is True, Python short-circuits and never
+                evaluates the right side, avoiding the ZeroDivisionError.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>5.</strong> Which is NOT a valid use of if/elif/else?</p>
+            <div class="answer">Correct Answer: c</div>
+            <div class="explanation"><code>else</code> must come last, after all <code>elif</code> blocks (if any).
+                Placing it earlier is a syntax error.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>6.</strong> Output of the if/elif/else grade code with score = 85</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">The first matching condition is <code>score &gt;= 80</code>, so "B" is printed and
+                the remaining branches are skipped.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>7.</strong> Output of independent if statements with score = 85</p>
+            <div class="answer">Correct Answer: c</div>
+            <div class="explanation">Independent <code>if</code> statements are all checked. Both <code>&gt;= 80</code>
+                and <code>&gt;= 70</code> are True, so "B" and "C" print. The <code>else</code> belongs only to the last
+                <code>if</code>.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>8.</strong> Which best demonstrates nested if statements?</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">Option b shows an <code>if</code> inside another <code>if</code> block (true
+                nesting). The others are chained elif, compound, or single if.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>9.</strong> Common pitfall</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">Forgetting the colon after a condition is a very common SyntaxError. The other
+                options are best practices.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>10.</strong> Final value of age after sequential ifs</p>
+            <div class="answer">Correct Answer: c</div>
+            <div class="explanation">First if sets age = 15. Second if (age &gt; 20) is False and skipped. Third if (age
+                &lt; 20) is True and sets age = 34.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>11.</strong> Which statement about the ternary operator is true?</p>
+            <div class="answer">Correct Answer: a</div>
+            <div class="explanation">Ternary is ideal for simple assignments. Multi-line logic or complex conditions
+                should stay as full if/else for readability.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>12.</strong> Value of result from ternary with age = 16</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">age &gt;= 18 is False, so the else value "Minor" is assigned.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>13.</strong> Code with missing colon</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">Exactly one error: missing colon after <code>elif score &gt;= 80</code>.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>14.</strong> What does the not operator do?</p>
+            <div class="answer">Correct Answer: a</div>
+            <div class="explanation"><code>not</code> inverts the Boolean value of the expression that follows it.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>15.</strong> Best practice for conditionals</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">Clear names and simple, readable conditions are essential best practices (Lesson
+                6).</div>
+        </div>
+
+        <div class="question">
+            <p><strong>16.</strong> Purpose of short-circuit evaluation</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">It avoids unnecessary work and potential errors when the final result is already
+                known.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>17.</strong> Empty string in if condition</p>
+            <div class="answer">Correct Answer: d</div>
+            <div class="explanation">Empty string is falsy, so the else branch runs and prints "No name".</div>
+        </div>
+
+        <div class="question">
+            <p><strong>18.</strong> Best rewrite of nested structure</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">A flat elif chain is clearer and more readable for exclusive age ranges than
+                unnecessary nesting.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>19.</strong> Ternary with is_member = True</p>
+            <div class="answer">Correct Answer: d</div>
+            <div class="explanation">The condition is True, so "Premium Member" is selected.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>20.</strong> Biblical principle connected to clear conditional logic</p>
+            <div class="answer">Correct Answer: b</div>
+            <div class="explanation">1 Corinthians 14:40 (NKJV) – “Let all things be done decently and in order.” Clear,
+                ordered code reflects good stewardship.</div>
+        </div>
+
+        <!-- Section 2 Solutions -->
+        <h2>Section 2: Short Answer &amp; Explanation – Sample Solutions</h2>
+
+        <div class="question">
+            <p><strong>1.</strong> Boolean True/False foundation</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Boolean values are the two special constants True and False. Every
+                decision a program makes ultimately reduces to True or False. They form the foundation of all
+                conditional logic (if statements, loops, etc.). Real-world example: checking whether a user is logged in
+                or whether a temperature is above a threshold to turn on a fan.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>2.</strong> Comparator operators example</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong>
+                <pre>age = 25
+score = 88
+name = "Alex"
+print(age >= 18)      # True
+print(score == 100)   # False
+print(name != "")     # True</pre>
+                The code evaluates three different comparisons and prints the Boolean results.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>3.</strong> Compound conditional expression</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> A compound conditional combines multiple conditions using and, or, or
+                not. Example: <code>if age >= 18 and has_ticket or is_vip:</code>. Parentheses control evaluation order
+                because not has higher precedence than and, which has higher precedence than or. Use parentheses for
+                clarity.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>4.</strong> Short-circuit evaluation</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Short-circuit evaluation means Python stops evaluating a compound
+                condition as soon as the final result is known. Example: <code>if x != 0 and y / x &gt; 5:</code> – if x
+                is 0 the division is never attempted. This prevents errors and improves efficiency.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>5.</strong> elif vs independent ifs</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Chained elif checks conditions in order and stops at the first True.
+                Independent ifs check every condition. Prefer elif when categories are mutually exclusive (e.g., letter
+                grades). Prefer independent ifs when multiple actions can legitimately happen together (e.g., multiple
+                warnings).
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>6.</strong> Nested if</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong>
+                <pre>if has_ticket:
+    if age >= 18:
+        print("Full access")
+    else:
+        print("Limited access")
+else:
+    print("No entry")</pre>
+                Nested ifs are useful when a decision depends on a previous decision. Prefer compound conditions when
+                the logic can be expressed more flatly and clearly.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>7.</strong> Truthy and falsy</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Falsy values include: False, None, 0, 0.0, "", [], {}, set(). Truthy
+                values are everything else. <code>if name:</code> is preferred because it is more Pythonic and works for
+                any falsy empty value, not just empty strings.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>8.</strong> Common pitfalls</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Two common pitfalls: (1) using = instead of ==, (2) missing colon after
+                condition. Before (buggy): <code>if age = 18 print("Adult")</code>. After (fixed):
+                <code>if age == 18: print("Adult")</code>. Always double-check assignment vs comparison and colon
+                placement.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>9.</strong> Ternary operator</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Syntax: <code>value_if_true if condition else value_if_false</code>.
+                Converted: <code>result = "Pass" if score &gt;= 60 else "Fail"</code>. Avoid ternary when the logic is
+                complex, multi-line, or hard to read.
+            </div>
+        </div>
+
+        <div class="question">
+            <p><strong>10.</strong> Real-world scenario</p>
+            <div class="explanation">
+                <strong>Sample Answer:</strong> Theme-park ticket advisor. Ask age, height, and season pass status. Use
+                if/elif/else for age-based pricing, a compound condition for full-access rides (height &gt;= 48 and has
+                pass), and a ternary for a welcome message. This combines almost every concept from the unit.
+            </div>
+        </div>
+
+        <!-- Section 3 Sample Solutions -->
+        <h2>Section 3: Coding Problems – Sample Solutions</h2>
+
+        <div class="question">
+            <p><strong>1.</strong> eligibility_checker.py</p>
+            <div class="coding-box">
+                print("=== Special Event Eligibility Checker ===")
+
+                age = int(input("Enter your age: "))
+                has_card = input("Do you have a membership card? (yes/no): ").strip().lower()
+
+                # Compound condition + if/elif/else chain
+                if age >= 18 and has_card == "yes":
+                access = "Full access"
+                elif age >= 13:
+                access = "Limited access (with adult supervision)"
+                else:
+                access = "Not eligible"
+
+                print(f"Eligibility: {access}")
+
+                # Ternary for bonus message
+                bonus = "Welcome back, valued member!" if has_card == "yes" else "First-time visitor – enjoy the day!"
+                print(bonus)
+
+                # Best practices: clear variable names, strip().lower(), comments, tested edge cases
+            </div>
+            <div class="explanation">Students should have clean input handling, at least one compound condition, an
+                if/elif/else chain, a ternary, and comments. No functions.</div>
+        </div>
+
+        <div class="question">
+            <p><strong>2.</strong> grade_advisor.py</p>
+            <div class="coding-box">
+                print("=== Grade Advisor ===")
+
+                score_input = input("Enter your numeric score (0-100): ").strip()
+
+                # Handle empty or invalid input with truthy/falsy and conversion
+                if not score_input:
+                print("No score entered.")
+                else:
+                score = float(score_input)
+                if score &lt; 0 or score &gt; 100:
+                print("Invalid score. Please enter a value between 0 and 100.")
+                elif score &gt;= 90:
+                print("Letter grade: A")
+                elif score &gt;= 80:
+                print("Letter grade: B")
+                elif score &gt;= 70:
+                print("Letter grade: C")
+                elif score &gt;= 60:
+                print("Letter grade: D")
+                else:
+                print("Letter grade: F")
+
+                # Reflection comment
+                # Best practice used: clear if/elif/else chain ordered from highest to lowest.
+                # Pitfall avoided: using = instead of == and forgetting the colon after conditions.
+            </div>
+            <div class="explanation">Look for proper grade ranges, handling of invalid scores (using truthy/falsy or
+                ternary is fine), clean code, and a thoughtful reflection comment.</div>
+        </div>
+
+        <!-- Biblical Reflection Sample -->
+        <h2>Biblical Integration &amp; Reflection – Sample Response</h2>
+        <div class="question biblical">
+            <p><strong>Sample Reflection:</strong></p>
+            <p>Writing clear conditional logic teaches me the importance of ordered, intentional decision-making. Just
+                as the order of if/elif conditions matters and a missing colon can break an entire program, the choices
+                I make in life need careful thought and the right sequence. Short-circuit evaluation reminds me that I
+                should not keep evaluating every option when God’s Word has already given a clear answer. The principle
+                “Let all things be done decently and in order” (1 Corinthians 14:40 NKJV) applies both to code and to
+                living wisely. Clear code is good stewardship of the mind God gave me, and clear choices honor Him.</p>
+        </div>
+
+        <div class="disclaimer">
+            Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.
+        </div>
+
+        <div class="footer">
+            <p><strong>Deliverable Note:</strong> Students submit the completed assessment plus the two .py files.
+                Whether working asynchronously alone or in a group setting with an instructor, they should be prepared
+                to discuss their reasoning.</p>
+            <p>© 2026 LogosTeach - All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
