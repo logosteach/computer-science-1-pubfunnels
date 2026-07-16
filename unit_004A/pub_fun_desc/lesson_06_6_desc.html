@@ -1,29 +1,36 @@
 <div
-    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;">
     <h1
-        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-        Common Pitfalls and Best Practices
+        style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;">
+        <strong>Common Pitfalls and Best Practices</strong>
     </h1>
-
-    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-        In this lesson, we will explore common mistakes that programmers make when working with conditionals and best practices for writing clear and maintainable if statements. 
+    <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+        In this lesson, we will explore common mistakes that programmers make when
+        working with conditionals and best practices for writing clear and
+        maintainable if statements.
     </p>
     <p>
-        Life is full of decisions, and the Christian life is no exception. As a matter of fact, many Christians in church history said plainly, 'the Christian life is full of trials'. We will make mistakes as we learn to grow in the Lord and rest upon His good promises and just wait for Him. Martin Luther is quoted as having said: "The most dangerous trial of all is when there is no trial, when everything is all right and running smoothly." Nevertheless, we are not forsaken. The Lord is our strength. Christ is enough. We are still learning that, however. It is something He teaches us by His Spirit of grace and mercy. (2 Corinthians 4:8-9; Colossians 2:9-10; Psalm 28:7)
+        Life is full of decisions, and the Christian life is no exception. As a
+        matter of fact, many Christians in church history said plainly, 'the
+        Christian life is full of trials'. We will make mistakes as we learn to grow
+        in the Lord and rest upon His good promises and just wait for Him. Martin
+        Luther is quoted as having said: "The most dangerous trial of all is when
+        there is no trial, when everything is all right and running smoothly."
+        Nevertheless, we are not forsaken. The Lord is our strength. Christ is
+        enough. We are still learning that, however. It is something He teaches us
+        by His Spirit of grace and mercy. (2 Corinthians 4:8-9; Colossians 2:9-10;
+        Psalm 28:7)
     </p>
-
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
         Objectives
     </h2>
-    <p>
-        By the end of the lesson, learners will be able to:
-    </p>
+    <p>By the end of the lesson, learners will be able to:</p>
     <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
         <li>
             <p>
-                Identify common mistakes when working with conditionals (= vs ==, missing
-                colons, incorrect indentation).
+                Identify common mistakes when working with conditionals (= vs ==,
+                missing colons, incorrect indentation).
             </p>
         </li>
         <li>
@@ -41,92 +48,107 @@
         </li>
         <li>
             <p>
-                Recognize that just as clear thinking leads to wise living, writing clear
-                conditional logic leads to reliable and trustworthy programs (Proverbs
-                4:23; 1 Corinthians 14:40).
+                Recognize that just as clear thinking leads to wise living, writing
+                clear conditional logic leads to reliable and trustworthy programs
+                (Proverbs 4:23; 1 Corinthians 14:40).
             </p>
         </li>
     </ul>
-
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
         Reading Assignment
     </h2>
-    <p style="font-size: 1.08em; margin-bottom: 15px;">Complete the following reading in your textbook before
-        continuing:</p>
+    <p style="font-size: 1.08em; margin-bottom: 15px;">
+        Complete the following reading in your textbook before continuing:
+    </p>
     <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
-        {{READING_ASSIGNMENT_LIST}}
+        <li>
+            <p>
+                Follow the video series and practice files to master the content of this
+                lesson.
+            </p>
+        </li>
     </ul>
-    <p style="font-size: 1.08em; margin-bottom: 12px;"><strong>While reading, pay special attention to:</strong>
-        {{KEY_READING_FOCUS}}</p>
-    <p style="font-size: 1.05em; font-style: italic; color: #555555;">{{OPTIONAL_NOTE}}</p>
-
+    <p style="font-size: 1.08em; margin-bottom: 12px;">
+        <strong>While reading, pay special attention to:</strong> = vs ==, missing
+        colon (:), indentation errors, unclear boolean variable names, clarity over
+        cleverness
+    </p>
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
         Video Resources
     </h2>
-    <p style="font-size: 1.08em; margin-bottom: 18px;">Watch the following videos to reinforce and go beyond the
-        concepts covered in the reading:</p>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Watch the following videos to reinforce and go beyond the concepts covered
+        in the reading:
+    </p>
     <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
-        {{VIDEO_LIST}}
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1209975148/ca2aa08333?share=copy&amp;fl=sv&amp;fe=ci">Talking Points -
+                    Common Conditional Mistakes</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://vimeo.com/1210229355/b9de4f1357?share=copy&amp;fl=sv&amp;fe=ci">Lesson 006 - Common
+                    Conditional Mistakes</a>
+            </p>
+        </li>
     </ul>
-
     <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+        style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;">
         Practice Files
     </h2>
-    <p style="font-size: 1.08em; margin-bottom: 18px;">Download the following files relevant to this lesson. This also
-        includes the computer lab for this lesson.</p>
+    <p style="font-size: 1.08em; margin-bottom: 18px;">
+        Download the following files relevant to this lesson. This also includes the
+        computer lab for this lesson.
+    </p>
     <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
-        {{PRACTICE_FILES_LIST}}
+        <li>
+            <p>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                    href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_004A/practice/practice_common_conditional_mistakes.py">practice_common_conditional_mistakes.py</a>
+            </p>
+        </li>
     </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Computer Lab
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 20px;">
-        The pdf file <em style="color: #1a3c5e;">{{LAB_PDF_FILENAME}}</em> can be found in the <strong>Attached
-            Files</strong> section in this lesson.
-    </p>
-    <p style="font-size: 1.08em; margin-bottom: 25px;">
-        {{LAB_DESCRIPTION}}
-    </p>
-
     <div
-        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-        <em>If you find any typos or errors, please let me know.</em><br><br>
-        <a href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"
-            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;">
+        <p>
+            <em>If you find any typos or errors, please let me know.</em><br /><br /><a target="_blank"
+                rel="noopener noreferrer nofollow"
+                href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"><strong>📧 Send
+                    me an email</strong></a>
+        </p>
     </div>
-
-    <p style="font-size: 1.08em; margin: 25px 0 15px 0;"><strong>Deliverable:</strong> The student is responsible to
-        self-grade their work. Solutions are provided in the <strong>Attached Files</strong> section of this lesson.</p>
-    <p style="font-size: 1.08em; margin-bottom: 40px;">
-        {{DELIVERABLE_INSTRUCTIONS}}
-    </p>
-
     <h2
-        style="font-size: 1.85em; margin: 55px 0 22px 0; color: #1a3c5e; border-left: 6px solid #1a3c5e; padding-left: 16px;">
+        style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;">
         Anchored in Christ
     </h2>
     <p style="font-size: 1.08em; margin-bottom: 22px;">
-        {{ANCHOR_INTRO}}
+        <strong>The Merciful Christ</strong>
     </p>
     <p style="font-size: 1.08em; margin-bottom: 22px;">
-        {{ANCHOR_BODY_1}}
+        When we forget to use == instead of =, or perhaps we forget the :, or use
+        incorrect indentation the computer is absolutely merciless. It gives us a
+        SyntaxError and expects us to shape up and fix our code. Praise be to God
+        that we are not thrown away when we ere. No. He loves His children. Great
+        forgiveness is available when we sin, or even transgress. We need but go to
+        Him with a humble and contrite heart. The forgiveness and kindness our
+        Heavenly Father shows to us, He also expects to be reciprocated to others.
     </p>
-    <p style="font-size: 1.08em; margin-bottom: 30px;">
-        {{ANCHOR_BODY_2}}
-    </p>
-
-    <blockquote
-        style="background-color: #f0f7f7; border-left: 8px solid #2c7a7b; margin: 35px 0; padding: 28px 32px; font-style: italic; color: #1a3c5e; font-size: 1.12em; line-height: 1.65;">
-        {{SCRIPTURE_QUOTE}}
+    <blockquote>
+        <p>
+            “If we confess our sins, He is faithful and just to forgive us our sins
+            and to cleanse us from all unrighteousness.” (1 John 1:9 NKJV) “And be
+            kind to one another, tenderhearted, forgiving one another, even as God in
+            Christ forgave you.” (Ephesians 4:32 NKJV)
+        </p>
     </blockquote>
-
     <div
-        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-        &copy; 2026 LogosTeach - All Rights Reserved.
+        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;">
+        <p>© 2026 LogosTeach - All Rights Reserved.</p>
     </div>
 </div>
