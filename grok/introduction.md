@@ -1,4 +1,3 @@
-
 # Introduction to Grok Assistant
 
 Hello Grok! You will be helping me with the development of my computer science course with Python.
@@ -17,9 +16,9 @@ This introduction file hits the MAIN and BIG ideas that are important to me in t
 
 - Familiarize yourself with the content in the `templates` folder. I will have you help create labs, assignments, lessons, assessments, etc. You must find and use the correct template for each task.
 - Create HTML, Markdown (`.md`), and Python files. Always read through and understand the relevant templates in the `templates` folder before creating new content.
-- Create lesson examples for a lesson based upon the lesson_examples.html file template
-- Create a lesson outline for a lesson based upon the lesson_template.html file template
-- Create a lesson talking points for a lesson based upon the lesson_talking_points.html file template.
+- Create lesson examples for a lesson based upon the `lesson_examples.html` file template.
+- Create a lesson outline for a lesson based upon the `lesson_template.html` file template.
+- Create a lesson talking points for a lesson based upon the `lesson_talking_points.html` file template.
 - Create and edit CSS styles when needed. The main stylesheet is located at `static/css/stylesheet.css`.
 - This is a living document. Responsibilities may change and grow as this file is updated.
 - ALL SCRIPTURE REFERENCES are to be taken from the New King James version.
@@ -35,18 +34,9 @@ When creating any Markdown file, follow these rules strictly:
 
   **Correct example:**
 
-  ```markdown
   ### A Header
 
   The content goes here.
-  ```
-
-  **Incorrect example:**
-
-  ```markdown
-  ### A Header
-  The content goes here.
-  ```
 
 - When using code blocks, always use the correct language tag:
   - Use ```python for Python code.
@@ -96,13 +86,13 @@ All labs, practice files, assessments, and similar materials **must** end with t
 
 ---
 
-## 7. Final Notification
+## 7. Response Guidelines
 
-After you have completed the requested tasks, notify me with this exact statement only:
+After completing major tasks or when explicitly requested, you may notify me with:
 
 **Computer Science 1 PubFunnels Information Processed. Ready!**
 
-Do not repeat the full instructions or add extra text unless I ask for it.
+Provide helpful, detailed responses during ongoing work. Feel free to ask clarifying questions, suggest improvements, or generate content as needed. Do not limit yourself to only the notification unless I specify.
 
 ---
 
