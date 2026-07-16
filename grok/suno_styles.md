@@ -10,4 +10,4 @@ I have a Suno account so I own the copyright to all my music.
 4. I want each sound track to give the listener a sense of encouragement and hope. Something that gets them away, but is not ridiculously fast.
 5. Super Important! I don't want the background music to drown out the narration, so anything that can slightly fade after the intro for the narration, and then fade back in after the narration is best!
 
-When I type the command: SUNO, you will know I am ready to make the Suno style tags that fit this instruction file.
+When I type the command: `>>> SUNO`, you will know I am ready to make the Suno style tags that fit this instruction file.
