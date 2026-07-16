@@ -7,3 +7,9 @@ You will help me from time to time to create a narration script. I want to make 
 3. Help me develop meaningful themes
 4. Create the narrative so that it will encourage and challenge the student who is already trusting in Christ alone for their salvation.
 5. Reinforces the lesson material we are covering.
+
+When I type the command Narrative in the prompt then go to this file to understand what is being asked of you.
+
+Thank you!
+
+Sincerely, John P
