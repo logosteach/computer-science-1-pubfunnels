@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 005 - Inheritance and Code Reuse | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Inheritance and Code Reuse</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how child classes inherit from parent classes, how to override methods, and how
+            <code>super()</code> helps extend parent behavior without rewriting everything.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            What Is Inheritance?
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><strong>Inheritance</strong> lets a child class receive attributes and methods from a parent class,
+                then specialize them. This reduces duplication and models “is-a” relationships
+                (a <code>Teacher</code> is a <code>Person</code>).</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Parent and Child Classes
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound.")
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} says Woof!")
+
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} says Meow!")
+
+Dog("Fido").speak()
+Cat("Luna").speak()
+Animal("Creature").speak()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Fido says Woof!
+Luna says Meow!
+Creature makes a sound.</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Using super()
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        return f"I am {self.name}, age {self.age}."
+
+class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)  # initialize parent attributes
+        self.grade = grade
+
+    def introduce(self):
+        base = super().introduce()
+        return f"{base} I am in grade {self.grade}."
+
+s = Student("Ava", 15, 10)
+print(s.introduce())
+print(s.name, s.age, s.grade)</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">I am Ava, age 15. I am in grade 10.
+Ava 15 10</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> <code>super()</code> calls the parent version so you can reuse it and add only
+                what is new.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Overriding and Extending Behavior
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Vehicle:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def description(self):
+        return f"Vehicle brand: {self.brand}"
+
+class Car(Vehicle):
+    def __init__(self, brand, doors):
+        super().__init__(brand)
+        self.doors = doors
+
+    def description(self):
+        return f"{super().description()}, doors: {self.doors}"
+
+print(Car("Honda", 4).description())</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Vehicle brand: Honda, doors: 4</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: isinstance and Code Reuse
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Employee:
+    def __init__(self, name):
+        self.name = name
+
+class Manager(Employee):
+    def __init__(self, name, team_size):
+        super().__init__(name)
+        self.team_size = team_size
+
+m = Manager("Jordan", 5)
+print(isinstance(m, Manager))
+print(isinstance(m, Employee))  # True — inheritance relationship</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">True
+True</code></pre>
+            <div class="warning-box">
+                Prefer inheritance for true “is-a” relationships. If you only need to reuse a feature, composition
+                (“has-a”) may be clearer.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                God’s blessings and calling can be passed down through generations, yet each person still has a unique
+                walk with Him. Inheritance in code reuses a foundation while still allowing specialized, unique behavior.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “...when I call to remembrance the genuine faith that is in you, which dwelt first in your grandmother Lois and your mother Eunice, and I am persuaded is in you also.” (2 Timothy 1:5)<br>
+                “We will not hide them from their children, telling to the generation to come the praises of the Lord...” (Psalm 78:4)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 005 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

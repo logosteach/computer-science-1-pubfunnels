@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 003 - Attributes, __init__, and Encapsulation | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Attributes, __init__, and Encapsulation</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to initialize attributes with <code>__init__</code> and <code>self</code>, use
+            dot notation, and apply encapsulation to protect and organize object data.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            self and __init__
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><code>__init__</code> runs automatically when you create a new object.</li>
+                <li><code>self</code> refers to the specific instance being created or used.</li>
+                <li>Attributes are usually attached with <code>self.name = ...</code>.</li>
+            </ul>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Initializing Attributes
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+ava = Student("Ava", 10)
+ben = Student("Ben", 11)
+
+print(ava.name, ava.grade)
+print(ben.name, ben.grade)</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Ava 10
+Ben 11</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Accessing and Modifying Attributes
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+acct = BankAccount("Mia", 100.0)
+print(acct.owner)
+print(acct.balance)
+
+acct.balance = acct.balance + 25
+print(acct.balance)</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Mia
+100.0
+125.0</code></pre>
+            <div class="warning-box">
+                Directly changing attributes is flexible, but it can also allow invalid data (for example, a negative
+                balance). Encapsulation helps control that.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Encapsulation Basics
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><strong>Encapsulation</strong> means bundling data and methods together and controlling how data is
+                accessed or changed. In Python, a leading underscore signals “internal use.”</p>
+            <pre><code class="language-python">class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self._balance = balance   # conventional "protected" attribute
+
+    def get_balance(self):
+        return self._balance
+
+    def deposit(self, amount):
+        if amount &gt; 0:
+            self._balance += amount
+        else:
+            print("Deposit must be positive.")
+
+acct = BankAccount("Noah", 50)
+acct.deposit(20)
+print(acct.get_balance())
+acct.deposit(-5)</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">70
+Deposit must be positive.</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Prefer methods like <code>deposit()</code> over freely rewriting internal values
+                when rules must be enforced.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Default Attribute Values
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Player:
+    def __init__(self, name, health=100):
+        self.name = name
+        self.health = health
+        self.level = 1
+
+hero = Player("Grace")
+print(hero.name, hero.health, hero.level)
+
+boss = Player("Dragon", health=500)
+print(boss.name, boss.health, boss.level)</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Grace 100 1
+Dragon 500 1</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                God has given each person unique attributes and wise boundaries. Encapsulation is a small programming
+                parallel: important internal details are protected and handled carefully, not treated as disposable.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “For You formed my inward parts; You covered me in my mother’s womb. I will praise You, for I am fearfully and wonderfully made; Marvelous are Your works, And that my soul knows very well.” (Psalm 139:13-14)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 003 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

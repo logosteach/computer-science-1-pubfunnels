@@ -1,0 +1,257 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 007 - Putting It All Together with Classes | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Putting It All Together with Classes</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples combine classes, inheritance, polymorphism, encapsulation, and earlier tools (lists,
+            loops, conditionals) into small, useful programs — plus debugging tips for OOP code.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Design First
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>For a simple library system, plan the “kinds of things” first:</p>
+            <ol>
+                <li><code>Book</code> — title, author, availability</li>
+                <li><code>Member</code> — name and checked-out books</li>
+                <li><code>Library</code> — holds books and members, coordinates actions</li>
+            </ol>
+            <div class="tip">
+                <strong>Tip:</strong> If you can name the nouns in the problem, you often have your classes.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Multiple Classes Working Together
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.available = True
+
+    def checkout(self):
+        if self.available:
+            self.available = False
+            return True
+        return False
+
+    def return_book(self):
+        self.available = True
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def find(self, title):
+        for book in self.books:
+            if book.title == title:
+                return book
+        return None
+
+    def available_titles(self):
+        return [b.title for b in self.books if b.available]
+
+lib = Library()
+lib.add_book(Book("Pilgrim's Progress", "Bunyan"))
+lib.add_book(Book("Mere Christianity", "Lewis"))
+
+book = lib.find("Mere Christianity")
+if book:
+    book.checkout()
+
+print(lib.available_titles())</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">["Pilgrim's Progress"]</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Inheritance + Polymorphism in One Program
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Employee:
+    def __init__(self, name):
+        self.name = name
+
+    def pay(self):
+        return 0
+
+    def label(self):
+        return "Employee"
+
+class HourlyEmployee(Employee):
+    def __init__(self, name, hours, rate):
+        super().__init__(name)
+        self.hours = hours
+        self.rate = rate
+
+    def pay(self):
+        return self.hours * self.rate
+
+    def label(self):
+        return "Hourly"
+
+class SalariedEmployee(Employee):
+    def __init__(self, name, salary):
+        super().__init__(name)
+        self.salary = salary
+
+    def pay(self):
+        return self.salary / 24  # semi-monthly simplification
+
+    def label(self):
+        return "Salaried"
+
+payroll = [
+    HourlyEmployee("Sam", 40, 15),
+    SalariedEmployee("Taylor", 48000),
+]
+
+for person in payroll:
+    print(f"{person.name} ({person.label()}): ${person.pay():.2f}")</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Sam (Hourly): $600.00
+Taylor (Salaried): $2000.00</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: OOP + Loops, Conditionals, and Lists
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Quiz:
+    def __init__(self, title):
+        self.title = title
+        self.scores = []
+
+    def add_score(self, score):
+        if 0 &lt;= score &lt;= 100:
+            self.scores.append(score)
+        else:
+            print("Ignored invalid score:", score)
+
+    def average(self):
+        if not self.scores:
+            return 0
+        return sum(self.scores) / len(self.scores)
+
+    def summary(self):
+        print(self.title)
+        print("Scores:", self.scores)
+        print("Average:", round(self.average(), 1))
+        if self.average() &gt;= 70:
+            print("Class is passing overall.")
+        else:
+            print("Class needs more review.")
+
+q = Quiz("Unit 6 Check")
+for value in [88, 72, 95, -3, 61]:
+    q.add_score(value)
+q.summary()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Ignored invalid score: -3
+Unit 6 Check
+Scores: [88, 72, 95, 61]
+Average: 79.0
+Class is passing overall.</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Debugging OOP Code
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Counter:
+    def __init__(self):
+        self.value = 0
+
+    def increment(self):
+        self.value += 1
+        return self.value
+
+# Common bug: forgetting parentheses when creating an instance
+# c = Counter      # class object, not instance
+c = Counter()
+print(c.increment())
+print(c.increment())
+
+# Common bug: calling method on wrong type
+# print(Counter.increment())  # missing instance / self</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">1
+2</code></pre>
+            <div class="warning-box">
+                Debug checklist: Did you create an instance with <code>()</code>? Did methods include
+                <code>self</code>? Are attributes set in <code>__init__</code>? Are you calling the method on the
+                correct object?
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Well-designed classes reflect something of God’s character as the ultimate Designer — orderly,
+                purposeful, and relational. Our systems are limited, but good design can still honor the One who holds
+                all things together.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “For by Him all things were created that are in heaven and that are on earth, visible and invisible... All things were created through Him and for Him. And He is before all things, and in Him all things consist.” (Colossians 1:16-17)<br>
+                “For since the creation of the world His invisible attributes are clearly seen, being understood by the things that are made...” (Romans 1:20)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 007 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

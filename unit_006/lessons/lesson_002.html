@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 002 - Creating Classes and Objects | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Creating Classes and Objects</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to define a class with the <code>class</code> keyword, create instances from that
+            class, and understand the blueprint vs object relationship.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Class vs Instance
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><strong>Class:</strong> The blueprint (one design).</li>
+                <li><strong>Instance / Object:</strong> A concrete object created from that design (many possible).</li>
+            </ul>
+            <div class="tip">
+                <strong>Tip:</strong> Cookie cutter = class. Cookies = instances. Same shape, many cookies.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Your First Class
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Dog:
+    pass   # empty for now — valid but not useful yet
+
+# Create instances (objects)
+fido = Dog()
+bella = Dog()
+
+print(type(fido))
+print(fido is bella)   # False — two different objects</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">&lt;class '__main__.Dog'&gt;
+False</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Multiple Instances From One Class
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Book:
+    pass
+
+book1 = Book()
+book2 = Book()
+book3 = Book()
+
+library = [book1, book2, book3]
+print(len(library))
+print(all(isinstance(b, Book) for b in library))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">3
+True</code></pre>
+            <p>One class definition; many independent objects.</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Naming Conventions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python"># Class names use CapWords (PascalCase)
+class StudentRecord:
+    pass
+
+class BankAccount:
+    pass
+
+# Instance variables use snake_case
+alice_record = StudentRecord()
+checking = BankAccount()</code></pre>
+            <div class="warning-box">
+                Always use <code>class ClassName:</code> with a capital letter to start class names. This is the standard
+                Python style and helps readers spot classes quickly.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Class Is the Type of Its Instances
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Cat:
+    pass
+
+whiskers = Cat()
+print(type(whiskers))
+print(whiskers.__class__)
+print(isinstance(whiskers, Cat))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">&lt;class '__main__.Cat'&gt;
+&lt;class '__main__.Cat'&gt;
+True</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                God is the ultimate Creator who designs unique things. When we write a class and create instances, we
+                practice a tiny shadow of design and creativity — always remembering that our designs are derivative,
+                while His are original and perfect.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “In the beginning God created the heavens and the earth.” (Genesis 1:1)<br>
+                “For by Him all things were created that are in heaven and that are on earth...” (Colossians 1:16)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 002 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

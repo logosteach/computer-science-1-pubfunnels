@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 006 - Polymorphism and Abstraction | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Polymorphism and Abstraction</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples introduce polymorphism (same method name, different behavior) and abstraction (exposing what
+            is needed while hiding messy details).
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Polymorphism and Abstraction
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><strong>Polymorphism:</strong> Different objects respond to the same method name in their own way.</li>
+                <li><strong>Abstraction:</strong> Hide complex internals; offer a simple, clear interface.</li>
+            </ul>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Polymorphism Through Method Overriding
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Shape:
+    def area(self):
+        return 0
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14159 * self.radius ** 2
+
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side * self.side
+
+shapes = [Circle(3), Square(4), Circle(1)]
+for s in shapes:
+    print(round(s.area(), 2))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">28.27
+16
+3.14</code></pre>
+            <p>Same method name (<code>area</code>), different calculations.</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Duck Typing in Python
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Python often cares more about behavior (“does it have this method?”) than about a strict family tree.</p>
+            <pre><code class="language-python">class Printer:
+    def render(self):
+        return "Sending to printer..."
+
+class Screen:
+    def render(self):
+        return "Drawing on screen..."
+
+def show(device):
+    # No shared parent required — just needs render()
+    print(device.render())
+
+show(Printer())
+show(Screen())</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Sending to printer...
+Drawing on screen...</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> “If it walks like a duck and quacks like a duck...” — if it has the needed method,
+                Python can use it.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Abstraction — Simple Interface, Hidden Details
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class TemperatureSensor:
+    def __init__(self, celsius):
+        self._celsius = celsius  # internal detail
+
+    def reading_f(self):
+        """Public interface: user does not need the conversion formula."""
+        return (self._celsius * 9 / 5) + 32
+
+    def status(self):
+        f = self.reading_f()
+        if f &lt; 32:
+            return "Freezing"
+        if f &gt; 85:
+            return "Hot"
+        return "Comfortable"
+
+sensor = TemperatureSensor(22)
+print(sensor.reading_f())
+print(sensor.status())</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">71.6
+Comfortable</code></pre>
+            <p>Callers use clear methods instead of reimplementing conversion logic themselves.</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Prefer Methods Over Raw Internals
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">class Playlist:
+    def __init__(self):
+        self._songs = []
+
+    def add(self, title):
+        self._songs.append(title)
+
+    def count(self):
+        return len(self._songs)
+
+    def titles(self):
+        return list(self._songs)  # return a copy
+
+pl = Playlist()
+pl.add("Hymn of Praise")
+pl.add("Psalm 23")
+print(pl.count())
+print(pl.titles())</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">2
+['Hymn of Praise', 'Psalm 23']</code></pre>
+            <div class="warning-box">
+                Abstraction does not mean “never look inside.” It means design a clear public face so most code does not
+                depend on fragile internals.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Polymorphism and abstraction remind us that God works through many different people and situations while
+                accomplishing His good purposes. Diversity of gifts, unity of purpose.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “For as we have many members in one body, but all the members do not have the same function, so we, being many, are one body in Christ...” (Romans 12:4-5)<br>
+                “There are diversities of gifts, but the same Spirit. There are differences of ministries, but the same Lord.” (1 Corinthians 12:4-5)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 006 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

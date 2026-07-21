@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 001 - Introduction to Object-Oriented Programming | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Introduction to Object-Oriented Programming</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples introduce Object-Oriented Programming (OOP): what it is, why it helps manage complexity,
+            and the core vocabulary — classes, objects, attributes, and methods.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            What Is OOP?
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><strong>Object-Oriented Programming</strong> is a style of programming that organizes code around
+                <em>objects</em> — bundles of data (attributes) and behavior (methods) that model real-world or
+                problem-domain things.</p>
+            <ul>
+                <li><strong>Organization:</strong> Related data and actions live together.</li>
+                <li><strong>Reusability:</strong> One class can create many similar objects.</li>
+                <li><strong>Modeling:</strong> Code can mirror students, books, animals, bank accounts, and more.</li>
+            </ul>
+            <div class="tip">
+                <strong>Tip:</strong> You have already used objects: strings, lists, and dictionaries are objects with
+                attributes and methods (for example, <code>"hello".upper()</code>).
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Core Vocabulary
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><strong>Class:</strong> A blueprint or template (for example, <code>Dog</code>).</li>
+                <li><strong>Object / Instance:</strong> One specific thing made from that blueprint (for example, Fido).</li>
+                <li><strong>Attribute:</strong> Data stored on an object (name, age, breed).</li>
+                <li><strong>Method:</strong> A function that belongs to a class and describes behavior (bark, sit).</li>
+            </ul>
+            <pre><code class="language-python"># You already work with objects every day:
+text = "Python"
+print(type(text))          # &lt;class 'str'&gt;
+print(text.upper())        # method call
+print(len(text))           # function that works with the object
+
+scores = [88, 92, 75]
+print(type(scores))        # &lt;class 'list'&gt;
+scores.append(100)         # method that changes the list</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Procedural Style vs Object Style (Preview)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Without classes, related data can get scattered:</p>
+            <pre><code class="language-python"># Related data stored separately
+student_name = "Ava"
+student_grade = 10
+student_gpa = 3.8
+
+def describe_student(name, grade, gpa):
+    print(f"{name} is in grade {grade} with GPA {gpa}")
+
+describe_student(student_name, student_grade, student_gpa)</code></pre>
+            <p>With OOP (preview of later lessons), name, grade, and GPA travel together as one object:</p>
+            <pre><code class="language-python"># Preview — full syntax comes in Lessons 2–4
+class Student:
+    def __init__(self, name, grade, gpa):
+        self.name = name
+        self.grade = grade
+        self.gpa = gpa
+
+    def describe(self):
+        print(f"{self.name} is in grade {self.grade} with GPA {self.gpa}")
+
+ava = Student("Ava", 10, 3.8)
+ava.describe()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Ava is in grade 10 with GPA 3.8</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Managing Complexity
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>As programs grow, loose variables and long function lists become hard to track. Classes help by:</p>
+            <ul>
+                <li>Grouping related state and behavior</li>
+                <li>Giving clear names to concepts in your problem</li>
+                <li>Making it easier to add features without rewriting everything</li>
+            </ul>
+            <div class="warning-box">
+                OOP is a tool, not a requirement for every tiny script. Use it when modeling “things with data and
+                behavior” makes the design clearer.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                God created the world with distinct kinds of things, each with purpose and design. Classes as blueprints
+                are a small human echo of ordered creation — patterns that produce many individual things.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Then God said, ‘Let the earth bring forth grass, the herb that yields seed, and the fruit tree that yields fruit according to its kind...’ And it was so.” (Genesis 1:11)<br>
+                “So God created great sea creatures and every living thing that moves, with which the waters abounded, according to their kind...” (Genesis 1:21)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
