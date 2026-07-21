@@ -1,0 +1,195 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Variables</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to create variables, follow naming rules, reassign values, and use variables in math and output.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Declaring and Assigning Variables
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A variable is a name that refers to a value. Use a single equals sign (=) to assign.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>name = "Hannah"
+age = 15
+score = 92.5
+is_student = True
+
+print(name)
+print(age)
+print(score)
+print(is_student)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Hannah
+15
+92.5
+True</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Naming Rules and Best Practices
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Names must start with a letter or underscore, can contain letters, digits, and underscores, and are case-sensitive. Prefer descriptive snake_case names.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Good names
+first_name = "Eli"
+quiz_score = 88
+_total = 100
+
+# Case-sensitive
+Score = 90
+score = 80
+print(Score, score)
+
+# Invalid (do not run): 2score = 10  or  first-name = "x"</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>90 80</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Avoid single-letter names except for short loops. Never use Python keywords (if, for, class, etc.) as names.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Reassignment (Values Can Change)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>You can assign a new value to the same variable. The name now points to the new value.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>points = 10
+print("Start:", points)
+points = points + 5
+print("After bonus:", points)
+points = 100
+print("Reset:", points)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Start: 10
+After bonus: 15
+Reset: 100</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Variables in Expressions and Output
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Use variables anywhere you would use a literal value.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>width = 8
+height = 5
+area = width * height
+print("Area:", area)
+print(width, "x", height, "=", area)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Area: 40
+8 x 5 = 40</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Variables in Python can change value at any time. God’s promises in Christ do not. They are Yes and Amen—a foundation that does not shift.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “For all the promises of God in Him are Yes, and in Him Amen, to the glory of God through us.” (2 Corinthians 1:20, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 002 - Variables Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

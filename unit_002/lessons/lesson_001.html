@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Order of Operations in Python</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how Python evaluates arithmetic using operator precedence (PEMDAS), how parentheses change the result, and common mistakes to avoid.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            PEMDAS / Operator Precedence
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Python does not always evaluate left to right. Multiplication and division happen before addition and subtraction. Exponentiation is even higher. Parentheses force the order you want.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print(2 + 3 * 4)      # multiplication first
+print((2 + 3) * 4)    # parentheses first
+print(10 - 4 + 2)     # left to right for same level
+print(2 ** 3 ** 2)    # exponentiation is right-associative
+print((2 ** 3) ** 2)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>14
+20
+8
+512
+64</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Remember PEMDAS: Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Using Parentheses to Control Order
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>When in doubt, use parentheses. They make your intent clear to Python and to human readers.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Average of three scores — need parentheses!
+score1, score2, score3 = 80, 90, 100
+wrong = score1 + score2 + score3 / 3
+right = (score1 + score2 + score3) / 3
+print("Without parentheses:", wrong)
+print("With parentheses:", right)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Without parentheses: 203.33333333333334
+With parentheses: 90.0</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> Forgetting parentheses around a sum before dividing is a classic bug.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Complex Expressions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Combine operations carefully and check intermediate reasoning.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>result = 5 + 2 * 3 ** 2 - 8 / 4
+print(result)
+# Steps: 3**2=9 → 2*9=18 → 8/4=2.0 → 5+18-2.0 = 21.0
+
+result2 = (5 + 2) * (3 ** 2 - 8) / 4
+print(result2)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>21.0
+1.75</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Common Precedence Mistakes
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Watch for mixing integer thinking with floats, and for assuming every operator has equal priority.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print(1 + 2 * 3)     # not 9
+print(10 / 2 * 5)    # left to right: (10/2)*5
+print(10 / (2 * 5))  # different result
+print(2 ** 3 * 2)    # (2**3)*2 = 16, not 2**(3*2)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>7
+25.0
+1.0
+16</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Just as some operations must wait until others are completed, Jesus told His disciples that there were things they were not yet ready to bear. Waiting on the Lord’s timing is part of walking with Him.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “I still have many things to say to you, but you cannot bear them now.” (John 16:12, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 - Order of Operations in Python Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

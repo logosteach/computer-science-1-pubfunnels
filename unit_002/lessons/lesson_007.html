@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - int(), float() and str() Functions</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples focus on converting values with int(), float(), and str(), including common cases and errors when types do not match.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Converting with int(), float(), str()
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Each function returns a new value of the requested type (when conversion is valid).</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print(int(3.9))       # truncates toward zero
+print(float(7))
+print(str(3.14))
+print(int("25") + 5)
+print(float("2.5") * 2)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>3
+7.0
+3.14
+30
+5.0</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            When Conversion Is Necessary
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>User input and many file values arrive as strings. Math requires numbers.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>raw = "12"          # imagine this came from input()
+# print(raw + 3)    # TypeError
+n = int(raw)
+print(n + 3)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>15</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> You cannot add a str and an int without converting first.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Safe Patterns for Numeric Input
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Convert immediately after you receive a string that should be numeric.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Simulated input (no keyboard needed for this example)
+age_text = "16"
+price_text = "9.99"
+age = int(age_text)
+price = float(price_text)
+print(f"Age next year: {age + 1}")
+print(f"Two items: ${price * 2:.2f}")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Age next year: 17
+Two items: $19.98</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Common Conversion Errors
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Invalid text cannot become a number.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print(int("42"))
+# print(int("42.5"))   # ValueError
+print(float("42.5"))
+print(int(float("42.5")))  # convert in steps
+# print(int("hello"))  # ValueError</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>42
+42.5
+42</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> If a string has a decimal point, use float() first (or validate the text).
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                A string like "37" cannot turn itself into the integer 37. In a deeper way, we cannot raise ourselves from spiritual death to life. We depend on Christ’s transforming work and faith in Him.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “And you He made alive, who were dead in trespasses and sins… even when we were dead in trespasses, made us alive together with Christ (by grace you have been saved).” (Ephesians 2:1, 5, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 007 - int(), float() and str() Functions Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
