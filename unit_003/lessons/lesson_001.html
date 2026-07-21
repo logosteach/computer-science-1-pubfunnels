@@ -1,0 +1,414 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson 001 - Modules and Import Statements</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Modules let us organize code into reusable files and bring in tools written by others—both from Python’s
+            standard library and from the wider programming community. In this lesson you will learn what modules are,
+            how to use <code>import</code> and <code>from ... import ...</code>, and how those two styles differ. Just
+            as God has gifted different members of the body of Christ with different abilities for the good of all,
+            modules remind us that we do not build alone.
+        </p>
+
+        <!-- Section 1: What Are Modules? -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            What Are Modules and Why Are They Useful?
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <strong>module</strong> is a Python file (ending in <code>.py</code>) that contains related code:
+                functions, variables, classes, or constants that you can reuse. When you <em>import</em> a module, you
+                make that code available in your current program without rewriting it.</p>
+
+            <p>Modules are useful because they help you:</p>
+            <ul>
+                <li><strong>Reuse code</strong> — write once, use in many programs</li>
+                <li><strong>Organize projects</strong> — keep related tools in separate files</li>
+                <li><strong>Build on the work of others</strong> — use the standard library and community packages</li>
+                <li><strong>Avoid reinventing the wheel</strong> — math, dates, random numbers, and more are already
+                    written for you</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="example-label">Example: Using the built-in math module</span>
+                <pre><code>import math
+
+print(math.pi)           # 3.141592653589793
+print(math.sqrt(16))     # 4.0
+print(math.ceil(3.2))    # 4
+print(math.floor(3.8))   # 3</code></pre>
+            </div>
+
+            <div class="tip">
+                <strong>Tip:</strong> Python ships with a large <em>standard library</em> of modules
+                (<code>math</code>, <code>random</code>, <code>datetime</code>, <code>os</code>, and many more). You do
+                not need to install these—only import them.
+            </div>
+        </div>
+
+        <!-- Section 2: The import statement -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Using <code>import</code> to Bring in a Module
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The simplest form is <code>import module_name</code>. After that, you access items with
+                <code>module_name.item</code> (dot notation). This style keeps the module’s name attached to every use,
+                which makes it clear where each function came from.</p>
+
+            <div class="code-example">
+                <span class="example-label">Import an entire module</span>
+                <pre><code>import random
+
+# random is the module; randint and choice are functions inside it
+print(random.randint(1, 6))          # a die roll: integer from 1 to 6
+print(random.choice(["A", "B", "C"]))  # picks one item from the list</code></pre>
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Import and use the datetime module</span>
+                <pre><code>import datetime
+
+today = datetime.date.today()
+print(today)                         # e.g., 2026-07-21
+print(today.year)                    # 2026
+print(today.strftime("%B %d, %Y"))   # e.g., July 21, 2026</code></pre>
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Import with an alias (shorter name)</span>
+                <pre><code>import datetime as dt
+
+now = dt.datetime.now()
+print(now.hour)                      # current hour (0–23)</code></pre>
+            </div>
+
+            <p>Aliases (with <code>as</code>) are optional. They are handy for long module names or when a community
+                convention exists.</p>
+
+            <h3 style="font-size: 1.25em; color: #1a3c5e; margin: 28px 0 12px 0;">Built-in vs. external modules</h3>
+            <p>Not every module comes with Python. You will work with two kinds:</p>
+            <ul>
+                <li><strong>Built-in / standard library modules</strong> — included with Python
+                    (<code>math</code>, <code>random</code>, <code>datetime</code>, <code>os</code>). Use
+                    <code>import</code> only; no install step.</li>
+                <li><strong>External modules (packages)</strong> — written by the wider community and installed
+                    separately (for example with <code>pip</code>). After installation, you import them the same way
+                    as built-in modules.</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="example-label">External module pattern (concept example)</span>
+                <pre><code># In a terminal (one-time install — do not put pip in your .py file):
+#   pip install requests
+#
+# Then in your Python program:
+import requests
+
+# Same import style as a built-in module; the tools came from the community
+response = requests.get("https://api.github.com")
+print(response.status_code)   # 200 means the request succeeded</code></pre>
+            </div>
+
+            <div class="tip">
+                <strong>Tip:</strong> The <code>import</code> statement itself does not change for external modules.
+                What changes is that someone else created the package and you install it first. That is community
+                software: gifts of skill shared for others to use.
+            </div>
+
+            <div class="warning-box">
+                <strong>Note for this course:</strong> Most early lessons stay with the standard library so you can
+                practice without installing extra packages. When we use an external module later, the lab will tell
+                you exactly what to install.
+            </div>
+        </div>
+
+        <!-- Section 3: from ... import ... -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Importing Specific Functions with <code>from ... import ...</code>
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Sometimes you only need one or two items from a module. You can import them by name and then call them
+                <em>without</em> the module prefix:</p>
+
+            <div class="code-example">
+                <span class="example-label">Import specific names</span>
+                <pre><code>from math import sqrt, pi
+
+print(sqrt(25))    # 5.0  — no math. prefix needed
+print(pi)          # 3.141592653589793</code></pre>
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Import one function and use it directly</span>
+                <pre><code>from random import choice
+
+fruits = ["apple", "banana", "cherry"]
+print(choice(fruits))   # e.g., banana</code></pre>
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Import with a local alias</span>
+                <pre><code>from math import factorial as fact
+
+print(fact(5))     # 120  (5 × 4 × 3 × 2 × 1)</code></pre>
+            </div>
+
+            <div class="tip">
+                <strong>Tip:</strong> Prefer importing only what you need when the module is large and you use just a
+                few names. Prefer <code>import module</code> when you use many items from that module, so readers can
+                see the source at a glance.
+            </div>
+        </div>
+
+        <!-- Section 4: Comparing the two styles -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Comparing <code>import module</code> and <code>from module import name</code>
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Both styles give you access to the same code, but they differ in how you write calls and how clear the
+                origin of each name is.</p>
+
+            <div class="code-example">
+                <span class="example-label">Side-by-side: same task, two styles</span>
+                <pre><code># Style A: import the whole module
+import math
+print(math.sqrt(9))
+print(math.pi)
+
+# Style B: import only what you need
+from math import sqrt, pi
+print(sqrt(9))
+print(pi)</code></pre>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 1.02em;">
+                <thead>
+                    <tr style="background-color: #e7f2fd; color: #1a3c5e;">
+                        <th style="border: 1px solid #c5d9e8; padding: 12px; text-align: left;">Style</th>
+                        <th style="border: 1px solid #c5d9e8; padding: 12px; text-align: left;">How you call it</th>
+                        <th style="border: 1px solid #c5d9e8; padding: 12px; text-align: left;">Strength</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #e0e0e0; padding: 12px;"><code>import math</code></td>
+                        <td style="border: 1px solid #e0e0e0; padding: 12px;"><code>math.sqrt(9)</code></td>
+                        <td style="border: 1px solid #e0e0e0; padding: 12px;">Clear source; fewer name clashes</td>
+                    </tr>
+                    <tr style="background-color: #f8f9fa;">
+                        <td style="border: 1px solid #e0e0e0; padding: 12px;"><code>from math import sqrt</code></td>
+                        <td style="border: 1px solid #e0e0e0; padding: 12px;"><code>sqrt(9)</code></td>
+                        <td style="border: 1px solid #e0e0e0; padding: 12px;">Shorter calls; focused imports</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>Common Pitfall to Avoid:</strong> Do not use <code>from math import *</code> (star import) in
+                student or production code. It dumps every name from the module into your file, which makes it hard to
+                tell where a name came from and can overwrite your own variables. Import the module or list the names
+                you need explicitly.
+            </div>
+
+            <div class="code-example">
+                <span class="example-label">Name clash example (why clarity matters)</span>
+                <pre><code># Your own function named sqrt
+def sqrt(n):
+    return "I am a custom message, not a square root!"
+
+# This would replace your function if you did: from math import sqrt
+# Better: keep the module prefix so both can coexist
+import math
+print(sqrt(16))       # custom version
+print(math.sqrt(16))  # the real math version → 4.0</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 5: Built-in modules in practice -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Putting It Together: A Small Practical Example
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Here is a short program that combines both import styles. Read it carefully and notice where the module
+                name is required and where it is not.</p>
+
+            <div class="code-example">
+                <span class="example-label">Ministry camp lottery helper</span>
+                <pre><code>import math
+from random import choice, randint
+
+# Students signed up for a midweek activity
+students = ["Ava", "Noah", "Grace", "Eli", "Sophia"]
+
+# Pick a random helper for snack time
+helper = choice(students)
+print(f"Snack helper today: {helper}")
+
+# Random table number from 1 to 8
+table = randint(1, 8)
+print(f"Please sit at table {table}.")
+
+# How many square tables fit along a wall of length 24 (each table 4 units)?
+wall_length = 24
+table_size = 4
+tables_that_fit = math.floor(wall_length / table_size)
+print(f"Tables that fit along the wall: {tables_that_fit}")</code></pre>
+            </div>
+
+            <p><strong>What to notice:</strong></p>
+            <ul>
+                <li><code>choice</code> and <code>randint</code> were imported by name, so no
+                    <code>random.</code> prefix</li>
+                <li><code>math.floor</code> still needs the <code>math.</code> prefix because the whole module was
+                    imported</li>
+                <li>The program reuses well-tested library code instead of inventing random-number logic from scratch
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section 6: Exploring modules -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Exploring What a Module Contains
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>When you are unsure what a module offers, Python gives you two helpful tools:</p>
+
+            <div class="code-example">
+                <span class="example-label">dir() and help()</span>
+                <pre><code>import math
+
+# List many of the names available in the math module
+print(dir(math))
+
+# Read documentation for one function (try this in IDLE or a terminal)
+help(math.sqrt)</code></pre>
+            </div>
+
+            <div class="tip">
+                <strong>Tip:</strong> Official documentation for the standard library lives at
+                <a href="https://docs.python.org/3/library/" target="_blank" rel="noopener noreferrer"
+                    style="color: #2c7a7b; font-weight: 600;">docs.python.org/3/library</a>. Learning to look things up
+                is a core programming skill.
+            </div>
+        </div>
+
+        <!-- Biblical Reflection / Anchored in Christ -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Modules teach us that good work is rarely done in isolation. Someone else wrote
+                <code>math.sqrt</code> and <code>random.choice</code>; we receive those gifts and build something new
+                with them. In the same way, God has gifted different people with different abilities so that the whole
+                body of Christ is built up—not so that any one member would have to do everything alone.
+            </p>
+            <p>
+                When you import a module, you are practicing a kind of humble dependence: admitting that useful tools
+                already exist, and wisely putting them to work. When a brother or sister shares a hymn, a lesson, or a
+                word of encouragement, the church is strengthened by gifts that did not originate with us. Programming
+                with modules is a small picture of that larger truth.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “There are diversities of gifts, but the same Spirit. There are differences of ministries, but the same
+                Lord. And there are diversities of activities, but it is the same God who works all in all. But the
+                manifestation of the Spirit is given to each one for the profit of all.” —
+                <strong>1 Corinthians 12:4–7 (NKJV)</strong><br><br>
+                “For as the body is one and has many members, but all the members of that one body, being many, are one
+                body, so also is Christ. … Now you are the body of Christ, and members individually.” —
+                <strong>1 Corinthians 12:12, 27 (NKJV)</strong>
+            </p>
+            <p style="margin-top: 15px;">
+                May our use of modules remind us to give thanks for the gifts of others—and to offer our own work so
+                that it can bless those who come after us.
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 - Modules and Import Statements"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+        <p style="font-size: 0.95em; color: #777777; text-align: center; margin-top: 15px;">
+            Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under
+            instructor supervision and review.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
