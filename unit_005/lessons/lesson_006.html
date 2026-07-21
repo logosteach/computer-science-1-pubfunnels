@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 006 - Organizing Code with Functions | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Organizing Code with Functions</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples focus on docstrings, clear naming, breaking large problems into smaller functions,
+            and organizing code so it is readable and intentional.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Best Practices Checklist
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li>Use verb-based names: <code>calculate_total</code>, <code>load_scores</code>, <code>display_menu</code>.</li>
+                <li>Keep each function focused on one clear job.</li>
+                <li>Write a short docstring explaining purpose, inputs, and return value.</li>
+                <li>Break big tasks into smaller helper functions.</li>
+            </ul>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Writing Clear Docstrings
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def celsius_to_fahrenheit(celsius):
+    """Convert a temperature from Celsius to Fahrenheit.
+
+    Args:
+        celsius (float): Temperature in degrees Celsius.
+
+    Returns:
+        float: Temperature in degrees Fahrenheit.
+    """
+    return (celsius * 9 / 5) + 32
+
+print(celsius_to_fahrenheit(0))
+print(celsius_to_fahrenheit(100))
+print(celsius_to_fahrenheit.__doc__)</code></pre>
+            <p><strong>Output (partial):</strong></p>
+            <pre><code class="language-console">32.0
+212.0
+Convert a temperature from Celsius to Fahrenheit.
+...</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Good docstrings help future-you (and classmates) understand a function without
+                rereading every line of code.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Naming and Structure
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python"># Harder to understand
+def f(x, y):
+    return x * 0.9 if y else x
+
+# Clearer
+def apply_discount(price, is_member):
+    """Return price after a 10% member discount when applicable."""
+    if is_member:
+        return price * 0.9
+    return price
+
+print(apply_discount(50, True))
+print(apply_discount(50, False))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">45.0
+50</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Breaking a Larger Problem into Functions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def get_scores():
+    """Return a sample list of quiz scores."""
+    return [88, 76, 94, 81]
+
+def average_score(scores):
+    """Return the average of a list of scores."""
+    return sum(scores) / len(scores)
+
+def letter_grade(avg):
+    """Return a simple letter grade for an average."""
+    if avg &gt;= 90:
+        return "A"
+    elif avg &gt;= 80:
+        return "B"
+    elif avg &gt;= 70:
+        return "C"
+    else:
+        return "Needs Improvement"
+
+def report_card():
+    """Build and print a short grade report."""
+    scores = get_scores()
+    avg = average_score(scores)
+    grade = letter_grade(avg)
+    print(f"Scores: {scores}")
+    print(f"Average: {avg:.1f}")
+    print(f"Grade: {grade}")
+
+report_card()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Scores: [88, 76, 94, 81]
+Average: 84.8
+Grade: B</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Before and After Refactoring
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><strong>Before (one long block):</strong></p>
+            <pre><code class="language-python"># All logic jammed together — harder to test and reuse
+scores = [88, 76, 94, 81]
+avg = sum(scores) / len(scores)
+if avg &gt;= 90:
+    grade = "A"
+elif avg &gt;= 80:
+    grade = "B"
+else:
+    grade = "C"
+print(scores, avg, grade)</code></pre>
+            <p><strong>After:</strong> separate functions (see Example 3) so each piece can be tested, reused, and understood.</p>
+            <div class="warning-box">
+                If a function is hard to name, it may be doing too many things. Split it.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Writing good functions teaches diligence and intentionality — qualities God desires in our work and
+                service. Careful craftsmanship in code can mirror careful faithfulness in life.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “And whatever you do, do it heartily, as to the Lord and not to men.” (Colossians 3:23)<br>
+                “Do you see a man who excels in his work? He will stand before kings; he will not stand before unknown men.” (Proverbs 22:29)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 006 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

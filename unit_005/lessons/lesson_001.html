@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 001 - Introduction to Functions | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Introduction to Functions</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples introduce why functions matter, the DRY principle (Don't Repeat Yourself), and how
+            reusable blocks of code improve readability and maintainability. We also connect real-world
+            “function-like” systems to programming.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Why Functions Exist
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Without functions, the same instructions get copied over and over. That makes programs longer,
+                harder to read, and risky to update (fix one place and forget another).</p>
+            <p>A <strong>function</strong> is a named, reusable block of code that performs a specific task.
+                You write it once and use it many times.</p>
+            <div class="tip">
+                <strong>Tip:</strong> Think of a function like a recipe card: write the steps once, follow them
+                whenever you need that result.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Repeated Code Without Functions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Imagine greeting three students with the same message pattern:</p>
+            <pre><code class="language-python"># Without functions — code is repeated
+print("Welcome to class, Alice!")
+print("Please open your textbook.")
+print("Have a great lesson!")
+print()
+
+print("Welcome to class, Ben!")
+print("Please open your textbook.")
+print("Have a great lesson!")
+print()
+
+print("Welcome to class, Cara!")
+print("Please open your textbook.")
+print("Have a great lesson!")</code></pre>
+            <p><strong>Problem:</strong> If you change the greeting, you must edit it in three places. Easy to miss one.</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: The Same Task With a Function (Preview)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Here is a first look at how a function solves that problem. You will learn the full syntax in Lesson 2.</p>
+            <pre><code class="language-python">def welcome_student(name):
+    print(f"Welcome to class, {name}!")
+    print("Please open your textbook.")
+    print("Have a great lesson!")
+    print()
+
+welcome_student("Alice")
+welcome_student("Ben")
+welcome_student("Cara")</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Welcome to class, Alice!
+Please open your textbook.
+Have a great lesson!
+
+Welcome to class, Ben!
+Please open your textbook.
+Have a great lesson!
+
+Welcome to class, Cara!
+Please open your textbook.
+Have a great lesson!</code></pre>
+            <p>One change inside <code>welcome_student</code> updates every greeting. That is DRY in action.</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Real-World Function Analogies
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><strong>Recipe:</strong> Ingredients + steps → finished dish (inputs → process → result).</li>
+                <li><strong>ATM withdrawal:</strong> You request an amount; the machine follows a fixed procedure.</li>
+                <li><strong>School schedule:</strong> Each class period is a “routine” with a clear purpose.</li>
+                <li><strong>Built-in Python tools:</strong> <code>print()</code>, <code>len()</code>, and <code>input()</code> are functions you already use.</li>
+            </ul>
+            <pre><code class="language-python"># You have already been calling functions!
+message = "Hello"
+print(len(message))      # len is a function
+print(message.upper())   # upper is a method (a function tied to a value)</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Readability, Reusability, Maintainability
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Good functions give you three major benefits:</p>
+            <ul>
+                <li><strong>Readability:</strong> A clear name like <code>calculate_average</code> tells what the code does.</li>
+                <li><strong>Reusability:</strong> Call the same function from many places in a program.</li>
+                <li><strong>Maintainability:</strong> Fix or improve one function instead of hunting through copy-pasted code.</li>
+            </ul>
+            <div class="warning-box">
+                Avoid giant “do everything” blocks. Prefer small, purposeful functions that each do one job well.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                God designed both creation and the Church with purpose and order. Different parts work together
+                efficiently, each with a role, just as well-named functions help a program work together without chaos.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “For as the body is one and has many members, but all the members of that one body, being many, are one body, so also is Christ.” (1 Corinthians 12:12)<br><br>
+                “Two are better than one, because they have a good reward for their labor. For if they fall, one will lift up his companion.” (Ecclesiastes 4:9-10)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

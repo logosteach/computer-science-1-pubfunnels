@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 005 - Advanced Function Features | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Advanced Function Features</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples introduce flexible argument packing with <code>*args</code> and <code>**kwargs</code>,
+            plus simple lambda functions for short, anonymous tasks. Use these tools carefully so code stays clear.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            When Advanced Features Help
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li>You need a function that accepts a varying number of values.</li>
+                <li>You need a tiny one-line function for sorting or mapping.</li>
+                <li>You want optional named options without listing every parameter.</li>
+            </ul>
+            <div class="warning-box">
+                Advanced does not always mean better. Prefer plain parameters when they keep the code easier to read.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: *args (Variable Positional Arguments)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><code>*args</code> collects extra positional arguments into a tuple.</p>
+            <pre><code class="language-python">def average(*numbers):
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
+
+print(average(10, 20))
+print(average(80, 90, 100))
+print(average(5))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">15.0
+90.0
+5.0</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: **kwargs (Variable Keyword Arguments)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><code>**kwargs</code> collects extra keyword arguments into a dictionary.</p>
+            <pre><code class="language-python">def student_profile(name, **details):
+    print(f"Name: {name}")
+    for key, value in details.items():
+        print(f"  {key}: {value}")
+
+student_profile("Emma", grade=10, club="Robotics", city="Boise")</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Name: Emma
+  grade: 10
+  club: Robotics
+  city: Boise</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Combining Regular Parameters with *args and **kwargs
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def log_event(event_type, *messages, **meta):
+    print(f"[{event_type}]")
+    for msg in messages:
+        print(" -", msg)
+    if meta:
+        print(" meta:", meta)
+
+log_event("INFO", "User logged in", "Session started", user="noah", attempt=1)</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">[INFO]
+ - User logged in
+ - Session started
+ meta: {'user': 'noah', 'attempt': 1}</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Simple Lambda Functions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <strong>lambda</strong> is a short anonymous function for simple expressions.</p>
+            <pre><code class="language-python">square = lambda x: x * x
+print(square(6))
+
+add = lambda a, b: a + b
+print(add(3, 4))
+
+# Useful with sorted
+names = ["Zara", "ben", "Amy"]
+print(sorted(names, key=lambda s: s.lower()))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">36
+7
+['Amy', 'ben', 'Zara']</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> If a lambda needs more than one short expression, write a normal
+                <code>def</code> function instead. Clarity beats cleverness.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                God gives different gifts and levels of responsibility to different people. In a similar way,
+                functions can flexibly handle varying inputs and roles without every function looking identical.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Having then gifts differing according to the grace that is given to us, let us use them: if prophecy, let us prophesy in proportion to our faith; or ministry, let us use it in our ministering; he who teaches, in teaching; he who exhorts, in exhortation; he who gives, with liberality; he who leads, with diligence; he who shows mercy, with cheerfulness.” (Romans 12:6-8)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 005 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

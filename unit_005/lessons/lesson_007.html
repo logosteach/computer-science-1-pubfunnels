@@ -1,0 +1,223 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 007 - Putting It All Together | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Putting It All Together</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples combine functions with loops, conditionals, and data structures. You will see how to plan a
+            small program by functions first, then implement and debug it.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Plan First: Break the Program into Functions
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>For a simple quiz-score tracker, plan these jobs:</p>
+            <ol>
+                <li><code>display_menu()</code> — show choices</li>
+                <li><code>add_score(scores)</code> — collect and store a score</li>
+                <li><code>show_summary(scores)</code> — compute stats and print a report</li>
+                <li><code>main()</code> — run the program loop</li>
+            </ol>
+            <div class="tip">
+                <strong>Tip:</strong> If you can name each step, you can usually turn each step into a function.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Functions + Loops + Conditionals
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def is_valid_score(score):
+    return 0 &lt;= score &lt;= 100
+
+def average(scores):
+    if not scores:
+        return 0
+    return sum(scores) / len(scores)
+
+def passing_count(scores, cutoff=70):
+    count = 0
+    for s in scores:
+        if s &gt;= cutoff:
+            count += 1
+    return count
+
+scores = [88, 62, 95, 70, 54]
+print("Average:", round(average(scores), 1))
+print("Passing:", passing_count(scores))
+print("Valid 101?", is_valid_score(101))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Average: 73.8
+Passing: 3
+Valid 101? False</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: A Small Useful Program
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def display_menu():
+    print("\n=== Score Tracker ===")
+    print("1. Add a score")
+    print("2. Show summary")
+    print("3. Quit")
+
+def add_score(scores):
+    value = int(input("Enter score (0-100): "))
+    if 0 &lt;= value &lt;= 100:
+        scores.append(value)
+        print("Score added.")
+    else:
+        print("Invalid score. Not added.")
+
+def show_summary(scores):
+    if not scores:
+        print("No scores yet.")
+        return
+    print(f"Scores: {scores}")
+    print(f"Count: {len(scores)}")
+    print(f"Average: {sum(scores) / len(scores):.1f}")
+    print(f"Best: {max(scores)}")
+    print(f"Lowest: {min(scores)}")
+
+def main():
+    scores = []
+    while True:
+        display_menu()
+        choice = input("Choose: ").strip()
+        if choice == "1":
+            add_score(scores)
+        elif choice == "2":
+            show_summary(scores)
+        elif choice == "3":
+            print("Goodbye!")
+            break
+        else:
+            print("Please choose 1, 2, or 3.")
+
+# main()  # Uncomment to run interactively</code></pre>
+            <p>This program structure is easy to extend later (for example, delete a score or save to a file).</p>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Debugging Multi-Function Programs
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def double_all(values):
+    result = []
+    for v in values:
+        result.append(v * 2)
+    return result
+
+def process(values):
+    # Common bug: forgetting to use the returned list
+    double_all(values)          # does nothing useful by itself
+    return double_all(values)   # correct: capture/return the result
+
+nums = [1, 2, 3]
+print(process(nums))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">[2, 4, 6]</code></pre>
+            <div class="warning-box">
+                When debugging functions: print inputs at the top, print return values before leaving, and test each
+                function alone before combining them.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Functions Working With Data Structures
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def tally_votes(votes):
+    """Count votes for each candidate in a list."""
+    counts = {}
+    for name in votes:
+        if name in counts:
+            counts[name] += 1
+        else:
+            counts[name] = 1
+    return counts
+
+def winner(counts):
+    """Return the candidate with the most votes."""
+    best_name = None
+    best_total = -1
+    for name, total in counts.items():
+        if total &gt; best_total:
+            best_name = name
+            best_total = total
+    return best_name
+
+ballots = ["Ava", "Ben", "Ava", "Cara", "Ben", "Ava"]
+results = tally_votes(ballots)
+print(results)
+print("Winner:", winner(results))</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">{'Ava': 3, 'Ben': 2, 'Cara': 1}
+Winner: Ava</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Well-organized functions reflect the biblical principle of doing all things decently and in order.
+                Clear structure in code is not just technical skill — it is a form of wise stewardship of the tools
+                and time God has given.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “Let all things be done decently and in order.” (1 Corinthians 14:40)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 007 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 002 - Defining and Calling Functions | Examples</title>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Defining and Calling Functions</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to define a function with <code>def</code>, how to call (invoke) it, and the
+            important difference between writing a function and actually running it.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Defining vs Calling
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul>
+                <li><strong>Define:</strong> Create the function using <code>def</code>. Python stores the instructions but does not run them yet.</li>
+                <li><strong>Call:</strong> Use the function name followed by parentheses to execute those instructions.</li>
+            </ul>
+            <div class="tip">
+                <strong>Tip:</strong> Defining a function is like writing a name on a toolbox. Calling it is actually using the tool.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 1: Your First Function
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def say_hello():
+    print("Hello, student!")
+    print("Ready to learn Python?")
+
+# Definition alone does nothing visible
+# Now call the function:
+say_hello()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Hello, student!
+Ready to learn Python?</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 2: Calling a Function Multiple Times
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def print_separator():
+    print("-" * 30)
+
+print("Section A")
+print_separator()
+print("Section B")
+print_separator()
+print("Section C")
+print_separator()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">Section A
+------------------------------
+Section B
+------------------------------
+Section C
+------------------------------</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 3: Functions That Perform Basic Tasks
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def show_menu():
+    print("=== Study Menu ===")
+    print("1. Review notes")
+    print("2. Practice problems")
+    print("3. Take a break")
+
+def cheer():
+    print("You can do this. One step at a time!")
+
+show_menu()
+print()
+cheer()</code></pre>
+            <p><strong>Output:</strong></p>
+            <pre><code class="language-console">=== Study Menu ===
+1. Review notes
+2. Practice problems
+3. Take a break
+
+You can do this. One step at a time!</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Example 4: Common Mistakes
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <pre><code class="language-python">def greet():
+    print("Hi there!")
+
+# Mistake 1: forgetting parentheses — this does NOT call the function
+greet   # no output; just refers to the function object
+
+# Mistake 2: calling before defining (NameError if this runs first)
+# greet_early()
+# def greet_early():
+#     print("Too late!")
+
+# Correct: define first, then call
+greet()</code></pre>
+            <div class="warning-box">
+                Always define a function before you call it in the same file (top to bottom order). And remember:
+                <code>greet</code> is not the same as <code>greet()</code>.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Just as God calls us by name and gives us purpose, we “call” functions so they perform the specific
+                tasks for which they were designed. A function without a call never acts; a believer is also called
+                to walk out the purpose God has given.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture:</strong><br>
+                “But now, thus says the Lord, who created you, O Jacob, and He who formed you, O Israel: ‘Fear not, for I have redeemed you; I have called you by your name; You are Mine.’” (Isaiah 43:1)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 002 Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
