@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Downloading and Installing Python</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These notes and examples walk through why we use Python, how to install it safely from official sources, how to verify the install, and how to open the IDLE shell for the first time.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Why Python?
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Python is popular for beginners and professionals because its syntax is readable, it has a large standard library, and it is used in education, science, web work, automation, and more. You can start small in the shell and grow into full programs.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># You do not need to run this yet — it is a reminder of Python's readable style.
+message = "Hello, Python!"
+print(message)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Hello, Python!</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Readable code is a gift to future you and to classmates who read your work.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Download and Install from Official Sources Only
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Install Python from the official website (python.org) or your OS’s trusted store/package source. Avoid random third-party download sites. On installers, enable options such as “Add Python to PATH” when offered (Windows).</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Checklist (not runnable code — steps to complete on your computer)
+# 1. Go to https://www.python.org/downloads/  (or your OS store)
+# 2. Download the current Python 3.x installer
+# 3. Run the installer
+# 4. Finish the install
+print("Install from a trusted source only.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Install from a trusted source only.</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> Untrusted downloads can include malware. Prefer python.org or official OS channels.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Verify the Installation
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Open a terminal or command prompt and check the version. Seeing a Python 3.x version string means the install is reachable from the command line.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># In Terminal / Command Prompt / PowerShell (type these yourself):
+#   python3 --version
+#   # or on some Windows setups:
+#   python --version
+#
+# Example of what success looks like:
+print("Python 3.12.x")  # your version number may differ</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Python 3.12.x</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> If the command is not found, Python may not be on PATH—revisit the installer options or your OS install notes in unit_001/etc.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Launch IDLE and Learn the Layout
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>IDLE (Integrated Development and Learning Environment) ships with Python. Open it from your applications menu or by running idle / idle3 on some systems. The shell window shows a prompt (&gt;&gt;&gt;) where you type code and press Enter for immediate results.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># When IDLE opens, you will see something like:
+# Python 3.x.x (... )
+# Type "help", "copyright", "credits" or "license" for more information.
+# &gt;&gt;&gt;
+#
+# Try typing:
+print(2 + 2)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>4</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Purpose of the IDLE Interface
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The interactive shell is for quick experiments. Later you will also use IDLE’s editor for multi-line scripts. For now, focus on opening IDLE, reading the prompt, and running one-line commands successfully.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print("IDLE shell is ready for practice.")
+print("Type an expression, press Enter, see the result.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>IDLE shell is ready for practice.
+Type an expression, press Enter, see the result.</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                We receive Python only through a valid, trusted source. In a far greater way, faith comes by hearing the true gospel of Jesus Christ—not a substitute message.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “So then faith comes by hearing, and hearing by the word of God.” (Romans 10:17, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 001 - Downloading and Installing Python Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

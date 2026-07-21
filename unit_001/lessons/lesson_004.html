@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - IDLE Script Editor</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples move from the interactive shell to IDLE’s script editor: multi-line programs, saving files, comments, and the edit–run–fix cycle.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Open the Editor and Create a New File
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>In IDLE: File → New File (or equivalent). A blank editor window opens. This is where multi-line programs live.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># File: hello_script.py
+# Created in IDLE: File → New File
+print("My first saved script")
+print("Each line runs in order from top to bottom")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>My first saved script
+Each line runs in order from top to bottom</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Write, Save, and Run
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Save as a .py file (File → Save). Run with Run → Run Module (often F5). Output appears in the shell window.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># save as greetings.py then press F5 (Run Module)
+student = "Hannah"
+print("Welcome,", student)
+print("This file can be opened and run again tomorrow.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Welcome, Hannah
+This file can be opened and run again tomorrow.</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> Save before you run. Unsaved buffers can confuse beginners.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Shell vs Script (Again, With Purpose)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Shell: explore one idea quickly. Script: keep a complete program, share it, submit it, return to it later.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Shell experiment (temporary):
+# &gt;&gt;&gt; 3 * 7
+# 21
+#
+# Script version (permanent):
+result = 3 * 7
+print("3 * 7 =", result)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>3 * 7 = 21</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Comments with #
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Comments document purpose for humans. Python ignores them.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># greet the user and show a simple total
+name = "Micah"       # camper name
+nights = 5           # length of stay
+print("Camper:", name)
+print("Nights:", nights)
+# print("debug:", name, nights)  # optional debug line</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Camper: Micah
+Nights: 5</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Edit, Debug, Re-run
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>When something is wrong: read the error in the shell, fix the editor line, save, run again. This loop is normal—not failure.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Broken then fixed pattern:
+# print("Hello)     # SyntaxError: missing quote
+print("Hello")       # fixed
+print(10 / 2)        # check your arithmetic output too</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Hello
+5.0</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> Logic errors may run without crashing but print the wrong answer—always check results.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Scripts call us to write, save, and do—not only to experiment once and forget. James urges us to be doers of the Word, not hearers only. Building lasting faithfulness matters more than momentary impulses.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “But be doers of the word, and not hearers only, deceiving yourselves… But he who looks into the perfect law of liberty and continues in it, and is not a forgetful hearer but a doer of the work, this one will be blessed in what he does.” (James 1:22, 25, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 004 - IDLE Script Editor Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

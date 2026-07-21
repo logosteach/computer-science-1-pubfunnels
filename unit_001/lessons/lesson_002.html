@@ -1,0 +1,210 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Arithmetic, Variable Naming Rules and Conventions</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples practice the IDLE interactive shell: arithmetic operators, immediate feedback, and the difference between experimenting in the shell and running saved scripts. Variable naming is introduced as a foundation for later lessons.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Open and Use the IDLE Shell
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Launch IDLE. At the &gt;&gt;&gt; prompt, type a line and press Enter. Python evaluates it and shows a result (or an error).</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Type these one at a time at the &gt;&gt;&gt; prompt:
+print("Shell is interactive")
+2 + 2</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Shell is interactive
+4</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> In the shell, a bare expression like 2 + 2 shows its value. In a saved script, use print() to display values.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Basic Arithmetic Operators
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Practice the core operators and watch results appear immediately.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print(10 + 3)
+print(10 - 3)
+print(10 * 3)
+print(10 / 3)    # true division → float
+print(10 // 3)   # floor division
+print(10 % 3)    # remainder
+print(2 ** 4)    # exponent (2 to the 4th)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>13
+7
+30
+3.3333333333333335
+3
+1
+16</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Shell vs Saved Scripts
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The shell is for quick trials. A script is a saved .py file you run as a whole program. Shell history is temporary; scripts are permanent and shareable.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Shell: type line by line, see results now
+# Script: write many lines, save as hello.py, run the file
+print("This line could live in either place.")
+print("Scripts are better for multi-step programs.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>This line could live in either place.
+Scripts are better for multi-step programs.</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Simple Syntax Errors in the Shell
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The shell reports mistakes right away. Read the error message and fix the line.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Broken examples (do not leave them broken—fix them):
+# print("Hello"      → SyntaxError: missing closing quote
+# 2 +                 → SyntaxError: incomplete expression
+# print(2 + 2)        → correct
+
+print(2 + 2)
+print("Hello")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>4
+Hello</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> SyntaxError means Python could not understand the line. Check quotes, parentheses, and complete expressions.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Variable Names (Foundation)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Names store values for later. Follow rules: start with a letter or underscore; use letters, digits, underscores; case-sensitive; prefer snake_case.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>score = 95
+player_name = "Ruth"
+print(player_name, score)
+# valid: total2, _temp, quiz_score
+# invalid: 2total, quiz-score, class</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Ruth 95</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                The IDLE shell is interactive—we type, we receive feedback, we respond again. Our walk with God is not passive. We actively engage: worship, hear the Word, read Scripture, pray with thanksgiving, and share the hope we have in Christ.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “Oh come, let us worship and bow down; let us kneel before the Lord our Maker.” (Psalm 95:6, NKJV)<br><br>“Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God.” (Philippians 4:6, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 002 - Arithmetic, Variable Naming Rules and Conventions Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

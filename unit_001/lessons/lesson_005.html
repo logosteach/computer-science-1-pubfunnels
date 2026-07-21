@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - VS Code - Downloading, Installing</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These notes introduce Visual Studio Code: install the editor, add the official Python extension, create and run a .py file, and compare Code with IDLE—including how to choose extensions wisely.
+        </p>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Download and Install VS Code
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Get Visual Studio Code from the official site (code.visualstudio.com) or a trusted OS store. Install like other applications for your platform (macOS, Windows, Linux).</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># After install, you should be able to open "Visual Studio Code"
+# or "Code" from your applications menu.
+print("VS Code is a code editor — great for larger projects.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>VS Code is a code editor — great for larger projects.</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> Use official sources for the editor, just as you did for Python.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Install the Official Python Extension
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Open Extensions in VS Code, search for Python published by Microsoft, and install it. This enables highlighting, run helpers, and language support.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Extension checklist:
+# 1. Click Extensions (sidebar)
+# 2. Search: Python
+# 3. Publisher: Microsoft
+# 4. Install
+print("Python extension helps VS Code understand .py files.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Python extension helps VS Code understand .py files.</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Create, Open, Write, Save, Run
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Create a folder for your course work, open it in VS Code, add a new file ending in .py, write code, save, then run with the Run button or the integrated terminal.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># File: vs_code_hello.py
+print("Running from VS Code")
+print(2 + 2)
+
+# Terminal example (integrated terminal):
+#   python3 vs_code_hello.py</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Running from VS Code
+4</code></pre>
+            <div class="tip">
+                <strong>Tip:</strong> If Run fails, confirm the selected Python interpreter matches the Python you installed.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            IDLE vs VS Code
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>IDLE is simple and ships with Python—excellent for first steps. VS Code is a full editor: folders, extensions, Git, multi-file projects. Use IDLE for quick starts; grow into VS Code as programs get larger.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code>print("IDLE: simple shell + basic editor, bundled with Python")
+print("VS Code: professional editor, extensions, multi-file work")
+print("Both can run the same Python language.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>IDLE: simple shell + basic editor, bundled with Python
+VS Code: professional editor, extensions, multi-file work
+Both can run the same Python language.</code></pre>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Marketplace Safety
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Extensions add power and risk. Prefer well-known publishers, high install counts, and clear descriptions. Avoid obscure extensions that ask for unnecessary permissions or come from unknown authors.</p>
+
+            <div class="code-example">
+                <span class="example-label">Example</span>
+                <pre><code># Before installing an extension, ask:
+# - Who is the publisher?
+# - Is it the official / widely used option?
+# - Do recent reviews report malware or breakage?
+print("Install extensions carefully — quality over quantity.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Install extensions carefully — quality over quantity.</code></pre>
+            <div class="warning-box">
+                <strong>Watch out:</strong> Malicious extensions exist. When unsure, do not install.
+            </div>
+        </div>
+
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Different tools fit different tasks—IDLE for simplicity, VS Code for larger work. God equips believers with different gifts and resources for kingdom purposes; variety is by design, for the common good.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “There are diversities of gifts, but the same Spirit. There are differences of ministries, but the same Lord. And there are diversities of activities, but it is the same God who works all in all. But the manifestation of the Spirit is given to each one for the profit of all.” (1 Corinthians 12:4–7, NKJV)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 005 - VS Code - Downloading, Installing Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
