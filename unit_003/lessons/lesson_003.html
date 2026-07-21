@@ -1,0 +1,261 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Python Sets</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to create sets, how they store only unique values, how to run union / intersection /
+            difference operations, and how to use sets for fast membership checks and duplicate removal.
+        </p>
+
+        <!-- Creating sets -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Creating Sets
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <strong>set</strong> holds unique items. Write a set with curly braces <code>{}</code>, or build one
+                with <code>set()</code>. Use <code>set()</code> (not <code>{}</code>) for an empty set—empty curly
+                braces create a dictionary.</p>
+
+            <div class="code-example">
+                <span class="example-label">Literal set and set() constructor</span>
+                <pre><code>gifts = {"teaching", "encouragement", "service"}
+numbers = set([1, 2, 2, 3, 3, 3])
+empty = set()
+
+print(gifts)
+print(numbers)
+print(type(empty))</code></pre>
+            </div>
+            <p><strong>Sample output</strong> (order of set items may vary):</p>
+            <pre><code>{'teaching', 'encouragement', 'service'}
+{1, 2, 3}
+&lt;class 'set'&gt;</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> Sets are unordered. Do not rely on left-to-right position the way you do with
+                lists. If you need a stable display order, wrap the set in <code>sorted()</code>.
+            </div>
+        </div>
+
+        <!-- Uniqueness and unordered -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Unique Elements (Duplicates Removed)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>If the same value appears more than once when you build a set, Python keeps only one copy.</p>
+
+            <div class="code-example">
+                <span class="example-label">Duplicates disappear automatically</span>
+                <pre><code>attendees = {"Anna", "Ben", "Anna", "Caleb", "Ben"}
+print(attendees)
+print(len(attendees))</code></pre>
+            </div>
+            <p><strong>Sample output:</strong></p>
+            <pre><code>{'Anna', 'Ben', 'Caleb'}
+3</code></pre>
+        </div>
+
+        <!-- Set operations -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Union, Intersection, Difference, Symmetric Difference
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Set operations compare two collections. Operators and method names both work.</p>
+
+            <div class="code-example">
+                <span class="example-label">Common set operations</span>
+                <pre><code>group_a = {"Ruth", "Naomi", "Boaz"}
+group_b = {"Boaz", "David", "Ruth"}
+
+print("Union:", group_a | group_b)
+print("Intersection:", group_a & group_b)
+print("Difference A-B:", group_a - group_b)
+print("Symmetric difference:", group_a ^ group_b)
+
+# Same ideas with methods:
+print(group_a.union(group_b))
+print(group_a.intersection(group_b))
+print(group_a.difference(group_b))
+print(group_a.symmetric_difference(group_b))</code></pre>
+            </div>
+            <p><strong>Meaning in plain language:</strong></p>
+            <ul>
+                <li><strong>Union</strong> — everyone in either group</li>
+                <li><strong>Intersection</strong> — only people in both groups</li>
+                <li><strong>Difference</strong> — in the first group but not the second</li>
+                <li><strong>Symmetric difference</strong> — in one group or the other, but not both</li>
+            </ul>
+        </div>
+
+        <!-- Membership and dedupe -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Membership Testing and Removing Duplicates
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>The <code>in</code> operator is fast on sets. Converting a list to a set (and back, if needed) is a
+                common way to drop duplicates.</p>
+
+            <div class="code-example">
+                <span class="example-label">Membership with in</span>
+                <pre><code>verse_refs = {"John 3:16", "Romans 8:28", "Psalm 23:1"}
+
+print("Romans 8:28" in verse_refs)
+print("Genesis 1:1" in verse_refs)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>True
+False</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">Remove duplicates from a list</span>
+                <pre><code>raw_names = ["Eli", "Maria", "Eli", "Noah", "Maria", "Ava"]
+unique_names = list(set(raw_names))
+print(sorted(unique_names))  # sorted for a stable display order</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['Ava', 'Eli', 'Maria', 'Noah']</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">add() and discard()</span>
+                <pre><code>topics = {"prayer", "worship"}
+topics.add("service")
+topics.discard("worship")
+print(sorted(topics))</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['prayer', 'service']</code></pre>
+
+            <div class="warning-box">
+                <strong>Watch out:</strong> <code>remove()</code> raises a <code>KeyError</code> if the item is missing.
+                <code>discard()</code> does nothing if the item is not in the set—safer when you are unsure.
+            </div>
+        </div>
+
+        <!-- Putting it together -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Putting It Together
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <div class="code-example">
+                <span class="example-label">Find shared and unique camp activities</span>
+                <pre><code>cabin_1 = {"hiking", "crafts", "swimming"}
+cabin_2 = {"swimming", "archery", "crafts"}
+
+shared = cabin_1 & cabin_2
+only_cabin_1 = cabin_1 - cabin_2
+all_activities = cabin_1 | cabin_2
+
+print("Shared:", sorted(shared))
+print("Only cabin 1:", sorted(only_cabin_1))
+print("All unique:", sorted(all_activities))
+print("Count of unique activities:", len(all_activities))</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Shared: ['crafts', 'swimming']
+Only cabin 1: ['hiking']
+All unique: ['archery', 'crafts', 'hiking', 'swimming']
+Count of unique activities: 4</code></pre>
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                A set keeps each element unique while still gathering them into one collection. In a similar way, each
+                believer is uniquely made and gifted, yet all who are in Christ belong to the same body—distinct, yet
+                united.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “For as the body is one and has many members, but all the members of that one body, being many, are one
+                body, so also is Christ. For by one Spirit we were all baptized into one body—whether Jews or Greeks,
+                whether slaves or free—and have all been made to drink into one Spirit.” (1 Corinthians 12:12–13)<br><br>
+                “There is neither Jew nor Greek, there is neither slave nor free, there is neither male nor female; for
+                you are all one in Christ Jesus.” (Galatians 3:28)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 003 - Python Sets Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

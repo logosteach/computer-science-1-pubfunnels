@@ -1,0 +1,300 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Python Dictionaries</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to create dictionaries (key–value pairs), access and update items, loop through
+            keys / values / items, and use methods such as <code>get()</code>, <code>keys()</code>,
+            <code>values()</code>, <code>items()</code>, and <code>update()</code>.
+        </p>
+
+        <!-- Creating dictionaries -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Creating Dictionaries
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <strong>dictionary</strong> stores data as <em>key → value</em> pairs. Keys must be unique and
+                immutable (strings and numbers are common). Values can be almost any type.</p>
+
+            <div class="code-example">
+                <span class="example-label">Empty dict and a dictionary with pairs</span>
+                <pre><code>empty = {}
+student = {
+    "name": "Silas",
+    "age": 16,
+    "course": "Python"
+}
+
+print(student)
+print(type(empty))</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>{'name': 'Silas', 'age': 16, 'course': 'Python'}
+&lt;class 'dict'&gt;</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> Think of a phone book: you look up a <em>name</em> (key) to find a
+                <em>number</em> (value)—not “the third entry on the page.”
+            </div>
+        </div>
+
+        <!-- Access, add, modify, remove -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Access, Add, Modify, and Remove
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <div class="code-example">
+                <span class="example-label">Read, write, and delete by key</span>
+                <pre><code>camper = {"name": "Ruth", "cabin": "A", "grade": 10}
+
+print(camper["name"])       # access
+camper["grade"] = 11        # modify
+camper["activity"] = "choir"  # add new key
+del camper["cabin"]         # remove a key
+
+print(camper)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Ruth
+{'name': 'Ruth', 'grade': 11, 'activity': 'choir'}</code></pre>
+
+            <div class="warning-box">
+                <strong>Watch out:</strong> Accessing a missing key with square brackets raises
+                <code>KeyError</code>. Prefer <code>get()</code> when the key might not exist.
+            </div>
+        </div>
+
+        <!-- Methods -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Methods: <code>get()</code>, <code>keys()</code>, <code>values()</code>, <code>items()</code>,
+            <code>update()</code>
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <div class="code-example">
+                <span class="example-label">get() with a default</span>
+                <pre><code>scores = {"math": 92, "science": 88}
+
+print(scores.get("math"))
+print(scores.get("history"))            # None if missing
+print(scores.get("history", "N/A"))     # custom default</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>92
+None
+N/A</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">keys, values, items, and update</span>
+                <pre><code>info = {"name": "Leah", "role": "student"}
+
+print(list(info.keys()))
+print(list(info.values()))
+print(list(info.items()))
+
+info.update({"role": "mentor", "years": 2})
+print(info)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['name', 'role']
+['Leah', 'student']
+[('name', 'Leah'), ('role', 'student')]
+{'name': 'Leah', 'role': 'mentor', 'years': 2}</code></pre>
+        </div>
+
+        <!-- Iteration -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Iterating Through a Dictionary
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>You can loop over keys only, values only, or key–value pairs with <code>.items()</code>.</p>
+
+            <div class="code-example">
+                <span class="example-label">Three common loop styles</span>
+                <pre><code>ministry = {
+    "prayer": 12,
+    "worship": 8,
+    "service": 15
+}
+
+print("--- keys ---")
+for key in ministry:
+    print(key)
+
+print("--- values ---")
+for count in ministry.values():
+    print(count)
+
+print("--- items ---")
+for area, count in ministry.items():
+    print(area, "→", count, "students")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>--- keys ---
+prayer
+worship
+service
+--- values ---
+12
+8
+15
+--- items ---
+prayer → 12 students
+worship → 8 students
+service → 15 students</code></pre>
+        </div>
+
+        <!-- When to use dicts -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            When a Dictionary Is the Best Choice
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Use a dictionary when you look up data by a meaningful label (name, id, product code) rather than by
+                position. Lists are great for ordered sequences; dictionaries shine for labeled records and fast
+                lookup by key.</p>
+
+            <div class="code-example">
+                <span class="example-label">List vs dictionary for the same person</span>
+                <pre><code># List: remember that index 0 is name, 1 is score...
+student_list = ["Alice", 85, "Math"]
+
+# Dictionary: labels make the meaning clear
+student_dict = {"name": "Alice", "score": 85, "subject": "Math"}
+
+print(student_list[1])
+print(student_dict["score"])</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>85
+85</code></pre>
+        </div>
+
+        <!-- Putting it together -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Putting It Together
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <div class="code-example">
+                <span class="example-label">Simple camper record</span>
+                <pre><code>camper = {}
+camper["name"] = "Micah"
+camper["cabin"] = "B"
+camper.update({"allergies": "none", "age": 14})
+
+print(camper.get("name"), "is in cabin", camper.get("cabin"))
+
+for key, value in camper.items():
+    print(f"  {key}: {value}")
+
+if "allergies" in camper:
+    print("Allergy note on file.")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Micah is in cabin B
+  name: Micah
+  cabin: B
+  allergies: none
+  age: 14
+Allergy note on file.</code></pre>
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Dictionaries store information under meaningful keys—not anonymous slots. In a far deeper way, our
+                heavenly Father knows each of us by name and calls us according to His purpose.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “But now, thus says the Lord, who created you, O Jacob, And He who formed you, O Israel: ‘Fear not, for
+                I have redeemed you; I have called you by your name; You are Mine.’” (Isaiah 43:1)<br><br>
+                “To him the doorkeeper opens, and the sheep hear his voice; and he calls his own sheep by name and leads
+                them out.” (John 10:3)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 005 - Python Dictionaries Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

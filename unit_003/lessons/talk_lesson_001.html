@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 001 - Modules and Import Statements | Talking Points</title>
+</head>
+
+<body>
+
+    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">Python with a Worldview</div>
+            <div class="header-right">LogosTeach</div>
+        </div>
+    </header>
+
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            Lesson 001 - Modules and Import Statements — Talking Points
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Key talking points and discussion notes for teaching modules and import statements: what modules are, why
+            they matter, <code>import</code> vs <code>from ... import ...</code>, and the value of building on others’
+            work.
+        </p>
+
+        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Main Teaching Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>What a module is:</strong> A module is a Python file (<code>.py</code>) that groups
+                        related code—functions, constants, or tools—you can reuse. Importing makes that code available
+                        without rewriting it.</p>
+                </li>
+                <li>
+                    <p><strong>Why modules are useful:</strong> Reuse, organization, building on the standard library
+                        and community packages, and avoiding reinventing common tools (math, random, dates, and more).
+                    </p>
+                </li>
+                <li>
+                    <p><strong><code>import module</code>:</strong> Brings in the whole module. You call items with
+                        dot notation (<code>math.sqrt(9)</code>). Clear source of each name; fewer name clashes.</p>
+                </li>
+                <li>
+                    <p><strong><code>from module import name</code>:</strong> Brings in specific names only. You call
+                        them directly (<code>sqrt(9)</code>). Shorter, but the origin is less obvious at each use.</p>
+                </li>
+                <li>
+                    <p><strong>Compare the two styles:</strong> Same underlying tools, different call style and
+                        clarity. Prefer whole-module import when you use many items; prefer selective import when you
+                        need only a few names.</p>
+                </li>
+                <li>
+                    <p><strong>Avoid star imports:</strong> <code>from module import *</code> dumps many names into
+                        your file and makes origin hard to track. Teach students not to use it.</p>
+                </li>
+                <li>
+                    <p><strong>Standard library first:</strong> Many powerful modules ship with Python—no install
+                        needed—only <code>import</code>.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Discussion &amp; Talking Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Question 1:</strong> Why is it wise to reuse a well-tested module instead of writing
+                        everything from scratch?</p>
+                </li>
+                <li>
+                    <p><strong>Question 2:</strong> Show <code>import math</code> vs <code>from math import sqrt</code>
+                        side by side. Which style is clearer for a beginner reading someone else’s code?</p>
+                </li>
+                <li>
+                    <p><strong>Question 3:</strong> What problems can arise if two modules both define a function with
+                        the same name and you use star imports?</p>
+                </li>
+                <li>
+                    <p><strong>Question 4:</strong> Can you name tools you already use that are “modules” in daily
+                        life—recipes, hymnals, study guides written by others?</p>
+                </li>
+                <li>
+                    <p><strong>Question 5:</strong> How does receiving gifts from other believers (teachers, song
+                        writers, servants) parallel using modules others have written for the good of the whole body?
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Integration
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            <p>
+                Modules show the value of community and shared gifts. We do not build alone. God has given different
+                people different abilities for the common good—just as different modules contribute different strengths
+                to a program.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “There are diversities of gifts, but the same Spirit. There are differences of ministries, but the same
+                Lord. And there are diversities of activities, but it is the same God who works all in all. But the
+                manifestation of the Spirit is given to each one for the profit of all.” (1 Corinthians 12:4–7)<br><br>
+                “For as the body is one and has many members, but all the members of that one body, being many, are one
+                body, so also is Christ.” (1 Corinthians 12:12)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Talking Points - Lesson 001 Modules and Imports"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

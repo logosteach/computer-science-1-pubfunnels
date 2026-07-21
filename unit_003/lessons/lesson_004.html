@@ -1,0 +1,303 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Python Tuples</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to create tuples, how they differ from lists (immutability), when a tuple is the
+            better choice, and how to unpack fixed collections of data.
+        </p>
+
+        <!-- Creating tuples -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Creating Tuples
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <strong>tuple</strong> is an ordered collection written with parentheses. Items are separated by
+                commas. A one-item tuple needs a trailing comma so Python does not treat it as a plain value in
+                parentheses.</p>
+
+            <div class="code-example">
+                <span class="example-label">Empty, single-item, and multi-item tuples</span>
+                <pre><code>empty = ()
+point = (3, 5)
+rgb = (255, 128, 0)
+single = (42,)          # trailing comma required
+also_a_tuple = 10, 20   # parentheses optional when packing
+
+print(point)
+print(single)
+print(type(single))
+print(also_a_tuple)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>(3, 5)
+(42,)
+&lt;class 'tuple'&gt;
+(10, 20)</code></pre>
+
+            <div class="warning-box">
+                <strong>Watch out:</strong> <code>(42)</code> is just the integer 42.
+                <code>(42,)</code> is a one-element tuple. The comma is what makes it a tuple.
+            </div>
+        </div>
+
+        <!-- Access like lists -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Indexing and Length
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Like lists, tuples use zero-based indexes and support <code>len()</code> and negative indexes.</p>
+
+            <div class="code-example">
+                <span class="example-label">Read values by index</span>
+                <pre><code>card = ("Ace", "Spades")
+print(card[0])
+print(card[1])
+print(card[-1])
+print(len(card))</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Ace
+Spades
+Spades
+2</code></pre>
+        </div>
+
+        <!-- Immutability -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Tuples Are Immutable (Unlike Lists)
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>After a tuple is created, you cannot change, add, or remove its elements. That is the key difference from
+                a list.</p>
+
+            <div class="code-example">
+                <span class="example-label">Lists can change; tuples cannot</span>
+                <pre><code>scores_list = [88, 92, 75]
+scores_list[0] = 90          # OK for a list
+print(scores_list)
+
+scores_tuple = (88, 92, 75)
+# scores_tuple[0] = 90       # TypeError if uncommented
+print(scores_tuple)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>[90, 92, 75]
+(88, 92, 75)</code></pre>
+
+            <div class="warning-box">
+                <strong>Watch out:</strong> Trying to assign to a tuple index raises
+                <code>TypeError: 'tuple' object does not support item assignment</code>.
+            </div>
+        </div>
+
+        <!-- When to use tuples -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            When to Use a Tuple Instead of a List
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Choose a <strong>tuple</strong> when the collection should stay fixed: coordinates, RGB colors, days of
+                the week as a fixed sequence, or a small record of related values that should not be edited later.
+                Choose a <strong>list</strong> when you expect to append, remove, or reorder items.</p>
+
+            <div class="code-example">
+                <span class="example-label">Fixed data fits a tuple well</span>
+                <pre><code># Fixed pair: latitude and longitude should not be reordered by accident
+camp_location = (45.5231, -122.6765)
+
+# Fixed triple: red, green, blue
+logo_color = (44, 122, 123)
+
+print("Lat:", camp_location[0], "Lon:", camp_location[1])
+print("RGB:", logo_color)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Lat: 45.5231 Lon: -122.6765
+RGB: (44, 122, 123)</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> Immutability is a feature, not a limitation. It protects data that should remain
+                stable and makes your intent clearer to readers of your code.
+            </div>
+        </div>
+
+        <!-- Unpacking -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Unpacking Tuples
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p><strong>Unpacking</strong> assigns each item in a tuple to its own variable in one step. The number of
+                variables must match the number of items (unless you use advanced patterns later).</p>
+
+            <div class="code-example">
+                <span class="example-label">Basic unpacking</span>
+                <pre><code>student = ("Hannah", 15, "Python")
+name, age, course = student
+
+print(name)
+print(age)
+print(course)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Hannah
+15
+Python</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">Swap two variables with unpacking</span>
+                <pre><code>a = "first"
+b = "second"
+a, b = b, a
+print(a)
+print(b)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>second
+first</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">Loop over a list of tuples</span>
+                <pre><code>roster = [
+    ("Eli", "Cabin A"),
+    ("Maria", "Cabin B"),
+    ("Noah", "Cabin A"),
+]
+
+for name, cabin in roster:
+    print(name, "→", cabin)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Eli → Cabin A
+Maria → Cabin B
+Noah → Cabin A</code></pre>
+        </div>
+
+        <!-- Putting it together -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Putting It Together
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <div class="code-example">
+                <span class="example-label">Fixed week schedule as tuples</span>
+                <pre><code>schedule = (
+    ("Monday", "Lists review"),
+    ("Tuesday", "Sets lab"),
+    ("Wednesday", "Tuples intro"),
+)
+
+for day, topic in schedule:
+    print(f"{day}: {topic}")
+
+print("Days planned:", len(schedule))
+# schedule[0] = ("Monday", "Something else")  # would raise TypeError</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Monday: Lists review
+Tuesday: Sets lab
+Wednesday: Tuples intro
+Days planned: 3</code></pre>
+        </div>
+
+        <!-- Biblical Reflection -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                A tuple, once established, does not change. That stability is a small picture of something far greater:
+                God’s counsel and promises in Christ are immutable. What He has spoken stands firm.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “Thus God, determining to show more abundantly to the heirs of promise the immutability of His counsel,
+                confirmed it by an oath, that by two immutable things, in which it is impossible for God to lie, we
+                might have strong consolation, who have fled for refuge to lay hold of the hope set before us.”
+                (Hebrews 6:17–18)<br><br>
+                “For all the promises of God in Him are Yes, and in Him Amen, to the glory of God through us.”
+                (2 Corinthians 1:20)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 004 - Python Tuples Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

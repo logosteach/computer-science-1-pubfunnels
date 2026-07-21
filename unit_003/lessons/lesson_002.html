@@ -1,0 +1,344 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <style>
+        pre {
+            color: #222 !important;
+            border: 1px solid #e7f2fd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #222 !important;
+        }
+
+        .code-example {
+            background-color: #e7f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2c7a7b;
+            margin: 20px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="lesson-body">
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">
+                Python with a Worldview
+            </div>
+            <div class="header-right">
+                LogosTeach
+            </div>
+        </div>
+    </header>
+
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            <strong>Lesson Examples - Python Lists</strong>
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            These examples show how to create lists, access and change their elements, use helpful built-in functions,
+            and walk through a list with a <code>for</code> loop. Lists let you store an ordered collection of items in
+            one variable—names, scores, tasks, or anything else you need to organize.
+        </p>
+
+        <!-- Section 1: Creating lists -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Creating Lists
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <strong>list</strong> is written with square brackets. Items are separated by commas. Lists can hold
+                strings, numbers, or a mix of types. You can also start with an empty list and fill it later.</p>
+
+            <div class="code-example">
+                <span class="example-label">Empty list and lists with values</span>
+                <pre><code>empty_list = []
+campers = ["Maria", "Eli", "Noah", "Ava"]
+scores = [88, 92, 75, 100]
+mixed = ["Unit 3", 3, True]
+
+print(campers)
+print(scores)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['Maria', 'Eli', 'Noah', 'Ava']
+[88, 92, 75, 100]</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> Choose a clear, plural variable name when a list holds many related items
+                (for example, <code>campers</code> or <code>scores</code>). That makes your intent easy to read.
+            </div>
+        </div>
+
+        <!-- Section 2: Accessing elements -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Accessing Elements with Indexing
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>List positions start at <strong>0</strong>. Use square brackets to read one item. Negative indexes
+                count from the end: <code>-1</code> is the last item.</p>
+
+            <div class="code-example">
+                <span class="example-label">Positive and negative indexes</span>
+                <pre><code>fruits = ["apple", "banana", "cherry", "date"]
+
+print(fruits[0])    # first item
+print(fruits[2])    # third item
+print(fruits[-1])   # last item
+print(fruits[-2])   # second-to-last item</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>apple
+cherry
+date
+cherry</code></pre>
+
+            <div class="warning-box">
+                <strong>Watch out:</strong> Using an index that does not exist raises an
+                <code>IndexError</code>. For a list of length 4, valid indexes are <code>0</code> through
+                <code>3</code> (and <code>-1</code> through <code>-4</code>).
+            </div>
+        </div>
+
+        <!-- Section 3: Modify, append, insert, remove -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Modifying, Adding, and Removing Elements
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Lists are <strong>mutable</strong>: you can change them after they are created. Assign a new value at an
+                index, add with <code>append()</code> or <code>insert()</code>, and take items out with
+                <code>remove()</code>.</p>
+
+            <div class="code-example">
+                <span class="example-label">Change an element by index</span>
+                <pre><code>tasks = ["read", "practice", "review"]
+tasks[1] = "code lab"
+print(tasks)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['read', 'code lab', 'review']</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">append() adds to the end; insert() places at an index</span>
+                <pre><code>guests = ["Anna", "Ben"]
+guests.append("Caleb")      # add at the end
+guests.insert(1, "Debra")   # insert at index 1
+print(guests)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['Anna', 'Debra', 'Ben', 'Caleb']</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">remove() deletes the first matching value</span>
+                <pre><code>supplies = ["Bible", "notebook", "pen", "notebook"]
+supplies.remove("notebook")
+print(supplies)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>['Bible', 'pen', 'notebook']</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> <code>append(item)</code> always goes at the end.
+                <code>insert(index, item)</code> puts the item at that position and shifts later items right.
+                <code>remove(value)</code> looks for the value, not the index—and only removes the first match.
+            </div>
+
+            <div class="warning-box">
+                <strong>Watch out:</strong> If the value is not in the list, <code>remove()</code> raises a
+                <code>ValueError</code>. Check with <code>in</code> first when the item might be missing.
+            </div>
+        </div>
+
+        <!-- Section 4: Built-in functions -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Built-in Functions: <code>len()</code>, <code>min()</code>, <code>max()</code>, <code>sum()</code>
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>Python provides functions that work with lists without writing a loop yourself. Use
+                <code>len()</code> for how many items; for numeric lists, <code>min()</code>, <code>max()</code>, and
+                <code>sum()</code> find the smallest, largest, and total.</p>
+
+            <div class="code-example">
+                <span class="example-label">Length of any list</span>
+                <pre><code>team = ["Grace", "Isaac", "Leah", "Paul"]
+print(len(team))</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>4</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">min, max, and sum with numbers</span>
+                <pre><code>quiz_scores = [78, 91, 85, 100, 88]
+
+print(min(quiz_scores))
+print(max(quiz_scores))
+print(sum(quiz_scores))
+print(sum(quiz_scores) / len(quiz_scores))  # average</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>78
+100
+442
+88.4</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> <code>min()</code>, <code>max()</code>, and <code>sum()</code> work best when
+                every item is a number. Mixing strings and numbers will usually cause a <code>TypeError</code>.
+            </div>
+        </div>
+
+        <!-- Section 5: for loop -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Iterating with a <code>for</code> Loop
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>A <code>for</code> loop visits each element in order. The loop variable holds the current item for that
+                pass. This is the most common way to process every value in a list.</p>
+
+            <div class="code-example">
+                <span class="example-label">Print each item</span>
+                <pre><code>names = ["Ruth", "Boaz", "Naomi"]
+
+for name in names:
+    print(name)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Ruth
+Boaz
+Naomi</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">Use each item in a calculation</span>
+                <pre><code>points = [10, 15, 20]
+total = 0
+
+for score in points:
+    total = total + score
+
+print("Total points:", total)</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Total points: 45</code></pre>
+
+            <div class="code-example">
+                <span class="example-label">Combine a loop with a condition</span>
+                <pre><code>temperatures = [68, 72, 81, 65, 90]
+
+for temp in temperatures:
+    if temp >= 80:
+        print(temp, "is warm")
+    else:
+        print(temp, "is mild")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>68 is mild
+72 is mild
+81 is warm
+65 is mild
+90 is warm</code></pre>
+
+            <div class="tip">
+                <strong>Tip:</strong> Name the loop variable after a single item
+                (<code>for name in names</code>, not <code>for names in names</code>. Clear names make the loop easier
+                to understand.
+            </div>
+        </div>
+
+        <!-- Section 6: Putting it together -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Putting It Together
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <p>This short program creates a list, updates it with methods, reports statistics, and prints each
+                student.</p>
+
+            <div class="code-example">
+                <span class="example-label">A small class roster program</span>
+                <pre><code>students = ["Hannah", "Micah"]
+students.append("Silas")
+students.insert(0, "Esther")
+students.remove("Micah")
+
+print("Roster:", students)
+print("Count:", len(students))
+
+for student in students:
+    print("Welcome,", student + "!")</code></pre>
+            </div>
+            <p><strong>Output:</strong></p>
+            <pre><code>Roster: ['Esther', 'Hannah', 'Silas']
+Count: 3
+Welcome, Esther!
+Welcome, Hannah!
+Welcome, Silas!</code></pre>
+        </div>
+
+        <!-- Biblical Reflection / Anchored in Christ -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Reflection
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #2c7a7b;">
+            <p>
+                Just as a list gathers many items into one ordered collection—and each item keeps its own place and
+                purpose—God gathers His people into communities and families. No believer is leftover data. Each person
+                has value, and together we serve the whole body under Christ.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “For as we have many members in one body, but all the members do not have the same function, so we,
+                being many, are one body in Christ, and individually members of one another.” (Romans 12:4–5)<br><br>
+                “from whom the whole body, joined and knit together by what every joint supplies, according to the
+                effective working by which every part does its share, causes growth of the body for the edifying of
+                itself in love.” (Ephesians 4:16)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Feedback for Lesson 002 - Python Lists Examples"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>

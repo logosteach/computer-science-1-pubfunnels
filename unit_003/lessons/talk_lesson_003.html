@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="../../static/css/stylesheet.css">
+    <title>Lesson 003 - Python Sets | Talking Points</title>
+</head>
+
+<body>
+
+    <!-- ====================== DOCUMENT HEADER ====================== -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="header-left">Python with a Worldview</div>
+            <div class="header-right">LogosTeach</div>
+        </div>
+    </header>
+
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <div
+        style="line-height: 1.7; max-width: 1000px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
+
+        <h1
+            style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
+            Lesson 003 - Python Sets — Talking Points
+        </h1>
+
+        <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
+            Key talking points and discussion notes for teaching Python sets: uniqueness, unordered collections, set
+            operations, membership testing, and duplicate removal.
+        </p>
+
+        <!-- ==================== TALKING POINTS SECTION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Main Teaching Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>What a set is:</strong> A set stores unique elements. Create with <code>{...}</code> or
+                        <code>set()</code>. Empty set must be <code>set()</code>, not <code>{}</code> (that is a
+                        dictionary).</p>
+                </li>
+                <li>
+                    <p><strong>Unique and unordered:</strong> Duplicates are removed automatically. Order is not
+                        guaranteed—do not treat sets like lists with positions.</p>
+                </li>
+                <li>
+                    <p><strong>Core operations:</strong> Union (<code>|</code> / <code>.union()</code>), intersection
+                        (<code>&amp;</code> / <code>.intersection()</code>), difference (<code>-</code> /
+                        <code>.difference()</code>), symmetric difference (<code>^</code> /
+                        <code>.symmetric_difference()</code>).</p>
+                </li>
+                <li>
+                    <p><strong>Membership is fast:</strong> <code>value in my_set</code> is a common and efficient
+                        pattern for “is this already in the collection?”</p>
+                </li>
+                <li>
+                    <p><strong>Practical use:</strong> Convert a list to a set to remove duplicates; use
+                        <code>add()</code>, <code>remove()</code>, and <code>discard()</code> carefully
+                        (<code>discard</code> is safer when the item might be missing).</p>
+                </li>
+                <li>
+                    <p><strong>Compare structures:</strong> List = ordered, allows duplicates. Set = unique, unordered.
+                        Choose based on the job.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== DISCUSSION / DEEPER QUESTIONS ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Discussion &amp; Talking Points
+        </h2>
+        <div style="margin-bottom: 45px; padding-left: 28px;">
+            <ul style="font-size: 1.08em;">
+                <li>
+                    <p><strong>Question 1:</strong> Why would Python refuse to keep two identical values in a set? When
+                        is that helpful in a real program?</p>
+                </li>
+                <li>
+                    <p><strong>Question 2:</strong> What is the difference between union and intersection? Give a
+                        ministry or classroom example (two groups of students, two event sign-up lists).</p>
+                </li>
+                <li>
+                    <p><strong>Question 3:</strong> Why is <code>{}</code> not a safe way to create an empty set?</p>
+                </li>
+                <li>
+                    <p><strong>Question 4:</strong> When would you keep data in a list instead of a set, even if
+                        uniqueness matters later?</p>
+                </li>
+                <li>
+                    <p><strong>Question 5:</strong> How does “unique elements in one collection” help us talk about
+                        believers who are distinct yet one body in Christ?</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== BIBLICAL INTEGRATION ==================== -->
+        <h2
+            style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
+            Biblical Integration
+        </h2>
+        <div
+            style="margin-bottom: 45px; padding-left: 28px; font-style: italic; color: #1a3c5e; background-color: #f0f7f7; padding: 25px; border-left: 6px solid #1a3c5e;">
+            <p>
+                Sets remind us that each believer is unique, yet we belong together in one body. Uniqueness does not
+                cancel unity; unity does not erase the person God has made.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Scripture (NKJV):</strong><br>
+                “For as the body is one and has many members, but all the members of that one body, being many, are one
+                body, so also is Christ.” (1 Corinthians 12:12)<br><br>
+                “There is neither Jew nor Greek, there is neither slave nor free, there is neither male nor female; for
+                you are all one in Christ Jesus.” (Galatians 3:28)
+            </p>
+        </div>
+
+        <div
+            style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
+            <em>If you find any typos or errors, please let me know.</em><br><br>
+            <a href="mailto:info@logosteach.com?subject=Talking Points - Lesson 003 Python Sets"
+                style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
+        </div>
+
+        <div
+            style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
+            © 2026 LogosTeach - All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
