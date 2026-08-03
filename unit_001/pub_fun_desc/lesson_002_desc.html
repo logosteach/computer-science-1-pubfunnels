@@ -1,109 +1,204 @@
 <div
-    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
-    <h1
-        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-        Arithmetic, Variable Naming Rules and Conventions
-    </h1>
-
-    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-        In this lesson we will explore the basics of using the Python shell to perform arithmetic operations and understand important variable assignments, and the naming rules that come along with creating variables in Python. These elements will be foundational for all our future learning and work in this course. We will also reflect on the interactive nature of the Python shell and how this can parallel our relationship with God through Christ Jesus.
-    </p>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Objectives
-    </h2>
+  style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;"
+>
+  <h1
+    style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;"
+  >
+    <strong>Arithmetic, Variable Naming Rules and Conventions</strong>
+  </h1>
+  <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+    In this lesson we will explore the basics of using the Python shell to
+    perform arithmetic operations and understand important variable assignments,
+    and the naming rules that come along with creating variables in Python.
+    These elements will be foundational for all our future learning and work in
+    this course. We will also reflect on the interactive nature of the Python
+    shell and how this can parallel our relationship with God through Christ
+    Jesus.
+  </p>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Objectives
+  </h2>
+  <p>By the end of the lesson, learners will be able to:</p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
+    <li><p>Open and use the Python IDLE interactive shell.</p></li>
+    <li>
+      <p>
+        Execute simple Python commands and expressions directly in the shell.
+      </p>
+    </li>
+    <li>
+      <p>
+        Understand the difference between the interactive shell and running
+        saved scripts.
+      </p>
+    </li>
+    <li>
+      <p>
+        Use basic arithmetic operators and see immediate results in the shell.
+      </p>
+    </li>
+    <li>
+      <p>
+        Recognize and correct simple syntax errors in the interactive
+        environment.
+      </p>
+    </li>
+    <li>
+      <p>
+        Reflect on how the interactive nature of the Python IDLE shell (where we
+        type commands and receive immediate feedback) reminds us that our
+        relationship with God is not passive; rather, we are called to actively
+        engage in worship and adoration, listening to the preached word of God,
+        read the mouth of God (the scriptures), pray with thanksgiving and
+        supplications, and seek to share this glorious hope with others so that
+        our lives increasingly reflect the obedience of Christ.
+      </p>
+    </li>
+  </ul>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Reading Assignment
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 15px;">
+    Complete the following reading in your textbook before continuing:
+  </p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
+    <li>
+      <p>
+        For this unit you will be reading all of chapter 1. You do not have to
+        have all of chapter 1 read for this lesson. Also, make sure to download
+        and read through the
+        <u
+          ><span style="color: rgb(80, 174, 217) !important;"
+            >variable_naming_rules.pdf</span
+          ></u
+        >
+        files in the Attached Files section of this lesson.
+      </p>
+    </li>
+  </ul>
+  <p style="font-size: 1.08em; margin-bottom: 12px;">
+    <strong>While reading, pay special attention to:</strong> order of
+    operations, division, floor division, modulo division, variable naming
+    rules, convention, syntax, interpreter, case sensitive,
+  </p>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Video Resources
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 18px;">
+    Watch the following videos to reinforce and go beyond the concepts covered
+    in the reading: <strong>Note</strong>: These video files are from a previous
+    series of lessons. The content is still good, but you will, for now, see an
+    inconsistency in format. The instructor is aware of this
+  </p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+    <li><p>{{VIDEO_LIST}}</p></li>
+  </ul>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Practice Files
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 18px;">
+    Download the following files relevant to this lesson. This also includes the
+    computer lab for this lesson.
+  </p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+    <li>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_001/practice/practice_arithmetic_operators.py"
+          >Arithmetic Operators</a
+        >
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/unit_001/practice/practice_variable_naming.py"
+          >Variable Naming Rules</a
+        >
+      </p>
+    </li>
+  </ul>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Computer Lab
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 20px;">
+    The pdf file
+    <em style="color: rgb(26, 60, 94);">lesson_002-computer-lab.pdf</em> can be
+    found in the <strong>Attached Files</strong> section in this lesson.
+  </p>
+  <div
+    style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;"
+  >
     <p>
-        By the end of the lesson, learners will be able to:
+      <em>If you find any typos or errors, please let me know.</em
+      ><br /><br /><a
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"
+        ><strong>📧 Send me an email</strong></a
+      >
     </p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
-        <li>Open and use the Python IDLE interactive shell.</li>
-        <li>Execute simple Python commands and expressions directly in the shell.</li>
-        <li>Understand the difference between the interactive shell and running saved scripts.</li>
-        <li>Use basic arithmetic operators and see immediate results in the shell.</li>
-        <li>Recognize and correct simple syntax errors in the interactive environment.</li>
-        <li>Reflect on how the interactive nature of the Python IDLE shell (where we type commands and receive immediate feedback) reminds us that our relationship with God is not passive; rather, we are called to actively engage in worship and adoration, listening to the preached word of God, read the mouth of God (the scriptures), pray with thanksgiving and supplications, and seek to share this glorious hope with others so that our lives increasingly reflect the obedience of Christ.</li>
-    </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Reading Assignment
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 15px;">Complete the following reading in your textbook before
-        continuing:</p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
-        {{READING_ASSIGNMENT_LIST}}
-    </ul>
-    <p style="font-size: 1.08em; margin-bottom: 12px;"><strong>While reading, pay special attention to:</strong>
-        {{KEY_READING_FOCUS}}</p>
-    <p style="font-size: 1.05em; font-style: italic; color: #555555;">{{OPTIONAL_NOTE}}</p>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Video Resources
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 18px;">Watch the following videos to reinforce and go beyond the
-        concepts covered in the reading:</p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
-        {{VIDEO_LIST}}
-    </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Practice Files
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 18px;">Download the following files relevant to this lesson. This also
-        includes the computer lab for this lesson.</p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
-        {{PRACTICE_FILES_LIST}}
-    </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Computer Lab
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 20px;">
-        The pdf file <em style="color: #1a3c5e;">{{LAB_PDF_FILENAME}}</em> can be found in the <strong>Attached
-            Files</strong> section in this lesson.
+  </div>
+  <h2
+    style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;"
+  >
+    Anchored in Christ
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 22px;">
+    <strong>What Is In A Name?</strong>
+  </p>
+  <p style="font-size: 1.08em; margin-bottom: 22px;">
+    In this lesson we have been learning about naming our variables according to
+    the rules in Python. If a variable is named incorrectly, then Python has no
+    idea what to do with it. The entire program is wrong, just because one
+    little name is out of place. When everything is named according to the
+    rules, but time has not been taking to name the variables clearly and
+    carefully, then confusion can arise as to what the code is even doing, even
+    though it technically works. Having a name, having a clear name, and a name
+    with purpose is important. Yes, its even important in life.
+  </p>
+  <p style="font-size: 1.08em; margin-bottom: 22px;">
+    In the scriptures, your name is everything. It defines you. For a very large
+    part of human history it was understood that when you were part of a family,
+    you bore the family name. You could honor that family name, or dishonor it.
+    The preservation of the family name was everything. That might seem a little
+    odd to us now here in the 21st century with our increases sense of
+    individuality, but God never intended us to live as individual lone rangers.
+    The sense of belonging to a community and being named by the community is
+    still very important for His image bearers.
+  </p>
+  <p style="font-size: 1.08em; margin-bottom: 30px;">
+    In the book of Ephesians we read Paul tell the church: “So then you are no
+    longer strangers and aliens, but you are fellow citizens with the saints and
+    members of the household of God.” Did you know that another wonderful
+    blessing in the heavenly places is that Christ won back a name for you in
+    His Father's house? If you trust in Christ, you are His now. You are named
+    by Him, and that name is eternal.
+  </p>
+  <blockquote style="margin: 1.5em 0; padding: 1em 1.4em; border-left: 5px solid #4a6fa5; background-color: #f4f7fb; color: #2c3e50; font-style: italic; border-radius: 0 6px 6px 0; line-height: 1.6;">
+    <p>
+      <strong><em>Ephesians 2:19 </em></strong><em>- </em>“So then you are no
+      longer strangers and aliens, but you are fellow citizens with the saints
+      and members of the household of God.”
     </p>
-    <p style="font-size: 1.08em; margin-bottom: 25px;">
-        {{LAB_DESCRIPTION}}
-    </p>
-
-    <div
-        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-        <em>If you find any typos or errors, please let me know.</em><br><br>
-        <a href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"
-            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
-    </div>
-
-    <p style="font-size: 1.08em; margin: 25px 0 15px 0;"><strong>Deliverable:</strong> The student is responsible to
-        self-grade their work. Solutions are provided in the <strong>Attached Files</strong> section of this lesson.</p>
-    <p style="font-size: 1.08em; margin-bottom: 40px;">
-        {{DELIVERABLE_INSTRUCTIONS}}
-    </p>
-
-    <h2
-        style="font-size: 1.85em; margin: 55px 0 22px 0; color: #1a3c5e; border-left: 6px solid #1a3c5e; padding-left: 16px;">
-        Anchored in Christ
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 22px;">
-        {{ANCHOR_INTRO}}
-    </p>
-    <p style="font-size: 1.08em; margin-bottom: 22px;">
-        {{ANCHOR_BODY_1}}
-    </p>
-    <p style="font-size: 1.08em; margin-bottom: 30px;">
-        {{ANCHOR_BODY_2}}
-    </p>
-
-    <blockquote
-        style="background-color: #f0f7f7; border-left: 8px solid #2c7a7b; margin: 35px 0; padding: 28px 32px; font-style: italic; color: #1a3c5e; font-size: 1.12em; line-height: 1.65;">
-        {{SCRIPTURE_QUOTE}}
-    </blockquote>
-
-    <div
-        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-        &copy; 2026 LogosTeach - All Rights Reserved.
-    </div>
+  </blockquote>
+  <div
+    style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;"
+  >
+    <p>© 2026 LogosTeach - All Rights Reserved.</p>
+  </div>
 </div>

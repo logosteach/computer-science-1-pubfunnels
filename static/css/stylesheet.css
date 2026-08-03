@@ -163,12 +163,29 @@ code {
 }
 
 blockquote {
-  border-left: 4px solid #3b82f6;
-  padding: 10px 20px;
-  margin: 20px 0;
-  background-color: #f0f9ff;
-  color: #1e40af;
+  margin: 1.5em 0;
+  padding: 1em 1.4em;
+  border-left: 5px solid #4a6fa5;   /* accent color – change if you like */
+  background-color: #f4f7fb;        /* light background */
+  color: #2c3e50;                   /* dark, readable text */
   font-style: italic;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+}
+
+/* Optional: nicer styling for a citation/source under the quote */
+blockquote footer,
+blockquote cite {
+  display: block;
+  margin-top: 0.75em;
+  font-style: normal;
+  font-size: 0.9em;
+  color: #5a6a7a;
+}
+
+/* Optional: remove extra margin on the paragraph inside the blockquote */
+blockquote p {
+  margin: 0;
 }
 
 /* ==================== SPECIAL BOXES & CALLOUTS ==================== */
