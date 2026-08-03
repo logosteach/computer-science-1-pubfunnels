@@ -426,3 +426,116 @@ mark {
   font-style: italic;
   color: #5c3f45;
 }
+
+.emph-coral {
+  color: #ff7f50;
+  font-style: italic;
+}
+
+.emph-purple {
+  color: #802fd0;
+  font-style: italic;
+}
+
+/* Table Styles */
+/* ==================== TABLES ==================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4em 0 1.8em 0;
+  font-size: 0.92em;
+  line-height: 1.4;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(13, 51, 88, 0.08);
+  border-radius: 6px;
+  overflow: hidden;          /* keeps the rounded corners clean */
+}
+
+/* Header row */
+thead th,
+table th {
+  background-color: #0d3358;   /* same dark blue as your document header */
+  color: #ffffff;
+  font-weight: 600;
+  text-align: left;
+  padding: 11px 14px;
+  border-bottom: 2px solid #0a2540;
+  letter-spacing: 0.3px;
+}
+
+/* Body cells */
+tbody td,
+table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+  color: #333;
+}
+
+/* Alternating rows for readability */
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tbody tr:hover {
+  background-color: #f0f7ff;   /* soft blue hover (nice in browser preview) */
+}
+
+/* Last row – remove bottom border so the table feels finished */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Make sure code inside tables looks exactly like the rest of the document */
+table code,
+th code,
+td code {
+  font-family: "Source Code Pro", monospace;
+  padding: 2px 5px;
+  color: #232323 !important;
+  background-color: #becfef !important;
+  border-radius: 3px;
+  font-size: 0.85em;          /* slightly larger than body inline code so it stays readable */
+  white-space: nowrap;
+}
+
+/* Optional: tighter style when a table is used for very compact data */
+table.compact th,
+table.compact td {
+  padding: 7px 10px;
+  font-size: 0.88em;
+}
+
+/* Vocabulary Styles */
+/* ==================== VOCABULARY BOX ==================== */
+.vocabulary {
+  background-color: #f0f7ff;
+  border-left: 6px solid #0d3358;
+  border-radius: 8px;
+  padding: 22px 28px 18px 28px;
+  margin: 2.2em 0 1.8em 0;
+  box-shadow: 0 3px 12px rgba(13, 51, 88, 0.08);
+}
+
+.vocabulary h3 {
+  margin-top: 0;
+  margin-bottom: 1.1em;
+  color: #0d3358;
+  font-size: 1.25em;
+  border-bottom: 2px solid #c5d7f0;
+  padding-bottom: 6px;
+}
+
+.vocabulary p {
+  margin: 0 0 1.05em 0;
+  line-height: 1.55;
+}
+
+.vocabulary p:last-child {
+  margin-bottom: 0;
+}
+
+.vocabulary strong {
+  color: #0d3358;
+  font-weight: 600;
+}
