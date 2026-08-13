@@ -1,0 +1,9 @@
+# Shopping for Failure
+
+Fran settled into her cozy office, the warm lamplight casting a soft glow over her desk. In the corner, her cat Mr. Buttons was purring softly, a steady little rumble that gave her a clear mind with the ability to think. She was an experienced programmer building a grocery total calculator for an application at her company, and even after years of writing code she still reached for test-driven development. It kept her honest and taught her something every time.
+
+She started the way she always did: by writing a simple pytest test for an empty list, expecting the total to come back as zero. She ran it and watched it fail on purpose. That red failure wasn’t a setback—it was the first clear target. Next she wrote a test that fed the function mixed data types, strings and None values mixed in with prices, and made sure it raised a ValueError instead of crashing later. She added another test for negative prices that should never be allowed, then tests for different tax rates on food versus household items, and finally coupons that had to discount the total before tax was applied.
+
+Each time she wrote the failing test first, then the smallest bit of code that made it pass, then cleaned the code up while the tests stayed green. Even as an experienced developer, Fran still learned from the process. The failures showed her edge cases she might have overlooked, and the steady rhythm of red-green-refactor kept her thinking clearly. By the end of the evening her function was solid, ready for real customer carts, and she smiled at the quiet progress that only comes from hunting for the right failures first.
+
+Just then Fran felt the soft nudge of Mr. Buttons at her feet. She knew it was time to feed him, and her programming would have to wait for now. Mr. Buttons was quite determined when it came to mealtime.
