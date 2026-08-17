@@ -1,0 +1,142 @@
+<div style="max-width: 780px; margin: 40px auto; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;">
+
+  <!-- Windows 11 Style Window -->
+  <div style="background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0,0,0,0.06);">
+
+    <!-- Title Bar -->
+    <div style="background: #ffffff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e5e5;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 16px; height: 16px; background: linear-gradient(135deg, #0078d4, #00bcf2); border-radius: 3px;"></div>
+        <span style="font-size: 0.95rem; color: #1a1a1a; font-weight: 500;">Boolean Truth Tables</span>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: center;">
+        <span style="color: #555; font-size: 1.1rem; line-height: 1;">─</span>
+        <span style="color: #555; font-size: 0.95rem; line-height: 1;">□</span>
+        <span style="color: #555; font-size: 1.15rem; line-height: 1;">×</span>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div style="padding: 28px 30px 32px; background: #f9f9f9;">
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+
+        <!-- AND Table -->
+        <div>
+          <h3 style="margin: 0 0 12px 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600;">AND</h3>
+          <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <tr style="background: #f0f0f0;">
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">B</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A AND B</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- OR Table -->
+        <div>
+          <h3 style="margin: 0 0 12px 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600;">OR</h3>
+          <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <tr style="background: #f0f0f0;">
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">B</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A OR B</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- XOR Table -->
+        <div>
+          <h3 style="margin: 0 0 12px 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600;">XOR</h3>
+          <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <tr style="background: #f0f0f0;">
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">B</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A XOR B</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- NOT Table -->
+        <div>
+          <h3 style="margin: 0 0 12px 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600;">NOT</h3>
+          <table style="width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <tr style="background: #f0f0f0;">
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">A</th>
+              <th style="padding: 9px 12px; text-align: center; font-size: 0.9rem; color: #333; font-weight: 600;">NOT A</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222; font-weight: 600;">True</td>
+            </tr>
+            <tr style="background: #fafafa;">
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">True</td>
+              <td style="padding: 8px 12px; text-align: center; border-top: 1px solid #eee; color: #222;">False</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

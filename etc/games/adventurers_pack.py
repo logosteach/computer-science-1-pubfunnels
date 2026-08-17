@@ -140,3 +140,5 @@ while True:
     # ----- Invalid menu choice -----
     else:
         print("\nPlease enter a number from 1 to 8.")
+        
+# Copyright 2026 LogosTeach - All Rights Reserved
