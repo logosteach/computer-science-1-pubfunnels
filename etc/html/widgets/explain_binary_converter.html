@@ -1,0 +1,151 @@
+<div style="max-width: 780px; margin: 40px auto; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #ffffff; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); overflow: hidden; border: 1px solid #e2e8f0;">
+
+  <!-- Header -->
+  <div style="background: linear-gradient(135deg, #1e3a5f, #1e40af); padding: 24px 32px; color: white;">
+    <h2 style="margin: 0 0 6px 0; font-size: 1.6rem; font-weight: 600;">Binary ↔ Decimal Converter</h2>
+    <p style="margin: 0; opacity: 0.9; font-size: 1rem;">A Python practice tool that helps you master number base conversion</p>
+  </div>
+
+  <!-- Intro -->
+  <div style="padding: 24px 32px 8px;">
+    <p style="margin: 0 0 16px 0; color: #334155; font-size: 1.05rem; line-height: 1.6;">
+      This desktop application lets you convert positive integers into binary and binary numbers back into decimal. 
+      It shows every step of the process so you can see exactly how the conversion works.
+    </p>
+  </div>
+
+  <!-- What you will learn -->
+  <div style="padding: 0 32px 20px;">
+    <div style="background: #f0f9ff; border-left: 5px solid #0284c7; border-radius: 8px; padding: 16px 20px;">
+      <p style="margin: 0 0 8px 0; color: #0c4a6e; font-weight: 600; font-size: 1.05rem;">What you will practice</p>
+      <ul style="margin: 0; padding-left: 20px; color: #334155; line-height: 1.7;">
+        <li>Converting decimal numbers to binary using repeated division</li>
+        <li>Converting binary numbers to decimal using place values</li>
+        <li>Understanding powers of 2 (1, 2, 4, 8, 16, 32…)</li>
+        <li>Reading remainders from bottom to top</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- How to use -->
+  <div style="padding: 0 32px 24px;">
+    <h3 style="margin: 0 0 12px 0; color: #1e3a5f; font-size: 1.15rem;">How to use the app</h3>
+    <ol style="margin: 0; padding-left: 22px; color: #334155; line-height: 1.7;">
+      <li>Choose your preferred text size (Small, Regular, or Large) at the top.</li>
+      <li>In the left panel, type a positive integer and click <strong>Convert to Binary</strong>.</li>
+      <li>In the right panel, type a binary number (only 0s and 1s) and click <strong>Convert to Decimal</strong>.</li>
+      <li>Watch the step-by-step work and the visual place-value chart update.</li>
+      <li>Try converting the same number both ways to check your understanding.</li>
+    </ol>
+  </div>
+
+  <!-- Visual Mockup of the running app -->
+  <div style="padding: 0 32px 28px;">
+    <p style="margin: 0 0 12px 0; color: #1e3a5f; font-weight: 600; font-size: 1.05rem;">What the running app looks like</p>
+
+    <!-- Fake window -->
+    <div style="background: #f1f5f9; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 1px solid #cbd5e1;">
+
+      <!-- Fake title bar -->
+      <div style="background: #1e3a5f; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="color: white; font-size: 0.9rem; font-weight: 500;">Binary ↔ Decimal Converter</span>
+        <div style="display: flex; gap: 8px;">
+          <span style="color: #94a3b8; font-size: 0.85rem;">─</span>
+          <span style="color: #94a3b8; font-size: 0.85rem;">□</span>
+          <span style="color: #94a3b8; font-size: 0.95rem;">×</span>
+        </div>
+      </div>
+
+      <!-- Font size bar -->
+      <div style="background: #e2e8f0; padding: 8px 16px; font-size: 0.85rem; color: #334155;">
+        Text size: &nbsp; ○ Small &nbsp; ● Regular &nbsp; ○ Large
+      </div>
+
+      <!-- Content mockup -->
+      <div style="padding: 16px; background: #f8fafc;">
+
+        <!-- Explanation mock -->
+        <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 14px; font-size: 0.82rem; color: #475569; line-height: 1.45;">
+          <strong style="color: #1e3a5f;">How the Conversion Works</strong><br>
+          Decimal → Binary: Repeatedly divide by 2 and record remainders…<br>
+          Binary → Decimal: Multiply each bit by its place value and add…
+        </div>
+
+        <!-- Two panes -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+          
+          <!-- Left pane -->
+          <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+            <div style="font-size: 0.85rem; font-weight: 600; color: #1e3a5f; margin-bottom: 8px;">Decimal → Binary</div>
+            <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 5px; padding: 6px 10px; font-size: 0.85rem; color: #64748b; margin-bottom: 8px;">13</div>
+            <div style="background: #2563eb; color: white; text-align: center; padding: 7px; border-radius: 5px; font-size: 0.82rem; font-weight: 600; margin-bottom: 10px;">Convert to Binary</div>
+            <div style="background: #f8fafc; border-radius: 5px; padding: 10px; font-family: Consolas, monospace; font-size: 0.78rem; color: #1e293b; line-height: 1.5;">
+              13₁₀ = 1101₂<br><br>
+              13 ÷ 2 = 6 remainder 1<br>
+              6 ÷ 2 = 3 remainder 0<br>
+              3 ÷ 2 = 1 remainder 1<br>
+              1 ÷ 2 = 0 remainder 1
+            </div>
+          </div>
+
+          <!-- Right pane -->
+          <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+            <div style="font-size: 0.85rem; font-weight: 600; color: #1e3a5f; margin-bottom: 8px;">Binary → Decimal</div>
+            <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 5px; padding: 6px 10px; font-size: 0.85rem; color: #64748b; font-family: monospace; margin-bottom: 8px;">1101</div>
+            <div style="background: #059669; color: white; text-align: center; padding: 7px; border-radius: 5px; font-size: 0.82rem; font-weight: 600; margin-bottom: 10px;">Convert to Decimal</div>
+            <div style="background: #f8fafc; border-radius: 5px; padding: 10px; font-family: Consolas, monospace; font-size: 0.78rem; color: #1e293b; line-height: 1.5;">
+              1101₂ = 13₁₀<br><br>
+              8 + 4 + 0 + 1 = 13
+            </div>
+          </div>
+        </div>
+
+        <!-- Place value chart mock -->
+        <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+          <div style="font-size: 0.85rem; font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Visual Place Values</div>
+          <div style="display: flex; gap: 8px; justify-content: center;">
+            <div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 6px; padding: 6px 10px; text-align: center; min-width: 48px;">
+              <div style="font-size: 0.7rem; color: #64748b;">2³</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: #475569;">8</div>
+              <div style="font-size: 1.1rem; font-weight: 700; color: #1d4ed8; font-family: monospace;">1</div>
+            </div>
+            <div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 6px; padding: 6px 10px; text-align: center; min-width: 48px;">
+              <div style="font-size: 0.7rem; color: #64748b;">2²</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: #475569;">4</div>
+              <div style="font-size: 1.1rem; font-weight: 700; color: #1d4ed8; font-family: monospace;">1</div>
+            </div>
+            <div style="background: #f1f5f9; border: 2px solid #e2e8f0; border-radius: 6px; padding: 6px 10px; text-align: center; min-width: 48px;">
+              <div style="font-size: 0.7rem; color: #64748b;">2¹</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: #475569;">2</div>
+              <div style="font-size: 1.1rem; font-weight: 700; color: #94a3b8; font-family: monospace;">0</div>
+            </div>
+            <div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 6px; padding: 6px 10px; text-align: center; min-width: 48px;">
+              <div style="font-size: 0.7rem; color: #64748b;">2⁰</div>
+              <div style="font-size: 0.8rem; font-weight: 600; color: #475569;">1</div>
+              <div style="font-size: 1.1rem; font-weight: 700; color: #1d4ed8; font-family: monospace;">1</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Download / Link Button -->
+  <div style="padding: 0 32px 28px; text-align: center;">
+    <a href="https://github.com/logosteach/computer-science-1-pubfunnels/blob/main/etc/python/widgets/binary_converter.py"
+       style="display: inline-block; background: linear-gradient(135deg, #1e40af, #1e3a5f); color: #ffffff; text-decoration: none; font-weight: 600; font-size: 1.05rem; padding: 14px 36px; border-radius: 50px; box-shadow: 0 4px 14px rgba(30, 64, 175, 0.35);">
+      Get the Python App →
+    </a>
+    <p style="margin: 14px 0 0 0; font-size: 0.88rem; color: #64748b;">
+      Click the button to open the full program on GitHub
+    </p>
+  </div>
+
+  <!-- Note -->
+  <div style="background: #f8fafc; padding: 16px 32px; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #64748b; text-align: center;">
+    This is a self-contained Python program that uses Tkinter. Download the file and run it with:<br>
+    <code style="background:#e2e8f0; padding:3px 8px; border-radius:4px; display:inline-block; margin-top:6px;">python binary_converter.py</code>
+  </div>
+
+</div>
