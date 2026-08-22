@@ -1,4 +1,5 @@
 ### STYLE TAG
+
 16-bit SNES video game soundtrack, chiptune, fun uplifting hopeful encouraging, mid-tempo, square wave lead melodies, triangle wave bass, soft warm pads, light pixel percussion, subtle orchestral strings accents, instrumental, no vocals, background music for narration, unobtrusive supporting role, soft dynamics after intro, 2 second intro, 2 second powerful outro, no loud drums, no busy arpeggios during main body.
 
 ### LYRICS FIELD (STRUCTURE ONLY)
