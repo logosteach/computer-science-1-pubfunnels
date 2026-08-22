@@ -25,3 +25,7 @@ static/pdf
 *.webm   # can contain audio
 static/media/videos/*
 static/media/audios/*
+
+*.two_factor_security_for_pub_fun.md
+./critical
+critical/*
