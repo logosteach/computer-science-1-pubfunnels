@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Code+Pro:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <title>Assessment - Unit 001: Python Foundations, Tools &amp; First Programs</title>
+    <style>
+        body {
+            font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 35px;
+            background-color: #f8f9fa;
+            color: #333333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin-bottom: 10px;
+            color: #1a3c5e;
+            border-bottom: 6px solid #2c7a7b;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.85em;
+            margin: 45px 0 18px;
+            color: #2c7a7b;
+            border-left: 7px solid #2c7a7b;
+            padding-left: 18px;
+        }
+
+        p code,
+        li code {
+            padding: 2px 6px;
+            color: #1d2b53;
+            background-color: #dafcef;
+            border-radius: 3px;
+        }
+
+        .header-info {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .instructions {
+            background-color: #f0f7f7;
+            padding: 20px;
+            border-left: 7px solid #2c7a7b;
+            margin: 25px 0;
+            font-size: 1.08em;
+        }
+
+        .question {
+            margin-bottom: 35px;
+        }
+
+        .question pre {
+            margin: 8px 0 14px 0;
+            padding: 12px 16px;
+            background-color: #f4f6f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            text-indent: 0;
+            margin-left: 0;
+        }
+
+        .coding-box {
+            background-color: #f8f9fa;
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Source Code Pro', Consolas, Monaco, 'Courier New', monospace;
+            white-space: pre-wrap;
+            min-height: 120px;
+        }
+
+        .footer {
+            margin-top: 70px;
+            padding-top: 25px;
+            border-top: 2px solid #e0e0e0;
+            font-size: 0.95em;
+            color: #777777;
+            text-align: center;
+        }
+
+        .biblical {
+            font-style: italic;
+            color: #1a3c5e;
+            background-color: #f0f7f7;
+            padding: 20px;
+            border-left: 6px solid #2c7a7b;
+        }
+
+        .page-break {
+            page-break-before: always;
+            page-break-after: always;
+            page-break-inside: avoid;
+            display: block;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        pre,
+        code {
+            font-family: 'Source Code Pro', Consolas, Monaco, 'Courier New', monospace;
+            font-size: 1.02em;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 14px 16px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .question ol {
+            margin-top: 12px;
+        }
+
+        .question li {
+            margin-bottom: 12px;
+        }
+
+        .disclaimer {
+            background-color: #f8f9fa;
+            padding: 18px;
+            border-left: 5px solid #2c7a7b;
+            margin: 30px 0;
+            font-size: 0.98em;
+            font-style: italic;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 001: Python Foundations, Tools &amp; First Programs Assessment</h1>
+
+        <div class="header-info">
+            <strong>Student Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp;
+            <strong>Date:</strong> _______________________________<br>
+            <strong>Unit:</strong> 001 – Python Foundations, Tools &amp; First Programs &nbsp;&nbsp;&nbsp;
+            <strong>Total Points Possible:</strong> ______
+        </div>
+
+        <div class="instructions">
+            <strong>Instructions:</strong> Review all learning objectives from the lessons in this unit before beginning. You may use your IDE (IDLE or VS Code) to write and test your code. Please minimize the use of AI tools during this assessment — the goal is to develop independent thinking, creativity, and problem-solving skills. Write all code as clearly and cleanly as possible, and test your solutions thoroughly before submitting. This assessment is designed for both students working asynchronously alone and those in a group with an instructor.
+        </div>
+
+        <!-- Section 1: Multiple Choice -->
+        <h2>Section 1: Knowledge &amp; Understanding</h2>
+
+        <div class="question">
+            <p><strong>1.</strong> IDLE, the integrated development environment that comes with Python, provides two primary ways to interact with Python code. How many main modes (or windows) does IDLE have? (__ points)</p>
+            <ul>
+                <li>a) 1</li>
+                <li>b) 2</li>
+                <li>c) 3</li>
+                <li>d) 4</li>
+                <li>e) 40 (like the days and nights of rain during the flood of Noah)</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>2.</strong> Python variable names must follow specific naming conventions. Which of the following is a valid variable name that would <strong>not</strong> cause a syntax error? (__ points)</p>
+            <ul>
+                <li>a) <code>2score</code></li>
+                <li>b) <code>my-score</code></li>
+                <li>c) <code>my score</code></li>
+                <li>d) <code>my_score</code></li>
+                <li>e) <code>fred#37</code></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>3.</strong> In Python, the conventional style for naming ordinary variables (as recommended by PEP 8) is called snake_case. Which of the following correctly follows that convention? (__ points)</p>
+            <ul>
+                <li>a) <code>studentName</code></li>
+                <li>b) <code>StudentName</code></li>
+                <li>c) <code>student_name</code></li>
+                <li>d) <code>STUDENT_NAME</code></li>
+                <li>e) <code>studentname#1</code></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>4.</strong> Dustin wants to use the variable name <code>hit points for my hero player</code> in his Python code. This name will cause an immediate error when he tries to run the program. What is the main reason it will cause a syntax error? (__ points)</p>
+            <ul>
+                <li>a) Variable names cannot contain spaces</li>
+                <li>b) Variable names must start with a capital letter</li>
+                <li>c) Variable names should be kept reasonably short and concise</li>
+                <li>d) Variable names cannot be longer than 20 characters</li>
+                <li>e) Variable names must include at least one number</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>5.</strong> In the IDLE interactive shell, the symbol that appears before the cursor (where you type Python commands) looks like three consecutive greater-than signs (<code>&gt;&gt;&gt;</code>). The specific name for this is called the Python prompt. In our lessons, what is the name that we have used to refer to these symbols? (__ points)</p>
+            <ul>
+                <li>a) The triple arrow</li>
+                <li>b) The shell indicator</li>
+                <li>c) Chevrons</li>
+                <li>d) The input marker</li>
+                <li>e) The “ready to code” blinker</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>6.</strong> Given the following variable assignments:</p>
+            <pre>x = 5
+y = 6
+z = 7</pre>
+            <p>Consider this line of code:</p>
+            <pre>w = xy + z   # This line will cause an error.</pre>
+            <p>What will happen when Python tries to execute this line? (__ points)</p>
+            <ul>
+                <li>a) It will calculate 5 × 6 + 7 and store 37 into <code>w</code></li>
+                <li>b) It will calculate 5 + 6 × 7 and store 47 into <code>w</code></li>
+                <li>c) It will produce a NameError because “xy” is not defined</li>
+                <li>d) It will automatically treat “xy” as a multiplication and store 37 into <code>w</code></li>
+                <li>e) It will treat “xy” as a new variable and add the value of <code>z</code> to it (resulting in an unpredictable number)</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>7.</strong> In the IDLE editor window (the window used for writing and editing Python scripts), does IDLE allow the user to display line numbers along the left margin to show which line of code they are on? (__ points)</p>
+            <ul>
+                <li>a) Yes</li>
+                <li>b) No</li>
+                <li>c) Only in the shell window, not the editor</li>
+                <li>d) Only if you install a special extension</li>
+                <li>e) Only if you manually type the numbers yourself at the start of each line</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>8.</strong> Given the following variable assignment:</p>
+            <pre>name = "Henry"</pre>
+            <p>Which of the following <code>print()</code> statements would produce the exact output:</p>
+            <pre>Hello my name is Henry</pre>
+            <p>(__ points)</p>
+            <ul>
+                <li>a) <code>print("Hello my name is " + name)</code></li>
+                <li>b) <code>print("Hello my name is " name)</code></li>
+                <li>c) <code>print("Hello my name is ", name)</code></li>
+                <li>d) <code>print("Hello my name is " + "name")</code></li>
+                <li>e) <code>print("Hello my name is name")</code></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>9.</strong> Does IDLE allow the user to configure it so that, when you launch the program, it opens directly to either the shell window or the editor window? (__ points)</p>
+            <ul>
+                <li>a) Yes</li>
+                <li>b) No</li>
+                <li>c) Yes, but only in Windows</li>
+                <li>d) Yes, but only if you create a custom shortcut</li>
+                <li>e) No, it always opens a blank editor window with no shell</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>10.</strong> Given the following variable assignments:</p>
+            <pre>x = 3
+y = 8</pre>
+            <p>Which of the following Python expressions would correctly calculate two <em>x</em> squared minus <em>y</em> (that is 2 · <em>x</em>² − <em>y</em>, which equals 10)? (__ points)</p>
+            <ul>
+                <li>a) <code>2 * x ** 2 - y</code></li>
+                <li>b) <code>2 * x * 2 - y</code></li>
+                <li>c) <code>2 x ** 2 - y</code></li>
+                <li>d) <code>2 * x^2 - y</code></li>
+                <li>e) <code>2 x squared minus y</code></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>11.</strong> Students have learned that the <code>print()</code> function has a default setting that controls what is placed at the end of the printed output, but that setting can be changed using the <code>end</code> parameter.</p>
+            <p>Consider the following Python code:</p>
+            <pre>print("Apple", end="&amp;")
+print("Banana", end="&amp;")
+print("Cherry", end="&amp;")</pre>
+            <p>When this code is run, what will the exact output look like? (__ points)</p>
+            <ul>
+                <li>a) Apple Banana Cherry</li>
+                <li>b) Apple&amp;Banana&amp;Cherry</li>
+                <li>c) Apple<br>Banana<br>Cherry</li>
+                <li>d) Apple&amp;&gt;&gt;&gt;<br>Banana&amp;&gt;&gt;&gt;<br>Cherry&amp;&gt;&gt;&gt;</li>
+                <li>e) Apple&amp;&gt;&gt;&gt;Banana&amp;&gt;&gt;&gt;Cherry&amp;&gt;&gt;&gt;</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>12.</strong> Given the following Python script:</p>
+            <pre>age = 21
+print("I am " + age + " years old.")</pre>
+            <p>What will happen when Python tries to execute these lines of code? (__ points)</p>
+            <ul>
+                <li>a) It will print: I am 21 years old.</li>
+                <li>b) It will print: I am 21 years old. (But with extra spaces)</li>
+                <li>c) It will produce a TypeError because you cannot concatenate a string and an integer.</li>
+                <li>d) It will automatically convert the number to a string and print the message correctly.</li>
+                <li>e) It will crash the entire computer (because numbers and words do not mix!)</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>13.</strong> Danielle wants to write a short Python script that produces the following exact output:</p>
+            <pre>Hello Everyone! My name is Danielle
+I am 17 years old</pre>
+            <p>She decides to use variables to store her name and age. Which of the following sets of Python statements accomplishes this goal in the best and most minimal way? (__ points)</p>
+            <ul>
+                <li>a)
+                    <pre>name = "Danielle"
+age = 17
+print("Hello Everyone! My name is " + name)
+print("I am " + str(age) + " years old")</pre>
+                </li>
+                <li>b)
+                    <pre>print("Hello Everyone! My name is Danielle")
+print("I am 17 years old")</pre>
+                </li>
+                <li>c)
+                    <pre>name = "Danielle"
+age = 17
+print("Hello Everyone! My name is ", name)
+print("I am ", age, " years old")</pre>
+                </li>
+                <li>d)
+                    <pre>name = "Danielle"
+age = 17
+print("Hello Everyone! My name is ", name)
+print("I am " + age + " years old")</pre>
+                </li>
+                <li>e)
+                    <pre>name = "Danielle"
+age = 17
+print("Hello Everyone! My name is Danielle")
+print("I am 17 years old")</pre>
+                </li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>14.</strong> In Python, when you run a script or type a command and Python responds with an error message that starts with <strong>SyntaxError</strong>, what does this mean? (__ points)</p>
+            <ul>
+                <li>a) The code ran successfully, but the output was not what you expected.</li>
+                <li>b) Python found a problem with the “grammar” or structure of the code itself, making it invalid Python before it even tries to run it.</li>
+                <li>c) There is a logical mistake in the code that causes the wrong mathematical result.</li>
+                <li>d) Python could not find a variable or function that was referenced.</li>
+                <li>e) Python ran out of memory while trying to execute code.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>15.</strong> In Python, <strong>SyntaxError</strong> and <strong>NameError</strong> are two common types of errors students encounter. What is the key difference between a <strong>SyntaxError</strong> and a <strong>NameError</strong>? (__ points)</p>
+            <ul>
+                <li>a) SyntaxError happens when you use the wrong math operator (+ instead of −); NameError happens when you forget quotes around text.</li>
+                <li>b) SyntaxError occurs before Python tries to run the code (invalid structure/grammar); NameError occurs during execution (variable name not defined).</li>
+                <li>c) SyntaxError is only in the IDLE shell; NameError is only in saved scripts.</li>
+                <li>d) SyntaxError crashes IDLE completely; NameError just prints a warning.</li>
+                <li>e) SyntaxError means “name is too long”; NameError means “name is too short”.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>16.</strong> Students have learned how to use the square root function by importing it from Python’s built-in <code>math</code> module. Which of the following import statements is the correct way to make the <code>sqrt</code> function available for use? (__ points)</p>
+            <ul>
+                <li>a) <code>import sqrt from math</code></li>
+                <li>b) <code>from math import sqrt</code></li>
+                <li>c) <code>import math.sqrt</code></li>
+                <li>d) <code>sqrt = math.sqrt</code></li>
+                <li>e) <code>from math import *</code></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>17.</strong> Maria is building a square garden in her backyard. She has decided that the area of the garden will be exactly 144 square feet. To find the length of each side she needs the square root of 144. Which of the following complete Python scripts correctly imports the <code>sqrt</code> function and prints the exact side length of Maria’s garden? (__ points)</p>
+            <ul>
+                <li>a)
+                    <pre>import math
+print(math.sqrt(144))</pre>
+                </li>
+                <li>b)
+                    <pre>from math import sqrt
+print(sqrt(12))</pre>
+                </li>
+                <li>c)
+                    <pre>from math import sqrt
+print(sqrt(144 * 144))</pre>
+                </li>
+                <li>d)
+                    <pre>from math import sqrt
+print(sqrt(144))</pre>
+                </li>
+                <li>e)
+                    <pre>import sqrt
+print(sqrt(144))</pre>
+                </li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>18.</strong> In VS Code, when browsing the Extensions Marketplace to add a Python Extension for your project, you notice two similar extensions.<br>
+            Extension A has 2.5 million downloads, 4,837 reviews averaging 4.8 stars and is published by “Microsoft”.<br>
+            Extension B has 1,200 downloads, 3 reviews averaging 5 stars, and is published by “QuickCode LLC”.<br>
+            Which extension should you primarily choose, and why? (__ points)</p>
+            <ul>
+                <li>a) Extension A, because high download count and many reviews indicate widespread use and trustworthiness.</li>
+                <li>b) Extension B, because of its perfect 5-star rating.</li>
+                <li>c) Extension A, because Microsoft is a world-known publisher of software.</li>
+                <li>d) Extension B, because fewer reviews mean less bias in the ratings.</li>
+                <li>e) Flip a coin between them (or choose the one with the prettiest icon).</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>19.</strong> You are starting a new Python project in VS Code and want to keep your files organized. Which of the following sequences best describes the correct steps to create a dedicated project folder (named “MyPythonProject”) and then open it in VS Code so you can start adding Python files inside it? (__ points)</p>
+            <ul>
+                <li>a) 1. In VS Code, go to File → New File<br>2. Save the file as MyPythonProject.py<br>3. VS Code automatically creates a folder for you.</li>
+                <li>b) 1. On your computer, create a new folder named MyPythonProject (using File Explorer or Finder)<br>2. Open VS Code<br>3. In VS Code, go to File → Open Folder and select the MyPythonProject folder.</li>
+                <li>c) 1. In VS Code, go to the Extensions view<br>2. Install a special “Folder Creator” extension<br>3. Use that extension to make the folder.</li>
+                <li>d) 1. Open VS Code first<br>2. Click the Explorer icon<br>3. Right-click and choose “New Project Folder” named MyPythonProject.</li>
+                <li>e) 1. Open IDLE<br>2. Save your script — VS Code will automatically detect and create the project folder.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p><strong>20.</strong> You have opened a project folder in VS Code and created several Python files and sub-folders inside it. Now you want to reorganize by moving a file named <code>hello.py</code> from the main project folder into a sub-folder named <code>scripts</code>. What is the correct and simplest way to move the file using your mouse in VS Code? (__ points)</p>
+            <ul>
+                <li>a) Right-click on <code>hello.py</code> in the Explorer, select “Cut”, then right-click inside the <code>scripts</code> folder and select “Paste”</li>
+                <li>b) Click and drag <code>hello.py</code> from the Explorer and drop it directly onto the <code>scripts</code> folder</li>
+                <li>c) Double-click <code>hello.py</code> to open it, then drag the tab at the top of the editor into the <code>scripts</code> folder</li>
+                <li>d) Select <code>hello.py</code>, press Ctrl + C (Command + C for macOS) to copy, then open the <code>scripts</code> folder and press Ctrl + V (Command + V for macOS) to paste</li>
+                <li>e) Close VS Code, move the file using File Explorer/Finder on your computer, then reopen VS Code</li>
+            </ul>
+        </div>
+
+        <!-- Section 2: Free Response / Short Answer -->
+        <h2>Section 2: Short Answer &amp; Explanation</h2>
+
+        <div class="question">
+            <p><strong>1.</strong> In your answer, begin by stating which operating system you are using (Windows, macOS, or Linux). Then, assuming you have already opened IDLE on your computer, describe in complete sentences the exact steps you would take to configure IDLE so that line numbers are displayed in the editor window whenever you open or create a new script. Be specific about the menus, tabs, and options you select. (__ points)</p>
+            <textarea style="width:100%; height:160px; font-family: Arial; padding:12px; border:1px solid #ddd;"
+                placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <div class="question">
+            <p><strong>2.</strong> Explain, in complete sentences, why it is important to carefully check the number of downloads, the number (and content) of reviews, and the publisher when choosing a VS Code extension to install. In your answer, describe what each of these factors tells you about the extension and how paying attention to them helps protect your computer and improve your programming experience. (__ points)</p>
+            <textarea style="width:100%; height:160px; font-family: Arial; padding:12px; border:1px solid #ddd;"
+                placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <div class="question">
+            <p><strong>3.</strong> Describe, in complete sentences, the step-by-step process to save a Python script you have written in the IDLE editor window and then run it. In your answer, explain each step clearly, including the specific menu options or keyboard shortcuts you would use, and what happens after each step. Assume you already have your code typed in an open editor window in IDLE. (__ points)</p>
+            <textarea style="width:100%; height:160px; font-family: Arial; padding:12px; border:1px solid #ddd;"
+                placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <div class="question">
+            <p><strong>4.</strong> Describe, in complete sentences, the step-by-step process to create a new Python file (with a <code>.py</code> extension) inside a project folder that is already open in VS Code. In your answer, explain each step clearly, including where you click and what you type. Assume the project folder is already visible in the Explorer sidebar on the left side of VS Code. (__ points)</p>
+            <textarea style="width:100%; height:160px; font-family: Arial; padding:12px; border:1px solid #ddd;"
+                placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <!-- Section 3: Coding Problems -->
+        <h2>Section 3: Coding Problems</h2>
+
+        <div class="question">
+            <p><strong>1.</strong> In a right triangle, the hypotenuse is the longest side and is opposite the right angle. The Pythagorean theorem states that for any right triangle with legs <em>a</em> and <em>b</em> and hypotenuse <em>c</em> = √(<em>a</em>² + <em>b</em>²).</p>
+            <p>Write a complete Python program that calculates the hypotenuse of a right triangle with legs of 5 inches and 8 inches.</p>
+            <p><strong>Your program must:</strong></p>
+            <ul>
+                <li>• Use the <code>from math import sqrt</code> statement to make the square root function available.</li>
+                <li>• Perform the calculation using the Pythagorean theorem.</li>
+                <li>• Print the result in exactly this format (including the period at the end):</li>
+            </ul>
+            <pre>The hypotenuse of a right triangle with legs of 5 and 8 inches is: [the answer]</pre>
+            <p>where [the answer] is the floating-point (decimal) answer provided by the <code>sqrt</code> function. (__ points)</p>
+            <div class="coding-box"># Your code here</div>
+        </div>
+
+        <div class="question">
+            <p><strong>2.</strong> Write a complete Python script that produces the following exact output (a perfectly centered diamond made of <code>#</code> characters):</p>
+            <pre>   #
+  ###
+ #####
+#######
+ #####
+  ###
+   #</pre>
+            <p><strong>Notice that:</strong></p>
+            <ul>
+                <li>• The diamond has exactly 7 lines.</li>
+                <li>• The top and bottom lines have one <code>#</code> centered with 3 spaces on each side.</li>
+                <li>• Each line above and below the center increases/decreases the number of <code>#</code> by 2.</li>
+                <li>• The center line has 7 <code>#</code> characters with no leading spaces.</li>
+                <li>• All lines must end with a newline (standard <code>print()</code> behavior is fine).</li>
+            </ul>
+            <p><strong>Your script must:</strong></p>
+            <ul>
+                <li>• Use only the basic Python concepts you have learned so far (<code>print()</code>, the <code>end</code> parameter, string multiplication with <code>*</code>, spaces <code>" "</code>, and the <code>#</code> character).</li>
+                <li>• Not use loops (<code>for</code> or <code>while</code>), lists, or any other advanced topics.</li>
+            </ul>
+            <p>(__ points)</p>
+            <div class="coding-box"># Your code here</div>
+        </div>
+
+        <div class="question">
+            <p><strong>3.</strong> Write a complete Python script that introduces yourself using variables.</p>
+            <p><strong>The script must:</strong></p>
+            <ul>
+                <li>• Create a variable <code>name</code> with your full name as a string (e.g., <code>"John Smith"</code>).</li>
+                <li>• Create a variable <code>age</code> with your age as an integer (e.g., <code>17</code>).</li>
+                <li>• Print exactly two lines of output in this format:</li>
+            </ul>
+            <pre>Hello Everyone! My name is John Smith.
+I am 17 years old.</pre>
+            <p><strong>Requirements:</strong></p>
+            <ul>
+                <li>• Use string concatenation with the <code>+</code> operator (not commas).</li>
+                <li>• Use the <code>str()</code> function to properly convert the age integer for concatenation.</li>
+                <li>• Do not hard-code the name or age directly in the <code>print()</code> statements.</li>
+            </ul>
+            <p>Test your script to ensure there are no extra spaces and the output matches exactly (including the period at the end of each line). (__ points)</p>
+            <div class="coding-box"># Your code here</div>
+        </div>
+
+        <div class="question">
+            <p><strong>4.</strong> Write a complete Python script that produces the following exact output (a simple bordered label):</p>
+            <pre>*********************
+*                   *
+* Welcome to Python! *
+*                   *
+*********************</pre>
+            <p><strong>Your script must:</strong></p>
+            <ul>
+                <li>• Use <code>print()</code> statements with the <code>end</code> parameter and/or string multiplication (<code>*</code>) to build the borders and spacing.</li>
+                <li>• Use only the concepts you have learned (no loops or advanced features).</li>
+                <li>• Have exactly 5 lines of output with the correct number of <code>*</code> and spaces.</li>
+            </ul>
+            <p>Test your code to ensure the alignment and spacing are perfect. (__ points)</p>
+            <div class="coding-box"># Your code here</div>
+        </div>
+
+        <div class="question">
+            <p><strong>5.</strong> This question is about organizing your project files in VS Code — there is no Python code to write.</p>
+            <p>Follow the instructions below exactly to set up a project folder structure in VS Code. You will submit a screenshot (or screen recording) showing that you successfully completed the task.</p>
+            <p><strong>Instructions:</strong></p>
+            <ol>
+                <li>Create a new folder on your computer named <code>test_1</code>.</li>
+                <li>Open this <code>test_1</code> folder in VS Code (File → Open Folder).</li>
+                <li>Inside <code>test_1</code>, create three subfolders named exactly:<br>
+                    <code>multi</code><br>
+                    <code>free_rep</code><br>
+                    <code>prog</code></li>
+                <li>Inside the <code>multi</code> folder, create 20 empty Python files named:<br>
+                    <code>m1.py</code>, <code>m2.py</code>, <code>m3.py</code>, …, up to <code>m20.py</code></li>
+                <li>Inside the <code>free_rep</code> folder, create 5 empty Python files named:<br>
+                    <code>f1.py</code>, <code>f2.py</code>, <code>f3.py</code>, <code>f4.py</code>, <code>f5.py</code></li>
+                <li>Inside the <code>prog</code> folder, create 5 empty Python files named:<br>
+                    <code>p1.py</code>, <code>p2.py</code>, <code>p3.py</code>, <code>p4.py</code>, <code>p5.py</code></li>
+            </ol>
+            <p><strong>Requirements:</strong></p>
+            <ul>
+                <li>• All folder and file names must be spelled and numbered exactly as shown (lowercase, no extra spaces).</li>
+                <li>• Use VS Code’s Explorer sidebar to create the folders and files (right-click → New Folder / New File).</li>
+                <li>• You may use any method to create multiple files quickly (e.g., copy-paste and rename), as long as the final structure is correct.</li>
+            </ul>
+            <p><strong>What to submit:</strong> A clear screenshot of your VS Code Explorer sidebar showing the full <code>test_1</code> folder structure with all subfolders and all 30 Python files visible (you may need to scroll or expand folders). (__ points)</p>
+            <div class="coding-box">[Submit screenshot / screen recording here or as a separate file]</div>
+        </div>
+
+        <!-- Biblical Integration / Reflection -->
+        <h2>Biblical Integration &amp; Reflection</h2>
+        <div class="question biblical">
+            <p><strong>Reflect:</strong> In this unit you have learned the foundational tools of programming: careful naming of variables, the importance of order and structure, the difference between syntax and meaning, and the wise selection and organization of tools (IDLE, VS Code, extensions, folders). (__ points)<br><br>
+            <strong>Reflect and explain</strong> (in 4–6 sentences): How does the discipline of naming things carefully, organizing files with intention, and building programs on a solid foundation remind you of the character of God and the call of the Christian life? Connect at least two specific ideas from this unit (e.g., valid names, snake_case, project organization, checking the trustworthiness of tools, or the difference between SyntaxError and NameError) to Scripture. Use at least one verse from the New King James Version (NKJV) in your reflection. Consider themes such as God naming and ordering creation, building on the rock, or being a careful steward of the gifts and tools God has given you.</p>
+            <textarea style="width:100%; height:180px; font-family: Arial; padding:12px; border:1px solid #ddd;"
+                placeholder="Write your reflection here..."></textarea>
+        </div>
+
+        <div class="disclaimer">
+            Labs, Practice Files and Assessments are developed in collaboration with the Grok AI assistant under instructor supervision and review.
+        </div>
+
+        <div class="footer">
+            <p><strong>Deliverable:</strong> Submit this completed assessment (and any required Python files or screenshots). Self-grade your work where possible and compare with provided solutions. Whether you are working asynchronously alone or in a group with an instructor, be ready to discuss your reasoning and design choices.</p>
+            <p>© 2026 LogosTeach - All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
