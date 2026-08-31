@@ -1,0 +1,123 @@
+/* ================================================================
+   BOOK COVER COLOR PALETTE — 2nd EDITION
+   Source: Python_with_a_Worldview_2nd_Edition_cover.jpg
+   Python with a Worldview, 2nd Edition
+   The Christian Creator's Guide to the Essentials of Computer Science
+   By John C. Partridge
+   Sampled from the spring-flat cover (coral top, amber gold band,
+   sea-glass teal bar, aqua code field, wave panel).
+   First-edition palette remains in book_cover_colors.css.
+   ================================================================ */
+
+:root {
+  /* ---------- Primary: Coral / Spring rust (upper band + PYTHON outline) ---------- */
+  --ed2-coral: #F06024;
+  --ed2-coral-rgb: 240, 96, 36;
+  --ed2-coral-rgba: rgba(240, 96, 36, 1);
+
+  --ed2-coral-deep: #E24A1C;
+  --ed2-coral-deep-rgb: 226, 74, 28;
+  --ed2-coral-deep-rgba: rgba(226, 74, 28, 1);
+
+  --ed2-coral-bright: #F56A36;
+  --ed2-coral-bright-rgb: 245, 106, 54;
+  --ed2-coral-bright-rgba: rgba(245, 106, 54, 1);
+
+  --ed2-coral-hot: #FC5F28;
+  --ed2-coral-hot-rgb: 252, 95, 40;
+  --ed2-coral-hot-rgba: rgba(252, 95, 40, 1);
+
+  /* ---------- Primary: Amber Gold (center band) ---------- */
+  --ed2-gold: #FD9C1F;
+  --ed2-gold-rgb: 253, 156, 31;
+  --ed2-gold-rgba: rgba(253, 156, 31, 1);
+
+  --ed2-gold-deep: #F0A010;
+  --ed2-gold-deep-rgb: 240, 160, 16;
+  --ed2-gold-deep-rgba: rgba(240, 160, 16, 1);
+
+  --ed2-gold-bright: #FDC02A;
+  --ed2-gold-bright-rgb: 253, 192, 42;
+  --ed2-gold-bright-rgba: rgba(253, 192, 42, 1);
+
+  --ed2-gold-soft: #FBB85F;
+  --ed2-gold-soft-rgb: 251, 184, 95;
+  --ed2-gold-soft-rgba: rgba(251, 184, 95, 1);
+
+  /* ---------- Primary: Sea-glass Teal (subtitle bar) ---------- */
+  --ed2-teal: #1689A4;
+  --ed2-teal-rgb: 22, 137, 164;
+  --ed2-teal-rgba: rgba(22, 137, 164, 1);
+
+  --ed2-teal-deep: #0E6F86;
+  --ed2-teal-deep-rgb: 14, 111, 134;
+  --ed2-teal-deep-rgba: rgba(14, 111, 134, 1);
+
+  --ed2-teal-mid: #1A8AA8;
+  --ed2-teal-mid-rgb: 26, 138, 168;
+  --ed2-teal-mid-rgba: rgba(26, 138, 168, 1);
+
+  /* ---------- Aqua / Wave field (code panel + ocean wash) ---------- */
+  --ed2-aqua: #7BD2DE;
+  --ed2-aqua-rgb: 123, 210, 222;
+  --ed2-aqua-rgba: rgba(123, 210, 222, 1);
+
+  --ed2-aqua-bright: #70D0E0;
+  --ed2-aqua-bright-rgb: 112, 208, 224;
+  --ed2-aqua-bright-rgba: rgba(112, 208, 224, 1);
+
+  --ed2-sea: #53BFD3;
+  --ed2-sea-rgb: 83, 191, 211;
+  --ed2-sea-rgba: rgba(83, 191, 211, 1);
+
+  --ed2-sea-deep: #2A9BB8;
+  --ed2-sea-deep-rgb: 42, 155, 184;
+  --ed2-sea-deep-rgba: rgba(42, 155, 184, 1);
+
+  /* ---------- Accents ---------- */
+  --ed2-worldview: #E24A1C;
+  --ed2-worldview-rgb: 226, 74, 28;
+  --ed2-worldview-rgba: rgba(226, 74, 28, 1);
+
+  --ed2-subtitle-gold: #F5D36A;
+  --ed2-subtitle-gold-rgb: 245, 211, 106;
+  --ed2-subtitle-gold-rgba: rgba(245, 211, 106, 1);
+
+  --ed2-code-keyword: #0E6F86;
+  --ed2-code-keyword-rgb: 14, 111, 134;
+  --ed2-code-keyword-rgba: rgba(14, 111, 134, 1);
+
+  --ed2-code-string: #F0A010;
+  --ed2-code-string-rgb: 240, 160, 16;
+  --ed2-code-string-rgba: rgba(240, 160, 16, 1);
+
+  /* ---------- Neutrals ---------- */
+  --ed2-white: #FFFFFF;
+  --ed2-white-rgb: 255, 255, 255;
+  --ed2-white-rgba: rgba(255, 255, 255, 1);
+
+  --ed2-cream: #F6F6F5;
+  --ed2-cream-rgb: 246, 246, 245;
+  --ed2-cream-rgba: rgba(246, 246, 245, 1);
+
+  --ed2-ink: #1A2B3C;
+  --ed2-ink-rgb: 26, 43, 60;
+  --ed2-ink-rgba: rgba(26, 43, 60, 1);
+
+  --ed2-shadow: #192837;
+  --ed2-shadow-rgb: 25, 40, 55;
+  --ed2-shadow-rgba: rgba(25, 40, 55, 0.55);
+}
+
+/*
+  Usage examples
+
+  color: var(--ed2-teal-deep);
+  background: var(--ed2-gold);
+  background: rgba(var(--ed2-coral-rgb), 0.85);
+  border-color: var(--ed2-coral);
+  text-shadow: 3px 3px 0 var(--ed2-shadow);
+
+  First-edition (darker rust / navy) variables live in book_cover_colors.css.
+  Student-document chrome still lives in logos_teach_document_style.css.
+*/
