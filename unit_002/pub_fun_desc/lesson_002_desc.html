@@ -1,108 +1,187 @@
 <div
-    style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: #ffffff; color: #333333; border: 1px solid #e0e0e0; border-radius: 10px;">
-    <h1
-        style="font-size: 2.6em; margin-bottom: 25px; color: #1a3c5e; border-bottom: 5px solid #2c7a7b; padding-bottom: 18px; font-weight: 700;">
-        Variables
-    </h1>
-
-    <p style="font-size: 1.1em; margin-bottom: 40px; color: #444444;">
-        In this lesson, we will explore the concept of variables in Python. Variables are fundamental building blocks in programming that allow us to store and manipulate data. We will learn how to declare variables, assign values to them, and use them in your code. We will discuss the ideas of referencing and de-referencing and the consequences that happen in computer memory when a value becomes de-referenced. We will also attempt to contrast the mutable nature of variable assignment with the immutable promises of our heavenly Father, and of Christ. (Hebrews 13:8).
-    </p>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Objectives
-    </h2>
+  style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; max-width: 900px; margin: 40px auto; padding: 35px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(224, 224, 224); border-radius: 10px;"
+>
+  <h1
+    style="font-size: 2.6em; margin-bottom: 25px; color: rgb(26, 60, 94); border-bottom: 5px solid rgb(44, 122, 123); padding-bottom: 18px; font-weight: 700;"
+  >
+    <strong>Python Variables and Naming Rules</strong>
+  </h1>
+  <p style="font-size: 1.1em; margin-bottom: 40px; color: rgb(68, 68, 68);">
+    In this lesson, we will explore the concept of variables in Python.
+    Variables are fundamental building blocks in programming that allow us to
+    store and manipulate data. We will learn how to declare variables, assign
+    values to them, and use them in your code. We will discuss the ideas of
+    referencing and de-referencing and the consequences that happen in computer
+    memory when a value becomes de-referenced. We will also attempt to contrast
+    the mutable nature of variable assignment with the immutable promises of our
+    heavenly Father, and of Christ. (Hebrews 13:8).
+  </p>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Objectives
+  </h2>
+  <p>By the end of the lesson, learners will be able to:</p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
+    <li><p>Declare and assign values to variables in Python.</p></li>
+    <li><p>Understand variable naming rules and best practices.</p></li>
+    <li>
+      <p>
+        Re-assign values to variables and explain the concept of mutability.
+      </p>
+    </li>
+    <li><p>Use variables in mathematical expressions and output.</p></li>
+    <li>
+      <p>
+        Contrast the mutable nature of variables in Python (which can change
+        value) with the immutable promises of God, which are "Yes and Amen!" in
+        Christ Jesus and never change, giving us a firm foundation we can always
+        rely on (2 Corinthians 1:20).
+      </p>
+    </li>
+  </ul>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Reading Assignment
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 15px;">
+    Complete the following reading in your textbook before continuing:
+  </p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
+    <li><p>Chapter 1 - pages 70 - 77</p></li>
+  </ul>
+  <p style="font-size: 1.08em; margin-bottom: 12px;">
+    <strong>While reading, pay special attention to:</strong> variable, naming
+    rules, snake_case, camelCase
+  </p>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Video Resources
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 18px;">
+    Watch the following videos to reinforce and go beyond the concepts covered
+    in the reading:
+  </p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+    <li>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href="https://vimeo.com/1224148577/ab93e3ec20?share=copy&amp;fl=sv&amp;fe=ci"
+          >Talking Points - Naming Variables in Python</a
+        >
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href="https://vimeo.com/1224150557/d8954f4828?share=copy&amp;fl=sv&amp;fe=ci"
+          >Lesson 002 - Naming Variables in Python</a
+        >
+      </p>
+    </li>
+  </ul>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Practice Files
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 18px;">
+    Download the following files relevant to this lesson. This also includes the
+    computer lab for this lesson.
+  </p>
+  <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
+    <li>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href="https://github.com/logosteach/python-with-a-worldview/blob/main/practice/naming_variables_in_python.py"
+          >naming_variables_in_python.py</a
+        >
+      </p>
+    </li>
+  </ul>
+  <h2
+    style="font-size: 1.85em; margin: 50px 0px 18px; color: rgb(44, 122, 123); border-left: 6px solid rgb(44, 122, 123); padding-left: 16px;"
+  >
+    Computer Lab
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 20px;">
+    The pdf file
+    <em style="color: rgb(26, 60, 94);"
+      >Jenni_and_Jayne_Bake_Sale_Revenue.pdf</em
+    >
+    can be found in the <strong>Attached Files</strong> section in this lesson.
+  </p>
+  <p style="font-size: 1.08em; margin-bottom: 25px;">
+    <strong>The Stand</strong>
+  </p>
+  <p style="font-size: 1.08em; margin-bottom: 25px;">
+    Jenna and Jayne are running a bake-sale stand for a homeschool project. The
+    stand sells two things only: cookies and brownies. Their class is studying
+    revenue — the money that comes in when something is sold. Their teacher will
+    sit with them first and settle what each cookie and each brownie should be
+    priced at for this sale. You will not invent those two prices,<span
+      style="color: rgb(210, 27, 27);"
+    >
+    </span
+    ><em
+      ><span style="color: rgb(210, 27, 27);"
+        >unless you are working on this lab individually without teacher
+        assistance.</span
+      ></em
+    >
+    You will store the prices your teacher gives you, store how many of each
+    treat were sold, and print the revenue.
+  </p>
+  <div
+    style="background-color: rgb(248, 249, 250); padding: 22px; border-left: 6px solid rgb(44, 122, 123); margin: 35px 0px; font-size: 1.05em;"
+  >
     <p>
-        By the end of the lesson, learners will be able to:
+      <em>If you find any typos or errors, please let me know.</em
+      ><br /><br /><a
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"
+        ><strong>📧 Send me an email</strong></a
+      >
     </p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 45px;">
-        <li>Declare and assign values to variables in Python.</li>
-        <li>Understand variable naming rules and best practices.</li>
-        <li>Re-assign values to variables and explain the concept of mutability.</li>
-        <li>Use variables in mathematical expressions and output.</li>
-        <li>Contrast the mutable nature of variables in Python (which can change value) with the immutable promises of God, which are "Yes and Amen!" in Christ Jesus and never change, giving us a firm foundation we can always rely on (2 Corinthians 1:20).</li>
-    </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Reading Assignment
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 15px;">Complete the following reading in your textbook before
-        continuing:</p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 20px;">
-        {{READING_ASSIGNMENT_LIST}}
-    </ul>
-    <p style="font-size: 1.08em; margin-bottom: 12px;"><strong>While reading, pay special attention to:</strong>
-        {{KEY_READING_FOCUS}}</p>
-    <p style="font-size: 1.05em; font-style: italic; color: #555555;">{{OPTIONAL_NOTE}}</p>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Video Resources
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 18px;">Watch the following videos to reinforce and go beyond the
-        concepts covered in the reading:</p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
-        {{VIDEO_LIST}}
-    </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Practice Files
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 18px;">Download the following files relevant to this lesson. This also
-        includes the computer lab for this lesson.</p>
-    <ul style="font-size: 1.08em; padding-left: 28px; margin-bottom: 40px;">
-        {{PRACTICE_FILES_LIST}}
-    </ul>
-
-    <h2
-        style="font-size: 1.85em; margin: 50px 0 18px 0; color: #2c7a7b; border-left: 6px solid #2c7a7b; padding-left: 16px;">
-        Computer Lab
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 20px;">
-        The pdf file <em style="color: #1a3c5e;">{{LAB_PDF_FILENAME}}</em> can be found in the <strong>Attached
-            Files</strong> section in this lesson.
+  </div>
+  <h2
+    style="font-size: 1.85em; margin: 55px 0px 22px; color: rgb(26, 60, 94); border-left: 6px solid rgb(26, 60, 94); padding-left: 16px;"
+  >
+    Anchored in Christ
+  </h2>
+  <p style="font-size: 1.08em; margin-bottom: 22px;">
+    <strong>The Name of the LORD</strong>
+  </p>
+  <p style="font-size: 1.08em; margin-bottom: 22px;">
+    The name of the LORD is holy. Holy, holy, holy. Let us be those that bless
+    the name of the LORD, and ask Him directly,
+    <em
+      >"Father in heaven, help me to understand that Your name is holy, what
+      this really means beyond what I currently understand, and help me to bless
+      Your holy name each and every moment. When things are well with my soul,
+      and yes, even when dark and troubling times may come. Blessed be the name
+      of the LORD. In Jesus' name, the name You love. Amen."</em
+    >
+  </p>
+  <blockquote>
+    <p><strong>Psalm 103:1 (NKJV)</strong></p>
+    <p dir="auto" style="white-space: pre-wrap;">
+      Bless the Lord, O my soul;<br />
+      And all that is within me, bless His holy name!
     </p>
-    <p style="font-size: 1.08em; margin-bottom: 25px;">
-        {{LAB_DESCRIPTION}}
-    </p>
-
-    <div
-        style="background-color: #f8f9fa; padding: 22px; border-left: 6px solid #2c7a7b; margin: 35px 0; font-size: 1.05em;">
-        <em>If you find any typos or errors, please let me know.</em><br><br>
-        <a href="mailto:info@logosteach.com?subject=Typos/Errata Found in Lesson {{LESSON_TITLE}}"
-            style="color: #2c7a7b; font-weight: 600; text-decoration: none;">📧 Send me an email</a>
-    </div>
-
-    <p style="font-size: 1.08em; margin: 25px 0 15px 0;"><strong>Deliverable:</strong> The student is responsible to
-        self-grade their work. Solutions are provided in the <strong>Attached Files</strong> section of this lesson.</p>
-    <p style="font-size: 1.08em; margin-bottom: 40px;">
-        {{DELIVERABLE_INSTRUCTIONS}}
-    </p>
-
-    <h2
-        style="font-size: 1.85em; margin: 55px 0 22px 0; color: #1a3c5e; border-left: 6px solid #1a3c5e; padding-left: 16px;">
-        Anchored in Christ
-    </h2>
-    <p style="font-size: 1.08em; margin-bottom: 22px;">
-        {{ANCHOR_INTRO}}
-    </p>
-    <p style="font-size: 1.08em; margin-bottom: 22px;">
-        {{ANCHOR_BODY_1}}
-    </p>
-    <p style="font-size: 1.08em; margin-bottom: 30px;">
-        {{ANCHOR_BODY_2}}
-    </p>
-
-    <blockquote
-        style="background-color: #f0f7f7; border-left: 8px solid #2c7a7b; margin: 35px 0; padding: 28px 32px; font-style: italic; color: #1a3c5e; font-size: 1.12em; line-height: 1.65;">
-        {{SCRIPTURE_QUOTE}}
-    </blockquote>
-
-    <div
-        style="margin-top: 70px; padding-top: 25px; border-top: 2px solid #e0e0e0; font-size: 0.95em; color: #777777; text-align: center;">
-        &copy; 2026 LogosTeach - All Rights Reserved.
-    </div>
+  </blockquote>
+  <div
+    style="margin-top: 70px; padding-top: 25px; border-top: 2px solid rgb(224, 224, 224); font-size: 0.95em; color: rgb(119, 119, 119); text-align: center;"
+  >
+    <p>© 2026 LogosTeach - All Rights Reserved.</p>
+  </div>
 </div>
