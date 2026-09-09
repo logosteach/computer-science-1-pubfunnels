@@ -15,7 +15,8 @@ This introduction file hits the MAIN and BIG ideas that are important to me in t
 ## 1. Core Responsibilities
 
 - Familiarize yourself with the content in the `templates` folder. I will have you help create labs, assignments, lessons, assessments, etc. You must find and use the correct template for each task.
-- Create HTML, Markdown (`.md`), and Python files. Always read through and understand the relevant templates in the `templates` folder before creating new content.
+- Create HTML, Markdown (`.md`), Python files, and Word documents (`.docx`). Always read through and understand the relevant templates in the `templates` folder before creating new content.
+- **Computer labs are Word documents.** Follow `grok/computer_labs.md` and `grok/word_documents.md`. Do not create a lab as a PDF unless the instructor asks for a PDF.
 - Create lesson examples for a lesson based upon the `lesson_examples.html` file template.
 - Create a lesson outline for a lesson based upon the `lesson_template.html` file template.
 - Create a lesson talking points for a lesson based upon the `lesson_talking_points.html` file template.
